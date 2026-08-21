@@ -5,6 +5,7 @@ import { migrate } from "drizzle-orm/node-postgres/migrator";
 import { eq } from "drizzle-orm";
 import { Pool } from "pg";
 import * as s from "./schema";
+import { replayReviewEvents,type Rating } from "@/lib/scheduler";
 
 async function main() {
   loadEnvConfig(process.cwd());
@@ -36,11 +37,17 @@ async function main() {
   await adminDb.insert(s.lexemeSenses).values([{id:workSense1,lexemeId:workLexeme,definitionLanguageId:ids.en,definition:"to perform a job"},{id:workSense2,lexemeId:workLexeme,definitionLanguageId:ids.en,definition:"to be suitable or convenient"}]);
 
   process.env.DEV_AUTH_USER_ID=ids.u1;
-  const [{POST:startRun},{GET:getRun},{POST:submit},{POST:complete},{GET:getProgress},{POST:injectVocabulary},{pool:appPool}] = await Promise.all([import("@/app/api/unit-runs/route"),import("@/app/api/unit-runs/[id]/route"),import("@/app/api/exercise-attempts/route"),import("@/app/api/unit-runs/[id]/complete/route"),import("@/app/api/progress/route"),import("@/app/api/vocabulary/injections/route"),import("./client")]);
+  const [{POST:startRun},{GET:getRun},{POST:submit},{POST:complete},{GET:getProgress},{POST:injectVocabulary},{POST:submitReview},{GET:getReviewQueue},{pool:appPool}] = await Promise.all([import("@/app/api/unit-runs/route"),import("@/app/api/unit-runs/[id]/route"),import("@/app/api/exercise-attempts/route"),import("@/app/api/unit-runs/[id]/complete/route"),import("@/app/api/progress/route"),import("@/app/api/vocabulary/injections/route"),import("@/app/api/reviews/route"),import("@/app/api/reviews/queue/route"),import("./client")]);
   const inject=(body:Record<string,unknown>)=>injectVocabulary(new Request("http://test/api/vocabulary/injections",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(body)}));
   const choices=await inject({rawText:"  ＷＯＲＫ  "});const choiceBody=await choices.json();assert.equal(choiceBody.status,"needs_selection");assert.equal(choiceBody.matches.length,2,"same spelling must retain two senses");
-  await inject({rawText:"work",selectedSenseId:workSense2});await inject({rawText:"work",selectedSenseId:workSense2});assert.equal((await adminDb.select().from(s.userVocabulary).where(eq(s.userVocabulary.userLearningPathId,ids.up1))).length,1,"same sense must not duplicate personal vocabulary");
+  await inject({rawText:"work",selectedSenseId:workSense2});await inject({rawText:"work",selectedSenseId:workSense2});const[personalWord]=await adminDb.select().from(s.userVocabulary).where(eq(s.userVocabulary.userLearningPathId,ids.up1));assert.equal((await adminDb.select().from(s.userVocabulary).where(eq(s.userVocabulary.userLearningPathId,ids.up1))).length,1,"same sense must not duplicate personal vocabulary");
   const unknown1=await inject({rawText:"spin   up"});const unknown2=await inject({rawText:"ＳＰＩＮ ＵＰ"});assert.equal((await unknown1.json()).status,"needs_enrichment");assert.equal((await unknown2.json()).idempotent,true);assert.equal((await adminDb.select().from(s.vocabularyInjectionTasks).where(eq(s.vocabularyInjectionTasks.userLearningPathId,ids.up1))).length,1,"normalized unknown capture must not duplicate");
+  const review=(dimension:"reading_recognition"|"listening_recognition"|"active_recall",clientEventId:string,isCorrect:boolean,rating?:Rating)=>submitReview(new Request("http://test/api/reviews",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({userVocabularyId:personalWord.id,dimension,clientEventId,isCorrect,rating})}));
+  const reviewEvent="50000000-0000-4000-8000-000000000101";await review("reading_recognition",reviewEvent,false,"forgot");const duplicateReview=await review("reading_recognition",reviewEvent,true,"too_easy");assert.equal((await duplicateReview.json()).reason,"incorrect_reset","duplicate review must preserve original rule");
+  await review("listening_recognition","50000000-0000-4000-8000-000000000102",true,"hard");await review("active_recall","50000000-0000-4000-8000-000000000103",true,"mastered");
+  assert.equal((await adminDb.select().from(s.reviewEvents)).length,3,"review retry must not duplicate events");const vocabularyStates=await adminDb.select().from(s.vocabularyMasteryStates).where(eq(s.vocabularyMasteryStates.userVocabularyId,personalWord.id));assert.equal(vocabularyStates.length,3,"vocabulary dimensions must remain independent");
+  const readingState=vocabularyStates.find(state=>state.dimension==="reading_recognition")!;const readingEvents=await adminDb.select().from(s.reviewEvents).where(eq(s.reviewEvents.vocabularyMasteryStateId,readingState.id));const replayed=replayReviewEvents(readingEvents.map(event=>({isCorrect:event.isCorrect,rating:event.rating as Rating|undefined,reviewedAt:event.createdAt})));assert.equal(replayed.intervalDays,readingState.intervalDays);assert.equal(replayed.reviewCount,readingState.reviewCount,"immutable events must rebuild the derived state");
+  await adminDb.update(s.vocabularyMasteryStates).set({nextReviewAt:new Date(0)}).where(eq(s.vocabularyMasteryStates.id,readingState.id));const queueBody=await (await getReviewQueue()).json();assert.equal(queueBody.due[0].dimension,"reading_recognition");assert.equal(queueBody.policy.dueFirst,true);
   const started=await startRun(); assert.equal(started.status,201); const runId=(await started.json()).id as string;
   assert.equal((await complete(new Request("http://test",{method:"POST"}),{params:Promise.resolve({id:runId})})).status,409,"incomplete run must fail");
   process.env.DEV_AUTH_USER_ID=ids.u2;
