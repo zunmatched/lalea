@@ -46,7 +46,7 @@ const audioDrafts=[
  {id:"60000000-0000-4000-8000-000000000002",unitId:extraCourses[0].unitId,exerciseId:"10000000-0000-4000-8000-000000000021",text:"We're on track to finish the draft today, but we're still waiting on the final cost estimate. I'll send you an update by four."},
  {id:"60000000-0000-4000-8000-000000000003",unitId:extraCourses[1].unitId,exerciseId:"10000000-0000-4000-8000-000000000031",text:"Could we move it to Friday morning? Friday works for me. Would ten o'clock work for you?"},
 ];
-for(const audio of audioDrafts)await db.insert(s.audioAssets).values({id:audio.id,learningUnitId:audio.unitId,exerciseId:audio.exerciseId,languageId:ids.en,text:audio.text,generationMethod:"local_tts",reviewStatus:"pending_generation",contentVersion:1}).onConflictDoUpdate({target:[s.audioAssets.exerciseId,s.audioAssets.contentVersion],set:{text:audio.text,reviewStatus:"pending_generation"}});
+for(const audio of audioDrafts)await db.insert(s.audioAssets).values({id:audio.id,learningUnitId:audio.unitId,exerciseId:audio.exerciseId,languageId:ids.en,text:audio.text,generationMethod:"local_tts",reviewStatus:"pending_generation",contentVersion:1}).onConflictDoUpdate({target:[s.audioAssets.exerciseId,s.audioAssets.contentVersion],set:{text:audio.text}});
 
 const vocabulary=[
  ["on track","進度符合計畫","按計畫進行","We're on track to finish the draft by Thursday.",extraCourses[0].unitId],

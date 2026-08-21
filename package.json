@@ -16,6 +16,9 @@
     "db:check": "drizzle-kit check",
     "db:migrate": "tsx src/db/migrate.ts",
     "db:seed": "tsx src/db/seed.ts",
+    "audio:generate": "tsx scripts/audio/generate.ts",
+    "audio:import": "tsx scripts/audio/import.ts",
+    "audio:review": "tsx scripts/audio/review.ts",
     "verify": "pnpm lint && pnpm typecheck && pnpm test && pnpm test:integration && pnpm test:e2e && pnpm build"
   },
   "dependencies": {

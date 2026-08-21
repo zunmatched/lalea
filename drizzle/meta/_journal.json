@@ -36,6 +36,13 @@
       "when": 1787299796307,
       "tag": "0004_icy_proteus",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1787300683445,
+      "tag": "0005_ambiguous_chimera",
+      "breakpoints": true
     }
   ]
 }

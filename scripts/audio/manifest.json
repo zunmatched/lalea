@@ -1,0 +1,8 @@
+{
+  "engine": { "name": "piper", "version": "1.6.0", "modelId": "en_US-lessac-medium", "modelSha256": "5efe09e69902187827af646e1a6e9d269dee769f9877d17b16b1b46eeaaf019f", "sampleRate": 22050, "engineLicense": "GPL-3.0", "voiceLicense": "MIT" },
+  "assets": [
+    { "id": "60000000-0000-4000-8000-000000000001", "file": "clarify-and-confirm-v1.wav", "text": "We don't have the final numbers yet, so let's hold off on sending the report." },
+    { "id": "60000000-0000-4000-8000-000000000002", "file": "progress-update-v1.wav", "text": "We're on track to finish the draft today, but we're still waiting on the final cost estimate. I'll send you an update by four." },
+    { "id": "60000000-0000-4000-8000-000000000003", "file": "reschedule-meeting-v1.wav", "text": "Could we move it to Friday morning? Friday works for me. Would ten o'clock work for you?" }
+  ]
+}
