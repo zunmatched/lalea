@@ -37,7 +37,7 @@ export function ReviewPanel(){
   return shuffle([...new Set([correctLabel,...distractors])]);
  },[item?.userVocabularyId,challengeType,queue,showEnglishOptions]);
 
- useEffect(()=>{setSelectedOption(null);setSpelling("");setChecked(null)},[item?.userVocabularyId]);
+ useEffect(()=>{setSelectedOption(null);setSpelling("");setChecked(null);setMessage("")},[item?.userVocabularyId]);
 
  function checkOption(label:string){
   if(!item||checked)return;
@@ -50,11 +50,18 @@ export function ReviewPanel(){
  }
  function speak(){if(!item||!("speechSynthesis"in window))return;window.speechSynthesis.cancel();const utterance=new SpeechSynthesisUtterance(item.form);utterance.lang="en-US";window.speechSynthesis.speak(utterance)}
 
+ function describeSchedule(state:{intervalDays:number;nextReviewAt:string}){
+  const minutesUntil=Math.round((new Date(state.nextReviewAt).getTime()-Date.now())/60000);
+  if(minutesUntil<60)return`已安排 ${Math.max(minutesUntil,1)} 分鐘後再複習`;
+  if(state.intervalDays<=1)return"已安排明天複習";
+  return`已安排 ${state.intervalDays} 天後複習`;
+ }
  async function submitReview(rating:"forgot"|"hard"|"mastered"|"too_easy"){
   if(!item)return;setBusy(true);
   const response=await fetch("/api/reviews",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({userVocabularyId:item.userVocabularyId,dimension:item.dimension,clientEventId:randomUUID(),isCorrect:checked?.correct??false,rating})});
-  const result=await response.json();setBusy(false);
-  if(response.ok){setMessage(`已安排下次複習：${result.reason}`);await load()}
+  const result=await response.json();
+  if(response.ok){setMessage(describeSchedule(result.state));await load()}
+  setBusy(false);
  }
 
  const prompts:Record<ChallengeType,string>={recognize_en:"這個字的意思是？",recognize_zh:"哪個英文字是這個意思？",spell:"請拼出這個字："};
@@ -69,14 +76,13 @@ export function ReviewPanel(){
    <input className="text-input" value={spelling} onChange={event=>setSpelling(event.target.value)} disabled={Boolean(checked)} placeholder="輸入英文拼字" onKeyDown={event=>event.key==="Enter"&&checkSpelling()}/>
    {!checked&&<button className="primary" onClick={checkSpelling} disabled={!spelling.trim()}>檢查拼字</button>}
   </>:<div className="options">{options.map(label=><button key={label} className={`option${selectedOption===label?" selected":""}`} disabled={Boolean(checked)} onClick={()=>checkOption(label)}>{label}</button>)}</div>}
-  {checked&&<>
+  {checked&&(message?<p className="context" role="status">{message}</p>:busy?<p className="context" role="status">安排下一個中…</p>:<>
    {checked.correct?<div className="review-ratings"><button disabled={busy} onClick={()=>submitReview("hard")}>困難</button><button disabled={busy} onClick={()=>submitReview("mastered")}>掌握</button><button disabled={busy} onClick={()=>submitReview("too_easy")}>太容易</button></div>
    :<button className="primary" disabled={busy} onClick={()=>submitReview("forgot")}>知道了，下一個</button>}
    <div className={`feedback ${checked.correct?"correct":"wrong"}`} role="status"><strong>{checked.correct?"答對了":"再記一次"}</strong>{!checked.correct&&<div>正確答案：{item.form}{item.translation?`（${item.translation}）`:""}</div>}</div>
    <div style={{display:"flex",alignItems:"center",gap:10,marginTop:14}}>{item.partOfSpeech&&<span className="context" style={{margin:0,padding:"3px 10px"}}>{item.partOfSpeech}</span>}<button aria-label="播放發音" onClick={speak} style={{border:0,borderRadius:"50%",width:36,height:36,background:"var(--mint)",color:"var(--ink)",cursor:"pointer"}}>🔊</button></div>
    {item.example&&<p className="context"><strong>{item.example}</strong>{item.exampleTranslation&&<><br/><span>{item.exampleTranslation}</span></>}</p>}
-  </>}
-  {message&&<p className="context" role="status">{message}</p>}
+  </>)}
  </section>:<section className="card"><h2>目前沒有到期項目</h2><p className="lead">可開始的新詞：{queue.new.length} 個；今日允許新增上限：{queue.policy.newAllowance} 個。</p></section>}
  </main>
 }
