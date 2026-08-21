@@ -5,6 +5,8 @@ import { normalizeVocabulary } from "@/lib/vocabulary";
 import { and, eq, inArray } from "drizzle-orm";
 import { z } from "zod";
 
+export async function GET(){const userId=requireUserId();const rows=await db.select({id:vocabularyInjectionTasks.id,rawText:vocabularyInjectionTasks.rawText,normalizedText:vocabularyInjectionTasks.normalizedText,status:vocabularyInjectionTasks.status,aiDraft:vocabularyInjectionTasks.aiDraft,createdAt:vocabularyInjectionTasks.createdAt}).from(vocabularyInjectionTasks).innerJoin(userLearningPaths,eq(vocabularyInjectionTasks.userLearningPathId,userLearningPaths.id)).where(eq(userLearningPaths.userId,userId));return Response.json({items:rows,exportSchemaVersion:1})}
+
 const input=z.object({rawText:z.string().trim().min(1).max(200),selectedSenseId:z.string().uuid().optional(),originalSentence:z.string().trim().max(1000).optional(),note:z.string().trim().max(500).optional()});
 export async function POST(request:Request){
  const parsed=input.safeParse(await request.json().catch(()=>null));if(!parsed.success)return Response.json({error:"Invalid vocabulary input"},{status:400});
