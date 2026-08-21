@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX "vocabulary_example_version_unique" ON "vocabulary_examples" USING btree ("lexeme_sense_id","text","content_version");

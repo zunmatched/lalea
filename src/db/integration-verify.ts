@@ -31,9 +31,16 @@ async function main() {
     {id:"10000000-0000-4000-8000-000000000103",position:3,type:"chunk_ordering"},
   ];
   for(const row of exerciseRows) await adminDb.insert(s.exercises).values({...row,learningUnitId:ids.unit,prompt:row.type,content:{options:[{id:"right",text:"Right"},{id:"wrong",text:"Wrong"}]},answer:{correctIds:["right"]},feedback:{correct:"Correct",incorrect:"Incorrect"}});
+  const workLexeme="40000000-0000-4000-8000-000000000101",workSense1="41000000-0000-4000-8000-000000000101",workSense2="41000000-0000-4000-8000-000000000102";
+  await adminDb.insert(s.lexemes).values({id:workLexeme,languageId:ids.en,canonicalForm:"work",normalizedForm:"work",type:"word"});
+  await adminDb.insert(s.lexemeSenses).values([{id:workSense1,lexemeId:workLexeme,definitionLanguageId:ids.en,definition:"to perform a job"},{id:workSense2,lexemeId:workLexeme,definitionLanguageId:ids.en,definition:"to be suitable or convenient"}]);
 
   process.env.DEV_AUTH_USER_ID=ids.u1;
-  const [{POST:startRun},{GET:getRun},{POST:submit},{POST:complete},{GET:getProgress},{pool:appPool}] = await Promise.all([import("@/app/api/unit-runs/route"),import("@/app/api/unit-runs/[id]/route"),import("@/app/api/exercise-attempts/route"),import("@/app/api/unit-runs/[id]/complete/route"),import("@/app/api/progress/route"),import("./client")]);
+  const [{POST:startRun},{GET:getRun},{POST:submit},{POST:complete},{GET:getProgress},{POST:injectVocabulary},{pool:appPool}] = await Promise.all([import("@/app/api/unit-runs/route"),import("@/app/api/unit-runs/[id]/route"),import("@/app/api/exercise-attempts/route"),import("@/app/api/unit-runs/[id]/complete/route"),import("@/app/api/progress/route"),import("@/app/api/vocabulary/injections/route"),import("./client")]);
+  const inject=(body:Record<string,unknown>)=>injectVocabulary(new Request("http://test/api/vocabulary/injections",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(body)}));
+  const choices=await inject({rawText:"  ＷＯＲＫ  "});const choiceBody=await choices.json();assert.equal(choiceBody.status,"needs_selection");assert.equal(choiceBody.matches.length,2,"same spelling must retain two senses");
+  await inject({rawText:"work",selectedSenseId:workSense2});await inject({rawText:"work",selectedSenseId:workSense2});assert.equal((await adminDb.select().from(s.userVocabulary).where(eq(s.userVocabulary.userLearningPathId,ids.up1))).length,1,"same sense must not duplicate personal vocabulary");
+  const unknown1=await inject({rawText:"spin   up"});const unknown2=await inject({rawText:"ＳＰＩＮ ＵＰ"});assert.equal((await unknown1.json()).status,"needs_enrichment");assert.equal((await unknown2.json()).idempotent,true);assert.equal((await adminDb.select().from(s.vocabularyInjectionTasks).where(eq(s.vocabularyInjectionTasks.userLearningPathId,ids.up1))).length,1,"normalized unknown capture must not duplicate");
   const started=await startRun(); assert.equal(started.status,201); const runId=(await started.json()).id as string;
   assert.equal((await complete(new Request("http://test",{method:"POST"}),{params:Promise.resolve({id:runId})})).status,409,"incomplete run must fail");
   process.env.DEV_AUTH_USER_ID=ids.u2;

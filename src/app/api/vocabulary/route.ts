@@ -1,0 +1,5 @@
+import { db } from "@/db/client";
+import { lexemes,lexemeSenses,senseTranslations,userLearningPaths,userVocabulary,vocabularyMasteryStates } from "@/db/schema";
+import { requireUserId } from "@/lib/dev-auth";
+import { eq } from "drizzle-orm";
+export async function GET(){const userId=requireUserId();const rows=await db.select({id:userVocabulary.id,status:userVocabulary.status,canonicalForm:lexemes.canonicalForm,definition:lexemeSenses.definition,translation:senseTranslations.translation,dimension:vocabularyMasteryStates.dimension,intervalDays:vocabularyMasteryStates.intervalDays,nextReviewAt:vocabularyMasteryStates.nextReviewAt}).from(userVocabulary).innerJoin(userLearningPaths,eq(userVocabulary.userLearningPathId,userLearningPaths.id)).innerJoin(lexemeSenses,eq(userVocabulary.lexemeSenseId,lexemeSenses.id)).innerJoin(lexemes,eq(lexemeSenses.lexemeId,lexemes.id)).leftJoin(senseTranslations,eq(senseTranslations.lexemeSenseId,lexemeSenses.id)).leftJoin(vocabularyMasteryStates,eq(vocabularyMasteryStates.userVocabularyId,userVocabulary.id)).where(eq(userLearningPaths.userId,userId));return Response.json({items:rows});}
