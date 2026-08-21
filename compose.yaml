@@ -1,0 +1,35 @@
+services:
+  postgres-dev:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: lalea_dev
+      POSTGRES_USER: lalea
+      POSTGRES_PASSWORD: lalea_dev_only
+    ports:
+      - "127.0.0.1:55432:5432"
+    volumes:
+      - lalea-dev-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U lalea -d lalea_dev"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  postgres-test:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: lalea_test
+      POSTGRES_USER: lalea
+      POSTGRES_PASSWORD: lalea_test_only
+    ports:
+      - "127.0.0.1:55433:5432"
+    tmpfs:
+      - /var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U lalea -d lalea_test"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  lalea-dev-data:

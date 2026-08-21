@@ -16,8 +16,13 @@ test-results/
 audio/generated/
 backups/
 
+# Next.js generated types and local tooling
+.next/
+playwright/.cache/
+
 # Logs and editor files
 *.log
+*.tsbuildinfo
 .DS_Store
 Thumbs.db
 .idea/
