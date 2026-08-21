@@ -1,0 +1,2 @@
+export type ListenCandidate={id:string;category:"due"|"weak"|"recent"|"new"};
+export function buildListenQueue(candidates:ListenCandidate[],limit=20){const seen=new Set<string>();const ordered=candidates.filter(item=>{if(seen.has(item.id))return false;seen.add(item.id);return true});const familiar=ordered.filter(item=>item.category!=="new").slice(0,limit);const newSlots=Math.min(limit-familiar.length,Math.floor(familiar.length/4));return[...familiar,...ordered.filter(item=>item.category==="new").slice(0,newSlots)]}

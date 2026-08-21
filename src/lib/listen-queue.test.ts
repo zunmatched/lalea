@@ -1,0 +1,2 @@
+import{describe,expect,it}from"vitest";import{buildListenQueue}from"./listen-queue";
+describe("listen queue",()=>{it("orders categories and caps new content at twenty percent",()=>{const items=buildListenQueue([{id:"d",category:"due"},{id:"w",category:"weak"},{id:"r1",category:"recent"},{id:"r2",category:"recent"},{id:"n1",category:"new"},{id:"n2",category:"new"}]);expect(items.map(item=>item.id)).toEqual(["d","w","r1","r2","n1"])});it("does not create an all-new passive queue",()=>expect(buildListenQueue([{id:"n",category:"new"}])).toEqual([]))});

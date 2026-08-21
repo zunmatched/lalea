@@ -1,0 +1,1 @@
+.audio-controls{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:-8px 0 18px}.audio-controls button{min-height:40px;border:1px solid var(--line);border-radius:12px;background:white;color:var(--ink);font-size:13px;font-weight:750}
