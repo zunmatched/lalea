@@ -1,14 +1,14 @@
 import { stat, readFile } from "node:fs/promises";
 import path from "node:path";
 
-const mediaDir = path.resolve(process.env.LALEA_MEDIA_DIR ?? "audio/generated");
+const mediaDir = path.resolve(/*turbopackIgnore: true*/ process.env.LALEA_MEDIA_DIR ?? "audio/generated");
 const fileNamePattern = /^[a-z0-9-]+\.wav$/;
 
 export async function GET(request: Request, context: { params: Promise<{ file: string }> }) {
   const { file } = await context.params;
   if (!fileNamePattern.test(file)) return new Response("Not found", { status: 404 });
 
-  const filePath = path.join(mediaDir, file);
+  const filePath = path.join(/*turbopackIgnore: true*/ mediaDir, file);
   let size: number;
   try {
     size = (await stat(filePath)).size;
