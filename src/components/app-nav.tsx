@@ -6,7 +6,7 @@ const links = [
   { href: "/", label: "首頁" },
   { href: "/review", label: "複習" },
   { href: "/listen", label: "純聽" },
-  { href: "/vocabulary", label: "詞彙庫" },
+  { href: "/vocabulary", label: "我的" },
 ];
 
 export function AppNav() {
