@@ -5,7 +5,7 @@ import { randomUUID } from "@/lib/client-id";
 type Pool={form:string;translation:string|null};
 type Due={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;example:string|null;exampleTranslation:string|null;dimension:"reading_recognition"|"listening_recognition"|"active_recall";nextReviewAt:string;reviewCount:number};
 type Fresh={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;example:string|null;exampleTranslation:string|null};
-type Queue={due:Due[];new:Fresh[];pool:Pool[];policy:{newAllowance:number;dueCount:number}};
+type Queue={due:Due[];new:Fresh[];pool:Pool[];policy:{newAllowance:number;dueCount:number;newVocabLimit:number}};
 
 const labels={reading_recognition:"閱讀辨識",listening_recognition:"聽力辨識",active_recall:"主動提取"};
 const challengeTypes=["recognize_en","recognize_zh","spell"] as const;
@@ -19,9 +19,11 @@ export function ReviewPanel(){
  const[selectedOption,setSelectedOption]=useState<string|null>(null);
  const[spelling,setSpelling]=useState("");
  const[checked,setChecked]=useState<{correct:boolean}|null>(null);
+ const[extraBusy,setExtraBusy]=useState(false);
 
- async function load(){const response=await fetch("/api/reviews/queue");if(response.ok)setQueue(await response.json())}
+ async function load(more=false){const response=await fetch(`/api/reviews/queue${more?"?more=1":""}`);if(response.ok)setQueue(await response.json())}
  useEffect(()=>{let active=true;fetch("/api/reviews/queue").then(r=>r.ok?r.json():null).then(result=>{if(active)setQueue(result)}).catch(()=>null);return()=>{active=false}},[]);
+ async function loadMore(){setExtraBusy(true);await load(true);setExtraBusy(false)}
 
  const dueItem=queue?.due[0];
  const freshItem=!dueItem?queue?.new[0]:undefined;
@@ -35,9 +37,10 @@ export function ReviewPanel(){
   const correctLabel=showEnglishOptions?item.form:(item.translation??item.form);
   const distractors=shuffle(queue.pool.filter(p=>p.form!==item.form)).slice(0,3).map(p=>showEnglishOptions?p.form:(p.translation??p.form));
   return shuffle([...new Set([correctLabel,...distractors])]);
- },[item?.userVocabularyId,challengeType,queue,showEnglishOptions]);
+ },[item?.userVocabularyId,item?.form,item?.translation,challengeType,queue,showEnglishOptions]);
 
- useEffect(()=>{setSelectedOption(null);setSpelling("");setChecked(null);setMessage("")},[item?.userVocabularyId]);
+ const[shownItemId,setShownItemId]=useState(item?.userVocabularyId);
+ if(item?.userVocabularyId!==shownItemId){setShownItemId(item?.userVocabularyId);setSelectedOption(null);setSpelling("");setChecked(null);setMessage("")}
 
  function checkOption(label:string){
   if(!item||checked)return;
@@ -48,7 +51,15 @@ export function ReviewPanel(){
   if(!item||checked||!spelling.trim())return;
   setChecked({correct:spelling.trim().toLowerCase()===item.form.toLowerCase()});
  }
- function speak(){if(!item||!("speechSynthesis"in window))return;window.speechSynthesis.cancel();const utterance=new SpeechSynthesisUtterance(item.form);utterance.lang="en-US";window.speechSynthesis.speak(utterance)}
+ function speak(){
+  if(!item||!("speechSynthesis"in window))return;
+  window.speechSynthesis.cancel();
+  const parts:Array<{text:string;lang:string}>=[{text:item.form,lang:"en-US"}];
+  if(item.translation)parts.push({text:item.translation,lang:"zh-TW"});
+  if(item.example)parts.push({text:item.example,lang:"en-US"});
+  if(item.exampleTranslation)parts.push({text:item.exampleTranslation,lang:"zh-TW"});
+  for(const part of parts){const utterance=new SpeechSynthesisUtterance(part.text);utterance.lang=part.lang;window.speechSynthesis.speak(utterance)}
+ }
 
  function describeSchedule(state:{intervalDays:number;nextReviewAt:string}){
   const minutesUntil=Math.round((new Date(state.nextReviewAt).getTime()-Date.now())/60000);
@@ -83,6 +94,6 @@ export function ReviewPanel(){
    <div style={{display:"flex",alignItems:"center",gap:10,marginTop:14}}>{item.partOfSpeech&&<span className="context" style={{margin:0,padding:"3px 10px"}}>{item.partOfSpeech}</span>}<button aria-label="播放發音" onClick={speak} style={{border:0,borderRadius:"50%",width:36,height:36,background:"var(--mint)",color:"var(--ink)",cursor:"pointer"}}>🔊</button></div>
    {item.example&&<p className="context"><strong>{item.example}</strong>{item.exampleTranslation&&<><br/><span>{item.exampleTranslation}</span></>}</p>}
   </>)}
- </section>:<section className="card"><h2>目前沒有到期項目</h2><p className="lead">可開始的新詞：{queue.new.length} 個；今日允許新增上限：{queue.policy.newAllowance} 個。</p></section>}
+ </section>:<section className="card"><h2>目前沒有到期項目</h2><p className="lead">今日新詞已用完（上限 {queue.policy.newVocabLimit} 個）。想繼續練習可以再多學一批，不會影響間隔複習排程。</p><button className="primary" disabled={extraBusy} onClick={loadMore}>{extraBusy?"載入中…":"再複習一次"}</button></section>}
  </main>
 }
