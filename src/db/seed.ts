@@ -42,11 +42,11 @@ const extraExercises=[
 ];
 for(const exercise of extraExercises)await db.insert(s.exercises).values({id:exercise.id,learningUnitId:exercise.unitId,position:exercise.position,type:exercise.type,prompt:exercise.prompt,content:exercise.content,answer:exercise.answer,feedback:exercise.feedback}).onConflictDoUpdate({target:s.exercises.id,set:{prompt:exercise.prompt,content:exercise.content,answer:exercise.answer,feedback:exercise.feedback}});
 const audioDrafts=[
- {id:"60000000-0000-4000-8000-000000000001",unitId:ids.unit,exerciseId:"10000000-0000-4000-8000-000000000002",text:"We don't have the final numbers yet, so let's hold off on sending the report."},
- {id:"60000000-0000-4000-8000-000000000002",unitId:extraCourses[0].unitId,exerciseId:"10000000-0000-4000-8000-000000000021",text:"We're on track to finish the draft today, but we're still waiting on the final cost estimate. I'll send you an update by four."},
- {id:"60000000-0000-4000-8000-000000000003",unitId:extraCourses[1].unitId,exerciseId:"10000000-0000-4000-8000-000000000031",text:"Could we move it to Friday morning? Friday works for me. Would ten o'clock work for you?"},
+ {id:"60000000-0000-4000-8000-000000000001",unitId:ids.unit,exerciseId:"10000000-0000-4000-8000-000000000002",text:"We don't have the final numbers yet, so let's hold off on sending the report.",translation:"我們還沒有最終的數字，所以先暫緩寄出報告吧。"},
+ {id:"60000000-0000-4000-8000-000000000002",unitId:extraCourses[0].unitId,exerciseId:"10000000-0000-4000-8000-000000000021",text:"We're on track to finish the draft today, but we're still waiting on the final cost estimate. I'll send you an update by four.",translation:"我們今天可以照計畫完成草稿，但還在等最終的成本估算。我會在四點前給你最新進度。"},
+ {id:"60000000-0000-4000-8000-000000000003",unitId:extraCourses[1].unitId,exerciseId:"10000000-0000-4000-8000-000000000031",text:"Could we move it to Friday morning? Friday works for me. Would ten o'clock work for you?",translation:"我們可以把它改到星期五早上嗎？星期五對我來說可以。十點對你方便嗎？"},
 ];
-for(const audio of audioDrafts)await db.insert(s.audioAssets).values({id:audio.id,learningUnitId:audio.unitId,exerciseId:audio.exerciseId,languageId:ids.en,text:audio.text,generationMethod:"local_tts",reviewStatus:"pending_generation",contentVersion:1}).onConflictDoUpdate({target:[s.audioAssets.exerciseId,s.audioAssets.contentVersion],set:{text:audio.text}});
+for(const audio of audioDrafts)await db.insert(s.audioAssets).values({id:audio.id,learningUnitId:audio.unitId,exerciseId:audio.exerciseId,languageId:ids.en,text:audio.text,translation:audio.translation,generationMethod:"local_tts",reviewStatus:"pending_generation",contentVersion:1}).onConflictDoUpdate({target:[s.audioAssets.exerciseId,s.audioAssets.contentVersion],set:{text:audio.text,translation:audio.translation}});
 
 const vocabulary=[
  ["on track","進度符合計畫","按計畫進行","We're on track to finish the draft by Thursday.",extraCourses[0].unitId],
