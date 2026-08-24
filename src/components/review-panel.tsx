@@ -3,10 +3,11 @@ import { useEffect,useMemo,useState } from "react";
 import { randomUUID } from "@/lib/client-id";
 
 type Pool={form:string;translation:string|null};
-type Due={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;example:string|null;exampleTranslation:string|null;dimension:"reading_recognition"|"listening_recognition"|"active_recall";nextReviewAt:string;reviewCount:number};
+type Due={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;example:string|null;exampleTranslation:string|null;dimension:"reading_recognition"|"listening_recognition"|"active_recall";proficiency:number;reviewCount:number};
 type Fresh={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;example:string|null;exampleTranslation:string|null};
 type Queue={due:Due[];new:Fresh[];pool:Pool[];policy:{newAllowance:number;dueCount:number;newVocabLimit:number}};
 
+const PROFICIENCY_MAX=100;
 const labels={reading_recognition:"閱讀辨識",listening_recognition:"聽力辨識",active_recall:"主動提取"};
 const challengeTypes=["recognize_en","recognize_zh","spell"] as const;
 type ChallengeType=typeof challengeTypes[number];
@@ -29,14 +30,14 @@ export function ReviewPanel(){
   const result=await load(true);
   setExtraBusy(false);
   if(!result)return;
-  setExtraMessage(result.due.length||result.new.length?"":"目前真的沒有更多新詞了，等到期複習時間到了再回來。");
+  setExtraMessage(result.due.length||result.new.length?"":"目前真的沒有更多新詞了，等熟練度掉下來再回來。");
   setQueue(result);
  }
 
  const dueItem=queue?.due[0];
  const freshItem=!dueItem?queue?.new[0]:undefined;
  const isFirstLearning=!dueItem&&Boolean(freshItem);
- const item=dueItem??(freshItem?{...freshItem,dimension:"reading_recognition" as const,nextReviewAt:"",reviewCount:0}:undefined);
+ const item=dueItem??(freshItem?{...freshItem,dimension:"reading_recognition" as const,proficiency:0,reviewCount:0}:undefined);
  const challengeType:ChallengeType|undefined=item?challengeTypes[item.reviewCount%3]:undefined;
  const showEnglishOptions=challengeType==="recognize_zh";
 
@@ -69,25 +70,20 @@ export function ReviewPanel(){
   for(const part of parts){const utterance=new SpeechSynthesisUtterance(part.text);utterance.lang=part.lang;window.speechSynthesis.speak(utterance)}
  }
 
- function describeSchedule(state:{intervalDays:number;nextReviewAt:string}){
-  const minutesUntil=Math.round((new Date(state.nextReviewAt).getTime()-Date.now())/60000);
-  if(minutesUntil<60)return`已安排 ${Math.max(minutesUntil,1)} 分鐘後再複習`;
-  if(state.intervalDays<=1)return"已安排明天複習";
-  return`已安排 ${state.intervalDays} 天後複習`;
- }
- async function submitReview(rating:"forgot"|"hard"|"mastered"|"too_easy"){
-  if(!item)return;setBusy(true);
-  const response=await fetch("/api/reviews",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({userVocabularyId:item.userVocabularyId,dimension:item.dimension,clientEventId:randomUUID(),isCorrect:checked?.correct??false,rating})});
+ async function acknowledge(){
+  if(!item||!checked)return;setBusy(true);
+  const response=await fetch("/api/reviews",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({userVocabularyId:item.userVocabularyId,dimension:item.dimension,clientEventId:randomUUID(),isCorrect:checked.correct})});
   const result=await response.json();
-  if(response.ok){setMessage(describeSchedule(result.state));const next=await load();if(next)setQueue(next)}
+  if(response.ok)setMessage(`熟練度 ${result.proficiency}/${PROFICIENCY_MAX}（近 5 天內每天最高分累計）`);
+  const next=await load();if(next)setQueue(next);
   setBusy(false);
  }
 
  const prompts:Record<ChallengeType,string>={recognize_en:"這個字的意思是？",recognize_zh:"哪個英文字是這個意思？",spell:"請拼出這個字："};
 
- return <main className="shell"><p className="eyebrow">到期複習</p><h1>先處理需要回想的內容。</h1><p className="lead">閱讀、聽力與主動提取分開安排；新的詞彙只會填入剩餘量。</p>
+ return <main className="shell"><p className="eyebrow">複習</p><h1>先處理最需要加強的內容。</h1><p className="lead">依熟練度由低到高排序；每字近 5 天內每天最高分累計，最高 {PROFICIENCY_MAX} 分，不練會掉分。</p>
  {!queue?<section className="card">載入中…</section>:item&&challengeType?<section className="card">
-  <span className="label">{isFirstLearning?`首次學習 · 可學 ${queue.new.length}`:`${labels[item.dimension]} · 剩餘 ${queue.due.length}`}</span>
+  <span className="label">{isFirstLearning?`首次學習 · 可學 ${queue.new.length}`:`${labels[item.dimension]} · 熟練度 ${item.proficiency}/${PROFICIENCY_MAX} · 剩餘 ${queue.due.length}`}</span>
   {challengeType==="recognize_en"&&<h1 style={{fontSize:30}}>{item.form}</h1>}
   {(challengeType==="recognize_zh"||challengeType==="spell")&&<h1 style={{fontSize:30}}>{item.translation??item.form}</h1>}
   <span className="label">{prompts[challengeType]}</span>
@@ -96,12 +92,11 @@ export function ReviewPanel(){
    {!checked&&<button className="primary" onClick={checkSpelling} disabled={!spelling.trim()}>檢查拼字</button>}
   </>:<div className="options">{options.map(label=><button key={label} className={`option${selectedOption===label?" selected":""}`} disabled={Boolean(checked)} onClick={()=>checkOption(label)}>{label}</button>)}</div>}
   {checked&&(message?<p className="context" role="status">{message}</p>:busy?<p className="context" role="status">安排下一個中…</p>:<>
-   {checked.correct?<div className="review-ratings"><button disabled={busy} onClick={()=>submitReview("hard")}>困難</button><button disabled={busy} onClick={()=>submitReview("mastered")}>掌握</button><button disabled={busy} onClick={()=>submitReview("too_easy")}>太容易</button></div>
-   :<button className="primary" disabled={busy} onClick={()=>submitReview("forgot")}>知道了，下一個</button>}
+   <button className="primary" disabled={busy} onClick={acknowledge}>下一個</button>
    <div className={`feedback ${checked.correct?"correct":"wrong"}`} role="status"><strong>{checked.correct?"答對了":"再記一次"}</strong>{!checked.correct&&<div>正確答案：{item.form}{item.translation?`（${item.translation}）`:""}</div>}</div>
    <div style={{display:"flex",alignItems:"center",gap:10,marginTop:14}}>{item.partOfSpeech&&<span className="context" style={{margin:0,padding:"3px 10px"}}>{item.partOfSpeech}</span>}<button aria-label="播放發音" onClick={speak} style={{border:0,borderRadius:"50%",width:36,height:36,background:"var(--mint)",color:"var(--ink)",cursor:"pointer"}}>🔊</button></div>
    {item.example&&<p className="context"><strong>{item.example}</strong>{item.exampleTranslation&&<><br/><span>{item.exampleTranslation}</span></>}</p>}
   </>)}
- </section>:<section className="card"><h2>目前沒有到期項目</h2><p className="lead">今日新詞已用完（上限 {queue.policy.newVocabLimit} 個）。想繼續練習可以再多學一批，不會影響間隔複習排程。</p><button className="primary" disabled={extraBusy} onClick={loadMore}>{extraBusy?"載入中…":"再複習一次"}</button>{extraMessage&&<p className="context" role="status">{extraMessage}</p>}</section>}
+ </section>:<section className="card"><h2>目前沒有需要加強的項目</h2><p className="lead">今日新詞已用完（上限 {queue.policy.newVocabLimit} 個）。想繼續練習可以再多學一批。</p><button className="primary" disabled={extraBusy} onClick={loadMore}>{extraBusy?"載入中…":"再複習一次"}</button>{extraMessage&&<p className="context" role="status">{extraMessage}</p>}</section>}
  </main>
 }
