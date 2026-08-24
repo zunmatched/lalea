@@ -17,9 +17,17 @@ export async function POST(request:Request){
  if(senses.length>1&&!data.selectedSenseId)return Response.json({status:"needs_selection",matches:senses});
  const selected=data.selectedSenseId?senses.find(s=>s.id===data.selectedSenseId):senses[0];
  if(selected){
-  const[record]=await db.insert(userVocabulary).values({userLearningPathId:path.id,lexemeSenseId:selected.id}).onConflictDoUpdate({target:[userVocabulary.userLearningPathId,userVocabulary.lexemeSenseId],set:{status:"ready_to_learn"}}).returning();
+  const[existingVocab]=await db.select({id:userVocabulary.id,status:userVocabulary.status}).from(userVocabulary).where(and(eq(userVocabulary.userLearningPathId,path.id),eq(userVocabulary.lexemeSenseId,selected.id))).limit(1);
+  let record:{id:string;status:string};
+  if(existingVocab){
+   record=existingVocab.status==="ignored"
+    ?await db.update(userVocabulary).set({status:"ready_to_learn"}).where(eq(userVocabulary.id,existingVocab.id)).returning({id:userVocabulary.id,status:userVocabulary.status}).then(rows=>rows[0])
+    :existingVocab;
+  } else {
+   [record]=await db.insert(userVocabulary).values({userLearningPathId:path.id,lexemeSenseId:selected.id}).returning({id:userVocabulary.id,status:userVocabulary.status});
+  }
   if(data.originalSentence||data.note)await db.insert(vocabularyContexts).values({userVocabularyId:record.id,originalSentence:data.originalSentence,note:data.note});
-  return Response.json({status:"ready_to_learn",vocabularyId:record.id,sense:selected},{status:201});
+  return Response.json({status:record.status,vocabularyId:record.id,sense:selected},{status:201});
  }
  const[existing]=await db.select().from(vocabularyInjectionTasks).where(and(eq(vocabularyInjectionTasks.userLearningPathId,path.id),eq(vocabularyInjectionTasks.normalizedText,normalized),inArray(vocabularyInjectionTasks.status,["captured","needs_enrichment","needs_review"]))).limit(1);
  if(existing)return Response.json({status:existing.status,taskId:existing.id,idempotent:true});

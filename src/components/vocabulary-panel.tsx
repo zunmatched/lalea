@@ -22,7 +22,8 @@ export function VocabularyPanel(){
   const response=await fetch("/api/vocabulary/injections",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({rawText,originalSentence:sentence||undefined,selectedSenseId})});const result=await response.json();setBusy(false);
   if(result.status==="needs_selection"){setMatches(result.matches);setMessage("找到多個詞義，請選擇這次遇到的意思。");return}
   if(result.status==="needs_enrichment"){setMatches([]);setMessage("已保存，等待補齊與人工審核；目前不會進入正式學習。");return}
-  if(result.status==="ready_to_learn"){setMatches([]);setRawText("");setSentence("");setMessage("已加入詞彙庫，將安排首次學習。");await load()}
+  const progressMessage:Record<string,string>={ready_to_learn:"已加入詞彙庫，將安排首次學習。",learning:"這個字你已經在學習中，進度不會被重設。",learned:"這個字你已經學會了，進度不會被重設。"};
+  if(result.status in progressMessage){setMatches([]);setRawText("");setSentence("");setMessage(progressMessage[result.status]);await load()}
  }
  const unique=[...new Map(items.map(item=>[item.id,item])).values()];
  const statusLabels:Record<string,string>={ready_to_learn:"等待首次學習",learning:"學習中",learned:"已學會",ignored:"已暫時忽略"};

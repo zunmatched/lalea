@@ -20,10 +20,18 @@ export function ReviewPanel(){
  const[spelling,setSpelling]=useState("");
  const[checked,setChecked]=useState<{correct:boolean}|null>(null);
  const[extraBusy,setExtraBusy]=useState(false);
+ const[extraMessage,setExtraMessage]=useState("");
 
- async function load(more=false){const response=await fetch(`/api/reviews/queue${more?"?more=1":""}`);if(response.ok)setQueue(await response.json())}
- useEffect(()=>{let active=true;fetch("/api/reviews/queue").then(r=>r.ok?r.json():null).then(result=>{if(active)setQueue(result)}).catch(()=>null);return()=>{active=false}},[]);
- async function loadMore(){setExtraBusy(true);await load(true);setExtraBusy(false)}
+ async function load(more=false){const response=await fetch(`/api/reviews/queue${more?"?more=1":""}`);if(response.ok)return(await response.json())as Queue;return null}
+ useEffect(()=>{let active=true;load().then(result=>{if(active&&result)setQueue(result)});return()=>{active=false}},[]);
+ async function loadMore(){
+  setExtraBusy(true);setExtraMessage("");
+  const result=await load(true);
+  setExtraBusy(false);
+  if(!result)return;
+  setExtraMessage(result.due.length||result.new.length?"":"目前真的沒有更多新詞了，等到期複習時間到了再回來。");
+  setQueue(result);
+ }
 
  const dueItem=queue?.due[0];
  const freshItem=!dueItem?queue?.new[0]:undefined;
@@ -40,7 +48,7 @@ export function ReviewPanel(){
  },[item?.userVocabularyId,item?.form,item?.translation,challengeType,queue,showEnglishOptions]);
 
  const[shownItemId,setShownItemId]=useState(item?.userVocabularyId);
- if(item?.userVocabularyId!==shownItemId){setShownItemId(item?.userVocabularyId);setSelectedOption(null);setSpelling("");setChecked(null);setMessage("")}
+ if(item?.userVocabularyId!==shownItemId){setShownItemId(item?.userVocabularyId);setSelectedOption(null);setSpelling("");setChecked(null);setMessage("");setExtraMessage("")}
 
  function checkOption(label:string){
   if(!item||checked)return;
@@ -71,7 +79,7 @@ export function ReviewPanel(){
   if(!item)return;setBusy(true);
   const response=await fetch("/api/reviews",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({userVocabularyId:item.userVocabularyId,dimension:item.dimension,clientEventId:randomUUID(),isCorrect:checked?.correct??false,rating})});
   const result=await response.json();
-  if(response.ok){setMessage(describeSchedule(result.state));await load()}
+  if(response.ok){setMessage(describeSchedule(result.state));const next=await load();if(next)setQueue(next)}
   setBusy(false);
  }
 
@@ -94,6 +102,6 @@ export function ReviewPanel(){
    <div style={{display:"flex",alignItems:"center",gap:10,marginTop:14}}>{item.partOfSpeech&&<span className="context" style={{margin:0,padding:"3px 10px"}}>{item.partOfSpeech}</span>}<button aria-label="播放發音" onClick={speak} style={{border:0,borderRadius:"50%",width:36,height:36,background:"var(--mint)",color:"var(--ink)",cursor:"pointer"}}>🔊</button></div>
    {item.example&&<p className="context"><strong>{item.example}</strong>{item.exampleTranslation&&<><br/><span>{item.exampleTranslation}</span></>}</p>}
   </>)}
- </section>:<section className="card"><h2>目前沒有到期項目</h2><p className="lead">今日新詞已用完（上限 {queue.policy.newVocabLimit} 個）。想繼續練習可以再多學一批，不會影響間隔複習排程。</p><button className="primary" disabled={extraBusy} onClick={loadMore}>{extraBusy?"載入中…":"再複習一次"}</button></section>}
+ </section>:<section className="card"><h2>目前沒有到期項目</h2><p className="lead">今日新詞已用完（上限 {queue.policy.newVocabLimit} 個）。想繼續練習可以再多學一批，不會影響間隔複習排程。</p><button className="primary" disabled={extraBusy} onClick={loadMore}>{extraBusy?"載入中…":"再複習一次"}</button>{extraMessage&&<p className="context" role="status">{extraMessage}</p>}</section>}
  </main>
 }
