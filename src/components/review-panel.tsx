@@ -25,7 +25,7 @@ export function ReviewPanel(){
  const[extraBusy,setExtraBusy]=useState(false);
  const[extraMessage,setExtraMessage]=useState("");
 
- async function load(more=false){const response=await fetch(`/api/reviews/queue${more?"?more=1":""}`);if(response.ok)return(await response.json())as Queue;return null}
+ async function load(more=false){try{const response=await fetch(`/api/reviews/queue${more?"?more=1":""}`);if(response.ok)return(await response.json())as Queue;return null}catch{return null}}
  useEffect(()=>{let active=true;load().then(result=>{if(active&&result)setQueue(result)});return()=>{active=false}},[]);
  async function loadMore(){
   setExtraBusy(true);setExtraMessage("");
@@ -83,13 +83,20 @@ export function ReviewPanel(){
 
  async function acknowledge(){
   if(!item||!checked)return;setBusy(true);
-  const response=await fetch("/api/reviews",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({userVocabularyId:item.userVocabularyId,dimension:item.dimension,clientEventId:randomUUID(),isCorrect:checked.correct})});
-  const result=await response.json();
-  if(response.ok)setMessage(`熟練度 ${result.proficiency}/${PROFICIENCY_MAX}（近 5 天內每天最高分累計）`);
-  await new Promise(resolve=>setTimeout(resolve,900));
-  const next=await load();if(next)setQueue(next);
-  setSelectedOption(null);setSpelling("");setChecked(null);setMessage("");
-  setBusy(false);
+  try{
+   const response=await fetch("/api/reviews",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({userVocabularyId:item.userVocabularyId,dimension:item.dimension,clientEventId:randomUUID(),isCorrect:checked.correct})});
+   if(response.ok){
+    const result=await response.json();
+    setMessage(`熟練度 ${result.proficiency}/${PROFICIENCY_MAX}（近 5 天內每天最高分累計）`);
+    await new Promise(resolve=>setTimeout(resolve,900));
+   }
+   const next=await load();if(next)setQueue(next);
+  }catch{
+   // network hiccup: fall through to clearing state below so the panel never freezes
+  }finally{
+   setSelectedOption(null);setSpelling("");setChecked(null);setMessage("");
+   setBusy(false);
+  }
  }
 
  const prompts:Record<ChallengeType,string>={recognize_en:"這個字的意思是？",recognize_zh:"哪個英文字是這個意思？",spell:"請拼出這個字：",dictation:"聽發音，拼出這個字，並選出正確的中文意思："};
