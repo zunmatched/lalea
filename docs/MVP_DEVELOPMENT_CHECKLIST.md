@@ -1,8 +1,10 @@
 # LaLea MVP 開發範圍凍結與執行清單
 
-> 狀態：等待使用者確認開始開發  
+> 狀態：開發中（Phase A–D 已完成，Phase E 暫緩）  
 > 最後更新：2026-08-21  
 > 本文件完成後停止增加開發前規格
+>
+> **2026-08-24 更新**：確定不對外公開部署，僅透過 Tailscale 私人網路個人使用。Phase E（Passkey 登入、固定公開網域、HTTPS、正式 Linux 部署）暫緩，不在目前開發範圍——細節見 `AUTHENTICATION_PLAN.md`、`LINUX_DEPLOYMENT_PLAN.md` 的對應更新。`DEV_AUTH_ENABLED` 視為目前的正式使用方式。
 
 ## 1. 已確認產品目標
 

@@ -38,4 +38,6 @@ pnpm build
 
 ## 範圍
 
-產品與架構基準請參考 `PRODUCT_ARCHITECTURE.md`、`IMPLEMENTATION_ARCHITECTURE.md` 與 `MVP_DEVELOPMENT_CHECKLIST.md`。YouTube、自動 AI、開放式回答和專業課程不在目前 MVP 內。
+產品與架構基準請參考 `docs/PRODUCT_ARCHITECTURE.md` 與 `docs/MVP_DEVELOPMENT_CHECKLIST.md`。YouTube、自動 AI、開放式回答和專業課程不在目前 MVP 內。
+
+正式帳號登入（Passkey）與公開網域部署已暫緩，目前僅透過 Tailscale 私人網路個人使用，細節見 `docs/AUTHENTICATION_PLAN.md`、`docs/LINUX_DEPLOYMENT_PLAN.md`。
