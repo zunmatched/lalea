@@ -1,6 +1,7 @@
 "use client";
 import { useEffect,useMemo,useState } from "react";
 import { randomUUID } from "@/lib/client-id";
+import { speakSequence } from "@/lib/speech";
 
 type Pool={form:string;translation:string|null};
 type Due={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;example:string|null;exampleTranslation:string|null;dimension:"reading_recognition"|"listening_recognition"|"active_recall";proficiency:number;reviewCount:number};
@@ -9,9 +10,10 @@ type Queue={due:Due[];new:Fresh[];pool:Pool[];policy:{newAllowance:number;dueCou
 
 const PROFICIENCY_MAX=100;
 const labels={reading_recognition:"閱讀辨識",listening_recognition:"聽力辨識",active_recall:"主動提取"};
-const challengeTypes=["recognize_en","recognize_zh","spell"] as const;
+const challengeTypes=["recognize_en","recognize_zh","spell","dictation"] as const;
 type ChallengeType=typeof challengeTypes[number];
 function shuffle<T>(items:T[]):T[]{return [...items].sort(()=>Math.random()-0.5)}
+function spellHint(form:string){const words=form.trim().split(/\s+/);const letters=words.join("").length;return`共 ${letters} 個字母${words.length>1?`（${words.length} 個單字）`:""}，開頭字母：${words[0][0].toUpperCase()}`}
 
 export function ReviewPanel(){
  const[queue,setQueue]=useState<Queue|null>(null);
@@ -38,7 +40,7 @@ export function ReviewPanel(){
  const freshItem=!dueItem?queue?.new[0]:undefined;
  const isFirstLearning=!dueItem&&Boolean(freshItem);
  const item=dueItem??(freshItem?{...freshItem,dimension:"reading_recognition" as const,proficiency:0,reviewCount:0}:undefined);
- const challengeType:ChallengeType|undefined=item?challengeTypes[item.reviewCount%3]:undefined;
+ const challengeType:ChallengeType|undefined=item?challengeTypes[item.reviewCount%challengeTypes.length]:undefined;
  const showEnglishOptions=challengeType==="recognize_zh";
 
  const options=useMemo(()=>{
@@ -60,14 +62,23 @@ export function ReviewPanel(){
   if(!item||checked||!spelling.trim())return;
   setChecked({correct:spelling.trim().toLowerCase()===item.form.toLowerCase()});
  }
+ function checkDictation(){
+  if(!item||checked||!spelling.trim()||!selectedOption)return;
+  const spellingCorrect=spelling.trim().toLowerCase()===item.form.toLowerCase();
+  const optionCorrect=selectedOption===(item.translation??item.form);
+  setChecked({correct:spellingCorrect&&optionCorrect});
+ }
+ function playWord(){
+  if(!item)return;
+  speakSequence([{text:item.form,lang:"en-US"}]);
+ }
  function speak(){
-  if(!item||!("speechSynthesis"in window))return;
-  window.speechSynthesis.cancel();
+  if(!item)return;
   const parts:Array<{text:string;lang:string}>=[{text:item.form,lang:"en-US"}];
   if(item.translation)parts.push({text:item.translation,lang:"zh-TW"});
   if(item.example)parts.push({text:item.example,lang:"en-US"});
   if(item.exampleTranslation)parts.push({text:item.exampleTranslation,lang:"zh-TW"});
-  for(const part of parts){const utterance=new SpeechSynthesisUtterance(part.text);utterance.lang=part.lang;window.speechSynthesis.speak(utterance)}
+  speakSequence(parts);
  }
 
  async function acknowledge(){
@@ -79,7 +90,7 @@ export function ReviewPanel(){
   setBusy(false);
  }
 
- const prompts:Record<ChallengeType,string>={recognize_en:"這個字的意思是？",recognize_zh:"哪個英文字是這個意思？",spell:"請拼出這個字："};
+ const prompts:Record<ChallengeType,string>={recognize_en:"這個字的意思是？",recognize_zh:"哪個英文字是這個意思？",spell:"請拼出這個字：",dictation:"聽發音，拼出這個字，並選出正確的中文意思："};
 
  return <main className="shell"><p className="eyebrow">複習</p><h1>先處理最需要加強的內容。</h1><p className="lead">依熟練度由低到高排序；每字近 5 天內每天最高分累計，最高 {PROFICIENCY_MAX} 分，不練會掉分。</p>
  {!queue?<section className="card">載入中…</section>:item&&challengeType?<section className="card">
@@ -87,12 +98,21 @@ export function ReviewPanel(){
   {challengeType==="recognize_en"&&<h1 style={{fontSize:30}}>{item.form}</h1>}
   {(challengeType==="recognize_zh"||challengeType==="spell")&&<h1 style={{fontSize:30}}>{item.translation??item.form}</h1>}
   <span className="label">{prompts[challengeType]}</span>
-  {challengeType==="spell"?<>
+  {challengeType==="spell"&&<>
    {item.partOfSpeech&&<span className="context" style={{display:"inline-block",margin:"0 0 10px",padding:"3px 10px"}}>{item.partOfSpeech}</span>}
-   <p className="lead" style={{margin:"0 0 14px"}}>{(()=>{const words=item.form.trim().split(/\s+/);const letters=words.join("").length;return`共 ${letters} 個字母${words.length>1?`（${words.length} 個單字）`:""}，開頭字母：${words[0][0].toUpperCase()}`})()}</p>
+   <p className="lead" style={{margin:"0 0 14px"}}>{spellHint(item.form)}</p>
    <input className="text-input" value={spelling} onChange={event=>setSpelling(event.target.value)} disabled={Boolean(checked)} placeholder="輸入英文拼字" onKeyDown={event=>event.key==="Enter"&&checkSpelling()}/>
    {!checked&&<button className="primary" onClick={checkSpelling} disabled={!spelling.trim()}>檢查拼字</button>}
-  </>:<div className="options">{options.map(label=><button key={label} className={`option${selectedOption===label?" selected":""}`} disabled={Boolean(checked)} onClick={()=>checkOption(label)}>{label}</button>)}</div>}
+  </>}
+  {challengeType==="dictation"&&<>
+   <button aria-label="播放發音" onClick={playWord} style={{border:0,borderRadius:16,background:"var(--mint)",color:"var(--ink)",cursor:"pointer",padding:"12px 18px",fontWeight:800,marginBottom:14}}>🔊 播放發音</button>
+   {item.partOfSpeech&&<span className="context" style={{display:"inline-block",margin:"0 0 10px",padding:"3px 10px"}}>{item.partOfSpeech}</span>}
+   <p className="lead" style={{margin:"0 0 14px"}}>{spellHint(item.form)}</p>
+   <input className="text-input" value={spelling} onChange={event=>setSpelling(event.target.value)} disabled={Boolean(checked)} placeholder="輸入聽到的英文拼字"/>
+   <div className="options">{options.map(label=><button key={label} className={`option${selectedOption===label?" selected":""}`} disabled={Boolean(checked)} onClick={()=>setSelectedOption(label)}>{label}</button>)}</div>
+   {!checked&&<button className="primary" onClick={checkDictation} disabled={!spelling.trim()||!selectedOption}>檢查答案</button>}
+  </>}
+  {(challengeType==="recognize_en"||challengeType==="recognize_zh")&&<div className="options">{options.map(label=><button key={label} className={`option${selectedOption===label?" selected":""}`} disabled={Boolean(checked)} onClick={()=>checkOption(label)}>{label}</button>)}</div>}
   {checked&&(message?<p className="context" role="status">{message}</p>:busy?<p className="context" role="status">安排下一個中…</p>:<>
    <button className="primary" disabled={busy} onClick={acknowledge}>下一個</button>
    <div className={`feedback ${checked.correct?"correct":"wrong"}`} role="status"><strong>{checked.correct?"答對了":"再記一次"}</strong>{!checked.correct&&<div>正確答案：{item.form}{item.translation?`（${item.translation}）`:""}</div>}</div>
