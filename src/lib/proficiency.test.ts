@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { computeProficiency, PROFICIENCY_MAX } from "./proficiency";
+import { computeProficiency, PROFICIENCY_MAX, reviewedOnDay } from "./proficiency";
 
 const day = (offset: number) => new Date(Date.UTC(2026, 0, 10 + offset, 4, 0, 0)); // ~noon Asia/Taipei
 
@@ -34,5 +34,17 @@ describe("computeProficiency", () => {
   it("keeps a day exactly at the 5-day edge", () => {
     const events = [{ isCorrect: true, createdAt: day(-4) }];
     expect(computeProficiency(events, day(0))).toBe(20);
+  });
+});
+
+describe("reviewedOnDay", () => {
+  it("is false with no events", () => {
+    expect(reviewedOnDay([], day(0))).toBe(false);
+  });
+  it("is true for a correct or incorrect review the same day", () => {
+    expect(reviewedOnDay([{ isCorrect: false, createdAt: day(0) }], day(0))).toBe(true);
+  });
+  it("is false when the only review was on a different day", () => {
+    expect(reviewedOnDay([{ isCorrect: true, createdAt: day(-1) }], day(0))).toBe(false);
   });
 });

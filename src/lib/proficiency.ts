@@ -22,3 +22,8 @@ export function computeProficiency(events: ProficiencyEvent[], now = new Date(),
   for (const correct of bestByDay.values()) if (correct) score += PROFICIENCY_DAY_POINTS;
   return score;
 }
+
+export function reviewedOnDay(events: ProficiencyEvent[], day: Date, timeZone = TIME_ZONE) {
+  const key = dayKey(day, timeZone);
+  return events.some((event) => dayKey(event.createdAt, timeZone) === key);
+}

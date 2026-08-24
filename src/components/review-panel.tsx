@@ -1,12 +1,14 @@
 "use client";
-import { useEffect,useMemo,useState } from "react";
+import { useEffect,useMemo,useRef,useState } from "react";
 import { randomUUID } from "@/lib/client-id";
 import { speakSequence } from "@/lib/speech";
 
 type Pool={form:string;translation:string|null};
-type Due={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;example:string|null;exampleTranslation:string|null;dimension:"reading_recognition"|"listening_recognition"|"active_recall";proficiency:number;reviewCount:number};
+type Due={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;example:string|null;exampleTranslation:string|null;dimension:"reading_recognition"|"listening_recognition"|"active_recall";proficiency:number;reviewCount:number;reviewedToday:boolean};
 type Fresh={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;example:string|null;exampleTranslation:string|null};
 type Queue={due:Due[];new:Fresh[];pool:Pool[];policy:{newAllowance:number;dueCount:number;newVocabLimit:number}};
+type SessionItem=(Due&{isNew:false})|(Fresh&{isNew:true;dimension:"reading_recognition";proficiency:0;reviewCount:0});
+type Source={key:string;label:string;due:number;new:number};
 
 const PROFICIENCY_MAX=100;
 const labels={reading_recognition:"閱讀辨識",listening_recognition:"聽力辨識",active_recall:"主動提取"};
@@ -14,64 +16,75 @@ const challengeTypes=["recognize_en","recognize_zh","spell","dictation"] as cons
 type ChallengeType=typeof challengeTypes[number];
 function shuffle<T>(items:T[]):T[]{return [...items].sort(()=>Math.random()-0.5)}
 function spellHint(form:string){const words=form.trim().split(/\s+/);const letters=words.join("").length;return`共 ${letters} 個字母${words.length>1?`（${words.length} 個單字）`:""}，開頭字母：${words[0][0].toUpperCase()}`}
+const emptyQueue:Queue={due:[],new:[],pool:[],policy:{newAllowance:0,dueCount:0,newVocabLimit:0}};
 
 export function ReviewPanel(){
- const[queue,setQueue]=useState<Queue|null>(null);
+ const[sources,setSources]=useState<Source[]|null>(null);
+ const[activeSource,setActiveSource]=useState<Source|null>(null);
+ const[pool,setPool]=useState<Pool[]>([]);
+ const[session,setSession]=useState<SessionItem[]|null>(null);
+ const[sessionIndex,setSessionIndex]=useState(0);
+ const[correctCount,setCorrectCount]=useState(0);
  const[message,setMessage]=useState("");
- const[busy,setBusy]=useState(false);
  const[selectedOption,setSelectedOption]=useState<string|null>(null);
  const[spelling,setSpelling]=useState("");
  const[checked,setChecked]=useState<{correct:boolean}|null>(null);
- const[extraBusy,setExtraBusy]=useState(false);
- const[extraMessage,setExtraMessage]=useState("");
+ const sessionIndexRef=useRef(sessionIndex);
+ useEffect(()=>{sessionIndexRef.current=sessionIndex},[sessionIndex]);
 
- async function load(more=false){try{const response=await fetch(`/api/reviews/queue${more?"?more=1":""}`);if(response.ok)return(await response.json())as Queue;return null}catch{return null}}
- useEffect(()=>{let active=true;load().then(result=>{if(active&&result)setQueue(result)});return()=>{active=false}},[]);
- async function loadMore(){
-  setExtraBusy(true);setExtraMessage("");
-  const result=await load(true);
-  setExtraBusy(false);
-  if(!result)return;
-  setExtraMessage(result.due.length||result.new.length?"":"目前真的沒有更多新詞了，等熟練度掉下來再回來。");
-  setQueue(result);
+ function loadSources(){
+  setSources(null);
+  fetch("/api/reviews/sources").then(r=>r.ok?r.json():null).then((data:{sources:Source[]}|null)=>setSources(data?.sources??[])).catch(()=>setSources([]));
  }
+ useEffect(()=>{let active=true;fetch("/api/reviews/sources").then(r=>r.ok?r.json():null).then((data:{sources:Source[]}|null)=>{if(active)setSources(data?.sources??[])}).catch(()=>{if(active)setSources([])});return()=>{active=false}},[]);
 
- const dueItem=queue?.due[0];
- const freshItem=!dueItem?queue?.new[0]:undefined;
- const isFirstLearning=!dueItem&&Boolean(freshItem);
- const item=dueItem??(freshItem?{...freshItem,dimension:"reading_recognition" as const,proficiency:0,reviewCount:0}:undefined);
+ function applySession(data:Queue){
+  const items:SessionItem[]=[
+   ...data.due.map(item=>({...item,isNew:false as const})),
+   ...data.new.map(item=>({...item,isNew:true as const,dimension:"reading_recognition" as const,proficiency:0 as const,reviewCount:0 as const})),
+  ];
+  setPool(data.pool);setSession(items);setSessionIndex(0);setCorrectCount(0);
+  setSelectedOption(null);setSpelling("");setChecked(null);setMessage("");
+ }
+ async function startSession(source:Source){
+  setActiveSource(source);setSession(null);
+  const query=source.key?`?source=${encodeURIComponent(source.key)}`:"";
+  const response=await fetch(`/api/reviews/queue${query}`).catch(()=>null);
+  applySession(response&&response.ok?(await response.json())as Queue:emptyQueue);
+ }
+ function backToMenu(){setActiveSource(null);setSession(null);loadSources()}
+
+ const item=session?.[sessionIndex];
+ const isFirstLearning=item?.isNew??false;
  const challengeType:ChallengeType|undefined=item?challengeTypes[item.reviewCount%challengeTypes.length]:undefined;
  const showEnglishOptions=challengeType==="recognize_zh";
 
  const options=useMemo(()=>{
-  if(!item||!queue||!challengeType||challengeType==="spell")return[];
+  if(!item||!challengeType||challengeType==="spell")return[];
   const correctLabel=showEnglishOptions?item.form:(item.translation??item.form);
-  const distractors=shuffle(queue.pool.filter(p=>p.form!==item.form)).slice(0,3).map(p=>showEnglishOptions?p.form:(p.translation??p.form));
+  const distractors=shuffle(pool.filter(p=>p.form!==item.form)).slice(0,3).map(p=>showEnglishOptions?p.form:(p.translation??p.form));
   return shuffle([...new Set([correctLabel,...distractors])]);
- },[item?.userVocabularyId,item?.form,item?.translation,challengeType,queue,showEnglishOptions]);
-
- const[shownItemId,setShownItemId]=useState(item?.userVocabularyId);
- if(item?.userVocabularyId!==shownItemId){setShownItemId(item?.userVocabularyId);setSelectedOption(null);setSpelling("");setChecked(null);setMessage("");setExtraMessage("")}
+ },[item?.userVocabularyId,item?.form,item?.translation,challengeType,pool,showEnglishOptions]);
 
  function checkOption(label:string){
   if(!item||checked)return;
   const correctLabel=showEnglishOptions?item.form:(item.translation??item.form);
-  setSelectedOption(label);setChecked({correct:label===correctLabel});
+  const correct=label===correctLabel;
+  setSelectedOption(label);setChecked({correct});submitReview(item,correct);
  }
  function checkSpelling(){
   if(!item||checked||!spelling.trim())return;
-  setChecked({correct:spelling.trim().toLowerCase()===item.form.toLowerCase()});
+  const correct=spelling.trim().toLowerCase()===item.form.toLowerCase();
+  setChecked({correct});submitReview(item,correct);
  }
  function checkDictation(){
   if(!item||checked||!spelling.trim()||!selectedOption)return;
   const spellingCorrect=spelling.trim().toLowerCase()===item.form.toLowerCase();
   const optionCorrect=selectedOption===(item.translation??item.form);
-  setChecked({correct:spellingCorrect&&optionCorrect});
+  const correct=spellingCorrect&&optionCorrect;
+  setChecked({correct});submitReview(item,correct);
  }
- function playWord(){
-  if(!item)return;
-  speakSequence([{text:item.form,lang:"en-US"}]);
- }
+ function playWord(){if(item)speakSequence([{text:item.form,lang:"en-US"}])}
  function speak(){
   if(!item)return;
   const parts:Array<{text:string;lang:string}>=[{text:item.form,lang:"en-US"}];
@@ -81,32 +94,54 @@ export function ReviewPanel(){
   speakSequence(parts);
  }
 
- async function acknowledge(){
-  if(!item||!checked)return;setBusy(true);
+ async function submitReview(forItem:SessionItem,correct:boolean){
+  if(correct)setCorrectCount(value=>value+1);
+  const forIndex=sessionIndexRef.current;
   try{
-   const response=await fetch("/api/reviews",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({userVocabularyId:item.userVocabularyId,dimension:item.dimension,clientEventId:randomUUID(),isCorrect:checked.correct})});
+   const response=await fetch("/api/reviews",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({userVocabularyId:forItem.userVocabularyId,dimension:forItem.dimension,clientEventId:randomUUID(),isCorrect:correct})});
    if(response.ok){
     const result=await response.json();
-    setMessage(`熟練度 ${result.proficiency}/${PROFICIENCY_MAX}（近 5 天內每天最高分累計）`);
-    await new Promise(resolve=>setTimeout(resolve,900));
+    if(sessionIndexRef.current===forIndex)setMessage(`熟練度 ${result.proficiency}/${PROFICIENCY_MAX}（近 5 天內每天最高分累計）`);
    }
-   const next=await load();if(next)setQueue(next);
   }catch{
-   // network hiccup: fall through to clearing state below so the panel never freezes
-  }finally{
-   setSelectedOption(null);setSpelling("");setChecked(null);setMessage("");
-   setBusy(false);
+   // network hiccup: the answer already counted locally, just no proficiency readout this time
   }
+ }
+ function acknowledge(){
+  if(!item||!checked)return;
+  setSelectedOption(null);setSpelling("");setChecked(null);setMessage("");
+  setSessionIndex(value=>value+1);
  }
 
  const prompts:Record<ChallengeType,string>={recognize_en:"這個字的意思是？",recognize_zh:"哪個英文字是這個意思？",spell:"請拼出這個字：",dictation:"聽發音，拼出這個字，並選出正確的中文意思："};
 
- return <main className="shell"><p className="eyebrow">複習</p><h1>先處理最需要加強的內容。</h1><p className="lead">依熟練度由低到高排序；每字近 5 天內每天最高分累計，最高 {PROFICIENCY_MAX} 分，不練會掉分。</p>
- {!queue?<section className="card">載入中…</section>:item&&challengeType?<section className="card">
-  <span className="label">{isFirstLearning?`首次學習 · 可學 ${queue.new.length}`:`${labels[item.dimension]} · 熟練度 ${item.proficiency}/${PROFICIENCY_MAX} · 剩餘 ${queue.due.length}`}</span>
+ if(!activeSource){
+  return <main className="shell">
+   <p className="eyebrow">複習</p>
+   <h1>先選要複習的內容。</h1>
+   <section className="card">
+    {sources===null&&<p className="lead">載入中…</p>}
+    {sources!==null&&sources.length===0&&<p className="lead">目前沒有需要複習的內容。</p>}
+    {sources!==null&&sources.length>0&&<div style={{display:"flex",flexDirection:"column",gap:10}}>
+     {sources.map(source=><button key={source.key||"all"} className="option" onClick={()=>startSession(source)} style={{textAlign:"left",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+      <span>{source.label}</span>
+      <span className="context" style={{margin:0}}>待複習 {source.due} · 新字 {source.new}</span>
+     </button>)}
+    </div>}
+   </section>
+  </main>;
+ }
+
+ if(session===null)return <main className="shell"><p className="eyebrow">複習 · {activeSource.label}</p><h1>先處理最需要加強的內容。</h1><section className="card">載入中…</section></main>;
+
+ if(!item)return <main className="shell finish"><div className="mark">✓</div><p className="eyebrow">本輪複習完成</p><h1>{session.length===0?"目前沒有需要複習的內容。":"這輪的內容都練過一次了。"}</h1>{session.length>0&&<div className="stats"><div className="stat"><strong>{correctCount}/{session.length}</strong><span>答對</span></div></div>}<button className="primary resume" onClick={backToMenu}>返回選單</button></main>;
+
+ return <main className="shell"><p className="eyebrow">複習 · {activeSource.label}</p><h1>先處理最需要加強的內容。</h1><p className="lead">依熟練度由低到高排序，本輪固定內容跑完一遍；每字近 5 天內每天最高分累計，最高 {PROFICIENCY_MAX} 分，不練會掉分。</p>
+ <section className="card">
+  <span className="label">{isFirstLearning?"首次學習":labels[item.dimension]} · {isFirstLearning?"":`熟練度 ${item.proficiency}/${PROFICIENCY_MAX} · `}本輪剩餘 {session.length-sessionIndex}</span>
   {challengeType==="recognize_en"&&<h1 style={{fontSize:30}}>{item.form}</h1>}
   {(challengeType==="recognize_zh"||challengeType==="spell")&&<h1 style={{fontSize:30}}>{item.translation??item.form}</h1>}
-  <span className="label">{prompts[challengeType]}</span>
+  <span className="label">{challengeType&&prompts[challengeType]}</span>
   {challengeType==="spell"&&<>
    {item.partOfSpeech&&<span className="context" style={{display:"inline-block",margin:"0 0 10px",padding:"3px 10px"}}>{item.partOfSpeech}</span>}
    <p className="lead" style={{margin:"0 0 14px"}}>{spellHint(item.form)}</p>
@@ -122,12 +157,13 @@ export function ReviewPanel(){
    {!checked&&<button className="primary" onClick={checkDictation} disabled={!spelling.trim()||!selectedOption}>檢查答案</button>}
   </>}
   {(challengeType==="recognize_en"||challengeType==="recognize_zh")&&<div className="options">{options.map(label=><button key={label} className={`option${selectedOption===label?" selected":""}`} disabled={Boolean(checked)} onClick={()=>checkOption(label)}>{label}</button>)}</div>}
-  {checked&&(message?<p className="context" role="status">{message}</p>:busy?<p className="context" role="status">安排下一個中…</p>:<>
-   <button className="primary" disabled={busy} onClick={acknowledge}>下一個</button>
+  {checked&&<>
+   <button className="primary" onClick={acknowledge}>下一個</button>
    <div className={`feedback ${checked.correct?"correct":"wrong"}`} role="status"><strong>{checked.correct?"答對了":"再記一次"}</strong>{!checked.correct&&<div>正確答案：{item.form}{item.translation?`（${item.translation}）`:""}</div>}</div>
+   {message&&<p className="context" role="status">{message}</p>}
    <div style={{display:"flex",alignItems:"center",gap:10,marginTop:14}}>{item.partOfSpeech&&<span className="context" style={{margin:0,padding:"3px 10px"}}>{item.partOfSpeech}</span>}<button aria-label="播放發音" onClick={speak} style={{border:0,borderRadius:"50%",width:36,height:36,background:"var(--mint)",color:"var(--ink)",cursor:"pointer"}}>🔊</button></div>
    {item.example&&<p className="context"><strong>{item.example}</strong>{item.exampleTranslation&&<><br/><span>{item.exampleTranslation}</span></>}</p>}
-  </>)}
- </section>:<section className="card"><h2>目前沒有需要加強的項目</h2><p className="lead">今日新詞已用完（上限 {queue.policy.newVocabLimit} 個）。想繼續練習可以再多學一批。</p><button className="primary" disabled={extraBusy} onClick={loadMore}>{extraBusy?"載入中…":"再複習一次"}</button>{extraMessage&&<p className="context" role="status">{extraMessage}</p>}</section>}
+  </>}
+ </section>
  </main>
 }
