@@ -22,7 +22,7 @@ function startNoise() {
   stopNoise();
   const context = new AudioContext();
   const gain = context.createGain();
-  gain.gain.value = 0.015;
+  gain.gain.value = 0.006;
   const source = context.createBufferSource();
   source.buffer = createNoiseBuffer(context);
   source.loop = true;
