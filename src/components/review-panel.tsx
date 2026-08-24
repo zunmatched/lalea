@@ -117,7 +117,7 @@ export function ReviewPanel(){
 
  if(!activeSource){
   return <main className="shell">
-   <p className="eyebrow">複習</p>
+   <p className="eyebrow">詞彙 · 測驗</p>
    <h1>先選要複習的內容。</h1>
    <section className="card">
     {sources===null&&<p className="lead">載入中…</p>}
@@ -132,11 +132,11 @@ export function ReviewPanel(){
   </main>;
  }
 
- if(session===null)return <main className="shell"><p className="eyebrow">複習 · {activeSource.label}</p><h1>先處理最需要加強的內容。</h1><section className="card">載入中…</section></main>;
+ if(session===null)return <main className="shell"><p className="eyebrow">詞彙 · 測驗 · {activeSource.label}</p><h1>先處理最需要加強的內容。</h1><section className="card">載入中…</section></main>;
 
  if(!item)return <main className="shell finish"><div className="mark">✓</div><p className="eyebrow">本輪複習完成</p><h1>{session.length===0?"目前沒有需要複習的內容。":"這輪的內容都練過一次了。"}</h1>{session.length>0&&<div className="stats"><div className="stat"><strong>{correctCount}/{session.length}</strong><span>答對</span></div></div>}<button className="primary resume" onClick={backToMenu}>返回選單</button></main>;
 
- return <main className="shell"><p className="eyebrow">複習 · {activeSource.label}</p><h1>先處理最需要加強的內容。</h1><p className="lead">依熟練度由低到高排序，本輪固定內容跑完一遍；每字近 5 天內每天最高分累計，最高 {PROFICIENCY_MAX} 分，不練會掉分。</p>
+ return <main className="shell"><p className="eyebrow">詞彙 · 測驗 · {activeSource.label}</p><h1>先處理最需要加強的內容。</h1><p className="lead">依熟練度由低到高排序，本輪固定內容跑完一遍；每字近 5 天內每天最高分累計，最高 {PROFICIENCY_MAX} 分，不練會掉分。</p>
  <section className="card">
   <span className="label">{isFirstLearning?"首次學習":labels[item.dimension]} · {isFirstLearning?"":`熟練度 ${item.proficiency}/${PROFICIENCY_MAX} · `}本輪剩餘 {session.length-sessionIndex}</span>
   {challengeType==="recognize_en"&&<h1 style={{fontSize:30}}>{item.form}</h1>}

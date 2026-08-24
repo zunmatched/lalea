@@ -1,2 +1,2 @@
-import { LearningApp } from "@/components/learning-app";
-export default function Home() { return <LearningApp />; }
+import { HomeDashboard } from "@/components/home-dashboard";
+export default function Home() { return <HomeDashboard />; }

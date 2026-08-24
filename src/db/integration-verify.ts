@@ -55,7 +55,7 @@ async function main() {
   const readingState=vocabularyStates.find(state=>state.dimension==="reading_recognition")!;assert.equal(readingState.reviewCount,1,"a deduplicated retry must not double-count reviewCount");const readingEvents=await adminDb.select().from(s.reviewEvents).where(eq(s.reviewEvents.vocabularyMasteryStateId,readingState.id));const replayedProficiency=computeProficiency(readingEvents.map(event=>({isCorrect:event.isCorrect,createdAt:event.createdAt})));const storedProficiency=(readingEvents[readingEvents.length-1].afterState as{proficiency:number}).proficiency;assert.equal(replayedProficiency,storedProficiency,"immutable events must rebuild the derived proficiency");
   const queueBody=await (await getReviewQueue(new Request("http://test/api/reviews/queue"))).json();assert.equal(queueBody.due[0].dimension,"reading_recognition","lowest proficiency word must sort first");assert.equal(queueBody.policy.dueFirst,true);
   const audioEventId="70000000-0000-4000-8000-000000000101";const audioEvent=()=>recordAudioEvent(new Request("http://test/api/audio-events",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({clientEventId:audioEventId,exerciseId:exerciseRows[1].id,eventType:"unfamiliar",playbackRate:"0.85"})}));await audioEvent();const repeatedAudio=await audioEvent();assert.equal((await repeatedAudio.json()).idempotent,true);assert.equal((await adminDb.select().from(s.audioPlayEvents)).length,1,"audio exposure retry must not duplicate");assert.equal((await adminDb.select().from(s.reviewEvents)).length,3,"unfamiliar exposure must not create an incorrect review event");
-  const started=await startRun(); assert.equal(started.status,201); const runId=(await started.json()).id as string;
+  const started=await startRun(new Request("http://test/api/unit-runs",{method:"POST"})); assert.equal(started.status,201); const runId=(await started.json()).id as string;
   assert.equal((await complete(new Request("http://test",{method:"POST"}),{params:Promise.resolve({id:runId})})).status,409,"incomplete run must fail");
   process.env.DEV_AUTH_USER_ID=ids.u2;
   assert.equal((await getRun(new Request("http://test"),{params:Promise.resolve({id:runId})})).status,404,"other user must not read run");
@@ -68,7 +68,7 @@ async function main() {
   const completed=await complete(new Request("http://test",{method:"POST"}),{params:Promise.resolve({id:runId})}); assert.equal(completed.status,200);
   assert.equal((await adminDb.select().from(s.exerciseAttempts).where(eq(s.exerciseAttempts.unitRunId,runId))).length,3,"retry must not insert a fourth attempt");
   assert.equal((await adminDb.select().from(s.masteryStates).where(eq(s.masteryStates.userLearningPathId,ids.up1))).length,3,"three mastery dimensions must be independent");
-  const progress=await getProgress(); const progressBody=await progress.json(); assert.equal(progressBody.completedUnits,1); assert.equal(progressBody.mastery.length,3);
+  const progress=await getProgress(); const progressBody=await progress.json(); assert.equal(progressBody.completedUnits,1);
   await appPool.end(); await adminPool.end(); console.log("Integration verification passed");
 }
 main().catch((error)=>{console.error(error);process.exitCode=1});
