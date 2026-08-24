@@ -86,7 +86,9 @@ export function ReviewPanel(){
   const response=await fetch("/api/reviews",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({userVocabularyId:item.userVocabularyId,dimension:item.dimension,clientEventId:randomUUID(),isCorrect:checked.correct})});
   const result=await response.json();
   if(response.ok)setMessage(`熟練度 ${result.proficiency}/${PROFICIENCY_MAX}（近 5 天內每天最高分累計）`);
+  await new Promise(resolve=>setTimeout(resolve,900));
   const next=await load();if(next)setQueue(next);
+  setSelectedOption(null);setSpelling("");setChecked(null);setMessage("");
   setBusy(false);
  }
 
