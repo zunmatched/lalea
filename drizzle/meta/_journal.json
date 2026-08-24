@@ -50,6 +50,13 @@
       "when": 1787475795391,
       "tag": "0006_many_skreet",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1787557692309,
+      "tag": "0007_low_rhodey",
+      "breakpoints": true
     }
   ]
 }

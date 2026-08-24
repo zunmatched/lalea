@@ -1,8 +1,8 @@
 import { db } from "@/db/client";
-import { learningPaths, lexemes, lexemeSenses, userLearningPaths, userVocabulary, vocabularyContexts, vocabularyInjectionTasks } from "@/db/schema";
+import { learningPaths, lexemeForms, lexemes, lexemeSenses, userLearningPaths, userVocabulary, vocabularyContexts, vocabularyInjectionTasks } from "@/db/schema";
 import { requireUserId } from "@/lib/dev-auth";
 import { normalizeVocabulary } from "@/lib/vocabulary";
-import { and, eq, inArray } from "drizzle-orm";
+import { and, eq, inArray, or } from "drizzle-orm";
 import { z } from "zod";
 
 export async function GET(){const userId=requireUserId();const rows=await db.select({id:vocabularyInjectionTasks.id,rawText:vocabularyInjectionTasks.rawText,normalizedText:vocabularyInjectionTasks.normalizedText,status:vocabularyInjectionTasks.status,aiDraft:vocabularyInjectionTasks.aiDraft,createdAt:vocabularyInjectionTasks.createdAt}).from(vocabularyInjectionTasks).innerJoin(userLearningPaths,eq(vocabularyInjectionTasks.userLearningPathId,userLearningPaths.id)).where(eq(userLearningPaths.userId,userId));return Response.json({items:rows,exportSchemaVersion:1})}
@@ -13,7 +13,7 @@ export async function POST(request:Request){
  const userId=requireUserId();const data=parsed.data;const normalized=normalizeVocabulary(data.rawText);
  const[path]=await db.select({id:userLearningPaths.id,targetLanguageId:learningPaths.targetLanguageId}).from(userLearningPaths).innerJoin(learningPaths,eq(userLearningPaths.learningPathId,learningPaths.id)).where(eq(userLearningPaths.userId,userId)).limit(1);
  if(!path)return Response.json({error:"Learning path not found"},{status:404});
- const senses=await db.select({id:lexemeSenses.id,canonicalForm:lexemes.canonicalForm,definition:lexemeSenses.definition,partOfSpeech:lexemeSenses.partOfSpeech}).from(lexemes).innerJoin(lexemeSenses,eq(lexemeSenses.lexemeId,lexemes.id)).where(and(eq(lexemes.languageId,path.targetLanguageId),eq(lexemes.normalizedForm,normalized),eq(lexemeSenses.status,"approved")));
+ const senses=await db.selectDistinct({id:lexemeSenses.id,canonicalForm:lexemes.canonicalForm,definition:lexemeSenses.definition,partOfSpeech:lexemeSenses.partOfSpeech}).from(lexemes).innerJoin(lexemeSenses,eq(lexemeSenses.lexemeId,lexemes.id)).leftJoin(lexemeForms,eq(lexemeForms.lexemeId,lexemes.id)).where(and(eq(lexemes.languageId,path.targetLanguageId),or(eq(lexemes.normalizedForm,normalized),eq(lexemeForms.normalizedForm,normalized)),eq(lexemeSenses.status,"approved")));
  if(senses.length>1&&!data.selectedSenseId)return Response.json({status:"needs_selection",matches:senses});
  const selected=data.selectedSenseId?senses.find(s=>s.id===data.selectedSenseId):senses[0];
  if(selected){
