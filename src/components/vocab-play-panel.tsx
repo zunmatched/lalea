@@ -1,5 +1,5 @@
 "use client";
-import { useEffect,useState } from "react";
+import { useEffect,useRef,useState } from "react";
 import { repeatModeLabels,RepeatMode,shuffle } from "@/lib/repeat-mode";
 import { speakSequence } from "@/lib/speech";
 
@@ -48,15 +48,18 @@ export function VocabPlayPanel(){
  }
 
  const item=items?.[index];
+ const autoAdvanceTimeout=useRef<ReturnType<typeof setTimeout>|undefined>(undefined);
+ function clearAutoAdvance(){if(autoAdvanceTimeout.current){clearTimeout(autoAdvanceTimeout.current);autoAdvanceTimeout.current=undefined}}
  function play(){
   if(!item)return;
+  clearAutoAdvance();
   const parts:Array<{text:string;lang:string}>=[{text:item.form,lang:"en-US"}];
   if(item.translation)parts.push({text:item.translation,lang:"zh-TW"});
   if(item.example)parts.push({text:item.example,lang:"en-US"});
   if(item.exampleTranslation)parts.push({text:item.exampleTranslation,lang:"zh-TW"});
-  speakSequence(parts);
+  speakSequence(parts,{onEnd:()=>{autoAdvanceTimeout.current=setTimeout(advance,600)}});
  }
- useEffect(()=>{if(item)play()},[item?.userVocabularyId]);
+ useEffect(()=>{if(item)play();return clearAutoAdvance},[item?.userVocabularyId]);
 
  if(!activeSource){
   return <main className="shell">

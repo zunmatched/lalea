@@ -10,6 +10,7 @@ export function ListenPanel(){
  const[items,setItems]=useState<Item[]|null>(null);
  const[index,setIndex]=useState(0);
  const[mode,setMode]=useState<RepeatMode>("single");
+ const[hasStarted,setHasStarted]=useState(false);
 
  useEffect(()=>{
   let active=true;
@@ -23,6 +24,7 @@ export function ListenPanel(){
  }
  function advance(){
   if(!items)return;
+  setHasStarted(true);
   const next=index+1;
   if(next<items.length){setIndex(next);return}
   if(mode==="loop"){setIndex(0);return}
@@ -47,7 +49,7 @@ export function ListenPanel(){
   </div>
   <section className="card">
    <span className="label">{index+1} / {items.length} · {categoryLabels[item.category]??item.category}</span>
-   <AudioPlayer exerciseId={item.exerciseId} text={item.text} asset={item}/>
+   <AudioPlayer key={item.id} exerciseId={item.exerciseId} text={item.text} asset={item} autoPlay={hasStarted} onComplete={advance}/>
    {item.translation&&<p className="context">{item.translation}</p>}
    <button className="primary" onClick={advance} style={{marginTop:14}}>下一個</button>
   </section>
