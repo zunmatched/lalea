@@ -46,6 +46,12 @@ export function VocabPlayPanel(){
   if(mode==="random"){setItems(shuffle(items));setIndex(0);return}
   setIndex(next);
  }
+ function goBack(){
+  if(!items)return;
+  const prev=index-1;
+  if(prev>=0){setIndex(prev);return}
+  if(mode==="loop"||mode==="random")setIndex(items.length-1);
+ }
 
  const item=items?.[index];
  const autoAdvanceTimeout=useRef<ReturnType<typeof setTimeout>|undefined>(undefined);
@@ -95,6 +101,7 @@ export function VocabPlayPanel(){
    {item.translation&&<p className="context"><strong>{item.translation}</strong></p>}
    {item.example&&<p className="context">{item.example}{item.exampleTranslation&&<><br/><span>{item.exampleTranslation}</span></>}</p>}
    <div style={{display:"flex",gap:10,marginTop:14}}>
+    <button onClick={goBack} disabled={mode==="single"&&index===0} style={{border:`1px solid var(--line)`,borderRadius:16,background:"white",color:"var(--ink)",cursor:"pointer",padding:"12px 18px",fontWeight:800}}>上一個</button>
     <button aria-label="重播" onClick={play} style={{border:0,borderRadius:16,background:"var(--mint)",color:"var(--ink)",cursor:"pointer",padding:"12px 18px",fontWeight:800}}>🔊 重播</button>
     <button className="primary" onClick={advance}>下一個</button>
    </div>

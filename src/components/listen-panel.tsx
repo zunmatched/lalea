@@ -31,6 +31,13 @@ export function ListenPanel(){
   if(mode==="random"){setItems(shuffle(items));setIndex(0);return}
   setIndex(next);
  }
+ function goBack(){
+  if(!items)return;
+  setHasStarted(true);
+  const prev=index-1;
+  if(prev>=0){setIndex(prev);return}
+  if(mode==="loop"||mode==="random")setIndex(items.length-1);
+ }
 
  const item=items?.[index];
 
@@ -51,7 +58,10 @@ export function ListenPanel(){
    <span className="label">{index+1} / {items.length} · {categoryLabels[item.category]??item.category}</span>
    <AudioPlayer key={item.id} exerciseId={item.exerciseId} text={item.text} asset={item} autoPlay={hasStarted} onComplete={advance}/>
    {item.translation&&<p className="context">{item.translation}</p>}
-   <button className="primary" onClick={advance} style={{marginTop:14}}>下一個</button>
+   <div style={{display:"flex",gap:10,marginTop:14}}>
+    <button onClick={goBack} disabled={mode==="single"&&index===0} style={{flex:1,border:"1px solid var(--line)",borderRadius:16,background:"white",color:"var(--ink)",cursor:"pointer",padding:"12px 18px",fontWeight:800}}>上一個</button>
+    <button className="primary" onClick={advance} style={{flex:1}}>下一個</button>
+   </div>
   </section>
  </main>;
 }
