@@ -75,7 +75,9 @@ export function ReviewPanel(){
   if(!item||checked)return;
   const correctLabel=showEnglishOptions?item.form:(item.translation??item.form);
   const correct=label===correctLabel;
-  setSelectedOption(label);setChecked({correct});submitReview(item,correct);
+  // 選擇類（中選英／英選中）只是練習，不送出複習紀錄，不影響熟練度
+  setSelectedOption(label);setChecked({correct});
+  if(correct)setCorrectCount(value=>value+1);
  }
  function checkSpelling(){
   if(!item||checked||!spelling.trim())return;
@@ -120,21 +122,9 @@ export function ReviewPanel(){
 
  const prompts:Record<ChallengeType,string>={recognize_en:"這個字的意思是？",recognize_zh:"哪個英文字是這個意思？",spell:"請拼出這個字：",dictation:"聽發音，拼出這個字，並選出正確的中文意思："};
 
- if(!category){
-  return <main className="shell">
-   <p className="eyebrow">詞彙 · 測驗</p>
-   <h1>要練哪一種？</h1>
-   <section className="card">
-    <div style={{display:"flex",flexDirection:"column",gap:10}}>
-     {(Object.keys(categoryTypes) as QuizCategory[]).map(value=><button key={value} className="option" onClick={()=>setCategory(value)} style={{textAlign:"left"}}>{categoryLabels[value]}</button>)}
-    </div>
-   </section>
-  </main>;
- }
-
  if(!activeSource){
   return <main className="shell">
-   <p className="eyebrow">詞彙 · 測驗 · {categoryLabels[category]}</p>
+   <p className="eyebrow">詞彙 · 測驗</p>
    <h1>先選要複習的內容。</h1>
    <section className="card">
     {sources===null&&<p className="lead">載入中…</p>}
@@ -145,6 +135,18 @@ export function ReviewPanel(){
       <span className="context" style={{margin:0}}>待複習 {source.due} · 新字 {source.new}</span>
      </button>)}
     </div>}
+   </section>
+  </main>;
+ }
+
+ if(!category){
+  return <main className="shell">
+   <p className="eyebrow">詞彙 · 測驗 · {activeSource.label}</p>
+   <h1>要練哪一種難度？</h1>
+   <section className="card">
+    <div style={{display:"flex",flexDirection:"column",gap:10}}>
+     {(Object.keys(categoryTypes) as QuizCategory[]).map(value=><button key={value} className="option" onClick={()=>setCategory(value)} style={{textAlign:"left"}}>{categoryLabels[value]}</button>)}
+    </div>
    </section>
   </main>;
  }
