@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { computeProficiency, PROFICIENCY_MAX, reviewedOnDay } from "./proficiency";
+import { computeProficiency, PROFICIENCY_DAY_POINTS, PROFICIENCY_MAX, reviewedOnDay } from "./proficiency";
 
 const day = (offset: number) => new Date(Date.UTC(2026, 0, 10 + offset, 4, 0, 0)); // ~noon Asia/Taipei
 
@@ -9,12 +9,12 @@ describe("computeProficiency", () => {
   });
 
   it("gives full points for a correct review same day", () => {
-    expect(computeProficiency([{ isCorrect: true, createdAt: day(0) }], day(0))).toBe(20);
+    expect(computeProficiency([{ isCorrect: true, createdAt: day(0) }], day(0))).toBe(PROFICIENCY_DAY_POINTS);
   });
 
   it("takes the best of multiple reviews on the same day", () => {
     const events = [{ isCorrect: false, createdAt: day(0) }, { isCorrect: true, createdAt: day(0) }, { isCorrect: false, createdAt: day(0) }];
-    expect(computeProficiency(events, day(0))).toBe(20);
+    expect(computeProficiency(events, day(0))).toBe(PROFICIENCY_DAY_POINTS);
   });
 
   it("an all-wrong day scores zero for that day", () => {
@@ -33,7 +33,7 @@ describe("computeProficiency", () => {
 
   it("keeps a day exactly at the 5-day edge", () => {
     const events = [{ isCorrect: true, createdAt: day(-4) }];
-    expect(computeProficiency(events, day(0))).toBe(20);
+    expect(computeProficiency(events, day(0))).toBe(PROFICIENCY_DAY_POINTS);
   });
 });
 

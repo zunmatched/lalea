@@ -1,6 +1,7 @@
 "use client";
 import { useEffect,useMemo,useRef,useState } from "react";
 import { randomUUID } from "@/lib/client-id";
+import { PROFICIENCY_MAX } from "@/lib/proficiency";
 import { speakSequence } from "@/lib/speech";
 
 type Pool={form:string;translation:string|null};
@@ -10,7 +11,6 @@ type Queue={due:Due[];new:Fresh[];pool:Pool[];policy:{newAllowance:number;dueCou
 type SessionItem=(Due&{isNew:false})|(Fresh&{isNew:true;dimension:"reading_recognition";proficiency:0;reviewCount:0});
 type Source={key:string;label:string;due:number;new:number};
 
-const PROFICIENCY_MAX=100;
 const labels={reading_recognition:"閱讀辨識",listening_recognition:"聽力辨識",active_recall:"主動提取"};
 const challengeTypes=["recognize_en","recognize_zh","spell","dictation"] as const;
 type ChallengeType=typeof challengeTypes[number];
