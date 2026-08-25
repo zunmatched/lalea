@@ -1,5 +1,5 @@
 "use client";
-import { useEffect,useState } from "react";
+import { useEffect,useRef,useState } from "react";
 import { AudioPlayer } from "./audio-player";
 import { repeatModeLabels,RepeatMode,shuffle } from "@/lib/repeat-mode";
 
@@ -9,8 +9,11 @@ const categoryLabels:Record<string,string>={due:"到期複習",weak:"弱項加�
 export function ListenPanel(){
  const[items,setItems]=useState<Item[]|null>(null);
  const[index,setIndex]=useState(0);
- const[mode,setMode]=useState<RepeatMode>("single");
+ const[mode,setMode]=useState<RepeatMode>("once");
+ const modeRef=useRef(mode);
+ useEffect(()=>{modeRef.current=mode},[mode]);
  const[hasStarted,setHasStarted]=useState(false);
+ const[replayTick,setReplayTick]=useState(0);
 
  useEffect(()=>{
   let active=true;
@@ -22,13 +25,15 @@ export function ListenPanel(){
   setMode(value);
   if(value==="random"&&items)setItems(shuffle(items));
  }
- function advance(){
+ function advance(auto=false){
   if(!items)return;
   setHasStarted(true);
+  const currentMode=modeRef.current;
+  if(auto&&currentMode==="single"){setReplayTick(value=>value+1);return}
   const next=index+1;
   if(next<items.length){setIndex(next);return}
-  if(mode==="loop"){setIndex(0);return}
-  if(mode==="random"){setItems(shuffle(items));setIndex(0);return}
+  if(currentMode==="loop"||currentMode==="single"){setIndex(0);return}
+  if(currentMode==="random"){setItems(shuffle(items));setIndex(0);return}
   setIndex(next);
  }
  function goBack(){
@@ -36,7 +41,7 @@ export function ListenPanel(){
   setHasStarted(true);
   const prev=index-1;
   if(prev>=0){setIndex(prev);return}
-  if(mode==="loop"||mode==="random")setIndex(items.length-1);
+  if(modeRef.current==="loop"||modeRef.current==="random"||modeRef.current==="single")setIndex(items.length-1);
  }
 
  const item=items?.[index];
@@ -56,11 +61,11 @@ export function ListenPanel(){
   </div>
   <section className="card">
    <span className="label">{index+1} / {items.length} · {categoryLabels[item.category]??item.category}</span>
-   <AudioPlayer key={item.id} exerciseId={item.exerciseId} text={item.text} asset={item} autoPlay={hasStarted} onComplete={advance}/>
+   <AudioPlayer key={`${item.id}-${replayTick}`} exerciseId={item.exerciseId} text={item.text} asset={item} autoPlay={hasStarted} onComplete={()=>advance(true)}/>
    {item.translation&&<p className="context">{item.translation}</p>}
    <div style={{display:"flex",gap:10,marginTop:14}}>
-    <button onClick={goBack} disabled={mode==="single"&&index===0} style={{flex:1,border:"1px solid var(--line)",borderRadius:16,background:"white",color:"var(--ink)",cursor:"pointer",padding:"12px 18px",fontWeight:800}}>上一個</button>
-    <button className="primary" onClick={advance} style={{flex:1}}>下一個</button>
+    <button onClick={goBack} disabled={mode==="once"&&index===0} style={{flex:1,border:"1px solid var(--line)",borderRadius:16,background:"white",color:"var(--ink)",cursor:"pointer",padding:"12px 18px",fontWeight:800}}>上一個</button>
+    <button className="primary" onClick={()=>advance()} style={{flex:1}}>下一個</button>
    </div>
   </section>
  </main>;

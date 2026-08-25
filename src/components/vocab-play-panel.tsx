@@ -12,7 +12,9 @@ export function VocabPlayPanel(){
  const[activeSource,setActiveSource]=useState<Source|null>(null);
  const[items,setItems]=useState<Item[]|null>(null);
  const[index,setIndex]=useState(0);
- const[mode,setMode]=useState<RepeatMode>("single");
+ const[mode,setMode]=useState<RepeatMode>("once");
+ const modeRef=useRef(mode);
+ useEffect(()=>{modeRef.current=mode},[mode]);
 
  useEffect(()=>{
   let active=true;
@@ -38,19 +40,21 @@ export function VocabPlayPanel(){
   setMode(value);
   if(value==="random"&&items)setItems(shuffle(items));
  }
- function advance(){
+ function advance(auto=false){
   if(!items)return;
+  const currentMode=modeRef.current;
+  if(auto&&currentMode==="single"){play();return}
   const next=index+1;
   if(next<items.length){setIndex(next);return}
-  if(mode==="loop"){setIndex(0);return}
-  if(mode==="random"){setItems(shuffle(items));setIndex(0);return}
+  if(currentMode==="loop"||currentMode==="single"){setIndex(0);return}
+  if(currentMode==="random"){setItems(shuffle(items));setIndex(0);return}
   setIndex(next);
  }
  function goBack(){
   if(!items)return;
   const prev=index-1;
   if(prev>=0){setIndex(prev);return}
-  if(mode==="loop"||mode==="random")setIndex(items.length-1);
+  if(modeRef.current==="loop"||modeRef.current==="random"||modeRef.current==="single")setIndex(items.length-1);
  }
 
  const item=items?.[index];
@@ -63,7 +67,7 @@ export function VocabPlayPanel(){
   if(item.translation)parts.push({text:item.translation,lang:"zh-TW"});
   if(item.example)parts.push({text:item.example,lang:"en-US"});
   if(item.exampleTranslation)parts.push({text:item.exampleTranslation,lang:"zh-TW"});
-  speakSequence(parts,{onEnd:()=>{autoAdvanceTimeout.current=setTimeout(advance,600)}});
+  speakSequence(parts,{onEnd:()=>{autoAdvanceTimeout.current=setTimeout(()=>advance(true),600)}});
  }
  useEffect(()=>{if(item)play();return clearAutoAdvance},[item?.userVocabularyId]);
 
@@ -101,9 +105,9 @@ export function VocabPlayPanel(){
    {item.translation&&<p className="context"><strong>{item.translation}</strong></p>}
    {item.example&&<p className="context">{item.example}{item.exampleTranslation&&<><br/><span>{item.exampleTranslation}</span></>}</p>}
    <div style={{display:"flex",gap:10,marginTop:14}}>
-    <button onClick={goBack} disabled={mode==="single"&&index===0} style={{border:`1px solid var(--line)`,borderRadius:16,background:"white",color:"var(--ink)",cursor:"pointer",padding:"12px 18px",fontWeight:800}}>上一個</button>
+    <button onClick={goBack} disabled={mode==="once"&&index===0} style={{border:`1px solid var(--line)`,borderRadius:16,background:"white",color:"var(--ink)",cursor:"pointer",padding:"12px 18px",fontWeight:800}}>上一個</button>
     <button aria-label="重播" onClick={play} style={{border:0,borderRadius:16,background:"var(--mint)",color:"var(--ink)",cursor:"pointer",padding:"12px 18px",fontWeight:800}}>🔊 重播</button>
-    <button className="primary" onClick={advance}>下一個</button>
+    <button className="primary" onClick={()=>advance()}>下一個</button>
    </div>
    <button onClick={backToMenu} style={{marginTop:14,background:"none",border:0,textDecoration:"underline",cursor:"pointer",padding:0}}>結束播放，返回選單</button>
   </section>
