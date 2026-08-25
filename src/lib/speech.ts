@@ -22,11 +22,17 @@ function startNoise() {
   stopNoise();
   const context = new AudioContext();
   const gain = context.createGain();
-  gain.gain.value = 0.006;
+  gain.gain.value = 0.025;
+  // Human hearing is far less sensitive below ~100Hz than in the 2-5kHz range where raw white
+  // noise carries most of its energy; low-passing it into a subsonic rumble keeps the route
+  // fed with real PCM without the audible hiss white noise has at any usable volume.
+  const filter = context.createBiquadFilter();
+  filter.type = "lowpass";
+  filter.frequency.value = 90;
   const source = context.createBufferSource();
   source.buffer = createNoiseBuffer(context);
   source.loop = true;
-  source.connect(gain).connect(context.destination);
+  source.connect(filter).connect(gain).connect(context.destination);
   source.start();
   activeNoise = { context, source };
   // safety net in case onend/onerror never fires for some reason
