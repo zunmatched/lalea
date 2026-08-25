@@ -2,6 +2,7 @@
 import { useEffect,useRef,useState } from "react";
 import { repeatModeLabels,RepeatMode,shuffle } from "@/lib/repeat-mode";
 import { speakSequence } from "@/lib/speech";
+import { useWakeLock } from "@/lib/wake-lock";
 
 type Item={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;example:string|null;exampleTranslation:string|null};
 type Queue={due:Item[];new:Item[]};
@@ -57,6 +58,7 @@ export function VocabPlayPanel(){
  }
 
  const item=items?.[index];
+ useWakeLock(Boolean(activeSource&&item));
  const autoAdvanceTimeout=useRef<ReturnType<typeof setTimeout>|undefined>(undefined);
  function clearAutoAdvance(){if(autoAdvanceTimeout.current){clearTimeout(autoAdvanceTimeout.current);autoAdvanceTimeout.current=undefined}}
  function play(){
