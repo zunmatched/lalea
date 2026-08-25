@@ -14,11 +14,15 @@ const PROFICIENCY_MAX=100;
 const labels={reading_recognition:"閱讀辨識",listening_recognition:"聽力辨識",active_recall:"主動提取"};
 const challengeTypes=["recognize_en","recognize_zh","spell","dictation"] as const;
 type ChallengeType=typeof challengeTypes[number];
+type QuizCategory="choice"|"spelling";
+const categoryTypes:Record<QuizCategory,readonly ChallengeType[]>={choice:["recognize_en","recognize_zh"],spelling:["spell","dictation"]};
+const categoryLabels:Record<QuizCategory,string>={choice:"選擇 · 中選英／英選中",spelling:"拼字 · 聽力／看中文寫英文"};
 function shuffle<T>(items:T[]):T[]{return [...items].sort(()=>Math.random()-0.5)}
 function spellHint(form:string){const words=form.trim().split(/\s+/);const letters=words.join("").length;return`共 ${letters} 個字母${words.length>1?`（${words.length} 個單字）`:""}，開頭字母：${words[0][0].toUpperCase()}`}
 const emptyQueue:Queue={due:[],new:[],pool:[],policy:{newAllowance:0,dueCount:0,newVocabLimit:0}};
 
 export function ReviewPanel(){
+ const[category,setCategory]=useState<QuizCategory|null>(null);
  const[sources,setSources]=useState<Source[]|null>(null);
  const[activeSource,setActiveSource]=useState<Source|null>(null);
  const[pool,setPool]=useState<Pool[]>([]);
@@ -56,7 +60,8 @@ export function ReviewPanel(){
 
  const item=session?.[sessionIndex];
  const isFirstLearning=item?.isNew??false;
- const challengeType:ChallengeType|undefined=item?challengeTypes[item.reviewCount%challengeTypes.length]:undefined;
+ const activeTypes=category?categoryTypes[category]:challengeTypes;
+ const challengeType:ChallengeType|undefined=item?activeTypes[item.reviewCount%activeTypes.length]:undefined;
  const showEnglishOptions=challengeType==="recognize_zh";
 
  const options=useMemo(()=>{
@@ -115,9 +120,21 @@ export function ReviewPanel(){
 
  const prompts:Record<ChallengeType,string>={recognize_en:"這個字的意思是？",recognize_zh:"哪個英文字是這個意思？",spell:"請拼出這個字：",dictation:"聽發音，拼出這個字，並選出正確的中文意思："};
 
- if(!activeSource){
+ if(!category){
   return <main className="shell">
    <p className="eyebrow">詞彙 · 測驗</p>
+   <h1>要練哪一種？</h1>
+   <section className="card">
+    <div style={{display:"flex",flexDirection:"column",gap:10}}>
+     {(Object.keys(categoryTypes) as QuizCategory[]).map(value=><button key={value} className="option" onClick={()=>setCategory(value)} style={{textAlign:"left"}}>{categoryLabels[value]}</button>)}
+    </div>
+   </section>
+  </main>;
+ }
+
+ if(!activeSource){
+  return <main className="shell">
+   <p className="eyebrow">詞彙 · 測驗 · {categoryLabels[category]}</p>
    <h1>先選要複習的內容。</h1>
    <section className="card">
     {sources===null&&<p className="lead">載入中…</p>}
