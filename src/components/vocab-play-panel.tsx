@@ -12,7 +12,7 @@ export function VocabPlayPanel(){
  const[activeSource,setActiveSource]=useState<Source|null>(null);
  const[items,setItems]=useState<Item[]|null>(null);
  const[index,setIndex]=useState(0);
- const[mode,setMode]=useState<RepeatMode>("once");
+ const[mode,setMode]=useState<RepeatMode>("loop");
  const modeRef=useRef(mode);
  useEffect(()=>{modeRef.current=mode},[mode]);
 
@@ -46,15 +46,14 @@ export function VocabPlayPanel(){
   if(auto&&currentMode==="single"){play();return}
   const next=index+1;
   if(next<items.length){setIndex(next);return}
-  if(currentMode==="loop"||currentMode==="single"){setIndex(0);return}
   if(currentMode==="random"){setItems(shuffle(items));setIndex(0);return}
-  setIndex(next);
+  setIndex(0);
  }
  function goBack(){
   if(!items)return;
   const prev=index-1;
   if(prev>=0){setIndex(prev);return}
-  if(modeRef.current==="loop"||modeRef.current==="random"||modeRef.current==="single")setIndex(items.length-1);
+  setIndex(items.length-1);
  }
 
  const item=items?.[index];
@@ -90,7 +89,7 @@ export function VocabPlayPanel(){
 
  if(items===null)return <main className="shell"><p className="eyebrow">詞彙 · 播放 · {activeSource.label}</p><h1>載入中…</h1></main>;
 
- if(!item)return <main className="shell finish"><div className="mark">✓</div><p className="eyebrow">播放完畢</p><h1>{items.length===0?"目前沒有可以播放的內容。":"這輪的內容都播完了。"}</h1><button className="primary resume" onClick={backToMenu}>返回選單</button></main>;
+ if(!item)return <main className="shell finish"><div className="mark">✓</div><p className="eyebrow">播放</p><h1>目前沒有可以播放的內容。</h1><button className="primary resume" onClick={backToMenu}>返回選單</button></main>;
 
  return <main className="shell">
   <p className="eyebrow">詞彙 · 播放 · {activeSource.label}</p>
@@ -105,7 +104,7 @@ export function VocabPlayPanel(){
    {item.translation&&<p className="context"><strong>{item.translation}</strong></p>}
    {item.example&&<p className="context">{item.example}{item.exampleTranslation&&<><br/><span>{item.exampleTranslation}</span></>}</p>}
    <div style={{display:"flex",gap:10,marginTop:14}}>
-    <button onClick={goBack} disabled={mode==="once"&&index===0} style={{flex:1,border:"1px solid var(--line)",borderRadius:16,background:"white",color:"var(--ink)",cursor:"pointer",padding:"12px 10px",fontWeight:800}}>上一個</button>
+    <button onClick={goBack} style={{flex:1,border:"1px solid var(--line)",borderRadius:16,background:"white",color:"var(--ink)",cursor:"pointer",padding:"12px 10px",fontWeight:800}}>上一個</button>
     <button aria-label="重播" onClick={play} style={{flex:1,border:0,borderRadius:16,background:"var(--mint)",color:"var(--ink)",cursor:"pointer",padding:"12px 10px",fontWeight:800,whiteSpace:"nowrap"}}>🔊 重播</button>
     <button className="primary" onClick={()=>advance()} style={{flex:1}}>下一個</button>
    </div>
