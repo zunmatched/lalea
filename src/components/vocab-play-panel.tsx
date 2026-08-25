@@ -29,7 +29,7 @@ export function VocabPlayPanel(){
   const response=await fetch(`/api/reviews/queue${query}`).catch(()=>null);
   const data:Queue=response&&response.ok?await response.json():{due:[],new:[]};
   const list=[...data.due,...data.new];
-  setItems(mode==="random"?shuffle(list):list);setIndex(0);
+  setItems(shuffle(list));setIndex(0);
  }
  function backToMenu(){
   if("speechSynthesis"in window)window.speechSynthesis.cancel();
@@ -85,9 +85,6 @@ export function VocabPlayPanel(){
   return <main className="shell">
    <p className="eyebrow">詞彙 · 播放</p>
    <h1>先選要播放的內容。</h1>
-   <div className="pills">
-    {(Object.keys(repeatModeLabels) as RepeatMode[]).map(value=><button key={value} className="pill" aria-pressed={mode===value} onClick={()=>selectMode(value)}>{repeatModeLabels[value]}</button>)}
-   </div>
    <section className="card">
     {sources===null&&<p className="lead">載入中…</p>}
     {sources!==null&&sources.length===0&&<p className="lead">目前沒有可以播放的詞彙。</p>}
