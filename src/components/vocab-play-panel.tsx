@@ -59,6 +59,7 @@ export function VocabPlayPanel(){
 
  const item=items?.[index];
  useWakeLock(Boolean(activeSource&&item));
+ const[speaking,setSpeaking]=useState(false);
  const autoAdvanceTimeout=useRef<ReturnType<typeof setTimeout>|undefined>(undefined);
  function clearAutoAdvance(){if(autoAdvanceTimeout.current){clearTimeout(autoAdvanceTimeout.current);autoAdvanceTimeout.current=undefined}}
  function play(){
@@ -68,7 +69,15 @@ export function VocabPlayPanel(){
   if(item.translation)parts.push({text:item.translation,lang:"zh-TW"});
   if(item.example)parts.push({text:item.example,lang:"en-US"});
   if(item.exampleTranslation)parts.push({text:item.exampleTranslation,lang:"zh-TW"});
-  speakSequence(parts,{onEnd:()=>{autoAdvanceTimeout.current=setTimeout(()=>advance(true),600)}});
+  speakSequence(parts,{onEnd:()=>{setSpeaking(false);autoAdvanceTimeout.current=setTimeout(()=>advance(true),600)},onError:()=>setSpeaking(false)});
+  setSpeaking(true);
+ }
+ function togglePlayPause(){
+  if(!("speechSynthesis"in window))return;
+  const synth=window.speechSynthesis;
+  if(speaking){synth.pause();setSpeaking(false);return}
+  if(synth.paused&&synth.speaking){synth.resume();setSpeaking(true);return}
+  play();
  }
  useEffect(()=>{if(item)play();return clearAutoAdvance},[item?.userVocabularyId]);
 
@@ -107,7 +116,7 @@ export function VocabPlayPanel(){
    {item.example&&<p className="context">{item.example}{item.exampleTranslation&&<><br/><span>{item.exampleTranslation}</span></>}</p>}
    <div style={{display:"flex",gap:10,marginTop:14}}>
     <button onClick={goBack} style={{flex:1,border:"1px solid var(--line)",borderRadius:16,background:"white",color:"var(--ink)",cursor:"pointer",padding:"12px 10px",fontWeight:800}}>上一個</button>
-    <button aria-label="重播" onClick={play} style={{flex:1,border:0,borderRadius:16,background:"var(--mint)",color:"var(--ink)",cursor:"pointer",padding:"12px 10px",fontWeight:800,whiteSpace:"nowrap"}}>🔊 重播</button>
+    <button aria-label={speaking?"暫停":"播放"} onClick={togglePlayPause} style={{flex:1,border:0,borderRadius:16,background:"var(--mint)",color:"var(--ink)",cursor:"pointer",padding:"12px 10px",fontWeight:800,whiteSpace:"nowrap"}}>{speaking?"Ⅱ 暫停":"▶ 播放"}</button>
     <button className="primary" onClick={()=>advance()} style={{flex:1}}>下一個</button>
    </div>
    <button onClick={backToMenu} style={{marginTop:14,background:"none",border:0,textDecoration:"underline",cursor:"pointer",padding:0}}>結束播放，返回選單</button>
