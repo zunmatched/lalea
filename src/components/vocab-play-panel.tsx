@@ -39,7 +39,7 @@ export function VocabPlayPanel(){
  }
  function selectMode(value:RepeatMode){
   setMode(value);
-  if(value==="random"&&items)setItems(shuffle(items));
+  if(value==="random"&&items){setItems(shuffle(items));setIndex(0)}
  }
  function advance(auto=false){
   if(!items)return;
