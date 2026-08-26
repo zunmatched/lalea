@@ -29,6 +29,7 @@ export function ReviewPanel(){
  const[session,setSession]=useState<SessionItem[]|null>(null);
  const[sessionIndex,setSessionIndex]=useState(0);
  const[correctCount,setCorrectCount]=useState(0);
+ const[wrongItems,setWrongItems]=useState<SessionItem[]>([]);
  const[message,setMessage]=useState("");
  const[selectedOption,setSelectedOption]=useState<string|null>(null);
  const[spelling,setSpelling]=useState("");
@@ -47,7 +48,7 @@ export function ReviewPanel(){
    ...data.due.map(item=>({...item,isNew:false as const})),
    ...data.new.map(item=>({...item,isNew:true as const,dimension:"reading_recognition" as const,proficiency:0 as const,reviewCount:0 as const})),
   ];
-  setPool(data.pool);setSession(items);setSessionIndex(0);setCorrectCount(0);
+  setPool(data.pool);setSession(items);setSessionIndex(0);setCorrectCount(0);setWrongItems([]);
   setSelectedOption(null);setSpelling("");setChecked(null);setMessage("");
  }
  async function startSession(source:Source){
@@ -116,6 +117,7 @@ export function ReviewPanel(){
  }
  function acknowledge(){
   if(!item||!checked)return;
+  if(!checked.correct)setWrongItems(value=>[...value,item]);
   setSelectedOption(null);setSpelling("");setChecked(null);setMessage("");
   setSessionIndex(value=>value+1);
  }
@@ -153,7 +155,7 @@ export function ReviewPanel(){
 
  if(session===null)return <main className="shell"><p className="eyebrow">詞彙 · 測驗 · {activeSource.label}</p><h1>先處理最需要加強的內容。</h1><section className="card">載入中…</section></main>;
 
- if(!item)return <main className="shell finish"><div className="mark">✓</div><p className="eyebrow">本輪複習完成</p><h1>{session.length===0?"目前沒有需要複習的內容。":"這輪的內容都練過一次了。"}</h1>{session.length>0&&<div className="stats"><div className="stat"><strong>{correctCount}/{session.length}</strong><span>答對</span></div></div>}<button className="primary resume" onClick={backToMenu}>返回選單</button></main>;
+ if(!item)return <main className="shell finish"><div className="mark">✓</div><p className="eyebrow">本輪複習完成</p><h1>{session.length===0?"目前沒有需要複習的內容。":"這輪的內容都練過一次了。"}</h1>{session.length>0&&<div className="stats"><div className="stat"><strong>{correctCount}/{session.length}</strong><span>答對</span></div></div>}{wrongItems.length>0&&<section className="card" style={{textAlign:"left"}}><span className="label">答錯的字</span>{wrongItems.map(wrong=><p key={wrong.userVocabularyId} className="context" style={{margin:"8px 0"}}>{wrong.form}{wrong.translation?`（${wrong.translation}）`:""}</p>)}</section>}<button className="primary resume" onClick={backToMenu}>返回選單</button></main>;
 
  return <main className="shell"><p className="eyebrow">詞彙 · 測驗 · {activeSource.label}</p><h1>先處理最需要加強的內容。</h1><p className="lead">依熟練度由低到高排序，本輪固定內容跑完一遍；每字近 5 天內每天最高分累計，最高 {PROFICIENCY_MAX} 分，不練會掉分。</p>
  <section className="card">
@@ -170,7 +172,6 @@ export function ReviewPanel(){
   {challengeType==="dictation"&&<>
    <button aria-label="播放發音" onClick={playWord} style={{border:0,borderRadius:16,background:"var(--mint)",color:"var(--ink)",cursor:"pointer",padding:"12px 18px",fontWeight:800,marginBottom:14}}>🔊 播放發音</button>
    {item.partOfSpeech&&<span className="context" style={{display:"inline-block",margin:"0 0 10px",padding:"3px 10px"}}>{item.partOfSpeech}</span>}
-   <p className="lead" style={{margin:"0 0 14px"}}>{spellHint(item.form)}</p>
    <input className="text-input" value={spelling} onChange={event=>setSpelling(event.target.value)} disabled={Boolean(checked)} placeholder="輸入聽到的英文拼字"/>
    <div className="options">{options.map(label=><button key={label} className={`option${selectedOption===label?" selected":""}`} disabled={Boolean(checked)} onClick={()=>setSelectedOption(label)}>{label}</button>)}</div>
    {!checked&&<button className="primary" onClick={checkDictation} disabled={!spelling.trim()||!selectedOption}>檢查答案</button>}
