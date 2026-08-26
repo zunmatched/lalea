@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --experimental-https --experimental-https-key ./.certs/ico36.tailc42e60.ts.net.key --experimental-https-cert ./.certs/ico36.tailc42e60.ts.net.crt",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
