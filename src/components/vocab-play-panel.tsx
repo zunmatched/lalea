@@ -2,7 +2,7 @@
 import { useEffect,useRef,useState } from "react";
 import { repeatModeLabels,RepeatMode,shuffle } from "@/lib/repeat-mode";
 import { speakSequence } from "@/lib/speech";
-import { useWakeLock } from "@/lib/wake-lock";
+import { useWakeLock,wakeLockStatusLabels } from "@/lib/wake-lock";
 
 type Item={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;example:string|null;exampleTranslation:string|null};
 type Queue={due:Item[];new:Item[]};
@@ -58,7 +58,7 @@ export function VocabPlayPanel(){
  }
 
  const item=items?.[index];
- useWakeLock(Boolean(activeSource&&item));
+ const wakeLockStatus=useWakeLock(Boolean(activeSource&&item));
  const[speaking,setSpeaking]=useState(false);
  const autoAdvanceTimeout=useRef<ReturnType<typeof setTimeout>|undefined>(undefined);
  function clearAutoAdvance(){if(autoAdvanceTimeout.current){clearTimeout(autoAdvanceTimeout.current);autoAdvanceTimeout.current=undefined}}
@@ -108,6 +108,7 @@ export function VocabPlayPanel(){
   <div className="pills">
    {(Object.keys(repeatModeLabels) as RepeatMode[]).map(value=><button key={value} className="pill" aria-pressed={mode===value} onClick={()=>selectMode(value)}>{repeatModeLabels[value]}</button>)}
   </div>
+  <p className="lead" style={{margin:"10px 0 0"}}>{wakeLockStatusLabels[wakeLockStatus]}</p>
   <section className="card">
    <span className="label">{index+1} / {items.length}</span>
    <h1 style={{fontSize:30}}>{item.form}</h1>
