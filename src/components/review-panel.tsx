@@ -62,7 +62,7 @@ export function ReviewPanel(){
  const item=session?.[sessionIndex];
  const isFirstLearning=item?.isNew??false;
  const activeTypes=category?categoryTypes[category]:challengeTypes;
- const challengeType:ChallengeType|undefined=item?activeTypes[item.reviewCount%activeTypes.length]:undefined;
+ const challengeType:ChallengeType|undefined=item?activeTypes[(category==="choice"?sessionIndex:item.reviewCount)%activeTypes.length]:undefined;
  const showEnglishOptions=challengeType==="recognize_zh";
 
  const options=useMemo(()=>{
