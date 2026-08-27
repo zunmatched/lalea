@@ -1,0 +1,1 @@
+ALTER TABLE "user_learning_paths" DROP COLUMN "new_vocab_limit";

@@ -7,7 +7,7 @@ import { speakSequence } from "@/lib/speech";
 type Pool={form:string;translation:string|null};
 type Due={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;example:string|null;exampleTranslation:string|null;dimension:"reading_recognition"|"listening_recognition"|"active_recall";proficiency:number;reviewCount:number;reviewedToday:boolean};
 type Fresh={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;example:string|null;exampleTranslation:string|null};
-type Queue={due:Due[];new:Fresh[];pool:Pool[];policy:{newAllowance:number;dueCount:number;newVocabLimit:number}};
+type Queue={due:Due[];new:Fresh[];pool:Pool[];policy:{dueFirst:boolean}};
 type SessionItem=(Due&{isNew:false})|(Fresh&{isNew:true;dimension:"reading_recognition";proficiency:0;reviewCount:0});
 type Source={key:string;label:string;due:number;new:number};
 
@@ -19,7 +19,7 @@ const categoryTypes:Record<QuizCategory,readonly ChallengeType[]>={choice:["reco
 const categoryLabels:Record<QuizCategory,string>={choice:"選擇 · 中選英／英選中",spelling:"拼字 · 聽力／看中文寫英文"};
 function shuffle<T>(items:T[]):T[]{return [...items].sort(()=>Math.random()-0.5)}
 function spellHint(form:string){const words=form.trim().split(/\s+/);const letters=words.join("").length;return`共 ${letters} 個字母${words.length>1?`（${words.length} 個單字）`:""}，開頭字母：${words[0][0].toUpperCase()}`}
-const emptyQueue:Queue={due:[],new:[],pool:[],policy:{newAllowance:0,dueCount:0,newVocabLimit:0}};
+const emptyQueue:Queue={due:[],new:[],pool:[],policy:{dueFirst:true}};
 
 export function ReviewPanel(){
  const[category,setCategory]=useState<QuizCategory|null>(null);

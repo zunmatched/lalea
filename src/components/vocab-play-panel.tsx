@@ -25,7 +25,7 @@ export function VocabPlayPanel(){
 
  async function startSource(source:Source){
   setActiveSource(source);setItems(null);
-  const query=source.key?`?source=${encodeURIComponent(source.key)}&more=1&full=1`:"?more=1&full=1";
+  const query=source.key?`?source=${encodeURIComponent(source.key)}`:"";
   const response=await fetch(`/api/reviews/queue${query}`).catch(()=>null);
   const data:Queue=response&&response.ok?await response.json():{due:[],new:[]};
   const list=[...data.due,...data.new];

@@ -6,18 +6,18 @@ import { z } from "zod";
 
 export async function GET() {
   const userId = requireUserId();
-  const [path] = await db.select({ dailyGoalMinutes: userLearningPaths.dailyGoalMinutes, newVocabLimit: userLearningPaths.newVocabLimit }).from(userLearningPaths).where(eq(userLearningPaths.userId, userId)).limit(1);
+  const [path] = await db.select({ dailyGoalMinutes: userLearningPaths.dailyGoalMinutes }).from(userLearningPaths).where(eq(userLearningPaths.userId, userId)).limit(1);
   if (!path) return Response.json({ error: "Learning path not found" }, { status: 404 });
   return Response.json(path);
 }
 
-const input = z.object({ newVocabLimit: z.number().int().min(1).max(20).optional(), dailyGoalMinutes: z.number().int().min(1).max(120).optional() });
+const input = z.object({ dailyGoalMinutes: z.number().int().min(1).max(120).optional() });
 export async function PATCH(request: Request) {
   const parsed = input.safeParse(await request.json().catch(() => null));
   if (!parsed.success) return Response.json({ error: "Invalid settings" }, { status: 400 });
   if (!Object.keys(parsed.data).length) return Response.json({ error: "No fields to update" }, { status: 400 });
   const userId = requireUserId();
-  const [updated] = await db.update(userLearningPaths).set(parsed.data).where(eq(userLearningPaths.userId, userId)).returning({ dailyGoalMinutes: userLearningPaths.dailyGoalMinutes, newVocabLimit: userLearningPaths.newVocabLimit });
+  const [updated] = await db.update(userLearningPaths).set(parsed.data).where(eq(userLearningPaths.userId, userId)).returning({ dailyGoalMinutes: userLearningPaths.dailyGoalMinutes });
   if (!updated) return Response.json({ error: "Learning path not found" }, { status: 404 });
   return Response.json(updated);
 }
