@@ -1,6 +1,5 @@
 "use client";
 import { useEffect,useMemo,useRef,useState } from "react";
-import Link from "next/link";
 import { randomUUID } from "@/lib/client-id";
 import { PROFICIENCY_MAX } from "@/lib/proficiency";
 import { speakSequence } from "@/lib/speech";
@@ -125,7 +124,6 @@ export function ReviewPanel({source}:{source:Source}){
     <div style={{display:"flex",flexDirection:"column",gap:10}}>
      {challengeTypes.map(value=><button key={value} className="option" onClick={()=>setCategory(value)} style={{textAlign:"left"}}>{categoryLabels[value]}</button>)}
     </div>
-    <Link href="/vocab" style={{display:"inline-block",marginTop:14,textDecoration:"underline"}}>換一個關卡</Link>
    </section>
   </main>;
  }

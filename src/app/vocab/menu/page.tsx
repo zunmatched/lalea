@@ -13,7 +13,6 @@ export default async function VocabMenuPage({ searchParams }: { searchParams: Pr
         <Link href={`/vocab/play${suffix}`} className="option" style={{textAlign:"left",textDecoration:"none"}}>播放 · 不用作答，聽過去就好</Link>
         <Link href={`/vocab/quiz${suffix}`} className="option" style={{textAlign:"left",textDecoration:"none"}}>測驗 · 認字、拼字、聽寫</Link>
       </div>
-      <Link href="/vocab" style={{display:"inline-block",marginTop:14,textDecoration:"underline"}}>換一個關卡</Link>
     </section>
   </main>;
 }
