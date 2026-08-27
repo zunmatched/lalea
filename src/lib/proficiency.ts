@@ -7,23 +7,26 @@ function dayKey(date: Date, timeZone = TIME_ZONE) {
   return new Intl.DateTimeFormat("en-CA", { timeZone, year: "numeric", month: "2-digit", day: "2-digit" }).format(date);
 }
 
-export type ProficiencyEvent = { isCorrect: boolean; createdAt: Date };
+export type ScoringChallengeType = "spell" | "dictation";
+export type ProficiencyEvent = { isCorrect: boolean; createdAt: Date; challengeType: ScoringChallengeType };
 
 export function computeProficiency(events: ProficiencyEvent[], now = new Date(), timeZone = TIME_ZONE) {
   const windowKeys = new Set<string>();
   for (let i = 0; i < PROFICIENCY_WINDOW_DAYS; i++) windowKeys.add(dayKey(new Date(now.getTime() - i * 86_400_000), timeZone));
-  const bestByDay = new Map<string, boolean>();
+  const byDay = new Map<string, { spell: boolean; dictation: boolean }>();
   for (const event of events) {
     const key = dayKey(event.createdAt, timeZone);
     if (!windowKeys.has(key)) continue;
-    bestByDay.set(key, (bestByDay.get(key) ?? false) || event.isCorrect);
+    const entry = byDay.get(key) ?? { spell: false, dictation: false };
+    if (event.isCorrect) entry[event.challengeType] = true;
+    byDay.set(key, entry);
   }
   let score = 0;
-  for (const correct of bestByDay.values()) if (correct) score += PROFICIENCY_DAY_POINTS;
+  for (const day of byDay.values()) if (day.spell && day.dictation) score += PROFICIENCY_DAY_POINTS;
   return score;
 }
 
-export function reviewedOnDay(events: ProficiencyEvent[], day: Date, timeZone = TIME_ZONE) {
+export function reviewedOnDay(events: { createdAt: Date }[], day: Date, timeZone = TIME_ZONE) {
   const key = dayKey(day, timeZone);
   return events.some((event) => dayKey(event.createdAt, timeZone) === key);
 }

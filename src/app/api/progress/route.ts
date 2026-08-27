@@ -18,9 +18,9 @@ export async function GET() {
       .where(eq(userLearningPaths.userId, userId)),
   ]);
 
-  const events = states.length ? await db.select({ masteryStateId: reviewEvents.vocabularyMasteryStateId, isCorrect: reviewEvents.isCorrect, createdAt: reviewEvents.createdAt }).from(reviewEvents).where(inArray(reviewEvents.vocabularyMasteryStateId, states.map((s) => s.id))) : [];
-  const eventsByState = new Map<string, { isCorrect: boolean; createdAt: Date }[]>();
-  for (const event of events) { const list = eventsByState.get(event.masteryStateId) ?? []; list.push({ isCorrect: event.isCorrect, createdAt: event.createdAt }); eventsByState.set(event.masteryStateId, list) }
+  const events = states.length ? await db.select({ masteryStateId: reviewEvents.vocabularyMasteryStateId, isCorrect: reviewEvents.isCorrect, createdAt: reviewEvents.createdAt, challengeType: reviewEvents.challengeType }).from(reviewEvents).where(inArray(reviewEvents.vocabularyMasteryStateId, states.map((s) => s.id))) : [];
+  const eventsByState = new Map<string, { isCorrect: boolean; createdAt: Date; challengeType: "spell" | "dictation" }[]>();
+  for (const event of events) { if (event.challengeType !== "spell" && event.challengeType !== "dictation") continue; const list = eventsByState.get(event.masteryStateId) ?? []; list.push({ isCorrect: event.isCorrect, createdAt: event.createdAt, challengeType: event.challengeType }); eventsByState.set(event.masteryStateId, list) }
   const proficiencies = states.map((state) => computeProficiency(eventsByState.get(state.id) ?? []));
 
   const [[totalVocab], [learnedVocab]] = await Promise.all([

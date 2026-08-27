@@ -1,0 +1,1 @@
+ALTER TABLE "review_events" ADD COLUMN "challenge_type" text;

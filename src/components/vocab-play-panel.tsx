@@ -1,16 +1,15 @@
 "use client";
 import { useEffect,useRef,useState } from "react";
+import Link from "next/link";
 import { repeatModeLabels,RepeatMode,shuffle } from "@/lib/repeat-mode";
 import { speakSequence } from "@/lib/speech";
 import { useWakeLock,wakeLockStatusLabels } from "@/lib/wake-lock";
 
 type Item={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;example:string|null;exampleTranslation:string|null};
 type Queue={due:Item[];new:Item[]};
-type Source={key:string;label:string;due:number;new:number};
+type Source={key:string;label:string};
 
-export function VocabPlayPanel(){
- const[sources,setSources]=useState<Source[]|null>(null);
- const[activeSource,setActiveSource]=useState<Source|null>(null);
+export function VocabPlayPanel({source}:{source:Source}){
  const[items,setItems]=useState<Item[]|null>(null);
  const[index,setIndex]=useState(0);
  const[mode,setMode]=useState<RepeatMode>("loop");
@@ -19,24 +18,13 @@ export function VocabPlayPanel(){
 
  useEffect(()=>{
   let active=true;
-  fetch("/api/reviews/sources").then(r=>r.ok?r.json():null).then((data:{sources:Source[]}|null)=>{if(active)setSources(data?.sources??[])}).catch(()=>{if(active)setSources([])});
-  return()=>{active=false};
- },[]);
-
- async function startSource(source:Source){
-  setActiveSource(source);setItems(null);
+  Promise.resolve().then(()=>{if(active)setItems(null)});
   const query=source.key?`?source=${encodeURIComponent(source.key)}`:"";
-  const response=await fetch(`/api/reviews/queue${query}`).catch(()=>null);
-  const data:Queue=response&&response.ok?await response.json():{due:[],new:[]};
-  const list=[...data.due,...data.new];
-  setItems(shuffle(list));setIndex(0);
- }
- function backToMenu(){
-  if("speechSynthesis"in window)window.speechSynthesis.cancel();
-  setActiveSource(null);setItems(null);
-  setSources(null);
-  fetch("/api/reviews/sources").then(r=>r.ok?r.json():null).then((data:{sources:Source[]}|null)=>setSources(data?.sources??[])).catch(()=>setSources([]));
- }
+  fetch(`/api/reviews/queue${query}`).then(r=>r.ok?r.json():{due:[],new:[]}).then((data:Queue)=>{if(active){setItems(shuffle([...data.due,...data.new]));setIndex(0)}}).catch(()=>{if(active)setItems([])});
+  return()=>{active=false};
+ },[source.key]);
+ useEffect(()=>()=>{if("speechSynthesis"in window)window.speechSynthesis.cancel()},[]);
+
  function selectMode(value:RepeatMode){
   setMode(value);
   if(value==="random"&&items){setItems(shuffle(items));setIndex(0)}
@@ -58,7 +46,7 @@ export function VocabPlayPanel(){
  }
 
  const item=items?.[index];
- const wakeLockStatus=useWakeLock(Boolean(activeSource&&item));
+ const wakeLockStatus=useWakeLock(Boolean(item));
  const[speaking,setSpeaking]=useState(false);
  const autoAdvanceTimeout=useRef<ReturnType<typeof setTimeout>|undefined>(undefined);
  function clearAutoAdvance(){if(autoAdvanceTimeout.current){clearTimeout(autoAdvanceTimeout.current);autoAdvanceTimeout.current=undefined}}
@@ -81,29 +69,12 @@ export function VocabPlayPanel(){
  }
  useEffect(()=>{if(item)play();return clearAutoAdvance},[item?.userVocabularyId]);
 
- if(!activeSource){
-  return <main className="shell">
-   <p className="eyebrow">詞彙 · 播放</p>
-   <h1>先選要播放的內容。</h1>
-   <section className="card">
-    {sources===null&&<p className="lead">載入中…</p>}
-    {sources!==null&&sources.length===0&&<p className="lead">目前沒有可以播放的詞彙。</p>}
-    {sources!==null&&sources.length>0&&<div style={{display:"flex",flexDirection:"column",gap:10}}>
-     {sources.map(source=><button key={source.key||"all"} className="option" onClick={()=>startSource(source)} style={{textAlign:"left",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-      <span>{source.label}</span>
-      <span className="context" style={{margin:0}}>共 {source.due+source.new} 字</span>
-     </button>)}
-    </div>}
-   </section>
-  </main>;
- }
+ if(items===null)return <main className="shell"><p className="eyebrow">詞彙 · 播放 · {source.label}</p><h1>載入中…</h1></main>;
 
- if(items===null)return <main className="shell"><p className="eyebrow">詞彙 · 播放 · {activeSource.label}</p><h1>載入中…</h1></main>;
-
- if(!item)return <main className="shell finish"><div className="mark">✓</div><p className="eyebrow">播放</p><h1>目前沒有可以播放的內容。</h1><button className="primary resume" onClick={backToMenu}>返回選單</button></main>;
+ if(!item)return <main className="shell finish"><div className="mark">✓</div><p className="eyebrow">播放</p><h1>目前沒有可以播放的內容。</h1><Link href="/vocab" className="primary resume" style={{display:"inline-block",textAlign:"center",textDecoration:"none"}}>返回選單</Link></main>;
 
  return <main className="shell">
-  <p className="eyebrow">詞彙 · 播放 · {activeSource.label}</p>
+  <p className="eyebrow">詞彙 · 播放 · {source.label}</p>
   <h1>不用作答，聽過去就好。</h1>
   <div className="pills">
    {(Object.keys(repeatModeLabels) as RepeatMode[]).map(value=><button key={value} className="pill" aria-pressed={mode===value} onClick={()=>selectMode(value)}>{repeatModeLabels[value]}</button>)}
@@ -120,7 +91,7 @@ export function VocabPlayPanel(){
     <button aria-label={speaking?"暫停":"播放"} onClick={togglePlayPause} style={{flex:1,border:0,borderRadius:16,background:"var(--mint)",color:"var(--ink)",cursor:"pointer",padding:"12px 10px",fontWeight:800,whiteSpace:"nowrap"}}>{speaking?"Ⅱ 暫停":"▶ 播放"}</button>
     <button className="primary" onClick={()=>advance()} style={{flex:1}}>下一個</button>
    </div>
-   <button onClick={backToMenu} style={{marginTop:14,background:"none",border:0,textDecoration:"underline",cursor:"pointer",padding:0}}>結束播放，返回選單</button>
+   <Link href="/vocab" onClick={()=>{if("speechSynthesis"in window)window.speechSynthesis.cancel()}} style={{marginTop:14,background:"none",border:0,textDecoration:"underline",cursor:"pointer",padding:0,display:"inline-block"}}>結束播放，返回選單</Link>
   </section>
  </main>;
 }
