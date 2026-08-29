@@ -46,7 +46,7 @@ export function VocabPlayPanel({source}:{source:Source}){
  }
 
  const item=items?.[index];
- const wakeLockStatus=useWakeLock(Boolean(item));
+ const[wakeLockStatus,retryWakeLock]=useWakeLock(Boolean(item));
  const[speaking,setSpeaking]=useState(false);
  const autoAdvanceTimeout=useRef<ReturnType<typeof setTimeout>|undefined>(undefined);
  function clearAutoAdvance(){if(autoAdvanceTimeout.current){clearTimeout(autoAdvanceTimeout.current);autoAdvanceTimeout.current=undefined}}
@@ -79,7 +79,9 @@ export function VocabPlayPanel({source}:{source:Source}){
   <div className="pills">
    {(Object.keys(repeatModeLabels) as RepeatMode[]).map(value=><button key={value} className="pill" aria-pressed={mode===value} onClick={()=>selectMode(value)}>{repeatModeLabels[value]}</button>)}
   </div>
-  <p className="lead" style={{margin:"10px 0 0"}}>{wakeLockStatusLabels[wakeLockStatus]}</p>
+  {wakeLockStatus==="active"||wakeLockStatus==="unsupported"
+   ?<p className="lead" style={{margin:"10px 0 0"}}>{wakeLockStatusLabels[wakeLockStatus]}</p>
+   :<button onClick={retryWakeLock} className="lead" style={{margin:"10px 0 0",background:"none",border:0,padding:0,font:"inherit",color:"inherit",textDecoration:"underline",cursor:"pointer"}}>{wakeLockStatusLabels[wakeLockStatus]}</button>}
   <section className="card">
    <span className="label">{index+1} / {items.length}</span>
    <h1 style={{fontSize:30}}>{item.form}</h1>

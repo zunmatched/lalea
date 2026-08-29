@@ -1,10 +1,11 @@
-import { useEffect,useRef,useState } from "react";
+import { useCallback,useEffect,useRef,useState } from "react";
 
 export type WakeLockStatus = "idle" | "active" | "unsupported" | "denied" | "error";
-export const wakeLockStatusLabels: Record<WakeLockStatus, string> = { idle: "尚未啟用", active: "🔒 螢幕保持喚醒中", unsupported: "此瀏覽器不支援螢幕喚醒鎖", denied: "螢幕喚醒鎖被拒絕", error: "螢幕喚醒鎖發生錯誤" };
+export const wakeLockStatusLabels: Record<WakeLockStatus, string> = { idle: "尚未啟用，點一下開啟", active: "🔒 螢幕保持喚醒中", unsupported: "此瀏覽器不支援螢幕喚醒鎖", denied: "螢幕喚醒鎖被拒絕，點一下重試", error: "螢幕喚醒鎖發生錯誤，點一下重試" };
 
-export function useWakeLock(active: boolean): WakeLockStatus {
+export function useWakeLock(active: boolean): [WakeLockStatus, () => void] {
   const [status, setStatus] = useState<WakeLockStatus>("idle");
+  const [retryTick, setRetryTick] = useState(0);
   const lockRef = useRef<WakeLockSentinel | null>(null);
   useEffect(() => {
     if (!active) { Promise.resolve().then(() => setStatus("idle")); return }
@@ -16,7 +17,12 @@ export function useWakeLock(active: boolean): WakeLockStatus {
         if (cancelled) { void lock.release(); return }
         lockRef.current = lock;
         setStatus("active");
-        lock.addEventListener("release", () => { if (!cancelled) setStatus("idle") });
+        lock.addEventListener("release", () => {
+          // the OS releases the lock the instant the screen turns off (manual power button included) —
+          // clearing the ref here is what lets the visibilitychange handler below know to re-acquire
+          if (lockRef.current === lock) lockRef.current = null;
+          if (!cancelled) setStatus("idle");
+        });
       } catch (err) {
         if (cancelled) return;
         setStatus(err instanceof DOMException && err.name === "NotAllowedError" ? "denied" : "error");
@@ -31,6 +37,7 @@ export function useWakeLock(active: boolean): WakeLockStatus {
       void lockRef.current?.release();
       lockRef.current = null;
     };
-  }, [active]);
-  return status;
+  }, [active, retryTick]);
+  const retry = useCallback(() => setRetryTick((value) => value + 1), []);
+  return [status, retry];
 }

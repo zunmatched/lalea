@@ -15,7 +15,7 @@ export function ListenPanel(){
  useEffect(()=>{modeRef.current=mode},[mode]);
  const[hasStarted,setHasStarted]=useState(false);
  const[replayTick,setReplayTick]=useState(0);
- const wakeLockStatus=useWakeLock(Boolean(items&&items.length>0));
+ const[wakeLockStatus,retryWakeLock]=useWakeLock(Boolean(items&&items.length>0));
 
  useEffect(()=>{
   let active=true;
@@ -59,7 +59,9 @@ export function ListenPanel(){
   <div className="pills">
    {(Object.keys(repeatModeLabels) as RepeatMode[]).map(value=><button key={value} className="pill" aria-pressed={mode===value} onClick={()=>selectMode(value)}>{repeatModeLabels[value]}</button>)}
   </div>
-  <p className="lead" style={{margin:"10px 0 0"}}>{wakeLockStatusLabels[wakeLockStatus]}</p>
+  {wakeLockStatus==="active"||wakeLockStatus==="unsupported"
+   ?<p className="lead" style={{margin:"10px 0 0"}}>{wakeLockStatusLabels[wakeLockStatus]}</p>
+   :<button onClick={retryWakeLock} className="lead" style={{margin:"10px 0 0",background:"none",border:0,padding:0,font:"inherit",color:"inherit",textDecoration:"underline",cursor:"pointer"}}>{wakeLockStatusLabels[wakeLockStatus]}</button>}
   <section className="card">
    <span className="label">{index+1} / {items.length} · {categoryLabels[item.category]??item.category}</span>
    <AudioPlayer key={`${item.id}-${replayTick}`} exerciseId={item.exerciseId} text={item.text} asset={item} autoPlay={hasStarted} onComplete={()=>advance(true)} onPrevious={goBack} onNext={()=>advance()}/>
