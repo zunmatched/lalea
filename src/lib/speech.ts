@@ -1,5 +1,21 @@
 type SpeechPart = { text: string; lang: string; rate?: number };
 
+let voiceCache: SpeechSynthesisVoice[] = [];
+if (typeof window !== "undefined" && "speechSynthesis" in window) {
+  const refreshVoices = () => { voiceCache = window.speechSynthesis.getVoices() };
+  refreshVoices();
+  window.speechSynthesis.addEventListener("voiceschanged", refreshVoices);
+}
+
+function pickVoice(lang: string) {
+  const exact = voiceCache.filter((voice) => voice.lang.toLowerCase() === lang.toLowerCase());
+  const candidates = exact.length ? exact : voiceCache.filter((voice) => voice.lang.toLowerCase().startsWith(lang.split("-")[0].toLowerCase()));
+  // Desktop OS voices (SAPI, espeak, etc.) tend to sound noticeably more robotic than Chrome's
+  // network-backed "Google ..." voices, which are also what most mobile Chrome installs default
+  // to — preferring them narrows the gap between desktop and mobile pronunciation.
+  return candidates.find((voice) => /google/i.test(voice.name)) ?? candidates[0];
+}
+
 let activeNoise: { context: AudioContext; source: AudioBufferSourceNode } | null = null;
 let noiseSafetyTimeout: ReturnType<typeof setTimeout> | undefined;
 
@@ -55,6 +71,8 @@ export function speakSequence(parts: SpeechPart[], handlers?: { onEnd?: () => vo
     parts.forEach((part, index) => {
       const utterance = new SpeechSynthesisUtterance(part.text);
       utterance.lang = part.lang;
+      const voice = pickVoice(part.lang);
+      if (voice) utterance.voice = voice;
       if (part.rate) utterance.rate = part.rate;
       if (index === parts.length - 1) {
         utterance.onend = () => { stopNoise(); handlers?.onEnd?.() };
