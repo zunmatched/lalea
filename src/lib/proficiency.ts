@@ -45,3 +45,10 @@ export function scoredOnDay(events: ProficiencyEvent[], day: Date, timeZone = TI
   }
   return spell && dictation;
 }
+
+// Whether a word was answered correctly via this specific typing type on the given day —
+// used to show per-challenge-type completion (only spell/dictation are ever recorded).
+export function correctTypeOnDay(events: ProficiencyEvent[], challengeType: ScoringChallengeType, day: Date, timeZone = TIME_ZONE) {
+  const key = dayKey(day, timeZone);
+  return events.some((event) => event.isCorrect && event.challengeType === challengeType && dayKey(event.createdAt, timeZone) === key);
+}
