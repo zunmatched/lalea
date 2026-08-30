@@ -1,13 +1,13 @@
 "use client";
 import { useEffect,useMemo,useRef,useState } from "react";
 import { randomUUID } from "@/lib/client-id";
-import { PROFICIENCY_MAX } from "@/lib/proficiency";
+import { DEFAULT_REVIEW_WINDOW_DAYS } from "@/lib/proficiency";
 import { speakSequence } from "@/lib/speech";
 
 type Pool={form:string;translation:string|null};
 type Due={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;example:string|null;exampleTranslation:string|null;dimension:"reading_recognition"|"listening_recognition"|"active_recall";proficiency:number;reviewCount:number;reviewedToday:boolean};
 type Fresh={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;example:string|null;exampleTranslation:string|null};
-type Queue={due:Due[];new:Fresh[];pool:Pool[];policy:{dueFirst:boolean}};
+type Queue={due:Due[];new:Fresh[];pool:Pool[];policy:{dueFirst:boolean};proficiencyMax:number};
 type SessionItem=(Due&{isNew:false})|(Fresh&{isNew:true;dimension:"reading_recognition";proficiency:0;reviewCount:0});
 type Source={key:string;label:string};
 
@@ -18,11 +18,12 @@ type QuizCategory=ChallengeType;
 const categoryLabels:Record<QuizCategory,string>={recognize_zh:"中選英",recognize_en:"英選中",dictation:"聽力拼字",spell:"看中文寫英文"};
 function shuffle<T>(items:T[]):T[]{return [...items].sort(()=>Math.random()-0.5)}
 function spellHint(form:string){const words=form.trim().split(/\s+/);const letters=words.join("").length;return`共 ${letters} 個字母${words.length>1?`（${words.length} 個單字）`:""}，開頭字母：${words[0][0].toUpperCase()}`}
-const emptyQueue:Queue={due:[],new:[],pool:[],policy:{dueFirst:true}};
+const emptyQueue:Queue={due:[],new:[],pool:[],policy:{dueFirst:true},proficiencyMax:DEFAULT_REVIEW_WINDOW_DAYS};
 
 export function ReviewPanel({source}:{source:Source}){
  const[category,setCategory]=useState<QuizCategory|null>(null);
  const[pool,setPool]=useState<Pool[]>([]);
+ const[proficiencyMax,setProficiencyMax]=useState(DEFAULT_REVIEW_WINDOW_DAYS);
  const[session,setSession]=useState<SessionItem[]|null>(null);
  const[sessionIndex,setSessionIndex]=useState(0);
  const[correctCount,setCorrectCount]=useState(0);
@@ -39,7 +40,7 @@ export function ReviewPanel({source}:{source:Source}){
    ...data.due.map(item=>({...item,isNew:false as const})),
    ...data.new.map(item=>({...item,isNew:true as const,dimension:"reading_recognition" as const,proficiency:0 as const,reviewCount:0 as const})),
   ];
-  setPool(data.pool);setSession(items);setSessionIndex(0);setCorrectCount(0);setWrongItems([]);
+  setPool(data.pool);setProficiencyMax(data.proficiencyMax);setSession(items);setSessionIndex(0);setCorrectCount(0);setWrongItems([]);
   setSelectedOption(null);setSpelling("");setChecked(null);setMessage("");
  }
  useEffect(()=>{
@@ -101,7 +102,7 @@ export function ReviewPanel({source}:{source:Source}){
    const response=await fetch("/api/reviews",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({userVocabularyId:forItem.userVocabularyId,dimension:forItem.dimension,challengeType,clientEventId:randomUUID(),isCorrect:correct})});
    if(response.ok){
     const result=await response.json();
-    if(sessionIndexRef.current===forIndex)setMessage(`熟練度 ${result.proficiency}/${PROFICIENCY_MAX}（聽力拼字與看中文寫英文今天都答對才計分，近 5 天內每天最高分累計）`);
+    if(sessionIndexRef.current===forIndex)setMessage(`熟練度 ${result.proficiency}/${proficiencyMax}（聽力拼字與看中文寫英文今天都答對才計分，近 ${proficiencyMax} 天內每天最高分累計）`);
    }
   }catch{
    // network hiccup: the answer already counted locally, just no proficiency readout this time
@@ -132,9 +133,9 @@ export function ReviewPanel({source}:{source:Source}){
 
  if(!item)return <main className="shell finish"><div className="mark">✓</div><p className="eyebrow">本輪複習完成</p><h1>{session.length===0?"目前沒有需要複習的內容。":"這輪的內容都練過一次了。"}</h1>{session.length>0&&<div className="stats"><div className="stat"><strong>{correctCount}/{session.length}</strong><span>答對</span></div></div>}{wrongItems.length>0&&<section className="card" style={{textAlign:"left"}}><span className="label">答錯的字</span>{wrongItems.map(wrong=><p key={wrong.userVocabularyId} className="context" style={{margin:"8px 0"}}>{wrong.form}{wrong.translation?`（${wrong.translation}）`:""}</p>)}</section>}<button className="primary resume" onClick={backToCategories}>返回選單</button></main>;
 
- return <main className="shell"><p className="eyebrow">詞彙 · 測驗 · {source.label} · {categoryLabels[category]}</p><h1>先處理最需要加強的內容。</h1><p className="lead">依熟練度由低到高排序，本輪固定內容跑完一遍；聽力拼字與看中文寫英文同一天都答對才計分，近 5 天內每天最高分累計，最高 {PROFICIENCY_MAX} 分，不練會掉分。</p>
+ return <main className="shell"><p className="eyebrow">詞彙 · 測驗 · {source.label} · {categoryLabels[category]}</p><h1>先處理最需要加強的內容。</h1><p className="lead">依熟練度由低到高排序，本輪固定內容跑完一遍；聽力拼字與看中文寫英文同一天都答對才計分，近 {proficiencyMax} 天內每天最高分累計，最高 {proficiencyMax} 分，不練會掉分。</p>
  <section className="card">
-  <span className="label">{isFirstLearning?"首次學習":labels[item.dimension]} · {isFirstLearning?"":`熟練度 ${item.proficiency}/${PROFICIENCY_MAX} · `}本輪剩餘 {session.length-sessionIndex}</span>
+  <span className="label">{isFirstLearning?"首次學習":labels[item.dimension]} · {isFirstLearning?"":`熟練度 ${item.proficiency}/${proficiencyMax} · `}本輪剩餘 {session.length-sessionIndex}</span>
   {challengeType==="recognize_en"&&<h1 style={{fontSize:30}}>{item.form}</h1>}
   {(challengeType==="recognize_zh"||challengeType==="spell")&&<h1 style={{fontSize:30}}>{item.translation??item.form}</h1>}
   <span className="label">{challengeType&&prompts[challengeType]}</span>

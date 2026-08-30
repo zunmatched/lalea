@@ -1,0 +1,1 @@
+ALTER TABLE "user_learning_paths" ADD COLUMN "review_window_days" integer DEFAULT 3 NOT NULL;

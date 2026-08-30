@@ -7,9 +7,10 @@ type Group={id:string;title:string;sources:Source[]};
 
 export function VocabGroupPicker({groupId,fallbackTitle}:{groupId:string;fallbackTitle:string}){
  const[group,setGroup]=useState<Group|null|undefined>(undefined);
+ const[proficiencyMax,setProficiencyMax]=useState(3);
  useEffect(()=>{
   let active=true;
-  fetch("/api/reviews/sources").then(r=>r.ok?r.json():null).then((data:{groups:Group[]}|null)=>{if(!active)return;setGroup(data?.groups.find(item=>item.id===groupId)??null)}).catch(()=>{if(active)setGroup(null)});
+  fetch("/api/reviews/sources").then(r=>r.ok?r.json():null).then((data:{groups:Group[];proficiencyMax:number}|null)=>{if(!active)return;setGroup(data?.groups.find(item=>item.id===groupId)??null);if(data)setProficiencyMax(data.proficiencyMax)}).catch(()=>{if(active)setGroup(null)});
   return()=>{active=false};
  },[groupId]);
 
@@ -24,7 +25,7 @@ export function VocabGroupPicker({groupId,fallbackTitle}:{groupId:string;fallbac
    {group&&group.sources.length>0&&<div style={{display:"flex",flexDirection:"column",gap:10}}>
     {group.sources.map(source=><Link key={source.key} href={`/vocab/menu?source=${encodeURIComponent(source.key)}&label=${encodeURIComponent(source.label)}`} className="option" style={{textAlign:"left",textDecoration:"none",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
      <span>{source.label}</span>
-     <span className="context" style={{margin:0}}>熟悉度 {source.proficiency}/5 · 共 {source.totalWords} 字</span>
+     <span className="context" style={{margin:0}}>熟悉度 {source.proficiency}/{proficiencyMax} · 共 {source.totalWords} 字</span>
     </Link>)}
    </div>}
   </section>

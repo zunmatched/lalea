@@ -1,6 +1,5 @@
-export const PROFICIENCY_WINDOW_DAYS = 5;
 export const PROFICIENCY_DAY_POINTS = 1;
-export const PROFICIENCY_MAX = PROFICIENCY_WINDOW_DAYS * PROFICIENCY_DAY_POINTS;
+export const DEFAULT_REVIEW_WINDOW_DAYS = 3;
 const TIME_ZONE = "Asia/Taipei";
 
 function dayKey(date: Date, timeZone = TIME_ZONE) {
@@ -10,9 +9,13 @@ function dayKey(date: Date, timeZone = TIME_ZONE) {
 export type ScoringChallengeType = "spell" | "dictation";
 export type ProficiencyEvent = { isCorrect: boolean; createdAt: Date; challengeType: ScoringChallengeType };
 
-export function computeProficiency(events: ProficiencyEvent[], now = new Date(), timeZone = TIME_ZONE) {
+export function proficiencyMax(windowDays: number) {
+  return windowDays * PROFICIENCY_DAY_POINTS;
+}
+
+export function computeProficiency(events: ProficiencyEvent[], windowDays: number, now = new Date(), timeZone = TIME_ZONE) {
   const windowKeys = new Set<string>();
-  for (let i = 0; i < PROFICIENCY_WINDOW_DAYS; i++) windowKeys.add(dayKey(new Date(now.getTime() - i * 86_400_000), timeZone));
+  for (let i = 0; i < windowDays; i++) windowKeys.add(dayKey(new Date(now.getTime() - i * 86_400_000), timeZone));
   const byDay = new Map<string, { spell: boolean; dictation: boolean }>();
   for (const event of events) {
     const key = dayKey(event.createdAt, timeZone);
@@ -29,4 +32,16 @@ export function computeProficiency(events: ProficiencyEvent[], now = new Date(),
 export function reviewedOnDay(events: { createdAt: Date }[], day: Date, timeZone = TIME_ZONE) {
   const key = dayKey(day, timeZone);
   return events.some((event) => dayKey(event.createdAt, timeZone) === key);
+}
+
+// Whether a word was actually scored (both typing types answered correctly) on the given day —
+// used for the daily quiz-completion count, independent of the rolling window size.
+export function scoredOnDay(events: ProficiencyEvent[], day: Date, timeZone = TIME_ZONE) {
+  const key = dayKey(day, timeZone);
+  let spell = false, dictation = false;
+  for (const event of events) {
+    if (!event.isCorrect || dayKey(event.createdAt, timeZone) !== key) continue;
+    if (event.challengeType === "spell") spell = true; else dictation = true;
+  }
+  return spell && dictation;
 }

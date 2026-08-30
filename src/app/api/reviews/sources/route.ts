@@ -1,16 +1,17 @@
 import { db } from "@/db/client";
 import { userLearningPaths,vocabGroups } from "@/db/schema";
 import { requireUserId } from "@/lib/dev-auth";
+import { proficiencyMax } from "@/lib/proficiency";
 import { loadDueCards,loadFreshCandidates } from "@/lib/review-data";
 import { ensureGroupAssignments,loadCourseSources,MANUAL_SOURCE_KEY,MANUAL_SOURCE_LABEL } from "@/lib/review-sources";
 import { eq,inArray } from "drizzle-orm";
 
 export async function GET(){
  const userId=requireUserId();
- const[path]=await db.select({id:userLearningPaths.id}).from(userLearningPaths).where(eq(userLearningPaths.userId,userId)).limit(1);
- if(!path)return Response.json({groups:[]});
+ const[path]=await db.select({id:userLearningPaths.id,reviewWindowDays:userLearningPaths.reviewWindowDays}).from(userLearningPaths).where(eq(userLearningPaths.userId,userId)).limit(1);
+ if(!path)return Response.json({groups:[],proficiencyMax:0});
 
- const[allReviewed,fresh,{courseLabels}]=await Promise.all([loadDueCards(userId,new Date(),{includeMastered:true}),loadFreshCandidates(userId),loadCourseSources(userId)]);
+ const[allReviewed,fresh,{courseLabels}]=await Promise.all([loadDueCards(userId,path.reviewWindowDays,new Date(),{includeMastered:true}),loadFreshCandidates(userId),loadCourseSources(userId)]);
 
  const stats=new Map<string,{sum:number;count:number;label:string}>();
  const bump=(key:string,label:string,proficiency:number)=>{const entry=stats.get(key)??{sum:0,count:0,label};entry.sum+=proficiency;entry.count+=1;stats.set(key,entry)};
@@ -41,5 +42,5 @@ export async function GET(){
   .sort((a,b)=>a.position-b.position||a.title.localeCompare(b.title))
   .map(({id,slug,title,sources})=>({id,slug,title,sources:sources.sort((a,b)=>(b.totalWords)-(a.totalWords))}));
 
- return Response.json({groups});
+ return Response.json({groups,proficiencyMax:proficiencyMax(path.reviewWindowDays)});
 }

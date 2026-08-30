@@ -2,7 +2,7 @@
 import { useEffect,useState } from "react";
 import Link from "next/link";
 
-type Progress={completedUnits:number;inProgressUnits:number;vocabulary:{total:number;learned:number;dueToday:number;averageProficiency:number}};
+type Progress={completedUnits:number;inProgressUnits:number;vocabulary:{total:number;learned:number;dueToday:number;averageProficiency:number;completedToday:number}};
 type Course={id:string;title:string;totalUnits:number;completedUnits:number};
 
 export function HomeDashboard(){
@@ -29,6 +29,7 @@ export function HomeDashboard(){
     <div className="stat"><strong>{progress.vocabulary.learned}/{progress.vocabulary.total}</strong><span>詞彙已學會</span></div>
     <div className="stat"><strong>{progress.vocabulary.averageProficiency}</strong><span>平均熟練度</span></div>
     <div className="stat"><strong>{progress.vocabulary.dueToday}</strong><span>待複習詞彙</span></div>
+    <div className="stat"><strong>{progress.vocabulary.completedToday}/{progress.vocabulary.total}</strong><span>今日測驗完成度</span></div>
    </div>}
   </section>
 
