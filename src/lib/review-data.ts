@@ -1,7 +1,7 @@
 import { db } from "@/db/client";
 import { lexemes,lexemeSenses,reviewEvents,senseTranslations,userLearningPaths,userVocabulary,vocabularyExamples,vocabularyMasteryStates } from "@/db/schema";
 import { and,eq,inArray,isNull } from "drizzle-orm";
-import { computeProficiency,proficiencyMax,ProficiencyEvent,reviewedOnDay } from "./proficiency";
+import { computeProficiency,proficiencyMax,ProficiencyEvent,reviewedOnDay,scoredOnDay } from "./proficiency";
 import { loadCourseSources,sourceFor } from "./review-sources";
 
 const cardFields={userVocabularyId:userVocabulary.id,lexemeSenseId:userVocabulary.lexemeSenseId,form:lexemes.canonicalForm,partOfSpeech:lexemeSenses.partOfSpeech,translation:senseTranslations.translation,example:vocabularyExamples.text,exampleTranslation:vocabularyExamples.translation,starred:userVocabulary.starred};
@@ -18,7 +18,7 @@ export async function loadDueCards(userId:string,windowDays:number,now=new Date(
  return states.map(({masteryStateId,lexemeSenseId,...card})=>{
   const stateEvents=eventsByState.get(masteryStateId)??[];
   const source=sourceFor(bySense,lexemeSenseId);
-  return{...card,proficiency:computeProficiency(stateEvents,windowDays,now),reviewedToday:reviewedOnDay(stateEvents,now),sourceKey:source.key,sourceLabel:source.label};
+  return{...card,proficiency:computeProficiency(stateEvents,windowDays,now),reviewedToday:reviewedOnDay(stateEvents,now),completedToday:scoredOnDay(stateEvents,now),sourceKey:source.key,sourceLabel:source.label};
  }).filter(item=>options?.includeMastered||item.proficiency<max);
 }
 

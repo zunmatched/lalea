@@ -24,6 +24,7 @@ export function ReviewPanel({source}:{source:Source}){
  const[category,setCategory]=useState<QuizCategory|null>(null);
  const[pool,setPool]=useState<Pool[]>([]);
  const[proficiencyMax,setProficiencyMax]=useState(DEFAULT_REVIEW_WINDOW_DAYS);
+ const[todayProgress,setTodayProgress]=useState<{completedToday:number;totalWords:number}|null>(null);
  const[session,setSession]=useState<SessionItem[]|null>(null);
  const[sessionIndex,setSessionIndex]=useState(0);
  const[correctCount,setCorrectCount]=useState(0);
@@ -51,7 +52,15 @@ export function ReviewPanel({source}:{source:Source}){
   fetch(`/api/reviews/queue${query}`).then(r=>r.ok?r.json():null).then((data:Queue|null)=>{if(active)applySession(data??emptyQueue)}).catch(()=>{if(active)applySession(emptyQueue)});
   return()=>{active=false};
  },[category,source.key]);
- function backToCategories(){setCategory(null);setSession(null)}
+
+ function loadTodayProgress(){
+  fetch("/api/reviews/sources").then(r=>r.ok?r.json():null).then((data:{groups:{sources:{key:string;completedToday:number;totalWords:number}[]}[]}|null)=>{
+   if(!data)return;
+   for(const group of data.groups)for(const item of group.sources)if(item.key===source.key){setTodayProgress({completedToday:item.completedToday,totalWords:item.totalWords});return}
+  }).catch(()=>{});
+ }
+ useEffect(()=>{loadTodayProgress()},[source.key]);
+ function backToCategories(){setCategory(null);setSession(null);loadTodayProgress()}
 
  const item=session?.[sessionIndex];
  const isFirstLearning=item?.isNew??false;
@@ -121,6 +130,7 @@ export function ReviewPanel({source}:{source:Source}){
   return <main className="shell">
    <p className="eyebrow">詞彙 · 測驗 · {source.label}</p>
    <h1>要練哪一種題型？</h1>
+   {todayProgress&&<p className="lead">今日完成度 {todayProgress.completedToday}/{todayProgress.totalWords}</p>}
    <section className="card">
     <div style={{display:"flex",flexDirection:"column",gap:10}}>
      {challengeTypes.map(value=><button key={value} className="option" onClick={()=>setCategory(value)} style={{textAlign:"left"}}>{categoryLabels[value]}</button>)}

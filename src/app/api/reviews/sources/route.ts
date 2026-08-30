@@ -13,14 +13,14 @@ export async function GET(){
 
  const[allReviewed,fresh,{courseLabels}]=await Promise.all([loadDueCards(userId,path.reviewWindowDays,new Date(),{includeMastered:true}),loadFreshCandidates(userId),loadCourseSources(userId)]);
 
- const stats=new Map<string,{sum:number;count:number;label:string}>();
- const bump=(key:string,label:string,proficiency:number)=>{const entry=stats.get(key)??{sum:0,count:0,label};entry.sum+=proficiency;entry.count+=1;stats.set(key,entry)};
- for(const item of allReviewed)bump(item.sourceKey,item.sourceLabel,item.proficiency);
- for(const item of fresh)bump(item.sourceKey,item.sourceLabel,0);
+ const stats=new Map<string,{sum:number;count:number;completedToday:number;label:string}>();
+ const bump=(key:string,label:string,proficiency:number,completedToday:boolean)=>{const entry=stats.get(key)??{sum:0,count:0,completedToday:0,label};entry.sum+=proficiency;entry.count+=1;if(completedToday)entry.completedToday+=1;stats.set(key,entry)};
+ for(const item of allReviewed)bump(item.sourceKey,item.sourceLabel,item.proficiency,item.completedToday);
+ for(const item of fresh)bump(item.sourceKey,item.sourceLabel,0,false);
 
  const keys=new Set([MANUAL_SOURCE_KEY,...courseLabels.keys()]);
  const sources=[...keys]
-  .map(key=>{const entry=stats.get(key);return{key,label:key===MANUAL_SOURCE_KEY?MANUAL_SOURCE_LABEL:(courseLabels.get(key)??key),totalWords:entry?.count??0,proficiency:entry&&entry.count?Math.round(entry.sum/entry.count):0}})
+  .map(key=>{const entry=stats.get(key);return{key,label:key===MANUAL_SOURCE_KEY?MANUAL_SOURCE_LABEL:(courseLabels.get(key)??key),totalWords:entry?.count??0,proficiency:entry&&entry.count?Math.round(entry.sum/entry.count):0,completedToday:entry?.completedToday??0}})
   .filter(source=>source.totalWords>0);
 
  const groupIdBySource=await ensureGroupAssignments(sources.map(source=>source.key));
