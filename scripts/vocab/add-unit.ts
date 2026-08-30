@@ -5,7 +5,8 @@ import { z } from "zod";
 loadEnvConfig(process.cwd());
 
 const wordSchema = z.object({ form: z.string().min(1), partOfSpeech: z.string().min(1), definition: z.string().min(1), translation: z.string().min(1), example: z.string().min(1), exampleTranslation: z.string().min(1) });
-const unitSchema = z.object({ slug: z.string().min(1).regex(/^[a-z0-9-]+$/, "slug 只能用小寫字母、數字與連字號"), title: z.string().min(1), words: z.array(wordSchema).min(1) });
+const groupSchema = z.object({ slug: z.string().min(1).regex(/^[a-z0-9-]+$/, "slug 只能用小寫字母、數字與連字號"), title: z.string().min(1) });
+const unitSchema = z.object({ slug: z.string().min(1).regex(/^[a-z0-9-]+$/, "slug 只能用小寫字母、數字與連字號"), title: z.string().min(1), group: groupSchema.optional(), words: z.array(wordSchema).min(1) });
 
 function normalize(form: string) {
   return form.trim().toLowerCase();
@@ -15,7 +16,7 @@ async function main() {
   const path = process.argv[2];
   if (!path) throw new Error("Usage: tsx scripts/vocab/add-unit.ts <word-list.json>");
   const raw = JSON.parse(await readFile(path, "utf8"));
-  const { slug: courseSlug, title: courseTitle, words } = unitSchema.parse(raw);
+  const { slug: courseSlug, title: courseTitle, group, words } = unitSchema.parse(raw);
 
   const { db, pool } = await import("../../src/db/client");
   const s = await import("../../src/db/schema");
@@ -29,6 +30,12 @@ async function main() {
 
     let [course] = await db.select().from(s.courses).where(and(eq(s.courses.learningPathId, learningPath.id), eq(s.courses.slug, courseSlug))).limit(1);
     if (!course) [course] = await db.insert(s.courses).values({ learningPathId: learningPath.id, slug: courseSlug, title: courseTitle }).returning();
+
+    if (group) {
+      let [vocabGroup] = await db.select().from(s.vocabGroups).where(eq(s.vocabGroups.slug, group.slug)).limit(1);
+      if (!vocabGroup) [vocabGroup] = await db.insert(s.vocabGroups).values({ slug: group.slug, title: group.title, position: 2 }).returning();
+      await db.insert(s.vocabGroupMembers).values({ groupId: vocabGroup.id, sourceKey: course.id }).onConflictDoUpdate({ target: s.vocabGroupMembers.sourceKey, set: { groupId: vocabGroup.id } });
+    }
 
     let [version] = await db.select().from(s.courseVersions).where(and(eq(s.courseVersions.courseId, course.id), eq(s.courseVersions.version, 1))).limit(1);
     if (!version) [version] = await db.insert(s.courseVersions).values({ courseId: course.id, version: 1 }).returning();
