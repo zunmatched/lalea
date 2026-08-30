@@ -1,30 +1,22 @@
 import { loadEnvConfig } from "@next/env";
+import { readFile } from "node:fs/promises";
+import { z } from "zod";
 
 loadEnvConfig(process.cwd());
 
-type WordInput = { form: string; partOfSpeech: string; definition: string; translation: string; example: string; exampleTranslation: string };
-
-const courseSlug = "recognition-and-appreciation";
-const courseTitle = "頒獎與感謝致詞";
-const unitTitle = "頒獎與感謝致詞";
-
-const words: WordInput[] = [
-  { form: "certificate", partOfSpeech: "noun", definition: "an official document that proves a fact or achievement", translation: "證書", example: "She received a certificate of completion after the training.", exampleTranslation: "她完成訓練後拿到了結業證書。" },
-  { form: "confer", partOfSpeech: "verb", definition: "to formally give an award, honor, or qualification to someone", translation: "頒授；授予", example: "The company will confer an award on employees who show dedication.", exampleTranslation: "公司會將獎項頒發給展現奉獻精神的員工。" },
-  { form: "recognition", partOfSpeech: "noun", definition: "public acknowledgment or praise for someone's achievement", translation: "表揚；肯定", example: "She received recognition for her hard work this year.", exampleTranslation: "她今年的努力獲得了肯定。" },
-  { form: "participation", partOfSpeech: "noun", definition: "the act of taking part in an activity or event", translation: "參與", example: "Thank you for your participation in this project.", exampleTranslation: "感謝你參與這個專案。" },
-  { form: "dedication", partOfSpeech: "noun", definition: "a strong commitment or devotion to a task or purpose", translation: "奉獻；敬業精神", example: "His dedication to the team inspired everyone.", exampleTranslation: "他對團隊的奉獻精神激勵了大家。" },
-  { form: "contribute", partOfSpeech: "verb", definition: "to give something, such as effort or ideas, to help achieve a shared goal", translation: "貢獻；付出", example: "Everyone is encouraged to contribute their ideas.", exampleTranslation: "鼓勵每個人貢獻自己的想法。" },
-  { form: "embrace", partOfSpeech: "verb", definition: "to accept something willingly and enthusiastically", translation: "欣然接受；擁抱", example: "We should embrace new challenges as they come.", exampleTranslation: "我們應該欣然接受隨之而來的新挑戰。" },
-  { form: "look forward to", partOfSpeech: "phrase", definition: "to feel excited about something that is going to happen", translation: "期待", example: "I look forward to working with you on this project.", exampleTranslation: "我期待在這個專案上與你合作。" },
-  { form: "opportunity", partOfSpeech: "noun", definition: "a favorable chance to do something", translation: "機會", example: "This is a great opportunity for growth.", exampleTranslation: "這是一個成長的絕佳機會。" },
-];
+const wordSchema = z.object({ form: z.string().min(1), partOfSpeech: z.string().min(1), definition: z.string().min(1), translation: z.string().min(1), example: z.string().min(1), exampleTranslation: z.string().min(1) });
+const unitSchema = z.object({ slug: z.string().min(1).regex(/^[a-z0-9-]+$/, "slug 只能用小寫字母、數字與連字號"), title: z.string().min(1), words: z.array(wordSchema).min(1) });
 
 function normalize(form: string) {
   return form.trim().toLowerCase();
 }
 
 async function main() {
+  const path = process.argv[2];
+  if (!path) throw new Error("Usage: tsx scripts/vocab/add-unit.ts <word-list.json>");
+  const raw = JSON.parse(await readFile(path, "utf8"));
+  const { slug: courseSlug, title: courseTitle, words } = unitSchema.parse(raw);
+
   const { db, pool } = await import("../../src/db/client");
   const s = await import("../../src/db/schema");
   const { and, eq } = await import("drizzle-orm");
@@ -45,7 +37,7 @@ async function main() {
     if (!unit) {
       const existingPositions = await db.select({ position: s.learningUnits.position }).from(s.learningUnits);
       const nextPosition = (existingPositions.length ? Math.max(...existingPositions.map((row) => row.position)) : 0) + 1;
-      [unit] = await db.insert(s.learningUnits).values({ courseVersionId: version.id, position: nextPosition, title: unitTitle, estimatedSeconds: 180 }).returning();
+      [unit] = await db.insert(s.learningUnits).values({ courseVersionId: version.id, position: nextPosition, title: courseTitle, estimatedSeconds: 180 }).returning();
     }
 
     for (let index = 0; index < words.length; index++) {
