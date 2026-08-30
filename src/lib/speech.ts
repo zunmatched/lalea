@@ -62,6 +62,6 @@ export function speakSequence(parts: SpeechPart[], handlers?: { onEnd?: () => vo
       }
       synth.speak(utterance);
     });
-  }, 80);
+  }, 250);
   return true;
 }
