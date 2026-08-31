@@ -1,7 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { computeProficiency, PROFICIENCY_DAY_POINTS, proficiencyMax, reviewedOnDay, scoredOnDay } from "./proficiency";
+import { computeProficiency, correctTypeOnDay, PROFICIENCY_DAY_POINTS, proficiencyMax, reviewedOnDay, scoredOnDay } from "./proficiency";
 
 const day = (offset: number) => new Date(Date.UTC(2026, 0, 10 + offset, 4, 0, 0)); // ~noon Asia/Taipei
+const later = (base: Date, minutes: number) => new Date(base.getTime() + minutes * 60_000);
 const WINDOW = 3;
 const MAX = proficiencyMax(WINDOW);
 
@@ -22,13 +23,22 @@ describe("computeProficiency", () => {
     expect(computeProficiency(events, WINDOW, day(0))).toBe(PROFICIENCY_DAY_POINTS);
   });
 
-  it("takes the best of multiple attempts of the same type on the same day", () => {
+  it("a later correct attempt overrides an earlier wrong attempt of the same type and day", () => {
     const events = [
       { isCorrect: false, createdAt: day(0), challengeType: "spell" as const },
-      { isCorrect: true, createdAt: day(0), challengeType: "spell" as const },
+      { isCorrect: true, createdAt: later(day(0), 5), challengeType: "spell" as const },
       { isCorrect: true, createdAt: day(0), challengeType: "dictation" as const },
     ];
     expect(computeProficiency(events, WINDOW, day(0))).toBe(PROFICIENCY_DAY_POINTS);
+  });
+
+  it("a later wrong attempt overrides an earlier correct attempt of the same type and day", () => {
+    const events = [
+      { isCorrect: true, createdAt: day(0), challengeType: "spell" as const },
+      { isCorrect: false, createdAt: later(day(0), 5), challengeType: "spell" as const },
+      { isCorrect: true, createdAt: day(0), challengeType: "dictation" as const },
+    ];
+    expect(computeProficiency(events, WINDOW, day(0))).toBe(0);
   });
 
   it("an all-wrong day scores zero for that day", () => {
@@ -76,6 +86,19 @@ describe("reviewedOnDay", () => {
   });
 });
 
+describe("correctTypeOnDay", () => {
+  it("is false with no attempts of that type today", () => {
+    expect(correctTypeOnDay([], "spell", day(0))).toBe(false);
+  });
+  it("reflects only the latest attempt of that type today", () => {
+    const events = [
+      { isCorrect: true, createdAt: day(0), challengeType: "spell" as const },
+      { isCorrect: false, createdAt: later(day(0), 5), challengeType: "spell" as const },
+    ];
+    expect(correctTypeOnDay(events, "spell", day(0))).toBe(false);
+  });
+});
+
 describe("scoredOnDay", () => {
   it("is false until both types are correct that day", () => {
     expect(scoredOnDay([{ isCorrect: true, createdAt: day(0), challengeType: "spell" }], day(0))).toBe(false);
@@ -91,6 +114,14 @@ describe("scoredOnDay", () => {
     const events = [
       { isCorrect: true, createdAt: day(-1), challengeType: "spell" as const },
       { isCorrect: true, createdAt: day(0), challengeType: "dictation" as const },
+    ];
+    expect(scoredOnDay(events, day(0))).toBe(false);
+  });
+  it("turns false again if the last attempt of the day for a type is wrong", () => {
+    const events = [
+      { isCorrect: true, createdAt: day(0), challengeType: "spell" as const },
+      { isCorrect: true, createdAt: day(0), challengeType: "dictation" as const },
+      { isCorrect: false, createdAt: later(day(0), 5), challengeType: "dictation" as const },
     ];
     expect(scoredOnDay(events, day(0))).toBe(false);
   });

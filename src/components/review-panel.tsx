@@ -4,7 +4,7 @@ import { randomUUID } from "@/lib/client-id";
 import { DEFAULT_REVIEW_WINDOW_DAYS } from "@/lib/proficiency";
 import { speakSequence } from "@/lib/speech";
 
-type Pool={form:string;translation:string|null};
+type Pool={form:string;translation:string|null;partOfSpeech:string|null};
 type Due={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;example:string|null;exampleTranslation:string|null;dimension:"reading_recognition"|"listening_recognition"|"active_recall";proficiency:number;reviewCount:number;reviewedToday:boolean};
 type Fresh={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;example:string|null;exampleTranslation:string|null};
 type Queue={due:Due[];new:Fresh[];pool:Pool[];policy:{dueFirst:boolean};proficiencyMax:number};
@@ -70,9 +70,13 @@ export function ReviewPanel({source}:{source:Source}){
  const options=useMemo(()=>{
   if(!item||!challengeType||challengeType==="spell")return[];
   const correctLabel=showEnglishOptions?item.form:(item.translation??item.form);
-  const distractors=shuffle(pool.filter(p=>p.form!==item.form)).slice(0,3).map(p=>showEnglishOptions?p.form:(p.translation??p.form));
+  // 盡量挑詞性相同但語意不同的干擾選項，避免用詞性就能猜出答案
+  const candidates=pool.filter(p=>p.form!==item.form);
+  const samePartOfSpeech=shuffle(candidates.filter(p=>p.partOfSpeech&&p.partOfSpeech===item.partOfSpeech));
+  const rest=shuffle(candidates.filter(p=>!(p.partOfSpeech&&p.partOfSpeech===item.partOfSpeech)));
+  const distractors=[...samePartOfSpeech,...rest].slice(0,3).map(p=>showEnglishOptions?p.form:(p.translation??p.form));
   return shuffle([...new Set([correctLabel,...distractors])]);
- },[item?.userVocabularyId,item?.form,item?.translation,challengeType,pool,showEnglishOptions]);
+ },[item?.userVocabularyId,item?.form,item?.translation,item?.partOfSpeech,challengeType,pool,showEnglishOptions]);
 
  function checkOption(label:string){
   if(!item||checked)return;
@@ -95,6 +99,7 @@ export function ReviewPanel({source}:{source:Source}){
   setChecked({correct});submitReview(item,correct,"dictation");
  }
  function playWord(){if(item)speakSequence([{text:item.form,lang:"en-US"}])}
+ useEffect(()=>{if(challengeType==="dictation"&&item)playWord()},[item?.userVocabularyId,challengeType]);
  function speak(){
   if(!item)return;
   const parts:Array<{text:string;lang:string}>=[{text:item.form,lang:"en-US"}];
@@ -132,10 +137,14 @@ export function ReviewPanel({source}:{source:Source}){
    <h1>要練哪一種題型？</h1>
    <section className="card">
     <div style={{display:"flex",flexDirection:"column",gap:10}}>
-     {challengeTypes.map(value=><button key={value} className="option" onClick={()=>setCategory(value)} style={{textAlign:"left",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-      <span>{categoryLabels[value]}</span>
-      {todayProgress&&(value==="spell"||value==="dictation")&&<span className="context" style={{margin:0}}>今日 {value==="spell"?todayProgress.spellDoneToday:todayProgress.dictationDoneToday}/{todayProgress.totalWords}</span>}
-     </button>)}
+     {challengeTypes.map(value=>{
+      const doneToday=value==="spell"?todayProgress?.spellDoneToday:value==="dictation"?todayProgress?.dictationDoneToday:undefined;
+      const isFull=todayProgress&&doneToday!==undefined&&todayProgress.totalWords>0&&doneToday===todayProgress.totalWords;
+      return <button key={value} className="option" onClick={()=>setCategory(value)} style={{textAlign:"left",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+       <span>{categoryLabels[value]}</span>
+       {todayProgress&&doneToday!==undefined&&<span className="context" style={isFull?{margin:0,background:"#dff0e5",color:"#185737",fontWeight:800}:{margin:0}}>{isFull?"✓ ":""}今日 {doneToday}/{todayProgress.totalWords}</span>}
+      </button>;
+     })}
     </div>
    </section>
   </main>;
@@ -158,8 +167,7 @@ export function ReviewPanel({source}:{source:Source}){
    {!checked&&<button className="primary" onClick={checkSpelling} disabled={!spelling.trim()}>檢查拼字</button>}
   </>}
   {challengeType==="dictation"&&<>
-   <button aria-label="播放發音" onClick={playWord} style={{border:0,borderRadius:16,background:"var(--mint)",color:"var(--ink)",cursor:"pointer",padding:"12px 18px",fontWeight:800,marginBottom:14}}>🔊 播放發音</button>
-   {item.partOfSpeech&&<span className="context" style={{display:"inline-block",margin:"0 0 10px",padding:"3px 10px"}}>{item.partOfSpeech}</span>}
+   <button aria-label="重新播放發音" onClick={playWord} style={{border:0,borderRadius:16,background:"var(--mint)",color:"var(--ink)",cursor:"pointer",padding:"12px 18px",fontWeight:800,marginBottom:14}}>🔊 重新播放</button>
    <input className="text-input" value={spelling} onChange={event=>setSpelling(event.target.value)} disabled={Boolean(checked)} placeholder="輸入聽到的英文拼字"/>
    <div className="options">{options.map(label=><button key={label} className={`option${selectedOption===label?" selected":""}`} disabled={Boolean(checked)} onClick={()=>setSelectedOption(label)}>{label}</button>)}</div>
    {!checked&&<button className="primary" onClick={checkDictation} disabled={!spelling.trim()||!selectedOption}>檢查答案</button>}

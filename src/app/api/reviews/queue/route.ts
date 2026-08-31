@@ -22,7 +22,7 @@ export async function GET(request:Request){
  if(sourceFilter)freshPool=freshPool.filter(item=>item.sourceKey===sourceFilter);
  const fresh=shuffle(freshPool);
 
- const pool=await db.select({form:lexemes.canonicalForm,translation:senseTranslations.translation}).from(userVocabulary).innerJoin(userLearningPaths,eq(userVocabulary.userLearningPathId,userLearningPaths.id)).innerJoin(lexemeSenses,eq(userVocabulary.lexemeSenseId,lexemeSenses.id)).innerJoin(lexemes,eq(lexemeSenses.lexemeId,lexemes.id)).leftJoin(senseTranslations,eq(senseTranslations.lexemeSenseId,lexemeSenses.id)).where(eq(userLearningPaths.userId,userId)).orderBy(sql`random()`).limit(60);
+ const pool=await db.select({form:lexemes.canonicalForm,translation:senseTranslations.translation,partOfSpeech:lexemeSenses.partOfSpeech}).from(userVocabulary).innerJoin(userLearningPaths,eq(userVocabulary.userLearningPathId,userLearningPaths.id)).innerJoin(lexemeSenses,eq(userVocabulary.lexemeSenseId,lexemeSenses.id)).innerJoin(lexemes,eq(lexemeSenses.lexemeId,lexemes.id)).leftJoin(senseTranslations,eq(senseTranslations.lexemeSenseId,lexemeSenses.id)).where(eq(userLearningPaths.userId,userId)).orderBy(sql`random()`).limit(60);
 
  return Response.json({due,new:fresh,pool,policy:{dueFirst:true},proficiencyMax:proficiencyMax(path.reviewWindowDays)});
 }
