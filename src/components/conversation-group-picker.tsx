@@ -22,10 +22,10 @@ export function ConversationGroupPicker({groupId,fallbackTitle}:{groupId:string;
    {group===null&&<p className="lead">找不到這個課程。</p>}
    {group&&group.courses.length===0&&<p className="lead">這個課程目前沒有可以練習的關卡。</p>}
    {group&&group.courses.length>0&&<div style={{display:"flex",flexDirection:"column",gap:10}}>
-    {group.courses.map(course=><Link key={course.id} href={`/conversation/menu?course=${encodeURIComponent(course.id)}&label=${encodeURIComponent(course.title)}`} className="option" style={{textAlign:"left",textDecoration:"none",display:"flex",flexDirection:"column",gap:4}}>
+    {group.courses.map(course=>{const fullyDone=course.totalUnits>0&&course.completedUnits>=course.totalUnits;return <Link key={course.id} href={`/conversation/menu?course=${encodeURIComponent(course.id)}&label=${encodeURIComponent(course.title)}`} className="option" style={{textAlign:"left",textDecoration:"none",display:"flex",flexDirection:"column",gap:4}}>
      <span style={{fontWeight:600}}>{course.title}</span>
-     <span style={{color:"var(--muted)",fontSize:13,paddingTop:8,marginTop:2,borderTop:"1px solid var(--line)"}}>{course.completedUnits}/{course.totalUnits} 完成</span>
-    </Link>)}
+     <span style={{color:"var(--muted)",fontSize:13,paddingTop:8,marginTop:2,borderTop:"1px solid var(--line)"}}>{fullyDone?<span style={{color:"#185737",fontWeight:700}}>✓ 已完成</span>:`${course.completedUnits}/${course.totalUnits} 完成`}</span>
+    </Link>})}
    </div>}
   </section>
  </main>;

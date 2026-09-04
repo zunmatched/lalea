@@ -16,9 +16,11 @@ export function ListenPanel({course}:{course:{key:string;label:string}}){
  const[hasStarted,setHasStarted]=useState(false);
  const[replayTick,setReplayTick]=useState(0);
  const[wakeLockStatus,retryWakeLock]=useWakeLock(Boolean(items&&items.length>0));
+ const[userPaused,setUserPaused]=useState(false);
 
  useEffect(()=>{
   let active=true;
+  Promise.resolve().then(()=>{if(active)setUserPaused(false)});
   fetch(`/api/listen/queue?course=${encodeURIComponent(course.key)}`).then(r=>r.ok?r.json():{items:[]}).then(result=>{if(active)setItems(result.items)}).catch(()=>{if(active)setItems([])});
   return()=>{active=false};
  },[course.key]);
@@ -64,7 +66,7 @@ export function ListenPanel({course}:{course:{key:string;label:string}}){
    :<button onClick={retryWakeLock} className="lead" style={{margin:"10px 0 0",background:"none",border:0,padding:0,font:"inherit",color:"inherit",textDecoration:"underline",cursor:"pointer"}}>{wakeLockStatusLabels[wakeLockStatus]}</button>}
   <section className="card">
    <span className="label">{index+1} / {items.length} · {categoryLabels[item.category]??item.category}</span>
-   <AudioPlayer key={`${item.id}-${replayTick}`} exerciseId={item.exerciseId} text={item.text} asset={item} autoPlay={hasStarted} onComplete={()=>advance(true)} onPrevious={goBack} onNext={()=>advance()}/>
+   <AudioPlayer key={`${item.id}-${replayTick}`} exerciseId={item.exerciseId} text={item.text} asset={item} autoPlay={hasStarted&&!userPaused} onComplete={()=>advance(true)} onPrevious={goBack} onNext={()=>advance()} onPauseStateChange={setUserPaused}/>
    {item.translation&&<p className="context">{item.translation}</p>}
    <div style={{display:"flex",gap:10,marginTop:14}}>
     <button onClick={goBack} style={{flex:1,border:"1px solid var(--line)",borderRadius:16,background:"white",color:"var(--ink)",cursor:"pointer",padding:"12px 18px",fontWeight:800}}>上一個</button>
