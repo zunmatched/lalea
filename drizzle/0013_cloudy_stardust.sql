@@ -1,0 +1,1 @@
+ALTER TABLE "user_vocabulary" ADD COLUMN "ever_mastered" boolean DEFAULT false NOT NULL;

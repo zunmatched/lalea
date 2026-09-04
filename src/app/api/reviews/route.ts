@@ -28,7 +28,7 @@ export async function POST(request:Request){
   const rows=await tx.insert(reviewEvents).values({clientEventId:data.clientEventId,vocabularyMasteryStateId:state.id,isCorrect:data.isCorrect,challengeType:data.challengeType,beforeState:before,afterState:after,reason:data.isCorrect?"correct":"incorrect",schedulerVersion:"day-bucket-v2"}).onConflictDoNothing().returning({id:reviewEvents.id});
   if(!rows.length)return false;
   await tx.update(vocabularyMasteryStates).set({lastReviewedAt:now,reviewCount:state.reviewCount+1,schedulerVersion:"day-bucket-v2"}).where(eq(vocabularyMasteryStates.id,state.id));
-  await tx.update(userVocabulary).set({status:after.proficiency>0?"learned":"learning",firstLearnedAt:owned.firstLearnedAt??now}).where(eq(userVocabulary.id,owned.id));
+  await tx.update(userVocabulary).set({status:after.proficiency>0?"learned":"learning",firstLearnedAt:owned.firstLearnedAt??now,...(after.proficiency>=max?{everMastered:true}:{})}).where(eq(userVocabulary.id,owned.id));
   return true;
  });
  if(!inserted){const[concurrent]=await db.select().from(reviewEvents).where(eq(reviewEvents.clientEventId,data.clientEventId)).limit(1);return Response.json({proficiency:(concurrent.afterState as{proficiency:number}).proficiency,max,idempotent:true})}

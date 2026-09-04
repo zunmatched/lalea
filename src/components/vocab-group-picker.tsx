@@ -2,7 +2,7 @@
 import { useEffect,useState } from "react";
 import Link from "next/link";
 
-type Source={key:string;label:string;totalWords:number;proficiency:number};
+type Source={key:string;label:string;totalWords:number;proficiency:number;everMasteredCount:number};
 type Group={id:string;title:string;sources:Source[]};
 
 export function VocabGroupPicker({groupId,fallbackTitle}:{groupId:string;fallbackTitle:string}){
@@ -23,10 +23,10 @@ export function VocabGroupPicker({groupId,fallbackTitle}:{groupId:string;fallbac
    {group===null&&<p className="lead">找不到這個課程。</p>}
    {group&&group.sources.length===0&&<p className="lead">這個課程目前沒有可以練習的詞彙。</p>}
    {group&&group.sources.length>0&&<div style={{display:"flex",flexDirection:"column",gap:10}}>
-    {group.sources.map(source=><Link key={source.key} href={`/vocab/menu?source=${encodeURIComponent(source.key)}&label=${encodeURIComponent(source.label)}`} className="option" style={{textAlign:"left",textDecoration:"none",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-     <span>{source.label}</span>
-     <span className="context" style={{margin:0}}>熟悉度 {source.proficiency}/{proficiencyMax} · 共 {source.totalWords} 字</span>
-    </Link>)}
+    {group.sources.map(source=>{const fullyDone=source.everMasteredCount>=source.totalWords;const partlyDone=source.everMasteredCount>0&&!fullyDone;return <Link key={source.key} href={`/vocab/menu?source=${encodeURIComponent(source.key)}&label=${encodeURIComponent(source.label)}`} className="option" style={{textAlign:"left",textDecoration:"none",display:"flex",flexDirection:"column",gap:4}}>
+     <span style={{fontWeight:600}}>{source.label}</span>
+     <span style={{color:"var(--muted)",fontSize:13,paddingTop:8,marginTop:2,borderTop:"1px solid var(--line)"}}>共 {source.totalWords} 字 · 複習頻率 {source.proficiency}/{proficiencyMax} · {fullyDone?<span style={{color:"#185737",fontWeight:700}}>✓ 已完成</span>:partlyDone?<span style={{color:"#185737",fontWeight:700}}>✓ 部分完成 {source.everMasteredCount}/{source.totalWords}</span>:"尚未完成"}</span>
+    </Link>})}
    </div>}
   </section>
  </main>;
