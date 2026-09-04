@@ -1,0 +1,389 @@
+{
+  "slug": "it-data-eng-workplace",
+  "title": "IT / 數據工程職場英文",
+  "units": [
+    {
+      "title": "站會與日常溝通",
+      "estimatedSeconds": 240,
+      "exercises": [
+        {
+          "type": "reading_choice",
+          "prompt": "在站會上，你想說「我卡在上游 schema 異動，等 analytics team 確認新欄位名稱」，哪一句最適合？",
+          "options": [
+            {
+              "id": "a",
+              "text": "I'm blocked on the upstream schema change — waiting on the analytics team to confirm the new field names."
+            },
+            {
+              "id": "b",
+              "text": "I finished the upstream schema change already, no problem."
+            },
+            {
+              "id": "c",
+              "text": "The analytics team blocked me, I don't know why."
+            }
+          ],
+          "correctIds": [
+            "a"
+          ],
+          "feedbackCorrect": "對，用 blocked on X 來描述被卡住的原因，再用 waiting on Y 補充你在等誰確認，是站會回報最常見的句型。",
+          "feedbackIncorrect": "這句要傳達「還沒完成、卡在等別人確認」，(b) 講的是已完成，(c) 語氣像是在抱怨對方，都不合適。",
+          "id": "a6f9ef79-1d3c-49f4-a8a9-fc1bc553ac22"
+        },
+        {
+          "type": "reading_choice",
+          "prompt": "你在 code review 留言，想請對方把 PR 拆小一點，因為它同時動到 ingestion 邏輯跟 schema，哪一句最適合？",
+          "options": [
+            {
+              "id": "a",
+              "text": "Could you split this PR into smaller commits? It's touching both the ingestion logic and the schema at once."
+            },
+            {
+              "id": "b",
+              "text": "This PR is too big, please fix it."
+            },
+            {
+              "id": "c",
+              "text": "You should not touch ingestion logic and schema together, never."
+            }
+          ],
+          "correctIds": [
+            "a"
+          ],
+          "feedbackCorrect": "用 Could you...? 加上具體原因，是 code review 留言常見又不失禮貌的講法。",
+          "feedbackIncorrect": "(b) 太籠統也偏命令語氣，(c) 用 never 太重、像是在訓話，不適合同事之間的 review 留言。",
+          "id": "6b9ce8fe-5563-4d2f-8291-e8fe455b436c"
+        },
+        {
+          "type": "reading_choice",
+          "prompt": "你在 Slack 上想提醒同事「昨天部署後儀表板的數字怪怪的，想知道有沒有其他人也發現」，哪一句最適合？",
+          "options": [
+            {
+              "id": "a",
+              "text": "Just flagging that the dashboard numbers look off since yesterday's deploy — anyone else seeing this?"
+            },
+            {
+              "id": "b",
+              "text": "The dashboard is broken, someone fix it now."
+            },
+            {
+              "id": "c",
+              "text": "I think the deploy is wrong but I am not sure who did it."
+            }
+          ],
+          "correctIds": [
+            "a"
+          ],
+          "feedbackCorrect": "Just flagging that... 是很自然的「先提醒一下、不預設誰的錯」講法，後面再用問句邀請其他人一起確認。",
+          "feedbackIncorrect": "(b) 語氣太強硬像是在指責，(c) 暗示在追究責任，都不是提醒問題時的合適語氣。",
+          "id": "90640ae4-49d0-4798-bd20-fa669357921b"
+        },
+        {
+          "type": "reading_choice",
+          "prompt": "跟非工程背景的 stakeholder 開會，你想說「簡單來說，延遲是廠商那邊的問題，不是我們的」，哪一句最適合？",
+          "options": [
+            {
+              "id": "a",
+              "text": "To put it simply, the delay is on the vendor's side, not ours."
+            },
+            {
+              "id": "b",
+              "text": "Simply speaking, the vendor is very bad at their job."
+            },
+            {
+              "id": "c",
+              "text": "It's not our fault, don't ask us again."
+            }
+          ],
+          "correctIds": [
+            "a"
+          ],
+          "feedbackCorrect": "To put it simply 是跟非技術背景的人說明重點時很自然的開場，後面直接點出責任歸屬但語氣中性。",
+          "feedbackIncorrect": "(b) 直接批評廠商顯得不專業，(c) 語氣防禦又不禮貌，都不適合對 stakeholder 說。",
+          "id": "4034227e-d6af-47d7-8657-e1ad187ac5f9"
+        },
+        {
+          "type": "reading_choice",
+          "prompt": "你明天請假，想在 Slack 提醒同事「有急事請找某某同事」，哪一句最適合？",
+          "options": [
+            {
+              "id": "a",
+              "text": "Heads up, I'll be OOO tomorrow, so please loop in Sarah if anything urgent comes up."
+            },
+            {
+              "id": "b",
+              "text": "I will not be here tomorrow, don't contact me for any reason."
+            },
+            {
+              "id": "c",
+              "text": "Tomorrow I am off, ask someone else maybe."
+            }
+          ],
+          "correctIds": [
+            "a"
+          ],
+          "feedbackCorrect": "Heads up 是常見的「提醒一下」開場，OOO（out of office）+ loop in someone 是職場上請假交接的標準講法。",
+          "feedbackIncorrect": "(b) 語氣過於強硬，(c) 太口語、沒有明確交代誰可以聯絡，都不夠專業。",
+          "id": "c6fed166-5a10-4fa5-bcb7-876c03001ab2"
+        }
+      ],
+      "id": "3fb1ba90-cad2-4e77-bc18-c68440e20140"
+    },
+    {
+      "title": "數據管線與上線",
+      "estimatedSeconds": 240,
+      "exercises": [
+        {
+          "type": "reading_choice",
+          "prompt": "你發現 source 端 schema 有 drift，導致 ingestion job 默默把欄位丟掉了，想跟同事說明，哪一句最適合？",
+          "options": [
+            {
+              "id": "a",
+              "text": "We're seeing schema drift from the source system, so the ingestion job is silently dropping columns."
+            },
+            {
+              "id": "b",
+              "text": "The source system changed something and now columns disappeared, very strange."
+            },
+            {
+              "id": "c",
+              "text": "Someone changed the schema and broke everything."
+            }
+          ],
+          "correctIds": [
+            "a"
+          ],
+          "feedbackCorrect": "schema drift 是資料工程常用術語，silently dropping columns 精準描述「沒有噴錯但資料悄悄不見了」這個現象。",
+          "feedbackIncorrect": "(b) 用字太口語模糊，(c) 語氣像是在怪罪某人，且沒說清楚實際發生了什麼技術問題。",
+          "id": "ed285287-5bde-46ab-8be3-ac1a518eeb8c"
+        },
+        {
+          "type": "reading_choice",
+          "prompt": "你想跟同事解釋「這個 job 是冪等的，失敗後重跑是安全的」，哪一句最適合？",
+          "options": [
+            {
+              "id": "a",
+              "text": "This job is idempotent, so re-running it after a failure is safe."
+            },
+            {
+              "id": "b",
+              "text": "This job can run many times, I think it's fine."
+            },
+            {
+              "id": "c",
+              "text": "If it fails just run it again and again until it works."
+            }
+          ],
+          "correctIds": [
+            "a"
+          ],
+          "feedbackCorrect": "idempotent 是資料工程的關鍵字，直接點出「重跑安全」的技術理由，比模糊帶過更有說服力。",
+          "feedbackIncorrect": "(b) 用 I think 顯得不確定，(c) 聽起來像是碰運氣重試，沒有說明真正原因。",
+          "id": "41077b3c-c0b9-40fb-ad97-8bab3dc23b89"
+        },
+        {
+          "type": "reading_choice",
+          "prompt": "你想說明「這次先用 feature flag 上線，比較保險」，哪一句最適合？",
+          "options": [
+            {
+              "id": "a",
+              "text": "We're rolling this out behind a feature flag first, just to be safe."
+            },
+            {
+              "id": "b",
+              "text": "We will turn it on for everyone and see what happens."
+            },
+            {
+              "id": "c",
+              "text": "This feature flag thing is just extra work but okay."
+            }
+          ],
+          "correctIds": [
+            "a"
+          ],
+          "feedbackCorrect": "roll out behind a feature flag 是描述漸進式上線策略的標準講法，just to be safe 說明保守做法的原因。",
+          "feedbackIncorrect": "(b) 描述的其實是完全相反的做法（直接全開），(c) 語氣顯得不情願、不專業。",
+          "id": "fba06388-6161-470b-8fe1-3328dfd1926e"
+        },
+        {
+          "type": "reading_choice",
+          "prompt": "你發現一個查詢在掃全表，想建議「應該要按日期分區」，哪一句最適合？",
+          "options": [
+            {
+              "id": "a",
+              "text": "This query is scanning the full table — we should partition it by date."
+            },
+            {
+              "id": "b",
+              "text": "This query is very slow, maybe do something about the table."
+            },
+            {
+              "id": "c",
+              "text": "The table is too big, somebody should split it."
+            }
+          ],
+          "correctIds": [
+            "a"
+          ],
+          "feedbackCorrect": "先指出具體技術現象（scanning the full table），再提出具體解法（partition by date），是效能討論中清楚又可執行的講法。",
+          "feedbackIncorrect": "(b)(c) 都只模糊描述「很慢」「太大」，沒有指出根因跟具體建議，說服力不足。",
+          "id": "374d252c-d75b-42f7-b58e-dc82fde6558d"
+        },
+        {
+          "type": "reading_choice",
+          "prompt": "你們碰到 API 的 rate limit，想說明「需要加上 backoff 跟重試邏輯」，哪一句最適合？",
+          "options": [
+            {
+              "id": "a",
+              "text": "We're hitting rate limits on the API, so we need to add backoff and retry logic."
+            },
+            {
+              "id": "b",
+              "text": "The API keeps blocking us, this API is bad."
+            },
+            {
+              "id": "c",
+              "text": "We call the API too much, maybe call it less."
+            }
+          ],
+          "correctIds": [
+            "a"
+          ],
+          "feedbackCorrect": "hitting rate limits 是精確的技術描述，backoff and retry logic 是業界標準的因應做法，兩者放在一起邏輯清楚。",
+          "feedbackIncorrect": "(b) 把問題怪在 API 本身不夠客觀，(c) 沒有提出具體的技術解法，只是模糊建議少用。",
+          "id": "0cbd7689-3fd5-4515-8656-7d75bbaa2b69"
+        }
+      ],
+      "id": "9a71df64-ac81-4674-9d83-4c8ec9ed728d"
+    },
+    {
+      "title": "Debug 與 Incident 處理",
+      "estimatedSeconds": 240,
+      "exercises": [
+        {
+          "type": "reading_choice",
+          "prompt": "同事回報一個 bug，你這邊重現不出來，想問對方要觸發問題的確切輸入，哪一句最適合？",
+          "options": [
+            {
+              "id": "a",
+              "text": "I can't reproduce it on my end — do you have the exact input that triggered this?"
+            },
+            {
+              "id": "b",
+              "text": "It doesn't happen for me, so maybe it's not a real bug."
+            },
+            {
+              "id": "c",
+              "text": "Send me everything about this bug right now."
+            }
+          ],
+          "correctIds": [
+            "a"
+          ],
+          "feedbackCorrect": "先誠實說明現況（重現不出來），再具體要求關鍵資訊（exact input），是排查問題時最有效率的溝通方式。",
+          "feedbackIncorrect": "(b) 太早否定對方回報的問題，(c) 語氣生硬又沒說清楚要什麼資訊，都不利於合作排查。",
+          "id": "a3f6adf7-4e62-45c6-8191-d1ce96d7675e"
+        },
+        {
+          "type": "reading_choice",
+          "prompt": "你找到 bug 的原因是迴圈條件裡的差一錯誤，想跟同事說明，哪一句最適合？",
+          "options": [
+            {
+              "id": "a",
+              "text": "It's an off-by-one error in the loop condition."
+            },
+            {
+              "id": "b",
+              "text": "The loop is wrong somewhere, I'm not sure exactly where."
+            },
+            {
+              "id": "c",
+              "text": "The number is one more or one less, that's the whole bug."
+            }
+          ],
+          "correctIds": [
+            "a"
+          ],
+          "feedbackCorrect": "off-by-one error 是程式除錯的標準術語，直接點出問題類型跟位置（loop condition），精準又專業。",
+          "feedbackIncorrect": "(b) 完全沒有指出具體原因，等於沒有 debug 結論，(c) 描述方式太口語不精確。",
+          "id": "812ec623-ec61-4484-949a-59867d48df1a"
+        },
+        {
+          "type": "reading_choice",
+          "prompt": "你發現目前找到的錯誤訊息只是表徵、還不是根因，想提醒團隊繼續往下查，哪一句最適合？",
+          "options": [
+            {
+              "id": "a",
+              "text": "This is a symptom, not the root cause — let's keep digging."
+            },
+            {
+              "id": "b",
+              "text": "This error is fake, ignore it completely."
+            },
+            {
+              "id": "c",
+              "text": "We found the error, so the bug is basically solved."
+            }
+          ],
+          "correctIds": [
+            "a"
+          ],
+          "feedbackCorrect": "symptom 跟 root cause 是 debug 討論中常見的對比概念，keep digging 則清楚表達「還沒結束、要繼續查」的態度。",
+          "feedbackIncorrect": "(b) 說錯誤訊息是假的並不準確，它只是不完整，(c) 把「找到表徵」誤當成「問題已解決」，會誤導團隊提早停手。",
+          "id": "fa672aa9-2f1e-4c84-a466-25b9f6a665e8"
+        },
+        {
+          "type": "reading_choice",
+          "prompt": "昨晚出了一個 P1，pipeline 因為一筆格式錯誤的資料整批失敗，你想跟團隊回報，哪一句最適合？",
+          "options": [
+            {
+              "id": "a",
+              "text": "We had a P1 last night — the pipeline choked on a malformed record and the whole batch failed."
+            },
+            {
+              "id": "b",
+              "text": "Something very bad happened last night with the pipeline, everything is broken."
+            },
+            {
+              "id": "c",
+              "text": "The pipeline failed because of one bad record, not a big deal."
+            }
+          ],
+          "correctIds": [
+            "a"
+          ],
+          "feedbackCorrect": "P1、choked on a malformed record 這些用詞精確描述了嚴重程度跟直接原因，適合正式的 incident 回報。",
+          "feedbackIncorrect": "(b) 用詞誇張卻沒有實際資訊，(c) 把整批失敗的 P1 事件輕描淡寫成「沒什麼大不了」，低估了嚴重性。",
+          "id": "60692955-3814-40a3-8253-215278af9625"
+        },
+        {
+          "type": "reading_choice",
+          "prompt": "你修完一個 bug，也驗證過了，並加了 regression test 避免再犯，想跟團隊回報，哪一句最適合？",
+          "options": [
+            {
+              "id": "a",
+              "text": "Fixed and verified — added a regression test so it doesn't come back."
+            },
+            {
+              "id": "b",
+              "text": "I think I fixed it, probably it's okay now."
+            },
+            {
+              "id": "c",
+              "text": "The bug is gone, no need to test again."
+            }
+          ],
+          "correctIds": [
+            "a"
+          ],
+          "feedbackCorrect": "Fixed and verified 清楚交代「已修好且已驗證」，加上 regression test 說明有做長期防範，是完整的收尾回報。",
+          "feedbackIncorrect": "(b) 用 probably 顯得沒有把握，不像已經驗證過，(c) 完全沒提驗證跟防範措施，容易讓人誤以為草率結案。",
+          "id": "2e213fa8-0a4a-4d6d-97fe-b124f4abedcb"
+        }
+      ],
+      "id": "b49c7365-e82a-4c5e-b802-c219848de4b0"
+    }
+  ],
+  "id": "57186de3-1b68-4105-ad5a-e33ac16ee298",
+  "versionId": "b50ca78e-1f6d-4e3a-a7cb-7969d0aa7276"
+}
