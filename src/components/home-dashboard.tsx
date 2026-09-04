@@ -3,16 +3,13 @@ import { useEffect,useState } from "react";
 import Link from "next/link";
 
 type Progress={completedUnits:number;inProgressUnits:number;vocabulary:{total:number;learned:number;dueToday:number;averageProficiency:number;completedToday:number}};
-type Course={id:string;title:string;totalUnits:number;completedUnits:number};
 
 export function HomeDashboard(){
  const[progress,setProgress]=useState<Progress|null>(null);
- const[courses,setCourses]=useState<Course[]|null>(null);
 
  useEffect(()=>{
   let active=true;
   fetch("/api/progress").then(r=>r.ok?r.json():null).then((data:Progress|null)=>{if(active)setProgress(data)}).catch(()=>{});
-  fetch("/api/courses").then(r=>r.ok?r.json():null).then((data:{courses:Course[]}|null)=>{if(active)setCourses(data?.courses??[])}).catch(()=>{if(active)setCourses([])});
   return()=>{active=false};
  },[]);
 
@@ -30,18 +27,6 @@ export function HomeDashboard(){
     <div className="stat"><strong>{progress.vocabulary.averageProficiency}</strong><span>平均熟練度</span></div>
     <div className="stat"><strong>{progress.vocabulary.dueToday}</strong><span>待複習詞彙</span></div>
     <div className="stat"><strong>{progress.vocabulary.completedToday}/{progress.vocabulary.total}</strong><span>今日測驗完成度</span></div>
-   </div>}
-  </section>
-
-  <section className="card" aria-label="課程選擇">
-   <span className="label">選一個課程開始會話練習</span>
-   {courses===null&&<p className="lead">載入中…</p>}
-   {courses!==null&&courses.length===0&&<p className="lead">目前沒有可以練習的課程。</p>}
-   {courses&&courses.length>0&&<div style={{display:"flex",flexDirection:"column",gap:10}}>
-    {courses.map(course=><Link key={course.id} href={`/conversation?course=${course.id}`} className="option" style={{textAlign:"left",display:"flex",justifyContent:"space-between",alignItems:"center",textDecoration:"none"}}>
-     <span>{course.title}</span>
-     <span className="context" style={{margin:0}}>{course.completedUnits}/{course.totalUnits} 完成</span>
-    </Link>)}
    </div>}
   </section>
 

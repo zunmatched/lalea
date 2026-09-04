@@ -7,7 +7,7 @@ import { useWakeLock,wakeLockStatusLabels } from "@/lib/wake-lock";
 type Item={id:string;exerciseId:string;text:string;translation:string|null;status:string;url:string|null;voice:string|null;durationMs:number|null;category:string};
 const categoryLabels:Record<string,string>={due:"到期複習",weak:"弱項加強",recent:"最近學過",new:"新內容"};
 
-export function ListenPanel(){
+export function ListenPanel({course}:{course:{key:string;label:string}}){
  const[items,setItems]=useState<Item[]|null>(null);
  const[index,setIndex]=useState(0);
  const[mode,setMode]=useState<RepeatMode>("loop");
@@ -19,9 +19,9 @@ export function ListenPanel(){
 
  useEffect(()=>{
   let active=true;
-  fetch("/api/listen/queue").then(r=>r.ok?r.json():{items:[]}).then(result=>{if(active)setItems(result.items)}).catch(()=>{if(active)setItems([])});
+  fetch(`/api/listen/queue?course=${encodeURIComponent(course.key)}`).then(r=>r.ok?r.json():{items:[]}).then(result=>{if(active)setItems(result.items)}).catch(()=>{if(active)setItems([])});
   return()=>{active=false};
- },[]);
+ },[course.key]);
 
  function selectMode(value:RepeatMode){
   setMode(value);
@@ -45,15 +45,15 @@ export function ListenPanel(){
   setIndex(items.length-1);
  }
 
- if(items===null)return <main className="shell"><p className="eyebrow">會話 · 播放</p><h1>不盯著螢幕，也能複習。</h1><section className="card">載入中…</section></main>;
+ if(items===null)return <main className="shell"><p className="eyebrow">會話 · {course.label}</p><h1>不盯著螢幕，也能複習。</h1><section className="card">載入中…</section></main>;
 
- if(items.length===0)return <main className="shell"><p className="eyebrow">會話 · 播放</p><h1>不盯著螢幕，也能複習。</h1><section className="card"><h2>目前沒有合適的播放內容</h2><p className="lead">先完成一堂短課，避免清單全部都是未學內容。</p></section></main>;
+ if(items.length===0)return <main className="shell"><p className="eyebrow">會話 · {course.label}</p><h1>不盯著螢幕，也能複習。</h1><section className="card"><h2>目前沒有合適的播放內容</h2><p className="lead">先完成一堂短課，避免清單全部都是未學內容。</p></section></main>;
 
  const item=items[index];
  if(!item)return null;
 
  return <main className="shell">
-  <p className="eyebrow">會話 · 播放</p>
+  <p className="eyebrow">會話 · {course.label}</p>
   <h1>不盯著螢幕，也能複習。</h1>
   <p className="lead">依序播放到期聽力、弱項與最近內容；新內容最多佔 20%。</p>
   <div className="pills">

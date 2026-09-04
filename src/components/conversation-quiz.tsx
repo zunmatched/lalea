@@ -1,5 +1,6 @@
 "use client";
 import { useEffect,useMemo,useState } from "react";
+import Link from "next/link";
 import { AudioPlayer } from "./audio-player";
 import { randomUUID } from "@/lib/client-id";
 
@@ -8,11 +9,9 @@ type Asset={id:string;status:string;url:string|null;voice:string|null;durationMs
 type Exercise={id:string;position:number;type:string;prompt:string;content:{context?:string;speech?:string;options?:Option[];audio?:Asset}};
 type Run={id:string;currentPosition:number;status:string;exercises:Exercise[]};
 type Feedback={isCorrect:boolean;correctIds:string[];message:string};
-type Course={id:string;title:string;totalUnits:number;completedUnits:number};
 
-export function ConversationQuiz({courseId}:{courseId?:string}){
- const[courses,setCourses]=useState<Course[]|null>(null);
- const[screen,setScreen]=useState<"picker"|"loading"|"lesson"|"done">(courseId?"loading":"picker");
+export function ConversationQuiz({courseId}:{courseId:string}){
+ const[screen,setScreen]=useState<"loading"|"lesson"|"done">("loading");
  const[run,setRun]=useState<Run|null>(null);
  const[index,setIndex]=useState(0);
  const[selected,setSelected]=useState<string[]>([]);
@@ -22,13 +21,6 @@ export function ConversationQuiz({courseId}:{courseId?:string}){
  const[correct,setCorrect]=useState(0);
  const exercise=run?.exercises[index];
  const optionMap=useMemo(()=>new Map(exercise?.content.options?.map(option=>[option.id,option.text])??[]),[exercise]);
-
- useEffect(()=>{
-  let active=true;
-  fetch("/api/courses").then(r=>r.ok?r.json():null).then((data:{courses:Course[]}|null)=>{if(active)setCourses(data?.courses??[])}).catch(()=>{if(active)setCourses([])});
-  return()=>{active=false};
- },[]);
- useEffect(()=>{if(courseId)startCourse(courseId)},[courseId]);
 
  async function startCourse(id:string){
   setScreen("loading");setBusy(true);setError("");
@@ -41,9 +33,11 @@ export function ConversationQuiz({courseId}:{courseId?:string}){
    const data:Run=await response.json();
    setRun(data);setIndex(Math.min(Math.max(data.currentPosition,0),Math.max(data.exercises.length-1,0)));
    setSelected([]);setFeedback(null);setCorrect(0);setScreen("lesson");
-  }catch(cause){setError(cause instanceof Error?cause.message:"發生未預期錯誤。");setScreen("picker")}
+  }catch(cause){setError(cause instanceof Error?cause.message:"發生未預期錯誤。")}
   finally{setBusy(false)}
  }
+
+ useEffect(()=>{void Promise.resolve().then(()=>startCourse(courseId))},[courseId]);
 
  function choose(id:string){
   if(feedback)return;
@@ -71,29 +65,13 @@ export function ConversationQuiz({courseId}:{courseId?:string}){
   else setError("課程完成狀態未能儲存，請再試一次。");
  }
 
- if(screen==="picker")return <main className="shell">
-  <p className="eyebrow">會話 · 測驗</p>
-  <h1>先選要練習的課程。</h1>
-  <section className="card">
-   {courses===null&&<p className="lead">載入中…</p>}
-   {courses!==null&&courses.length===0&&<p className="lead">目前沒有可以練習的課程。</p>}
-   {courses&&courses.length>0&&<div style={{display:"flex",flexDirection:"column",gap:10}}>
-    {courses.map(course=><button key={course.id} className="option" onClick={()=>startCourse(course.id)} style={{textAlign:"left",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-     <span>{course.title}</span>
-     <span className="context" style={{margin:0}}>{course.completedUnits}/{course.totalUnits} 完成</span>
-    </button>)}
-   </div>}
-   {error&&<p className="error" role="alert">{error}</p>}
-  </section>
- </main>;
-
- if(screen==="loading")return <main className="shell"><p className="eyebrow">會話 · 測驗</p><h1>準備課程中…</h1><section className="card">載入中…</section></main>;
+ if(screen==="loading")return <main className="shell"><p className="eyebrow">會話 · 測驗</p><h1>準備課程中…</h1><section className="card">{error?<p className="error" role="alert">{error}</p>:"載入中…"}</section></main>;
 
  if(screen==="done")return <main className="shell finish">
   <div className="mark">✓</div><p className="eyebrow">短課完成</p>
   <h1>做得好，這些內容已加入你的學習進度。</h1>
   <div className="stats"><div className="stat"><strong>{correct}/{run?.exercises.length}</strong><span>答對</span></div></div>
-  <button className="primary" onClick={()=>{setRun(null);setCorrect(0);setScreen("picker")}}>選別的課程</button>
+  <Link href="/conversation" className="primary" style={{display:"block",textAlign:"center",textDecoration:"none"}}>選別的課程</Link>
  </main>;
 
  if(!exercise||!run)return null;
