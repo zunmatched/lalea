@@ -18,9 +18,10 @@
       "form": "taker",
       "partOfSpeech": "noun",
       "definition": "a person who accepts an offer or takes something",
-      "translation": "接受者（常見於 test-taker 應試者）",
+      "translation": "接受者",
       "example": "Test-takers must arrive thirty minutes before the exam begins.",
-      "exampleTranslation": "應試者必須在考試開始前三十分鐘抵達。"
+      "exampleTranslation": "應試者必須在考試開始前三十分鐘抵達。",
+      "note": "常見於 test-taker（應試者）這類複合詞"
     },
     {
       "form": "utility",
@@ -50,9 +51,10 @@
       "form": "behalf",
       "partOfSpeech": "noun",
       "definition": "used in 'on behalf of' to mean acting as a representative of someone",
-      "translation": "代表（常用 on behalf of）",
+      "translation": "代表",
       "example": "I'm signing this document on behalf of the director.",
-      "exampleTranslation": "我是代表主任簽署這份文件。"
+      "exampleTranslation": "我是代表主任簽署這份文件。",
+      "note": "常用片語 on behalf of（代表）"
     },
     {
       "form": "minimize",

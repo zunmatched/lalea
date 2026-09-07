@@ -1,28 +1,179 @@
 {
   "slug": "toeic-0661-0681",
   "title": "TOEIC 核心單字 0661-0681",
-  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "group": {
+    "slug": "toeic-service-list",
+    "title": "TOEIC 核心單字"
+  },
   "words": [
-    { "form": "authorization", "partOfSpeech": "noun", "definition": "official permission for something to happen", "translation": "授權；批准", "example": "You'll need written authorization from your manager to access this file.", "exampleTranslation": "你需要主管的書面授權才能存取這份檔案。" },
-    { "form": "campus", "partOfSpeech": "noun", "definition": "the grounds and buildings of a university, college, or large company", "translation": "校園；園區", "example": "The new office campus includes a gym and a cafeteria.", "exampleTranslation": "新的辦公園區設有健身房跟自助餐廳。" },
-    { "form": "candy", "partOfSpeech": "noun", "definition": "sweet food made mostly of sugar", "translation": "糖果", "example": "There's a bowl of candy at the front desk for visitors.", "exampleTranslation": "前台有一碗糖果給訪客享用。" },
-    { "form": "certify", "partOfSpeech": "verb", "definition": "to officially confirm that something meets a required standard", "translation": "認證；證明", "example": "The lab was certified to test food safety standards.", "exampleTranslation": "這間實驗室已通過食品安全標準的認證。" },
-    { "form": "checkout", "partOfSpeech": "noun", "definition": "the place or process of paying for goods, or the time you leave a hotel", "translation": "結帳；退房", "example": "Hotel checkout time is eleven in the morning.", "exampleTranslation": "飯店的退房時間是早上十一點。" },
-    { "form": "chemistry", "partOfSpeech": "noun", "definition": "the scientific study of substances and their reactions, or a close working relationship", "translation": "化學；默契", "example": "The two new hires already show good chemistry as a team.", "exampleTranslation": "這兩位新進員工搭檔起來已經展現出不錯的默契。" },
-    { "form": "circulation", "partOfSpeech": "noun", "definition": "the movement of something around a system, such as blood, air, or a publication's readership", "translation": "流通；發行量", "example": "The newsletter's circulation has doubled since going digital.", "exampleTranslation": "自從電子化以來，這份電子報的發行量已經翻倍。" },
-    { "form": "concierge", "partOfSpeech": "noun", "definition": "a hotel employee who assists guests with reservations and information", "translation": "禮賓人員；服務員", "example": "Ask the concierge for restaurant recommendations near the venue.", "exampleTranslation": "可以請禮賓人員推薦場地附近的餐廳。" },
-    { "form": "consent", "partOfSpeech": "noun", "definition": "permission for something to happen", "translation": "同意；許可", "example": "We need written consent before publishing the customer's testimonial.", "exampleTranslation": "在刊登顧客的推薦文之前，我們需要取得書面同意。" },
-    { "form": "consistently", "partOfSpeech": "adverb", "definition": "in a way that always happens or behaves in the same way", "translation": "始終如一地", "example": "The team has consistently met its quarterly targets.", "exampleTranslation": "這個團隊一直以來都穩定達成季度目標。" },
-    { "form": "cookie", "partOfSpeech": "noun", "definition": "a small, sweet baked snack, or a small piece of data stored by a website", "translation": "餅乾；瀏覽器 cookie", "example": "The website asks visitors to accept cookies before browsing.", "exampleTranslation": "這個網站會要求訪客在瀏覽前接受 cookie。" },
-    { "form": "deck", "partOfSpeech": "noun", "definition": "an outdoor platform attached to a building, or a set of presentation slides", "translation": "露台；簡報", "example": "Please send me the final slide deck before the meeting.", "exampleTranslation": "請在會議前把最終版的簡報寄給我。" },
-    { "form": "descriptive", "partOfSpeech": "adjective", "definition": "giving a detailed description of something", "translation": "描述性的", "example": "Use a more descriptive title so customers can find the product easily.", "exampleTranslation": "請用更具描述性的標題，讓顧客更容易找到產品。" },
-    { "form": "detach", "partOfSpeech": "verb", "definition": "to remove or disconnect something from something else", "translation": "分離；拆下", "example": "Detach the receipt from the invoice before filing it.", "exampleTranslation": "歸檔前請把收據從發票上拆下來。" },
-    { "form": "entrepreneur", "partOfSpeech": "noun", "definition": "a person who starts and runs a business, taking on financial risk", "translation": "創業者", "example": "The workshop is designed for first-time entrepreneurs.", "exampleTranslation": "這個工作坊是為初次創業者設計的。" },
-    { "form": "exceptional", "partOfSpeech": "adjective", "definition": "unusually good; standing out from the ordinary", "translation": "傑出的；例外的", "example": "She received an award for exceptional customer service.", "exampleTranslation": "她因為傑出的顧客服務而獲得獎項。" },
-    { "form": "familiarize", "partOfSpeech": "verb", "definition": "to make someone become well acquainted with something", "translation": "使熟悉", "example": "New employees spend the first day familiarizing themselves with the office.", "exampleTranslation": "新進員工第一天會花時間熟悉辦公室環境。" },
-    { "form": "hotline", "partOfSpeech": "noun", "definition": "a telephone line set up for direct, urgent communication", "translation": "熱線", "example": "Call our customer hotline for immediate assistance.", "exampleTranslation": "如需立即協助，請撥打我們的客服熱線。" },
-    { "form": "intonation", "partOfSpeech": "noun", "definition": "the rise and fall of the voice while speaking", "translation": "語調", "example": "The trainer coached staff on friendly intonation for phone calls.", "exampleTranslation": "培訓師指導員工在電話中使用友善的語調。" },
-    { "form": "invention", "partOfSpeech": "noun", "definition": "something newly created or designed, or the act of creating it", "translation": "發明", "example": "The company holds a patent on its latest invention.", "exampleTranslation": "公司擁有最新發明的專利。" },
-    { "form": "irritate", "partOfSpeech": "verb", "definition": "to annoy or bother someone", "translation": "使惱怒", "example": "Long hold times tend to irritate callers.", "exampleTranslation": "長時間的等候容易讓來電者感到不耐。" }
+    {
+      "form": "authorization",
+      "partOfSpeech": "noun",
+      "definition": "official permission for something to happen",
+      "translation": "授權；批准",
+      "example": "You'll need written authorization from your manager to access this file.",
+      "exampleTranslation": "你需要主管的書面授權才能存取這份檔案。"
+    },
+    {
+      "form": "campus",
+      "partOfSpeech": "noun",
+      "definition": "the grounds and buildings of a university, college, or large company",
+      "translation": "校園；園區",
+      "example": "The new office campus includes a gym and a cafeteria.",
+      "exampleTranslation": "新的辦公園區設有健身房跟自助餐廳。"
+    },
+    {
+      "form": "candy",
+      "partOfSpeech": "noun",
+      "definition": "sweet food made mostly of sugar",
+      "translation": "糖果",
+      "example": "There's a bowl of candy at the front desk for visitors.",
+      "exampleTranslation": "前台有一碗糖果給訪客享用。"
+    },
+    {
+      "form": "certify",
+      "partOfSpeech": "verb",
+      "definition": "to officially confirm that something meets a required standard",
+      "translation": "認證；證明",
+      "example": "The lab was certified to test food safety standards.",
+      "exampleTranslation": "這間實驗室已通過食品安全標準的認證。"
+    },
+    {
+      "form": "checkout",
+      "partOfSpeech": "noun",
+      "definition": "the place or process of paying for goods, or the time you leave a hotel",
+      "translation": "結帳；退房",
+      "example": "Hotel checkout time is eleven in the morning.",
+      "exampleTranslation": "飯店的退房時間是早上十一點。"
+    },
+    {
+      "form": "chemistry",
+      "partOfSpeech": "noun",
+      "definition": "the scientific study of substances and their reactions, or a close working relationship",
+      "translation": "化學；默契",
+      "example": "The two new hires already show good chemistry as a team.",
+      "exampleTranslation": "這兩位新進員工搭檔起來已經展現出不錯的默契。"
+    },
+    {
+      "form": "circulation",
+      "partOfSpeech": "noun",
+      "definition": "the movement of something around a system, such as blood, air, or a publication's readership",
+      "translation": "流通；發行量",
+      "example": "The newsletter's circulation has doubled since going digital.",
+      "exampleTranslation": "自從電子化以來，這份電子報的發行量已經翻倍。"
+    },
+    {
+      "form": "concierge",
+      "partOfSpeech": "noun",
+      "definition": "a hotel employee who assists guests with reservations and information",
+      "translation": "禮賓人員；服務員",
+      "example": "Ask the concierge for restaurant recommendations near the venue.",
+      "exampleTranslation": "可以請禮賓人員推薦場地附近的餐廳。"
+    },
+    {
+      "form": "consent",
+      "partOfSpeech": "noun",
+      "definition": "permission for something to happen",
+      "translation": "同意；許可",
+      "example": "We need written consent before publishing the customer's testimonial.",
+      "exampleTranslation": "在刊登顧客的推薦文之前，我們需要取得書面同意。"
+    },
+    {
+      "form": "consistently",
+      "partOfSpeech": "adverb",
+      "definition": "in a way that always happens or behaves in the same way",
+      "translation": "始終如一地",
+      "example": "The team has consistently met its quarterly targets.",
+      "exampleTranslation": "這個團隊一直以來都穩定達成季度目標。"
+    },
+    {
+      "form": "cookie",
+      "partOfSpeech": "noun",
+      "definition": "a small, sweet baked snack, or a small piece of data stored by a website",
+      "translation": "餅乾；（電腦）小型資料檔",
+      "example": "The website asks visitors to accept cookies before browsing.",
+      "exampleTranslation": "這個網站會要求訪客在瀏覽前接受 cookie。",
+      "note": "在網路情境中通常直接沿用英文 cookie 這個詞"
+    },
+    {
+      "form": "deck",
+      "partOfSpeech": "noun",
+      "definition": "an outdoor platform attached to a building, or a set of presentation slides",
+      "translation": "露台；簡報",
+      "example": "Please send me the final slide deck before the meeting.",
+      "exampleTranslation": "請在會議前把最終版的簡報寄給我。"
+    },
+    {
+      "form": "descriptive",
+      "partOfSpeech": "adjective",
+      "definition": "giving a detailed description of something",
+      "translation": "描述性的",
+      "example": "Use a more descriptive title so customers can find the product easily.",
+      "exampleTranslation": "請用更具描述性的標題，讓顧客更容易找到產品。"
+    },
+    {
+      "form": "detach",
+      "partOfSpeech": "verb",
+      "definition": "to remove or disconnect something from something else",
+      "translation": "分離；拆下",
+      "example": "Detach the receipt from the invoice before filing it.",
+      "exampleTranslation": "歸檔前請把收據從發票上拆下來。"
+    },
+    {
+      "form": "entrepreneur",
+      "partOfSpeech": "noun",
+      "definition": "a person who starts and runs a business, taking on financial risk",
+      "translation": "創業者",
+      "example": "The workshop is designed for first-time entrepreneurs.",
+      "exampleTranslation": "這個工作坊是為初次創業者設計的。"
+    },
+    {
+      "form": "exceptional",
+      "partOfSpeech": "adjective",
+      "definition": "unusually good; standing out from the ordinary",
+      "translation": "傑出的；例外的",
+      "example": "She received an award for exceptional customer service.",
+      "exampleTranslation": "她因為傑出的顧客服務而獲得獎項。"
+    },
+    {
+      "form": "familiarize",
+      "partOfSpeech": "verb",
+      "definition": "to make someone become well acquainted with something",
+      "translation": "使熟悉",
+      "example": "New employees spend the first day familiarizing themselves with the office.",
+      "exampleTranslation": "新進員工第一天會花時間熟悉辦公室環境。"
+    },
+    {
+      "form": "hotline",
+      "partOfSpeech": "noun",
+      "definition": "a telephone line set up for direct, urgent communication",
+      "translation": "熱線",
+      "example": "Call our customer hotline for immediate assistance.",
+      "exampleTranslation": "如需立即協助，請撥打我們的客服熱線。"
+    },
+    {
+      "form": "intonation",
+      "partOfSpeech": "noun",
+      "definition": "the rise and fall of the voice while speaking",
+      "translation": "語調",
+      "example": "The trainer coached staff on friendly intonation for phone calls.",
+      "exampleTranslation": "培訓師指導員工在電話中使用友善的語調。"
+    },
+    {
+      "form": "invention",
+      "partOfSpeech": "noun",
+      "definition": "something newly created or designed, or the act of creating it",
+      "translation": "發明",
+      "example": "The company holds a patent on its latest invention.",
+      "exampleTranslation": "公司擁有最新發明的專利。"
+    },
+    {
+      "form": "irritate",
+      "partOfSpeech": "verb",
+      "definition": "to annoy or bother someone",
+      "translation": "使惱怒",
+      "example": "Long hold times tend to irritate callers.",
+      "exampleTranslation": "長時間的等候容易讓來電者感到不耐。"
+    }
   ]
 }

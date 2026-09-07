@@ -130,9 +130,10 @@
       "form": "seeker",
       "partOfSpeech": "noun",
       "definition": "a person who is looking for something, often used as 'job seeker'",
-      "translation": "尋求者（常見於 job seeker 求職者）",
+      "translation": "尋求者",
       "example": "The career fair attracted many job seekers.",
-      "exampleTranslation": "這場就業博覽會吸引了許多求職者。"
+      "exampleTranslation": "這場就業博覽會吸引了許多求職者。",
+      "note": "常見於 job seeker（求職者）這類複合詞"
     },
     {
       "form": "temporarily",

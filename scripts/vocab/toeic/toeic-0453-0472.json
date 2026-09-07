@@ -130,9 +130,10 @@
       "form": "meantime",
       "partOfSpeech": "noun",
       "definition": "the period between two events; used in 'in the meantime'",
-      "translation": "同時（常用 in the meantime）",
+      "translation": "同時；其間",
       "example": "In the meantime, please continue using the current system.",
-      "exampleTranslation": "在這期間，請繼續使用目前的系統。"
+      "exampleTranslation": "在這期間，請繼續使用目前的系統。",
+      "note": "常用片語 in the meantime（與此同時）"
     },
     {
       "form": "merge",

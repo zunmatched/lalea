@@ -10,9 +10,10 @@
       "form": "pant",
       "partOfSpeech": "noun",
       "definition": "a piece of clothing covering the legs; usually used as 'pants'",
-      "translation": "褲子（常用複數 pants）",
+      "translation": "褲子",
       "example": "The uniform includes a matching pant and jacket.",
-      "exampleTranslation": "這套制服包含成套的褲子和外套。"
+      "exampleTranslation": "這套制服包含成套的褲子和外套。",
+      "note": "通常用複數形 pants"
     },
     {
       "form": "profitable",

@@ -1,27 +1,171 @@
 {
   "slug": "toeic-1041-1060",
   "title": "TOEIC 核心單字 1041-1060",
-  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "group": {
+    "slug": "toeic-service-list",
+    "title": "TOEIC 核心單字"
+  },
   "words": [
-    { "form": "cushion", "partOfSpeech": "noun", "definition": "a soft pad used for sitting or leaning on for comfort", "translation": "靠墊；坐墊", "example": "The lounge chairs come with an extra cushion for comfort.", "exampleTranslation": "這些休閒椅附有一個額外的靠墊，增加舒適度。" },
-    { "form": "dose", "partOfSpeech": "noun", "definition": "a measured quantity of medicine to be taken at one time", "translation": "劑量", "example": "The pharmacist explained the correct dose for the medication.", "exampleTranslation": "藥師說明了這款藥物的正確劑量。" },
-    { "form": "drum", "partOfSpeech": "verb", "definition": "to generate or create something through active effort, as in \"drum up\"", "translation": "招攬；炒熱（常用於 drum up）", "example": "The marketing team is trying to drum up interest before the launch.", "exampleTranslation": "行銷團隊正努力在上市前炒熱話題。" },
-    { "form": "embed", "partOfSpeech": "verb", "definition": "to fix something firmly into a surrounding mass or place it within something", "translation": "嵌入", "example": "A tracking chip is embedded in each shipping container.", "exampleTranslation": "每個貨櫃裡都嵌入了一個追蹤晶片。" },
-    { "form": "evacuate", "partOfSpeech": "verb", "definition": "to remove people from a dangerous place to a safer one", "translation": "撤離；疏散", "example": "Staff were asked to evacuate the building during the fire drill.", "exampleTranslation": "員工在消防演習期間被要求撤離大樓。" },
-    { "form": "expedite", "partOfSpeech": "verb", "definition": "to make a process happen more quickly", "translation": "加快；加速處理", "example": "We paid extra to expedite the delivery of the parts.", "exampleTranslation": "我們額外付費以加快零件的送達速度。" },
-    { "form": "extinguisher", "partOfSpeech": "noun", "definition": "a device used to put out a fire", "translation": "滅火器", "example": "Every floor of the office must have a fire extinguisher.", "exampleTranslation": "辦公室每一層樓都必須配置滅火器。" },
-    { "form": "familiarity", "partOfSpeech": "noun", "definition": "close acquaintance with or good knowledge of something", "translation": "熟悉；熟稔", "example": "Her familiarity with the software made training the new hires easy.", "exampleTranslation": "她對這套軟體的熟悉讓訓練新進員工變得容易。" },
-    { "form": "flaw", "partOfSpeech": "noun", "definition": "a mark, imperfection, or fault that spoils something", "translation": "瑕疵；缺陷", "example": "Quality control found a flaw in the packaging design.", "exampleTranslation": "品管在包裝設計中發現了一個瑕疵。" },
-    { "form": "fluctuate", "partOfSpeech": "verb", "definition": "to rise and fall irregularly in amount or level", "translation": "波動；起伏不定", "example": "Fuel prices tend to fluctuate throughout the year.", "exampleTranslation": "燃油價格全年往往會有波動。" },
-    { "form": "fluent", "partOfSpeech": "adjective", "definition": "able to speak or write a language easily and accurately", "translation": "流利的", "example": "Being fluent in Mandarin gave her an advantage in the interview.", "exampleTranslation": "她流利的華語能力讓她在面試中占優勢。" },
-    { "form": "honestly", "partOfSpeech": "adverb", "definition": "in a truthful and sincere manner", "translation": "老實說；誠實地", "example": "Honestly, the proposal needs more supporting data.", "exampleTranslation": "老實說，這份提案需要更多支持的數據。" },
-    { "form": "housekeep", "partOfSpeech": "verb", "definition": "to do the cleaning and other domestic or maintenance work for a place", "translation": "做家務／客房清潔工作", "example": "The hotel hired extra staff to housekeep during the busy season.", "exampleTranslation": "飯店在旺季雇用了額外的人員做客房清潔。" },
-    { "form": "hurricane", "partOfSpeech": "noun", "definition": "a severe tropical storm with very strong winds", "translation": "颶風", "example": "Flights were delayed for two days because of the hurricane.", "exampleTranslation": "因為颶風，班機延誤了兩天。" },
-    { "form": "hygiene", "partOfSpeech": "noun", "definition": "conditions and practices that help maintain health and cleanliness", "translation": "衛生", "example": "The restaurant received top marks for kitchen hygiene.", "exampleTranslation": "這間餐廳的廚房衛生獲得最高評分。" },
-    { "form": "integral", "partOfSpeech": "adjective", "definition": "necessary to make something complete; essential", "translation": "不可或缺的；構成整體的", "example": "Customer feedback is integral to improving the product.", "exampleTranslation": "顧客回饋對於改善產品是不可或缺的。" },
-    { "form": "interactive", "partOfSpeech": "adjective", "definition": "allowing a two-way flow of information or response between a user and a system", "translation": "互動式的", "example": "The new kiosk features an interactive touchscreen menu.", "exampleTranslation": "這台新的自助服務機有互動式觸控螢幕菜單。" },
-    { "form": "interfere", "partOfSpeech": "verb", "definition": "to intervene in a way that hinders or disrupts something", "translation": "干擾；妨礙", "example": "Personal matters should not interfere with your work schedule.", "exampleTranslation": "私人事務不應該干擾你的工作行程。" },
-    { "form": "kilogram", "partOfSpeech": "noun", "definition": "a metric unit of mass equal to 1,000 grams", "translation": "公斤", "example": "Excess baggage over twenty kilograms will incur a fee.", "exampleTranslation": "超過二十公斤的行李將會收取費用。" },
-    { "form": "layoff", "partOfSpeech": "noun", "definition": "a temporary or permanent dismissal of an employee from a job", "translation": "裁員", "example": "The company announced a round of layoffs last quarter.", "exampleTranslation": "公司在上一季宣布了一輪裁員。" }
+    {
+      "form": "cushion",
+      "partOfSpeech": "noun",
+      "definition": "a soft pad used for sitting or leaning on for comfort",
+      "translation": "靠墊；坐墊",
+      "example": "The lounge chairs come with an extra cushion for comfort.",
+      "exampleTranslation": "這些休閒椅附有一個額外的靠墊，增加舒適度。"
+    },
+    {
+      "form": "dose",
+      "partOfSpeech": "noun",
+      "definition": "a measured quantity of medicine to be taken at one time",
+      "translation": "劑量",
+      "example": "The pharmacist explained the correct dose for the medication.",
+      "exampleTranslation": "藥師說明了這款藥物的正確劑量。"
+    },
+    {
+      "form": "drum",
+      "partOfSpeech": "verb",
+      "definition": "to generate or create something through active effort, as in \"drum up\"",
+      "translation": "招攬；炒熱",
+      "example": "The marketing team is trying to drum up interest before the launch.",
+      "exampleTranslation": "行銷團隊正努力在上市前炒熱話題。",
+      "note": "常用片語 drum up（招攬、炒熱氣氛）"
+    },
+    {
+      "form": "embed",
+      "partOfSpeech": "verb",
+      "definition": "to fix something firmly into a surrounding mass or place it within something",
+      "translation": "嵌入",
+      "example": "A tracking chip is embedded in each shipping container.",
+      "exampleTranslation": "每個貨櫃裡都嵌入了一個追蹤晶片。"
+    },
+    {
+      "form": "evacuate",
+      "partOfSpeech": "verb",
+      "definition": "to remove people from a dangerous place to a safer one",
+      "translation": "撤離；疏散",
+      "example": "Staff were asked to evacuate the building during the fire drill.",
+      "exampleTranslation": "員工在消防演習期間被要求撤離大樓。"
+    },
+    {
+      "form": "expedite",
+      "partOfSpeech": "verb",
+      "definition": "to make a process happen more quickly",
+      "translation": "加快；加速處理",
+      "example": "We paid extra to expedite the delivery of the parts.",
+      "exampleTranslation": "我們額外付費以加快零件的送達速度。"
+    },
+    {
+      "form": "extinguisher",
+      "partOfSpeech": "noun",
+      "definition": "a device used to put out a fire",
+      "translation": "滅火器",
+      "example": "Every floor of the office must have a fire extinguisher.",
+      "exampleTranslation": "辦公室每一層樓都必須配置滅火器。"
+    },
+    {
+      "form": "familiarity",
+      "partOfSpeech": "noun",
+      "definition": "close acquaintance with or good knowledge of something",
+      "translation": "熟悉；熟稔",
+      "example": "Her familiarity with the software made training the new hires easy.",
+      "exampleTranslation": "她對這套軟體的熟悉讓訓練新進員工變得容易。"
+    },
+    {
+      "form": "flaw",
+      "partOfSpeech": "noun",
+      "definition": "a mark, imperfection, or fault that spoils something",
+      "translation": "瑕疵；缺陷",
+      "example": "Quality control found a flaw in the packaging design.",
+      "exampleTranslation": "品管在包裝設計中發現了一個瑕疵。"
+    },
+    {
+      "form": "fluctuate",
+      "partOfSpeech": "verb",
+      "definition": "to rise and fall irregularly in amount or level",
+      "translation": "波動；起伏不定",
+      "example": "Fuel prices tend to fluctuate throughout the year.",
+      "exampleTranslation": "燃油價格全年往往會有波動。"
+    },
+    {
+      "form": "fluent",
+      "partOfSpeech": "adjective",
+      "definition": "able to speak or write a language easily and accurately",
+      "translation": "流利的",
+      "example": "Being fluent in Mandarin gave her an advantage in the interview.",
+      "exampleTranslation": "她流利的華語能力讓她在面試中占優勢。"
+    },
+    {
+      "form": "honestly",
+      "partOfSpeech": "adverb",
+      "definition": "in a truthful and sincere manner",
+      "translation": "老實說；誠實地",
+      "example": "Honestly, the proposal needs more supporting data.",
+      "exampleTranslation": "老實說，這份提案需要更多支持的數據。"
+    },
+    {
+      "form": "housekeep",
+      "partOfSpeech": "verb",
+      "definition": "to do the cleaning and other domestic or maintenance work for a place",
+      "translation": "做家務／客房清潔工作",
+      "example": "The hotel hired extra staff to housekeep during the busy season.",
+      "exampleTranslation": "飯店在旺季雇用了額外的人員做客房清潔。"
+    },
+    {
+      "form": "hurricane",
+      "partOfSpeech": "noun",
+      "definition": "a severe tropical storm with very strong winds",
+      "translation": "颶風",
+      "example": "Flights were delayed for two days because of the hurricane.",
+      "exampleTranslation": "因為颶風，班機延誤了兩天。"
+    },
+    {
+      "form": "hygiene",
+      "partOfSpeech": "noun",
+      "definition": "conditions and practices that help maintain health and cleanliness",
+      "translation": "衛生",
+      "example": "The restaurant received top marks for kitchen hygiene.",
+      "exampleTranslation": "這間餐廳的廚房衛生獲得最高評分。"
+    },
+    {
+      "form": "integral",
+      "partOfSpeech": "adjective",
+      "definition": "necessary to make something complete; essential",
+      "translation": "不可或缺的；構成整體的",
+      "example": "Customer feedback is integral to improving the product.",
+      "exampleTranslation": "顧客回饋對於改善產品是不可或缺的。"
+    },
+    {
+      "form": "interactive",
+      "partOfSpeech": "adjective",
+      "definition": "allowing a two-way flow of information or response between a user and a system",
+      "translation": "互動式的",
+      "example": "The new kiosk features an interactive touchscreen menu.",
+      "exampleTranslation": "這台新的自助服務機有互動式觸控螢幕菜單。"
+    },
+    {
+      "form": "interfere",
+      "partOfSpeech": "verb",
+      "definition": "to intervene in a way that hinders or disrupts something",
+      "translation": "干擾；妨礙",
+      "example": "Personal matters should not interfere with your work schedule.",
+      "exampleTranslation": "私人事務不應該干擾你的工作行程。"
+    },
+    {
+      "form": "kilogram",
+      "partOfSpeech": "noun",
+      "definition": "a metric unit of mass equal to 1,000 grams",
+      "translation": "公斤",
+      "example": "Excess baggage over twenty kilograms will incur a fee.",
+      "exampleTranslation": "超過二十公斤的行李將會收取費用。"
+    },
+    {
+      "form": "layoff",
+      "partOfSpeech": "noun",
+      "definition": "a temporary or permanent dismissal of an employee from a job",
+      "translation": "裁員",
+      "example": "The company announced a round of layoffs last quarter.",
+      "exampleTranslation": "公司在上一季宣布了一輪裁員。"
+    }
   ]
 }

@@ -82,9 +82,10 @@
       "form": "spite",
       "partOfSpeech": "noun",
       "definition": "used in the phrase 'in spite of' to mean despite",
-      "translation": "儘管（常用 in spite of）",
+      "translation": "儘管",
       "example": "In spite of the delay, the shipment arrived in good condition.",
-      "exampleTranslation": "儘管有延誤，這批貨還是完好送達了。"
+      "exampleTranslation": "儘管有延誤，這批貨還是完好送達了。",
+      "note": "常用片語 in spite of（儘管）"
     },
     {
       "form": "bathroom",
