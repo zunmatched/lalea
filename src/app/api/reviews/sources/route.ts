@@ -38,9 +38,13 @@ export async function GET(){
   grouped.set(group.id,entry);
  }
 
+ const fullyDone=(s:typeof sources[number])=>s.totalWords>0&&s.everMasteredCount>=s.totalWords;
+ const completionRatio=(s:typeof sources[number])=>s.totalWords>0?s.everMasteredCount/s.totalWords:0;
+ const bySources=(a:typeof sources[number],b:typeof sources[number])=>{const doneDiff=Number(fullyDone(a))-Number(fullyDone(b));if(doneDiff!==0)return doneDiff;return completionRatio(b)-completionRatio(a)};
+
  const groups=[...grouped.values()]
   .sort((a,b)=>a.position-b.position||a.title.localeCompare(b.title))
-  .map(({id,slug,title,sources})=>({id,slug,title,sources:sources.sort((a,b)=>(b.totalWords)-(a.totalWords))}));
+  .map(({id,slug,title,sources})=>({id,slug,title,sources:sources.sort(bySources)}));
 
  return Response.json({groups,proficiencyMax:proficiencyMax(path.reviewWindowDays)});
 }
