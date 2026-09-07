@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-1061-1080",
+  "title": "TOEIC 核心單字 1061-1080",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "lightweight", "partOfSpeech": "adjective", "definition": "of less than average weight", "translation": "輕量的", "example": "The company switched to lightweight packaging to cut shipping costs.", "exampleTranslation": "公司改用輕量包裝以降低運費成本。" },
+    { "form": "merit", "partOfSpeech": "noun", "definition": "the quality of being good or deserving of reward", "translation": "功績；優點", "example": "Promotions here are based on merit, not seniority.", "exampleTranslation": "這裡的升遷是根據績效，而不是年資。" },
+    { "form": "necklace", "partOfSpeech": "noun", "definition": "a piece of jewelry worn around the neck", "translation": "項鍊", "example": "The gift shop sells handmade necklaces from local artisans.", "exampleTranslation": "這間禮品店販售當地工匠手作的項鍊。" },
+    { "form": "needy", "partOfSpeech": "adjective", "definition": "lacking basic necessities such as money or food", "translation": "貧困的", "example": "The charity provides winter coats to needy families.", "exampleTranslation": "這個慈善機構為貧困家庭提供冬季外套。" },
+    { "form": "overpay", "partOfSpeech": "verb", "definition": "to pay more than necessary or than something is worth", "translation": "多付；付過多的錢", "example": "We overpaid the vendor by mistake and requested a refund.", "exampleTranslation": "我們不小心多付了廠商款項，並要求退款。" },
+    { "form": "pamphlet", "partOfSpeech": "noun", "definition": "a small booklet or leaflet giving information", "translation": "小冊子；宣傳單", "example": "Pick up a pamphlet at the front desk for more details.", "exampleTranslation": "在櫃檯拿一份小冊子以了解更多細節。" },
+    { "form": "partial", "partOfSpeech": "adjective", "definition": "existing only in part; incomplete", "translation": "部分的", "example": "The insurance only covers a partial refund for the damage.", "exampleTranslation": "這份保險只涵蓋損失的部分退款。" },
+    { "form": "penalize", "partOfSpeech": "verb", "definition": "to punish someone for breaking a rule or law", "translation": "懲罰；處罰", "example": "Late submissions will be penalized with a reduced score.", "exampleTranslation": "遲交將會被扣分懲罰。" },
+    { "form": "pollute", "partOfSpeech": "verb", "definition": "to make land, water, or air dirty or harmful", "translation": "污染", "example": "The factory was fined for polluting the nearby river.", "exampleTranslation": "這間工廠因為污染附近的河流而被罰款。" },
+    { "form": "prescribe", "partOfSpeech": "verb", "definition": "to state officially that something should be done, or to recommend a treatment", "translation": "規定；開立（處方）", "example": "Company policy prescribes a dress code for client visits.", "exampleTranslation": "公司政策規定了拜訪客戶時的服裝規範。" },
+    { "form": "probable", "partOfSpeech": "adjective", "definition": "likely to happen or likely to be true", "translation": "很有可能的", "example": "A delay in shipping is probable given the weather forecast.", "exampleTranslation": "根據天氣預報，貨運延誤是很有可能的。" },
+    { "form": "prominent", "partOfSpeech": "adjective", "definition": "important, well-known, or easily noticeable", "translation": "顯著的；著名的", "example": "Her name appears in a prominent position on the report cover.", "exampleTranslation": "她的名字出現在報告封面的顯眼位置。" },
+    { "form": "rainfall", "partOfSpeech": "noun", "definition": "the amount of rain that falls in a given area over a period of time", "translation": "降雨量", "example": "Heavy rainfall disrupted deliveries across the region.", "exampleTranslation": "大雨造成整個地區的送貨中斷。" },
+    { "form": "relocation", "partOfSpeech": "noun", "definition": "the process of moving to a new place", "translation": "搬遷；遷移", "example": "The company covered all relocation expenses for the new manager.", "exampleTranslation": "公司支付了新任經理所有的搬遷費用。" },
+    { "form": "residence", "partOfSpeech": "noun", "definition": "a house or place where a person lives", "translation": "住所；居所", "example": "Employees must provide proof of residence for the housing allowance.", "exampleTranslation": "員工必須提供居住證明才能申請住房津貼。" },
+    { "form": "retrieve", "partOfSpeech": "verb", "definition": "to get or bring something back", "translation": "取回；找回", "example": "She went back to the meeting room to retrieve her laptop.", "exampleTranslation": "她回到會議室去取回她的筆電。" },
+    { "form": "rider", "partOfSpeech": "noun", "definition": "an additional clause added to a document or contract", "translation": "附加條款", "example": "The contract includes a rider covering equipment damage.", "exampleTranslation": "這份合約包含一個涵蓋設備損壞的附加條款。" },
+    { "form": "rubber", "partOfSpeech": "noun", "definition": "a tough, elastic material used for many practical purposes", "translation": "橡膠", "example": "The warehouse floor is covered with a rubber mat for safety.", "exampleTranslation": "倉庫地板鋪了橡膠墊以確保安全。" },
+    { "form": "rug", "partOfSpeech": "noun", "definition": "a piece of thick fabric used as a floor covering", "translation": "地毯（小塊）", "example": "A new rug was placed in the reception area.", "exampleTranslation": "接待區放了一張新地毯。" },
+    { "form": "salespeople", "partOfSpeech": "noun", "definition": "people whose job is to sell goods or services", "translation": "業務人員；銷售人員", "example": "The training session is mandatory for all salespeople.", "exampleTranslation": "這場訓練課程是所有業務人員的必修課。" }
+  ]
+}

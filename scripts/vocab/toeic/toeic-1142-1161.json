@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-1142-1161",
+  "title": "TOEIC 核心單字 1142-1161",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "interpreter", "partOfSpeech": "noun", "definition": "a person who translates spoken language from one language to another", "translation": "口譯員", "example": "An interpreter was hired for the meeting with the overseas client.", "exampleTranslation": "這場與海外客戶的會議聘請了一位口譯員。" },
+    { "form": "intersection", "partOfSpeech": "noun", "definition": "a point where two or more roads or lines cross", "translation": "十字路口；交叉點", "example": "Turn left at the next intersection to reach the office.", "exampleTranslation": "在下一個十字路口左轉就能到辦公室。" },
+    { "form": "irrelevant", "partOfSpeech": "adjective", "definition": "not connected with or important to the matter at hand", "translation": "無關的；不相關的", "example": "The details about the old system are irrelevant to this discussion.", "exampleTranslation": "關於舊系統的細節與這次討論無關。" },
+    { "form": "jeans", "partOfSpeech": "noun", "definition": "trousers made of denim", "translation": "牛仔褲", "example": "Casual Friday allows employees to wear jeans to work.", "exampleTranslation": "便服星期五允許員工穿牛仔褲上班。" },
+    { "form": "journalism", "partOfSpeech": "noun", "definition": "the activity of writing and reporting news", "translation": "新聞學；新聞業", "example": "She studied journalism before joining the company's communications team.", "exampleTranslation": "她在加入公司的傳播團隊前主修新聞學。" },
+    { "form": "letterhead", "partOfSpeech": "noun", "definition": "printed heading on stationery showing a company's name and address", "translation": "信頭；信頭紙", "example": "Official offers must be printed on company letterhead.", "exampleTranslation": "正式的邀約必須印在公司信頭紙上。" },
+    { "form": "lifeguard", "partOfSpeech": "noun", "definition": "a person employed to watch over the safety of swimmers", "translation": "救生員", "example": "The hotel pool always has a lifeguard on duty.", "exampleTranslation": "這間飯店的泳池隨時都有救生員值班。" },
+    { "form": "modem", "partOfSpeech": "noun", "definition": "a device that connects a computer to the internet via phone or cable lines", "translation": "數據機", "example": "IT replaced the old modem to improve the office's internet speed.", "exampleTranslation": "IT 部門更換了舊數據機以提升辦公室的網路速度。" },
+    { "form": "monument", "partOfSpeech": "noun", "definition": "a structure built to commemorate a person or event", "translation": "紀念碑；紀念性建築", "example": "The new building will become a monument to the founder's vision.", "exampleTranslation": "這棟新建築將成為創辦人願景的紀念象徵。" },
+    { "form": "mosquito", "partOfSpeech": "noun", "definition": "a small flying insect that bites and sucks blood", "translation": "蚊子", "example": "The outdoor event was moved indoors because of mosquitoes.", "exampleTranslation": "這場戶外活動因為蚊子問題而改到室內舉行。" },
+    { "form": "obligate", "partOfSpeech": "verb", "definition": "to bind someone legally or morally to do something", "translation": "使負義務", "example": "The contract obligates both parties to give thirty days' notice.", "exampleTranslation": "這份合約規定雙方都必須提前三十天通知。" },
+    { "form": "oblige", "partOfSpeech": "verb", "definition": "to make someone legally or morally bound to do something, or to do a favor", "translation": "使負有義務；樂意配合", "example": "We're happy to oblige and reschedule the appointment for you.", "exampleTranslation": "我們很樂意配合，幫您重新安排約診時間。" },
+    { "form": "occurrence", "partOfSpeech": "noun", "definition": "something that happens; an event", "translation": "發生的事；事件", "example": "A system error of this kind is a rare occurrence.", "exampleTranslation": "這種系統錯誤是很少發生的事。" },
+    { "form": "operational", "partOfSpeech": "adjective", "definition": "functioning and ready for use", "translation": "可運作的；營運中的", "example": "The new branch will be fully operational by next month.", "exampleTranslation": "新分店將於下個月全面正式營運。" },
+    { "form": "outage", "partOfSpeech": "noun", "definition": "a period when a service, especially electricity or the internet, is not available", "translation": "（電力／服務）中斷", "example": "The website was down for two hours due to a server outage.", "exampleTranslation": "網站因伺服器故障而中斷了兩個小時。" },
+    { "form": "overcrowd", "partOfSpeech": "verb", "definition": "to fill a place with more people or things than is comfortable", "translation": "使過度擁擠", "example": "The small meeting room quickly became overcrowded.", "exampleTranslation": "這間小會議室很快就變得過度擁擠。" },
+    { "form": "paralegal", "partOfSpeech": "noun", "definition": "a person trained to assist lawyers but not fully qualified as one", "translation": "法務助理", "example": "The paralegal prepared the documents before the lawyer reviewed them.", "exampleTranslation": "這位法務助理在律師審閱前先準備好文件。" },
+    { "form": "partially", "partOfSpeech": "adverb", "definition": "to some extent; not completely", "translation": "部分地", "example": "The order was only partially fulfilled due to a stock shortage.", "exampleTranslation": "由於庫存不足，這筆訂單只被部分出貨。" },
+    { "form": "pepper", "partOfSpeech": "noun", "definition": "a spice made from the dried berries of a plant, or a type of vegetable", "translation": "胡椒；辣椒", "example": "Season the dish with salt and pepper to taste.", "exampleTranslation": "依個人口味用鹽和胡椒調味這道菜。" },
+    { "form": "permanently", "partOfSpeech": "adverb", "definition": "in a way that lasts forever or is not temporary", "translation": "永久地", "example": "The position was permanently filled after a six-month trial.", "exampleTranslation": "經過六個月的試用期後，這個職位被正式錄用了。" }
+  ]
+}

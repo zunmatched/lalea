@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-0601-0620",
+  "title": "TOEIC 核心單字 0601-0620",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "fasten", "partOfSpeech": "verb", "definition": "to close or attach something firmly", "translation": "繫緊；扣緊", "example": "Please fasten the boxes securely before loading them onto the truck.", "exampleTranslation": "裝上卡車前，請把箱子牢牢綁緊。" },
+    { "form": "harmful", "partOfSpeech": "adjective", "definition": "causing or likely to cause damage or injury", "translation": "有害的", "example": "The new packaging avoids materials that are harmful to the environment.", "exampleTranslation": "新的包裝避免使用對環境有害的材料。" },
+    { "form": "informative", "partOfSpeech": "adjective", "definition": "providing useful or interesting information", "translation": "資訊豐富的", "example": "The orientation session was short but informative.", "exampleTranslation": "這場新人說明會雖然短，但內容很豐富。" },
+    { "form": "institute", "partOfSpeech": "noun", "definition": "an organization created for a particular purpose, often education or research", "translation": "機構；學院", "example": "She trained at a culinary institute before opening her own restaurant.", "exampleTranslation": "她在開自己的餐廳之前，曾在一所餐飲學院受訓。" },
+    { "form": "kit", "partOfSpeech": "noun", "definition": "a set of tools, equipment, or parts for a particular purpose", "translation": "工具組；套件", "example": "Every technician carries a basic repair kit.", "exampleTranslation": "每位技術人員都會攜帶一組基本維修工具。" },
+    { "form": "locally", "partOfSpeech": "adverb", "definition": "in or from the local area", "translation": "在當地；就近", "example": "We try to source ingredients locally whenever possible.", "exampleTranslation": "我們盡量就近在當地採購食材。" },
+    { "form": "mentor", "partOfSpeech": "noun", "definition": "an experienced person who advises and guides a less experienced one", "translation": "導師；指導者", "example": "Every new hire is paired with a mentor for the first month.", "exampleTranslation": "每位新進員工在第一個月都會配對一位導師。" },
+    { "form": "nominate", "partOfSpeech": "verb", "definition": "to formally propose someone for a position or award", "translation": "提名", "example": "Her manager nominated her for the employee-of-the-year award.", "exampleTranslation": "她的主管提名她角逐年度最佳員工獎。" },
+    { "form": "opt", "partOfSpeech": "verb", "definition": "to make a choice between two or more options", "translation": "選擇", "example": "Employees can opt to receive their pay stub by email instead of paper.", "exampleTranslation": "員工可以選擇用電子郵件收薪資單，而不是紙本。" },
+    { "form": "parade", "partOfSpeech": "noun", "definition": "a public procession, often to celebrate an event", "translation": "遊行", "example": "Downtown streets will be closed for the annual parade.", "exampleTranslation": "市中心街道會因為年度遊行而封閉。" },
+    { "form": "physician", "partOfSpeech": "noun", "definition": "a medical doctor, especially one who treats general illnesses", "translation": "醫師", "example": "The clinic added a new physician to reduce patient wait times.", "exampleTranslation": "診所新增了一位醫師，以縮短病患的等候時間。" },
+    { "form": "polish", "partOfSpeech": "verb", "definition": "to make something smooth and shiny by rubbing it, or to refine and improve it", "translation": "打磨；潤飾", "example": "Take a few minutes to polish your presentation before the meeting.", "exampleTranslation": "在會議前花點時間把簡報再潤飾一下。" },
+    { "form": "postage", "partOfSpeech": "noun", "definition": "the cost of sending mail through the postal system", "translation": "郵資", "example": "Postage rates will increase starting next month.", "exampleTranslation": "郵資費率從下個月開始調漲。" },
+    { "form": "recreational", "partOfSpeech": "adjective", "definition": "relating to activities done for enjoyment when not working", "translation": "休閒的；娛樂的", "example": "The office added a recreational area with a ping-pong table.", "exampleTranslation": "辦公室新增了一個有桌球桌的休閒區。" },
+    { "form": "rehearse", "partOfSpeech": "verb", "definition": "to practice something, such as a speech or performance, before doing it for real", "translation": "排練；預演", "example": "Let's rehearse the client pitch one more time before tomorrow.", "exampleTranslation": "明天之前我們再排練一次客戶提案。" },
+    { "form": "removal", "partOfSpeech": "noun", "definition": "the act of taking something away or off", "translation": "移除；搬遷", "example": "The removal of the old equipment is scheduled for Friday.", "exampleTranslation": "舊設備的移除作業排在星期五。" },
+    { "form": "satisfactory", "partOfSpeech": "adjective", "definition": "acceptable and meeting expectations", "translation": "令人滿意的", "example": "The inspection results were satisfactory, so the shipment was approved.", "exampleTranslation": "檢驗結果令人滿意，所以這批貨獲准出貨。" },
+    { "form": "seasonal", "partOfSpeech": "adjective", "definition": "relating to or occurring during a particular season of the year", "translation": "季節性的", "example": "We hire extra seasonal staff during the holiday rush.", "exampleTranslation": "我們在假期購物潮期間會多聘僱季節性人力。" },
+    { "form": "separately", "partOfSpeech": "adverb", "definition": "apart from something else, not together", "translation": "分開地；個別地", "example": "Please invoice the two orders separately.", "exampleTranslation": "請把這兩筆訂單分開開立發票。" },
+    { "form": "turnover", "partOfSpeech": "noun", "definition": "the rate at which employees leave a company, or the total amount of business done", "translation": "流動率；營業額", "example": "Staff turnover has decreased since we introduced flexible hours.", "exampleTranslation": "自從我們實施彈性工時後，員工流動率就降低了。" }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-1202-1221",
+  "title": "TOEIC 核心單字 1202-1221",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "bulb", "partOfSpeech": "noun", "definition": "a glass device that produces light when connected to electricity", "translation": "燈泡", "example": "Facilities replaced the burnt-out light bulb in the hallway.", "exampleTranslation": "設施部門更換了走廊裡燒壞的燈泡。" },
+    { "form": "by-law", "partOfSpeech": "noun", "definition": "a rule made by a company or organization to regulate its own affairs", "translation": "內部規章；細則", "example": "The condo's by-laws require approval for any renovation.", "exampleTranslation": "這棟公寓的內部規章規定任何整修都需要核准。" },
+    { "form": "cheer", "partOfSpeech": "verb", "definition": "to shout encouragement, support, or approval", "translation": "歡呼；喝采", "example": "The whole office cheered when the deal was announced.", "exampleTranslation": "這筆交易宣布時，整間辦公室都歡呼了起來。" },
+    { "form": "complication", "partOfSpeech": "noun", "definition": "a factor that makes a situation more difficult", "translation": "複雜狀況；併發問題", "example": "An unexpected complication delayed the merger by several weeks.", "exampleTranslation": "一個意外的複雜狀況讓這次合併延遲了好幾週。" },
+    { "form": "considerate", "partOfSpeech": "adjective", "definition": "careful not to cause inconvenience or harm to others", "translation": "體貼的；顧慮周到的", "example": "Please be considerate of colleagues working nearby when on calls.", "exampleTranslation": "講電話時請顧慮到附近工作的同事。" },
+    { "form": "daytime", "partOfSpeech": "noun", "definition": "the period of light between sunrise and sunset", "translation": "白天", "example": "The office switches to daytime lighting automatically.", "exampleTranslation": "辦公室會自動切換成白天照明模式。" },
+    { "form": "decoration", "partOfSpeech": "noun", "definition": "an ornament used to make something look more attractive", "translation": "裝飾（品）", "example": "Holiday decorations went up in the lobby this week.", "exampleTranslation": "這週大廳掛上了節慶裝飾。" },
+    { "form": "discard", "partOfSpeech": "verb", "definition": "to get rid of something no longer wanted or needed", "translation": "丟棄；捨棄", "example": "Discard any expired samples from the storage fridge.", "exampleTranslation": "請丟棄儲藏冰箱裡任何過期的樣品。" },
+    { "form": "drastically", "partOfSpeech": "adverb", "definition": "in a way that is extreme and often sudden", "translation": "劇烈地；大幅地", "example": "Shipping costs have risen drastically this quarter.", "exampleTranslation": "這一季的運費大幅上漲。" },
+    { "form": "erase", "partOfSpeech": "verb", "definition": "to remove or rub out something completely", "translation": "清除；抹去", "example": "Make sure to erase all data before returning the laptop.", "exampleTranslation": "歸還筆電前請務必清除所有資料。" },
+    { "form": "explorer", "partOfSpeech": "noun", "definition": "a person who travels to discover unfamiliar places or things", "translation": "探險家", "example": "The museum exhibit honors early explorers of the region.", "exampleTranslation": "這場博物館展覽向這個地區的早期探險家致敬。" },
+    { "form": "factual", "partOfSpeech": "adjective", "definition": "concerned with or containing facts rather than opinions", "translation": "事實的；如實的", "example": "Please keep the report strictly factual, without opinions.", "exampleTranslation": "請讓這份報告完全根據事實，不摻雜個人意見。" },
+    { "form": "fixture", "partOfSpeech": "noun", "definition": "a piece of equipment or furniture that is fixed in position", "translation": "固定裝置；固定設備", "example": "The light fixtures in the conference room were recently upgraded.", "exampleTranslation": "會議室裡的固定燈具最近剛升級過。" },
+    { "form": "footwear", "partOfSpeech": "noun", "definition": "shoes and boots collectively", "translation": "鞋類", "example": "Safety footwear is required on the factory floor.", "exampleTranslation": "工廠廠區內規定要穿安全鞋。" },
+    { "form": "genre", "partOfSpeech": "noun", "definition": "a category of art, music, or literature with a particular style or content", "translation": "類型；體裁", "example": "The bookstore organizes its shelves by genre.", "exampleTranslation": "這間書店依照類型來分類書架。" },
+    { "form": "gymnasium", "partOfSpeech": "noun", "definition": "a room or building equipped for physical exercise", "translation": "體育館；健身房", "example": "The company gymnasium is open to all employees after 6 p.m.", "exampleTranslation": "公司的健身房在晚上六點後對所有員工開放。" },
+    { "form": "hereby", "partOfSpeech": "adverb", "definition": "by this means or as a result of this statement (used in formal documents)", "translation": "特此；茲", "example": "I hereby confirm my attendance at the annual conference.", "exampleTranslation": "我在此確認出席年度大會。" },
+    { "form": "hesitation", "partOfSpeech": "noun", "definition": "a pause before doing or saying something, due to uncertainty", "translation": "猶豫", "example": "She accepted the new role without hesitation.", "exampleTranslation": "她毫不猶豫地接受了這個新職位。" },
+    { "form": "homemade", "partOfSpeech": "adjective", "definition": "made at home rather than bought", "translation": "自製的；家常的", "example": "The office potluck featured several homemade dishes.", "exampleTranslation": "辦公室的百樂餐聚會有好幾道自製料理。" },
+    { "form": "hospitality", "partOfSpeech": "noun", "definition": "friendly and generous treatment of guests or visitors", "translation": "殷勤款待；好客", "example": "The client praised the team's hospitality during the visit.", "exampleTranslation": "客戶稱讚了團隊在來訪期間的殷勤款待。" }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "slug": "toeic-1242-1250",
+  "title": "TOEIC 核心單字 1242-1250",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "unreliable", "partOfSpeech": "adjective", "definition": "not able to be trusted or depended on", "translation": "不可靠的", "example": "We switched suppliers because the old one had an unreliable delivery schedule.", "exampleTranslation": "我們換了供應商，因為原本那家的出貨時程不可靠。" },
+    { "form": "acclaim", "partOfSpeech": "noun", "definition": "public praise and approval", "translation": "讚譽；好評", "example": "The new product line has received widespread acclaim from reviewers.", "exampleTranslation": "這條新產品線得到了評論者的廣泛讚譽。" },
+    { "form": "chronic", "partOfSpeech": "adjective", "definition": "continuing for a long time or recurring frequently", "translation": "長期的；慢性的", "example": "The department has a chronic shortage of qualified technicians.", "exampleTranslation": "這個部門長期缺乏合格的技術人員。" },
+    { "form": "deteriorate", "partOfSpeech": "verb", "definition": "to become progressively worse", "translation": "惡化；變差", "example": "Customer satisfaction began to deteriorate after the price increase.", "exampleTranslation": "調漲價格後，顧客滿意度開始惡化。" },
+    { "form": "resemble", "partOfSpeech": "verb", "definition": "to look or seem like someone or something else", "translation": "與...相似", "example": "The new interface closely resembles the one used by our competitor.", "exampleTranslation": "這個新介面跟我們競爭對手用的非常相似。" },
+    { "form": "unauthorized", "partOfSpeech": "adjective", "definition": "done without official permission", "translation": "未經授權的", "example": "Unauthorized access to the payroll system will be reported to security.", "exampleTranslation": "未經授權存取薪資系統的行為將會被通報給安全部門。" },
+    { "form": "violate", "partOfSpeech": "verb", "definition": "to break a rule, law, or agreement", "translation": "違反", "example": "Sharing client data with a third party would violate the contract.", "exampleTranslation": "把客戶資料分享給第三方會違反合約規定。" },
+    { "form": "unplug", "partOfSpeech": "verb", "definition": "to disconnect a device by removing its plug", "translation": "拔掉插頭", "example": "Please unplug the projector before you leave the conference room.", "exampleTranslation": "離開會議室前請把投影機的插頭拔掉。" },
+    { "form": "videoconference", "partOfSpeech": "noun", "definition": "a meeting held between people in different locations using video technology", "translation": "視訊會議", "example": "The quarterly review will be held as a videoconference this time.", "exampleTranslation": "這次的季度檢討會議會用視訊會議的方式進行。" }
+  ]
+}

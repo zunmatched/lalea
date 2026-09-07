@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-0101-0120",
+  "title": "TOEIC 核心單字 0101-0120",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "exit", "partOfSpeech": "noun", "definition": "a way out of a building or vehicle, or the act of leaving", "translation": "出口；離開", "example": "The nearest emergency exit is located next to the stairwell.", "exampleTranslation": "最近的緊急出口就在樓梯間旁邊。" },
+    { "form": "attendee", "partOfSpeech": "noun", "definition": "a person who is present at an event or meeting", "translation": "與會者", "example": "Each attendee will receive a name badge and a program booklet.", "exampleTranslation": "每位與會者都會拿到一張名牌和一本議程手冊。" },
+    { "form": "cruise", "partOfSpeech": "noun", "definition": "a voyage on a ship taken for pleasure, usually stopping at several ports", "translation": "郵輪旅行", "example": "The travel agency is offering a discount on the Caribbean cruise.", "exampleTranslation": "這家旅行社正在提供加勒比海郵輪旅行的折扣。" },
+    { "form": "birthday", "partOfSpeech": "noun", "definition": "the anniversary of the day someone was born", "translation": "生日", "example": "The team surprised him with a cake for his birthday.", "exampleTranslation": "團隊用一個蛋糕給他生日驚喜。" },
+    { "form": "café", "partOfSpeech": "noun", "definition": "a small restaurant serving light meals and drinks, especially coffee", "translation": "咖啡廳", "example": "Let's grab coffee at the café across from the office.", "exampleTranslation": "我們去辦公室對面的咖啡廳喝杯咖啡吧。" },
+    { "form": "comprehension", "partOfSpeech": "noun", "definition": "the ability to understand something", "translation": "理解力", "example": "The training focuses on improving listening comprehension for new hires.", "exampleTranslation": "這項訓練著重於提升新進員工的聽力理解力。" },
+    { "form": "mall", "partOfSpeech": "noun", "definition": "a large building or group of buildings containing many shops", "translation": "購物中心", "example": "The flagship store will open at the downtown shopping mall.", "exampleTranslation": "旗艦店將在市中心的購物中心開幕。" },
+    { "form": "medication", "partOfSpeech": "noun", "definition": "a drug or other substance used to treat illness", "translation": "藥物", "example": "The pharmacy is closed for lunch, so pick up your medication after one.", "exampleTranslation": "藥局午休中，一點以後再去領藥物。" },
+    { "form": "recycle", "partOfSpeech": "verb", "definition": "to process used materials so they can be used again", "translation": "回收再利用", "example": "Please recycle paper and cardboard in the blue bin.", "exampleTranslation": "請把紙張和紙箱回收放進藍色回收桶。" },
+    { "form": "renew", "partOfSpeech": "verb", "definition": "to extend the period of validity of a contract, license, or subscription", "translation": "續約；更新", "example": "We need to renew the software license before it expires.", "exampleTranslation": "我們需要在軟體授權到期前續約。" },
+    { "form": "tenant", "partOfSpeech": "noun", "definition": "a person who rents property from a landlord", "translation": "房客；承租人", "example": "The building manager sent a notice to all tenants about the elevator repair.", "exampleTranslation": "大樓管理員發了通知給所有房客，說明電梯維修事宜。" },
+    { "form": "sandwich", "partOfSpeech": "noun", "definition": "food consisting of two slices of bread with filling in between", "translation": "三明治", "example": "The catering service will provide sandwiches for the lunch meeting.", "exampleTranslation": "外燴服務會為午餐會議提供三明治。" },
+    { "form": "departure", "partOfSpeech": "noun", "definition": "the act of leaving, especially at the start of a journey", "translation": "出發；離境", "example": "Please arrive two hours before your flight's departure time.", "exampleTranslation": "請在航班出發時間前兩小時抵達。" },
+    { "form": "mini", "partOfSpeech": "adjective", "definition": "very small in size compared to the usual version", "translation": "迷你的", "example": "We'll hold a mini workshop before the full-day training.", "exampleTranslation": "我們會在全天訓練之前先辦一場迷你工作坊。" },
+    { "form": "fitness", "partOfSpeech": "noun", "definition": "the condition of being physically healthy and strong", "translation": "健身；體適能", "example": "The company added a fitness center for employees last year.", "exampleTranslation": "公司去年為員工新增了一間健身中心。" },
+    { "form": "inconvenience", "partOfSpeech": "noun", "definition": "trouble or difficulty caused to someone", "translation": "不便", "example": "We apologize for any inconvenience caused by the schedule change.", "exampleTranslation": "我們為行程異動造成的不便致歉。" },
+    { "form": "banquet", "partOfSpeech": "noun", "definition": "a large formal meal, often held to celebrate an occasion", "translation": "宴會", "example": "The annual awards banquet will be held at the downtown hotel.", "exampleTranslation": "年度頒獎宴會將在市中心的飯店舉行。" },
+    { "form": "closet", "partOfSpeech": "noun", "definition": "a small enclosed space or cabinet used for storage", "translation": "衣櫃；儲藏室", "example": "Extra chairs for the meeting are stored in the closet.", "exampleTranslation": "會議用的額外椅子存放在儲藏室裡。" },
+    { "form": "unreal", "partOfSpeech": "adjective", "definition": "not seeming real; hard to believe", "translation": "不真實的", "example": "The sales growth this quarter feels almost unreal.", "exampleTranslation": "這一季的銷售成長感覺幾乎不真實。" },
+    { "form": "distractor", "partOfSpeech": "noun", "definition": "an incorrect option included in a test question to mislead test-takers", "translation": "干擾選項", "example": "Each question includes one correct answer and three distractors.", "exampleTranslation": "每一題都包含一個正確答案和三個干擾選項。" }
+  ]
+}

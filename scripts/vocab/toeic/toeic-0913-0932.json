@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-0913-0932",
+  "title": "TOEIC 核心單字 913-932",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "freighter", "partOfSpeech": "noun", "definition": "a ship or aircraft used to transport cargo", "translation": "貨輪；貨機", "example": "The freighter delivered containers to the port this morning.", "exampleTranslation": "貨輪今天早上把貨櫃送到港口。" },
+    { "form": "generator", "partOfSpeech": "noun", "definition": "a machine that produces electricity", "translation": "發電機", "example": "The office relies on a backup generator during power outages.", "exampleTranslation": "停電時，這間辦公室依靠備用發電機供電。" },
+    { "form": "hallway", "partOfSpeech": "noun", "definition": "a corridor inside a building", "translation": "走廊", "example": "The conference rooms are located down the main hallway.", "exampleTranslation": "會議室位於主走廊盡頭。" },
+    { "form": "hamburger", "partOfSpeech": "noun", "definition": "a sandwich with a cooked patty of ground meat", "translation": "漢堡", "example": "The cafeteria added a plant-based hamburger to the menu.", "exampleTranslation": "自助餐廳的菜單新增了一款植物性漢堡。" },
+    { "form": "hazard", "partOfSpeech": "noun", "definition": "a source of danger", "translation": "危險；隱患", "example": "Loose cables on the floor are a tripping hazard.", "exampleTranslation": "地板上鬆脫的電線是絆倒的隱患。" },
+    { "form": "homeowner", "partOfSpeech": "noun", "definition": "a person who owns the house they live in", "translation": "屋主", "example": "Homeowners in the area formed a committee to discuss repairs.", "exampleTranslation": "這個地區的屋主組成了一個委員會來討論維修事宜。" },
+    { "form": "imperative", "partOfSpeech": "adjective", "definition": "extremely important or urgent", "translation": "極重要的；當務之急", "example": "It is imperative that we finalize the contract by Friday.", "exampleTranslation": "我們必須在星期五前完成合約的最終確認。" },
+    { "form": "inflate", "partOfSpeech": "verb", "definition": "to fill with air or gas, or to increase artificially", "translation": "使膨脹；誇大", "example": "Don't inflate the numbers in your quarterly report.", "exampleTranslation": "不要在你的季度報告裡誇大數字。" },
+    { "form": "insert", "partOfSpeech": "verb", "definition": "to put something into something else", "translation": "插入", "example": "Insert your card to begin the transaction.", "exampleTranslation": "插入你的卡片以開始交易。" },
+    { "form": "lecturer", "partOfSpeech": "noun", "definition": "a person who gives lectures, especially at a university", "translation": "講師", "example": "The guest lecturer shared insights from his years in industry.", "exampleTranslation": "這位客座講師分享了他多年業界經驗的見解。" },
+    { "form": "meaningful", "partOfSpeech": "adjective", "definition": "having real importance or value", "translation": "有意義的", "example": "The manager wants to give employees more meaningful feedback.", "exampleTranslation": "經理想給員工更有意義的回饋。" },
+    { "form": "memorize", "partOfSpeech": "verb", "definition": "to learn something by heart", "translation": "記住；背誦", "example": "Sales staff must memorize the key product specifications.", "exampleTranslation": "業務人員必須熟記主要的產品規格。" },
+    { "form": "merchant", "partOfSpeech": "noun", "definition": "a person or business that buys and sells goods", "translation": "商人", "example": "The merchant negotiated a better price for bulk orders.", "exampleTranslation": "這位商人為大宗訂單談到了更好的價格。" },
+    { "form": "modification", "partOfSpeech": "noun", "definition": "a change made to something", "translation": "修改", "example": "The client requested a few modifications to the design.", "exampleTranslation": "客戶要求對設計做一些修改。" },
+    { "form": "occupant", "partOfSpeech": "noun", "definition": "a person who lives in or uses a space", "translation": "居住者；使用者", "example": "All occupants must evacuate during the fire drill.", "exampleTranslation": "消防演習期間，所有居住者都必須撤離。" },
+    { "form": "overcharge", "partOfSpeech": "verb", "definition": "to charge someone more than the correct amount", "translation": "超收費用", "example": "The customer complained that the hotel had overcharged her.", "exampleTranslation": "這位顧客抱怨飯店對她超收費用。" },
+    { "form": "oversee", "partOfSpeech": "verb", "definition": "to supervise or manage a task or process", "translation": "監督；監管", "example": "She was promoted to oversee the entire supply chain.", "exampleTranslation": "她被升職負責監督整個供應鏈。" },
+    { "form": "petition", "partOfSpeech": "noun", "definition": "a formal written request signed by many people", "translation": "請願書", "example": "Employees signed a petition requesting better parking facilities.", "exampleTranslation": "員工們簽署了一份請願書要求更好的停車設施。" },
+    { "form": "pillow", "partOfSpeech": "noun", "definition": "a cushion for supporting the head while resting", "translation": "枕頭", "example": "The hotel offers a choice of firm or soft pillows.", "exampleTranslation": "這間飯店提供軟硬枕頭可供選擇。" },
+    { "form": "popcorn", "partOfSpeech": "noun", "definition": "a snack made from heated corn kernels", "translation": "爆米花", "example": "Free popcorn was served at the store's grand opening.", "exampleTranslation": "這間商店的盛大開幕活動有提供免費爆米花。" }
+  ]
+}

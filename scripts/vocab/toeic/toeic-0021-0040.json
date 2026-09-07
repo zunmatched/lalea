@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-0021-0040",
+  "title": "TOEIC 核心單字 0021-0040",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "noon", "partOfSpeech": "noun", "definition": "twelve o'clock in the middle of the day", "translation": "正午；中午", "example": "The store closes for lunch break at noon.", "exampleTranslation": "這家店在中午會休息用午餐。" },
+    { "form": "accountant", "partOfSpeech": "noun", "definition": "a person whose job is to keep or check financial records", "translation": "會計師", "example": "Our accountant will prepare the quarterly financial report.", "exampleTranslation": "我們的會計師會準備這一季的財務報告。" },
+    { "form": "clerk", "partOfSpeech": "noun", "definition": "a person who works in an office or store handling records or sales", "translation": "職員；店員", "example": "The clerk at the front desk checked us in quickly.", "exampleTranslation": "櫃檯的職員很快就幫我們辦好入住手續。" },
+    { "form": "lobby", "partOfSpeech": "noun", "definition": "a large entrance hall in a hotel or office building", "translation": "大廳", "example": "Let's meet in the hotel lobby at seven tomorrow morning.", "exampleTranslation": "我們明天早上七點在飯店大廳見面吧。" },
+    { "form": "publish", "partOfSpeech": "verb", "definition": "to prepare and issue a book, magazine, or piece of writing for the public", "translation": "出版；發布", "example": "The company plans to publish its annual report next month.", "exampleTranslation": "公司計劃下個月發布年度報告。" },
+    { "form": "résumé", "partOfSpeech": "noun", "definition": "a short document summarizing a person's work experience and education", "translation": "履歷表", "example": "Please attach your résumé and a cover letter to the application.", "exampleTranslation": "請在申請表中附上你的履歷表和求職信。" },
+    { "form": "enclose", "partOfSpeech": "verb", "definition": "to put something inside an envelope or package along with a letter", "translation": "隨函附上", "example": "I have enclosed a copy of the receipt for your records.", "exampleTranslation": "我隨函附上收據的副本以供您留存。" },
+    { "form": "applicant", "partOfSpeech": "noun", "definition": "a person who formally applies for a job, loan, or position", "translation": "申請人；應徵者", "example": "Over two hundred applicants applied for the marketing position.", "exampleTranslation": "超過兩百位應徵者申請了這個行銷職缺。" },
+    { "form": "seminar", "partOfSpeech": "noun", "definition": "a meeting for discussion or training on a particular subject", "translation": "研討會", "example": "She attended a seminar on effective time management.", "exampleTranslation": "她參加了一場關於有效時間管理的研討會。" },
+    { "form": "technician", "partOfSpeech": "noun", "definition": "a person skilled in the practical or mechanical side of a job", "translation": "技師；技術員", "example": "A technician was sent to repair the printer this afternoon.", "exampleTranslation": "今天下午派了一位技師來修理印表機。" },
+    { "form": "cloth", "partOfSpeech": "noun", "definition": "woven or knitted material used to make items such as clothing", "translation": "布料", "example": "The tablecloth is made from a durable, easy-to-clean cloth.", "exampleTranslation": "這張桌巾是用耐用又容易清潔的布料做的。" },
+    { "form": "fare", "partOfSpeech": "noun", "definition": "the money charged for a trip on a bus, train, plane, or taxi", "translation": "票價；車資", "example": "The train fare increases slightly during peak hours.", "exampleTranslation": "尖峰時段的火車票價會稍微上漲。" },
+    { "form": "receipt", "partOfSpeech": "noun", "definition": "a printed statement confirming that money or goods were received", "translation": "收據", "example": "Keep your receipt in case you need to return the item.", "exampleTranslation": "請保留收據，以防你需要退貨。" },
+    { "form": "traveler", "partOfSpeech": "noun", "definition": "a person who is traveling or who travels often", "translation": "旅客；旅行者", "example": "Frequent travelers can earn points toward a free flight.", "exampleTranslation": "常搭飛機的旅客可以累積點數換取免費機票。" },
+    { "form": "caller", "partOfSpeech": "noun", "definition": "a person who makes a phone call", "translation": "來電者", "example": "The receptionist asked the caller to hold for a moment.", "exampleTranslation": "接待員請來電者稍等一下。" },
+    { "form": "subway", "partOfSpeech": "noun", "definition": "an underground railway system in a city", "translation": "地鐵", "example": "It's faster to take the subway than to drive downtown.", "exampleTranslation": "搭地鐵到市中心比開車快。" },
+    { "form": "luggage", "partOfSpeech": "noun", "definition": "bags and suitcases used to carry belongings while traveling", "translation": "行李", "example": "Please make sure your luggage is tagged with your name and address.", "exampleTranslation": "請確認你的行李有貼上姓名和地址的標籤。" },
+    { "form": "shipment", "partOfSpeech": "noun", "definition": "a batch of goods sent together to a destination", "translation": "貨運；一批貨", "example": "The next shipment of parts is expected to arrive on Friday.", "exampleTranslation": "下一批零件貨運預計星期五抵達。" },
+    { "form": "infer", "partOfSpeech": "verb", "definition": "to work out or conclude something from evidence rather than being told directly", "translation": "推斷；推論", "example": "From the report, we can infer that sales declined due to weak demand.", "exampleTranslation": "從這份報告我們可以推斷出，銷售下滑是因為需求疲弱。" },
+    { "form": "waiter", "partOfSpeech": "noun", "definition": "a man who serves food and drinks to customers in a restaurant", "translation": "服務生（男）", "example": "The waiter recommended the seafood pasta as today's special.", "exampleTranslation": "服務生推薦今天的特餐海鮮義大利麵。" }
+  ]
+}

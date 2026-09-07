@@ -1,0 +1,14 @@
+{
+  "slug": "toeic-0994-1000",
+  "title": "TOEIC 核心單字 0994-1000",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "loyalty", "partOfSpeech": "noun", "definition": "firm support for a person, brand, or organization over time", "translation": "忠誠度", "example": "The airline's loyalty program gives frequent flyers free upgrades.", "exampleTranslation": "這家航空公司的忠誠度計畫會給常客免費升等。" },
+    { "form": "microwave", "partOfSpeech": "noun", "definition": "a kitchen appliance that heats food quickly using electromagnetic waves", "translation": "微波爐", "example": "There's a shared microwave in the office break room.", "exampleTranslation": "辦公室的休息區有一台共用的微波爐。" },
+    { "form": "misidentify", "partOfSpeech": "verb", "definition": "to identify someone or something incorrectly", "translation": "誤認；識別錯誤", "example": "The system misidentified the shipment and sent it to the wrong warehouse.", "exampleTranslation": "系統誤認了這批貨，把它送到錯誤的倉庫。" },
+    { "form": "neat", "partOfSpeech": "adjective", "definition": "tidy and carefully arranged", "translation": "整齊的", "example": "Please keep your desk neat before you leave the office.", "exampleTranslation": "離開辦公室前請保持桌面整齊。" },
+    { "form": "nomination", "partOfSpeech": "noun", "definition": "the act of formally proposing someone for a position or award", "translation": "提名", "example": "Her nomination for Employee of the Year was announced this morning.", "exampleTranslation": "她被提名為年度最佳員工的消息今天早上公布了。" },
+    { "form": "officially", "partOfSpeech": "adverb", "definition": "in a way that is authorized or formally recognized", "translation": "正式地", "example": "The merger was officially announced at this afternoon's press conference.", "exampleTranslation": "這樁合併案在今天下午的記者會上正式宣布了。" },
+    { "form": "outfit", "partOfSpeech": "noun", "definition": "a set of clothes worn together, especially for a particular occasion", "translation": "服裝；一整套裝束", "example": "Employees are expected to wear a business outfit for the client meeting.", "exampleTranslation": "員工出席客戶會議時要穿商務服裝。" }
+  ]
+}

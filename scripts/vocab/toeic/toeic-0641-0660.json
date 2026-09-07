@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-0641-0660",
+  "title": "TOEIC 核心單字 0641-0660",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "ongoing", "partOfSpeech": "adjective", "definition": "continuing to happen or develop; still in progress", "translation": "持續進行的", "example": "The renovation is an ongoing project expected to finish next spring.", "exampleTranslation": "這項翻修是持續進行中的計畫，預計明年春天完成。" },
+    { "form": "periodically", "partOfSpeech": "adverb", "definition": "occurring at regular intervals", "translation": "定期地", "example": "The equipment should be inspected periodically to prevent breakdowns.", "exampleTranslation": "設備應該定期檢查，以避免故障。" },
+    { "form": "pie", "partOfSpeech": "noun", "definition": "a baked dish with a pastry crust, filled with sweet or savory ingredients", "translation": "派", "example": "The bakery donated pies for the office holiday party.", "exampleTranslation": "這家烘焙坊為公司的假期派對捐了幾個派。" },
+    { "form": "plug", "partOfSpeech": "noun", "definition": "a device inserted into a socket to connect electrical equipment to a power source", "translation": "插頭", "example": "Make sure the plug is fully inserted before starting the machine.", "exampleTranslation": "啟動機器前，請確認插頭已完全插入。" },
+    { "form": "recruitment", "partOfSpeech": "noun", "definition": "the process of finding and hiring new employees", "translation": "招募", "example": "The recruitment process usually takes about three weeks.", "exampleTranslation": "招募流程通常需要大約三週。" },
+    { "form": "referee", "partOfSpeech": "noun", "definition": "an official who supervises a sports match to ensure fair play", "translation": "裁判", "example": "A referee was hired for the company's charity soccer match.", "exampleTranslation": "公司的慈善足球賽請了一位裁判。" },
+    { "form": "referral", "partOfSpeech": "noun", "definition": "the act of recommending someone or something, or the person recommended", "translation": "推薦；轉介", "example": "We offer a bonus for every successful employee referral.", "exampleTranslation": "每成功推薦一位員工，我們都會提供獎金。" },
+    { "form": "renown", "partOfSpeech": "noun", "definition": "the state of being widely known and respected", "translation": "聲望；名望", "example": "The chef gained renown for her innovative menu.", "exampleTranslation": "這位主廚因為創新的菜單而聲名大噪。" },
+    { "form": "runner", "partOfSpeech": "noun", "definition": "a person who runs, or an employee who delivers items or messages", "translation": "跑者；跑腿人員", "example": "A runner was sent to pick up the missing supplies.", "exampleTranslation": "我們派了一位跑腿人員去取回缺少的物資。" },
+    { "form": "sock", "partOfSpeech": "noun", "definition": "a piece of clothing worn on the foot, inside a shoe", "translation": "襪子", "example": "The clothing brand launched a new line of socks this season.", "exampleTranslation": "這個服飾品牌這季推出了新的襪子系列。" },
+    { "form": "spam", "partOfSpeech": "noun", "definition": "unwanted, unsolicited messages sent in bulk, especially by email", "translation": "垃圾郵件", "example": "The filter blocks most spam before it reaches your inbox.", "exampleTranslation": "過濾器會在垃圾郵件送到你的收件匣前先攔截大部分。" },
+    { "form": "surf", "partOfSpeech": "verb", "definition": "to ride waves on a board, or to browse the internet casually", "translation": "衝浪；瀏覽", "example": "Please don't surf the web during working hours.", "exampleTranslation": "上班時間請不要瀏覽網路。" },
+    { "form": "timetable", "partOfSpeech": "noun", "definition": "a schedule showing when events or activities are planned to happen", "translation": "時刻表；時間表", "example": "The project timetable was updated after the client's request.", "exampleTranslation": "客戶提出要求後，專案時間表已經更新。" },
+    { "form": "vase", "partOfSpeech": "noun", "definition": "a decorative container, often used to hold flowers", "translation": "花瓶", "example": "A fresh vase of flowers sits on the reception desk every morning.", "exampleTranslation": "每天早上接待櫃檯都會擺一瓶新鮮花束。" },
+    { "form": "aboard", "partOfSpeech": "adverb", "definition": "on or into a ship, aircraft, or other vehicle", "translation": "在船上；在機上", "example": "All passengers must be aboard fifteen minutes before departure.", "exampleTranslation": "所有乘客必須在起飛前十五分鐘登機。" },
+    { "form": "advancement", "partOfSpeech": "noun", "definition": "progress or promotion in a job or career", "translation": "晉升；進展", "example": "The company offers clear paths for career advancement.", "exampleTranslation": "公司提供明確的職涯晉升路徑。" },
+    { "form": "advertiser", "partOfSpeech": "noun", "definition": "a company or person that pays to promote a product or service", "translation": "廣告主", "example": "The magazine relies on advertisers for most of its revenue.", "exampleTranslation": "這本雜誌的大部分營收都來自廣告主。" },
+    { "form": "alternatively", "partOfSpeech": "adverb", "definition": "as another option or choice", "translation": "或者；另一方面", "example": "Alternatively, you can pick up the order in person.", "exampleTranslation": "或者，你也可以親自來取貨。" },
+    { "form": "amuse", "partOfSpeech": "verb", "definition": "to entertain or make someone laugh or smile", "translation": "娛樂；逗樂", "example": "The clown was hired to amuse guests at the family day event.", "exampleTranslation": "公司請了小丑在家庭日活動中娛樂賓客。" },
+    { "form": "attorney", "partOfSpeech": "noun", "definition": "a lawyer, especially one who represents clients in legal matters", "translation": "律師", "example": "The company's attorney reviewed the contract before signing.", "exampleTranslation": "公司的律師在簽約前審閱了合約。" }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-0751-0770",
+  "title": "TOEIC 核心單字 751-770",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "advisory", "partOfSpeech": "adjective", "definition": "providing advice or recommendations rather than direct authority", "translation": "建議性的；顧問性質的", "example": "The committee only has an advisory role in the final hiring decision.", "exampleTranslation": "該委員會在最終聘僱決定中只扮演建議性的角色。" },
+    { "form": "asleep", "partOfSpeech": "adjective", "definition": "in a state of sleep", "translation": "睡著的", "example": "He fell asleep during the long flight to Tokyo.", "exampleTranslation": "他在飛往東京的長途班機上睡著了。" },
+    { "form": "authentic", "partOfSpeech": "adjective", "definition": "genuine and not a copy or imitation", "translation": "真正的；道地的", "example": "The restaurant is known for its authentic Italian cuisine.", "exampleTranslation": "這家餐廳以道地的義大利料理聞名。" },
+    { "form": "bakery", "partOfSpeech": "noun", "definition": "a shop that makes and sells bread and cakes", "translation": "麵包店", "example": "The bakery on the corner sells fresh croissants every morning.", "exampleTranslation": "轉角的麵包店每天早上都賣新鮮的可頌。" },
+    { "form": "carton", "partOfSpeech": "noun", "definition": "a box or container used for packaging goods", "translation": "紙箱；紙盒", "example": "Please stack the cartons neatly in the warehouse.", "exampleTranslation": "請把紙箱整齊地堆放在倉庫裡。" },
+    { "form": "compartment", "partOfSpeech": "noun", "definition": "a separate section within a larger structure", "translation": "隔間；置物櫃", "example": "Store your luggage in the overhead compartment.", "exampleTranslation": "請把行李放進頭頂上方的置物櫃。" },
+    { "form": "compatible", "partOfSpeech": "adjective", "definition": "able to exist or work together without conflict", "translation": "相容的", "example": "Make sure the printer is compatible with your operating system.", "exampleTranslation": "請確認這台印表機跟你的作業系統相容。" },
+    { "form": "consumption", "partOfSpeech": "noun", "definition": "the act of using up a resource or product", "translation": "消費；消耗", "example": "Energy consumption tends to rise during the summer months.", "exampleTranslation": "能源消耗在夏季通常會上升。" },
+    { "form": "conveniently", "partOfSpeech": "adverb", "definition": "in a way that is easy or suitable", "translation": "方便地", "example": "The hotel is conveniently located near the train station.", "exampleTranslation": "這間飯店的位置很方便，就在火車站附近。" },
+    { "form": "cosmetic", "partOfSpeech": "adjective", "definition": "relating to beauty products, or only affecting appearance rather than substance", "translation": "化妝品的；表面的", "example": "The company launched a new line of cosmetic products this spring.", "exampleTranslation": "這家公司在今年春天推出了一系列新的化妝品。" },
+    { "form": "courtesy", "partOfSpeech": "noun", "definition": "polite behavior, or a favor done out of politeness", "translation": "禮貌；優待", "example": "Complimentary breakfast is offered as a courtesy to all guests.", "exampleTranslation": "免費早餐是提供給所有房客的禮遇。" },
+    { "form": "creativity", "partOfSpeech": "noun", "definition": "the ability to produce original and imaginative ideas", "translation": "創造力", "example": "The design team is known for its creativity and attention to detail.", "exampleTranslation": "這個設計團隊以其創造力和對細節的注重而聞名。" },
+    { "form": "disagreement", "partOfSpeech": "noun", "definition": "a difference of opinion", "translation": "意見不合；分歧", "example": "There was a disagreement over the budget allocation for next quarter.", "exampleTranslation": "對於下一季的預算分配，雙方有意見分歧。" },
+    { "form": "disappointment", "partOfSpeech": "noun", "definition": "a feeling of sadness from unmet expectations", "translation": "失望", "example": "The delayed shipment was a major disappointment to our customers.", "exampleTranslation": "延遲出貨讓我們的客戶非常失望。" },
+    { "form": "dissatisfy", "partOfSpeech": "verb", "definition": "to fail to meet someone's expectations or needs", "translation": "使不滿意", "example": "Poor customer service can quickly dissatisfy loyal clients.", "exampleTranslation": "糟糕的客戶服務很快就會讓忠實客戶感到不滿。" },
+    { "form": "enjoyable", "partOfSpeech": "adjective", "definition": "giving pleasure or satisfaction", "translation": "令人愉快的", "example": "The team-building retreat was an enjoyable experience for everyone.", "exampleTranslation": "這次團隊建設之旅對每個人來說都是愉快的體驗。" },
+    { "form": "faculty", "partOfSpeech": "noun", "definition": "the teaching staff of a school, or a natural ability", "translation": "教職員；能力", "example": "The university faculty voted to update the curriculum.", "exampleTranslation": "大學教職員投票決定更新課程。" },
+    { "form": "favorable", "partOfSpeech": "adjective", "definition": "advantageous or positive", "translation": "有利的；良好的", "example": "The company reported favorable earnings for the third quarter.", "exampleTranslation": "這家公司公布了第三季的良好獲利。" },
+    { "form": "foreman", "partOfSpeech": "noun", "definition": "a worker who supervises a team, especially on a construction site", "translation": "領班；工頭", "example": "The foreman inspected the site before construction began.", "exampleTranslation": "工頭在施工開始前先檢查了工地。" },
+    { "form": "forum", "partOfSpeech": "noun", "definition": "a place or event for open discussion", "translation": "論壇", "example": "The conference included a forum for discussing industry trends.", "exampleTranslation": "這場研討會包含一個討論產業趨勢的論壇。" }
+  ]
+}

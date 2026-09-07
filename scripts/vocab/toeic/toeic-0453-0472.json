@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-0453-0472",
+  "title": "TOEIC 核心單字 453-472",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "tray", "partOfSpeech": "noun", "definition": "a flat container used for carrying or holding items", "translation": "托盤", "example": "Please place your documents on the tray at the reception desk.", "exampleTranslation": "請把您的文件放在櫃檯的托盤上。" },
+    { "form": "vendor", "partOfSpeech": "noun", "definition": "a person or company that sells goods or services", "translation": "供應商；賣家", "example": "We are negotiating a new contract with our office supplies vendor.", "exampleTranslation": "我們正在與辦公用品供應商協商新合約。" },
+    { "form": "withdrawal", "partOfSpeech": "noun", "definition": "the act of taking money out of an account, or removing something", "translation": "提款；撤回", "example": "The bank limits daily cash withdrawal to a certain amount.", "exampleTranslation": "銀行對每日現金提款設有限額。" },
+    { "form": "anytime", "partOfSpeech": "adverb", "definition": "at any time; whenever", "translation": "隨時", "example": "Feel free to call the support line anytime during business hours.", "exampleTranslation": "營業時間內歡迎隨時撥打客服專線。" },
+    { "form": "badge", "partOfSpeech": "noun", "definition": "a small card or symbol worn to show identity or status", "translation": "識別證；徽章", "example": "Visitors must wear a badge at all times inside the building.", "exampleTranslation": "訪客在建築物內必須全程配戴識別證。" },
+    { "form": "brake", "partOfSpeech": "noun", "definition": "a device used to slow down or stop a vehicle", "translation": "煞車", "example": "The delivery truck's brakes were inspected before the long trip.", "exampleTranslation": "送貨卡車的煞車在長途出發前已檢查過。" },
+    { "form": "calculation", "partOfSpeech": "noun", "definition": "the process of using math to find an answer", "translation": "計算", "example": "Double-check the calculation before you send the invoice.", "exampleTranslation": "寄出發票前請再次確認計算結果。" },
+    { "form": "coordinator", "partOfSpeech": "noun", "definition": "a person who organizes different parts of an activity to work together", "translation": "協調員；統籌人", "example": "The event coordinator confirmed all the vendors for Saturday.", "exampleTranslation": "活動協調員確認了週六所有的供應商。" },
+    { "form": "costly", "partOfSpeech": "adjective", "definition": "expensive; costing a lot", "translation": "昂貴的；代價高的", "example": "Delaying the repair could become costly in the long run.", "exampleTranslation": "延遲維修長期下來可能會變得代價高昂。" },
+    { "form": "equip", "partOfSpeech": "verb", "definition": "to supply someone or something with necessary items", "translation": "配備；裝備", "example": "Each workstation is equipped with two monitors.", "exampleTranslation": "每個工作站都配備了兩台螢幕。" },
+    { "form": "excursion", "partOfSpeech": "noun", "definition": "a short trip taken for pleasure", "translation": "短程旅遊；遠足", "example": "The conference includes an optional excursion to the old town.", "exampleTranslation": "這場研討會包含一場前往舊城區的自選遠足行程。" },
+    { "form": "graphic", "partOfSpeech": "adjective", "definition": "relating to visual art or design", "translation": "圖像的；平面設計的", "example": "The graphic designer created a new logo for the rebrand.", "exampleTranslation": "平面設計師為這次品牌重塑設計了新標誌。" },
+    { "form": "inexperience", "partOfSpeech": "noun", "definition": "lack of knowledge or skill gained from doing something", "translation": "經驗不足", "example": "His inexperience with the software slowed down the onboarding process.", "exampleTranslation": "他對這套軟體經驗不足，拖慢了上手的過程。" },
+    { "form": "lengthy", "partOfSpeech": "adjective", "definition": "very long, especially in time or duration", "translation": "冗長的", "example": "The approval process can be lengthy for international shipments.", "exampleTranslation": "國際貨運的核准流程可能會很冗長。" },
+    { "form": "librarian", "partOfSpeech": "noun", "definition": "a person who works in or manages a library", "translation": "圖書館員", "example": "The librarian helped locate the archived company records.", "exampleTranslation": "圖書館員協助找到了公司的存檔紀錄。" },
+    { "form": "meantime", "partOfSpeech": "noun", "definition": "the period between two events; used in 'in the meantime'", "translation": "同時（常用 in the meantime）", "example": "In the meantime, please continue using the current system.", "exampleTranslation": "在這期間，請繼續使用目前的系統。" },
+    { "form": "merge", "partOfSpeech": "verb", "definition": "to combine two or more things into one", "translation": "合併", "example": "The two departments will merge into a single team next quarter.", "exampleTranslation": "這兩個部門下季將合併成一個團隊。" },
+    { "form": "performer", "partOfSpeech": "noun", "definition": "a person who entertains an audience, such as by singing or acting", "translation": "表演者", "example": "A live performer was hired for the company's anniversary event.", "exampleTranslation": "公司週年活動請了一位現場表演者。" },
+    { "form": "pharmacist", "partOfSpeech": "noun", "definition": "a person qualified to prepare and sell medicine", "translation": "藥劑師", "example": "Ask the pharmacist if you have questions about the dosage.", "exampleTranslation": "如果對劑量有疑問，可以詢問藥劑師。" },
+    { "form": "pizza", "partOfSpeech": "noun", "definition": "a baked dish of flattened bread topped with sauce and cheese", "translation": "披薩", "example": "The team ordered pizza for the late-night product launch.", "exampleTranslation": "團隊為了熬夜的產品上線訂了披薩。" }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-0954-0973",
+  "title": "TOEIC 核心單字 954-973",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "unused", "partOfSpeech": "adjective", "definition": "not used", "translation": "未使用的", "example": "Return any unused office supplies to the storage room.", "exampleTranslation": "請把未使用的辦公用品歸還到儲藏室。" },
+    { "form": "waive", "partOfSpeech": "verb", "definition": "to voluntarily give up a right or claim", "translation": "放棄；豁免", "example": "The landlord agreed to waive the late fee this month.", "exampleTranslation": "房東同意這個月豁免逾期費用。" },
+    { "form": "yen", "partOfSpeech": "noun", "definition": "the currency of Japan, or a strong desire for something", "translation": "日圓；渴望", "example": "The exchange rate for the yen fluctuated last week.", "exampleTranslation": "上週日圓的匯率有所波動。" },
+    { "form": "activate", "partOfSpeech": "verb", "definition": "to make something start working", "translation": "啟動；激活", "example": "Activate your account by clicking the link in the email.", "exampleTranslation": "點擊電子郵件裡的連結來啟動你的帳戶。" },
+    { "form": "additionally", "partOfSpeech": "adverb", "definition": "in addition; also", "translation": "此外", "example": "Additionally, the plan includes free technical support.", "exampleTranslation": "此外，這個方案還包含免費的技術支援。" },
+    { "form": "affirmative", "partOfSpeech": "adjective", "definition": "expressing agreement or a positive response", "translation": "肯定的", "example": "The board gave an affirmative response to the proposal.", "exampleTranslation": "董事會對這項提案給出了肯定的答覆。" },
+    { "form": "baker", "partOfSpeech": "noun", "definition": "a person who bakes and sells bread", "translation": "麵包師傅", "example": "The baker starts work before dawn every day.", "exampleTranslation": "這位麵包師傅每天在天亮前就開始工作。" },
+    { "form": "brainstorm", "partOfSpeech": "verb", "definition": "to generate ideas through group discussion", "translation": "腦力激盪", "example": "Let's brainstorm some ideas for the new campaign.", "exampleTranslation": "我們來為新的活動腦力激盪一下想法吧。" },
+    { "form": "cage", "partOfSpeech": "noun", "definition": "an enclosure with bars for holding animals", "translation": "籠子", "example": "The delivery included a metal cage for the warehouse.", "exampleTranslation": "這次的貨物包含一個給倉庫用的金屬籠子。" },
+    { "form": "cinema", "partOfSpeech": "noun", "definition": "a movie theater", "translation": "電影院", "example": "The mall includes a cinema with ten screens.", "exampleTranslation": "這間購物中心設有一間十廳的電影院。" },
+    { "form": "collaboration", "partOfSpeech": "noun", "definition": "the act of working together", "translation": "合作", "example": "The two departments launched a collaboration to improve efficiency.", "exampleTranslation": "這兩個部門展開合作以提升效率。" },
+    { "form": "condominium", "partOfSpeech": "noun", "definition": "a residential building where individual units are separately owned", "translation": "公寓大廈", "example": "She purchased a condominium near the business district.", "exampleTranslation": "她在商業區附近買了一間公寓大廈。" },
+    { "form": "consecutive", "partOfSpeech": "adjective", "definition": "following one after another without interruption", "translation": "連續的", "example": "The team has met its sales target for six consecutive months.", "exampleTranslation": "這個團隊已經連續六個月達成銷售目標。" },
+    { "form": "cordless", "partOfSpeech": "adjective", "definition": "operating without a cord, especially an electrical one", "translation": "無線的", "example": "The office upgraded to cordless phones last year.", "exampleTranslation": "這間辦公室去年升級到無線電話。" },
+    { "form": "deluxe", "partOfSpeech": "adjective", "definition": "luxurious or of superior quality", "translation": "豪華的", "example": "Guests can upgrade to a deluxe room for an extra fee.", "exampleTranslation": "房客可以額外付費升級到豪華客房。" },
+    { "form": "desirable", "partOfSpeech": "adjective", "definition": "worth having or wanting", "translation": "令人嚮往的；理想的", "example": "The corner office is the most desirable spot on the floor.", "exampleTranslation": "那間轉角辦公室是這層樓最令人嚮往的位置。" },
+    { "form": "discrepancy", "partOfSpeech": "noun", "definition": "a difference between two things that should match", "translation": "差異；不一致", "example": "There is a discrepancy between the invoice and the purchase order.", "exampleTranslation": "發票和採購單之間有出入。" },
+    { "form": "dispatch", "partOfSpeech": "verb", "definition": "to send someone or something off for a purpose", "translation": "派遣；發送", "example": "The company will dispatch a technician within 24 hours.", "exampleTranslation": "這家公司會在 24 小時內派遣一位技術人員過去。" },
+    { "form": "drawback", "partOfSpeech": "noun", "definition": "a disadvantage of a plan or situation", "translation": "缺點；不利之處", "example": "The only drawback of the new system is its high cost.", "exampleTranslation": "這套新系統唯一的缺點是成本高。" },
+    { "form": "dull", "partOfSpeech": "adjective", "definition": "not interesting, or not sharp or bright", "translation": "無趣的；遲鈍的", "example": "The meeting felt dull without any new information to discuss.", "exampleTranslation": "這場會議因為沒有新資訊可討論而顯得無趣。" }
+  ]
+}

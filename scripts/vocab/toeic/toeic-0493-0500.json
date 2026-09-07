@@ -1,0 +1,15 @@
+{
+  "slug": "toeic-0493-0500",
+  "title": "TOEIC 核心單字 493-500",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "airfare", "partOfSpeech": "noun", "definition": "the cost of a ticket for air travel", "translation": "機票費用", "example": "The company reimburses airfare for approved business trips.", "exampleTranslation": "公司會報銷已核准出差的機票費用。" },
+    { "form": "bake", "partOfSpeech": "verb", "definition": "to cook food using dry heat, usually in an oven", "translation": "烘烤", "example": "The café bakes fresh bread every morning.", "exampleTranslation": "這間咖啡店每天早上都會烘烤新鮮麵包。" },
+    { "form": "businessperson", "partOfSpeech": "noun", "definition": "a person who works in business, especially in management", "translation": "商務人士", "example": "The hotel caters mainly to traveling businesspeople.", "exampleTranslation": "這間飯店主要服務出差的商務人士。" },
+    { "form": "considerably", "partOfSpeech": "adverb", "definition": "by a large amount; significantly", "translation": "相當地；顯著地", "example": "Sales increased considerably after the marketing campaign.", "exampleTranslation": "行銷活動之後，銷售額顯著成長。" },
+    { "form": "faulty", "partOfSpeech": "adjective", "definition": "having a defect; not working correctly", "translation": "有故障的；有瑕疵的", "example": "The customer returned a faulty charger for a replacement.", "exampleTranslation": "顧客退回了一個故障的充電器要求更換。" },
+    { "form": "hobby", "partOfSpeech": "noun", "definition": "an activity done regularly for enjoyment in one's free time", "translation": "興趣；嗜好", "example": "Employees shared their hobbies during the icebreaker session.", "exampleTranslation": "員工在破冰活動中分享了自己的興趣。" },
+    { "form": "informal", "partOfSpeech": "adjective", "definition": "relaxed and casual; not following strict rules", "translation": "非正式的", "example": "The team held an informal discussion before the official meeting.", "exampleTranslation": "團隊在正式會議前先進行了一場非正式討論。" },
+    { "form": "kilometer", "partOfSpeech": "noun", "definition": "a unit of length equal to 1,000 meters", "translation": "公里", "example": "The warehouse is about ten kilometers from the port.", "exampleTranslation": "倉庫距離港口大約十公里。" }
+  ]
+}

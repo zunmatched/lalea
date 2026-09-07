@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-0724-0743",
+  "title": "TOEIC 核心單字 0724-0743",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "junk", "partOfSpeech": "noun", "definition": "unwanted or useless items or material", "translation": "垃圾；廢物", "example": "Please clear out the junk in the storage closet this weekend.", "exampleTranslation": "這週末請清理儲物間裡的雜物。" },
+    { "form": "ma'am", "partOfSpeech": "noun", "definition": "a polite way to address a woman, especially one you don't know", "translation": "女士（尊稱）", "example": "The receptionist greeted her with 'Good morning, ma'am.'", "exampleTranslation": "接待人員向她問候：「早安，女士。」" },
+    { "form": "mileage", "partOfSpeech": "noun", "definition": "the distance traveled, measured in miles, or the amount of use gotten from something", "translation": "里程", "example": "Employees can claim mileage for business trips using their own car.", "exampleTranslation": "員工開自己的車出差可以申請里程補助。" },
+    { "form": "noisy", "partOfSpeech": "adjective", "definition": "making or full of a lot of loud sound", "translation": "吵鬧的", "example": "The construction next door has made the office quite noisy.", "exampleTranslation": "隔壁的施工讓辦公室變得相當吵鬧。" },
+    { "form": "pan", "partOfSpeech": "noun", "definition": "a flat-bottomed container used for cooking food", "translation": "平底鍋", "example": "The test kitchen ordered a new set of pans for the cooking demo.", "exampleTranslation": "試驗廚房為了烹飪示範訂購了一組新的平底鍋。" },
+    { "form": "parcel", "partOfSpeech": "noun", "definition": "an item or items wrapped up for mailing or carrying; a package", "translation": "包裹", "example": "A parcel arrived for you at the front desk this morning.", "exampleTranslation": "今天早上有一個包裹送到前台，是給你的。" },
+    { "form": "pasta", "partOfSpeech": "noun", "definition": "an Italian food made from dough, shaped into various forms", "translation": "義大利麵", "example": "The cafeteria added a pasta bar to the weekly menu.", "exampleTranslation": "自助餐廳在每週菜單裡新增了一個義大利麵吧。" },
+    { "form": "periodical", "partOfSpeech": "noun", "definition": "a magazine or journal published at regular intervals", "translation": "期刊", "example": "The library subscribes to several business periodicals.", "exampleTranslation": "圖書館訂閱了好幾份商業期刊。" },
+    { "form": "pill", "partOfSpeech": "noun", "definition": "a small tablet of medicine taken by swallowing", "translation": "藥丸", "example": "The clinic reminded staff to take their allergy pills before the outdoor event.", "exampleTranslation": "診所提醒員工在戶外活動前先服用過敏藥丸。" },
+    { "form": "portable", "partOfSpeech": "adjective", "definition": "able to be easily carried or moved", "translation": "便攜的；可攜式的", "example": "Each technician was issued a portable scanner for inventory checks.", "exampleTranslation": "每位技術人員都配發了一台便攜式掃描器用於盤點。" },
+    { "form": "punctual", "partOfSpeech": "adjective", "definition": "arriving or doing something at the agreed or expected time", "translation": "準時的", "example": "Being punctual for client meetings is part of our company culture.", "exampleTranslation": "準時參加客戶會議是我們公司文化的一部分。" },
+    { "form": "recreation", "partOfSpeech": "noun", "definition": "activities done for enjoyment when not working", "translation": "休閒；娛樂", "example": "The resort offers a wide range of recreation for guests.", "exampleTranslation": "這間度假村為房客提供多樣的休閒活動。" },
+    { "form": "relieve", "partOfSpeech": "verb", "definition": "to make pain, distress, or a burden less severe", "translation": "緩解；減輕", "example": "The new hire will relieve some of the workload from the current team.", "exampleTranslation": "這位新進員工將能減輕現有團隊的部分工作負擔。" },
+    { "form": "reminder", "partOfSpeech": "noun", "definition": "something that helps a person remember an event or task", "translation": "提醒", "example": "You'll receive an email reminder a day before the appointment.", "exampleTranslation": "你會在約診前一天收到電子郵件提醒。" },
+    { "form": "rumor", "partOfSpeech": "noun", "definition": "information or a story spread among people without confirmation of its truth", "translation": "謠言；傳聞", "example": "Management addressed the rumor about upcoming layoffs directly.", "exampleTranslation": "管理層直接回應了關於即將裁員的傳聞。" },
+    { "form": "scarf", "partOfSpeech": "noun", "definition": "a piece of fabric worn around the neck or head", "translation": "圍巾", "example": "The uniform includes a branded scarf for winter.", "exampleTranslation": "冬季制服包含一條印有品牌標誌的圍巾。" },
+    { "form": "seaside", "partOfSpeech": "noun", "definition": "an area located next to the sea", "translation": "海邊", "example": "This year's retreat will be held at a seaside resort.", "exampleTranslation": "今年的員工靜修活動將在海邊度假村舉行。" },
+    { "form": "shorten", "partOfSpeech": "verb", "definition": "to make something shorter in length or duration", "translation": "縮短", "example": "We shortened the meeting to make time for the site visit.", "exampleTranslation": "我們縮短了會議時間，好留時間進行現場參訪。" },
+    { "form": "specially", "partOfSpeech": "adverb", "definition": "for a particular purpose; especially", "translation": "特別地；專門地", "example": "The gift box was specially designed for the holiday season.", "exampleTranslation": "這個禮盒是專門為節日季節設計的。" },
+    { "form": "spill", "partOfSpeech": "verb", "definition": "to cause liquid to flow out of a container accidentally", "translation": "灑出；溢出", "example": "Someone spilled coffee near the server room, so it had to be cleaned up quickly.", "exampleTranslation": "有人在伺服器機房附近打翻了咖啡，必須馬上清理。" }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-0041-0060",
+  "title": "TOEIC 核心單字 0041-0060",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "rental", "partOfSpeech": "noun", "definition": "an item, especially a vehicle or property, that is rented out", "translation": "租賃；出租物", "example": "We picked up our rental car right outside the airport terminal.", "exampleTranslation": "我們在機場航廈外就取到了租賃汽車。" },
+    { "form": "warranty", "partOfSpeech": "noun", "definition": "a written guarantee promising to repair or replace a faulty product", "translation": "保固；保證書", "example": "The laptop comes with a one-year warranty against defects.", "exampleTranslation": "這台筆電附有一年的瑕疵保固。" },
+    { "form": "cafeteria", "partOfSpeech": "noun", "definition": "a self-service restaurant, often in a workplace or school", "translation": "自助餐廳", "example": "Employees can get a discounted lunch at the office cafeteria.", "exampleTranslation": "員工可以在公司自助餐廳享用優惠午餐。" },
+    { "form": "chef", "partOfSpeech": "noun", "definition": "a professional cook, especially the head cook in a restaurant", "translation": "主廚", "example": "The hotel hired a new chef to redesign the breakfast menu.", "exampleTranslation": "飯店聘請了一位新主廚重新設計早餐菜單。" },
+    { "form": "elevator", "partOfSpeech": "noun", "definition": "a platform or enclosure that carries people between floors of a building", "translation": "電梯", "example": "Take the elevator to the fifth floor for the conference room.", "exampleTranslation": "搭電梯到五樓就可以到達會議室。" },
+    { "form": "reception", "partOfSpeech": "noun", "definition": "the area where visitors are welcomed, or a formal social event", "translation": "接待處；接待會", "example": "Please check in at reception before heading to the meeting room.", "exampleTranslation": "請先到接待處報到，再前往會議室。" },
+    { "form": "correctly", "partOfSpeech": "adverb", "definition": "in a way that is accurate and without mistakes", "translation": "正確地", "example": "Make sure the form is filled out correctly before submitting it.", "exampleTranslation": "請確認表格正確填寫後再送出。" },
+    { "form": "lease", "partOfSpeech": "noun", "definition": "a legal agreement to rent property for a set period of time", "translation": "租約", "example": "The office lease is due for renewal at the end of the year.", "exampleTranslation": "這間辦公室的租約到年底就要續約了。" },
+    { "form": "bicycle", "partOfSpeech": "noun", "definition": "a two-wheeled vehicle powered by pedaling", "translation": "腳踏車", "example": "Many employees commute to work by bicycle in the summer.", "exampleTranslation": "夏天有很多員工騎腳踏車通勤上班。" },
+    { "form": "notify", "partOfSpeech": "verb", "definition": "to formally inform someone of something", "translation": "通知", "example": "We will notify all customers by email if the shipping date changes.", "exampleTranslation": "如果出貨日期有變動，我們會用電子郵件通知所有顧客。" },
+    { "form": "preview", "partOfSpeech": "noun", "definition": "an advance showing or viewing of something before its official release", "translation": "預覽；試映", "example": "Investors were given a preview of the new product line.", "exampleTranslation": "投資人得到了新產品線的預覽機會。" },
+    { "form": "attendant", "partOfSpeech": "noun", "definition": "a person whose job is to help or serve customers in a public place", "translation": "服務員；隨行人員", "example": "A flight attendant offered us drinks shortly after takeoff.", "exampleTranslation": "起飛後不久，空服員就送上了飲料。" },
+    { "form": "subscription", "partOfSpeech": "noun", "definition": "an arrangement to receive a product or service regularly by paying in advance", "translation": "訂閱", "example": "Our subscription to the industry magazine expires next month.", "exampleTranslation": "我們訂閱的產業雜誌下個月就到期了。" },
+    { "form": "convenient", "partOfSpeech": "adjective", "definition": "easy to use or suited to someone's needs without extra effort", "translation": "方便的", "example": "The new office location is more convenient for most staff.", "exampleTranslation": "新的辦公室地點對大部分員工來說更方便。" },
+    { "form": "manual", "partOfSpeech": "noun", "definition": "a book of instructions explaining how to use or operate something", "translation": "說明書；手冊", "example": "Refer to the manual if the machine displays an error code.", "exampleTranslation": "如果機器顯示錯誤代碼，請參考說明書。" },
+    { "form": "clue", "partOfSpeech": "noun", "definition": "a piece of information that helps solve a problem or mystery", "translation": "線索", "example": "The survey results gave us a clue about why sales dropped.", "exampleTranslation": "調查結果給了我們銷售下滑原因的線索。" },
+    { "form": "garage", "partOfSpeech": "noun", "definition": "a building or area used to store vehicles or for vehicle repairs", "translation": "車庫；修車廠", "example": "The company car is parked in the garage on the first floor.", "exampleTranslation": "公司用車停在一樓的車庫裡。" },
+    { "form": "obtain", "partOfSpeech": "verb", "definition": "to get or acquire something, often through effort", "translation": "取得；獲得", "example": "You must obtain approval from your manager before booking travel.", "exampleTranslation": "你必須先取得主管核准才能訂機票。" },
+    { "form": "oval", "partOfSpeech": "adjective", "definition": "having a rounded, egg-like shape", "translation": "橢圓形的", "example": "The conference table is oval, so everyone can see each other.", "exampleTranslation": "這張會議桌是橢圓形的，所以每個人都能看到彼此。" },
+    { "form": "inventory", "partOfSpeech": "noun", "definition": "a complete list of goods or materials held in stock", "translation": "存貨；庫存清單", "example": "The warehouse team does a full inventory check every quarter.", "exampleTranslation": "倉庫團隊每一季都會做一次完整的庫存盤點。" }
+  ]
+}

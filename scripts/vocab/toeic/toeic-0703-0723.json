@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-0703-0723",
+  "title": "TOEIC 核心單字 0703-0723",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "clarify", "partOfSpeech": "verb", "definition": "to make something clearer or easier to understand", "translation": "澄清；釐清", "example": "Could you clarify what you mean by 'final draft'?", "exampleTranslation": "你能澄清一下「最終稿」是什麼意思嗎？" },
+    { "form": "classmate", "partOfSpeech": "noun", "definition": "a person who is in the same class as you at school", "translation": "同班同學", "example": "She reconnected with an old classmate at the industry conference.", "exampleTranslation": "她在產業研討會上重新聯繫上一位老同學。" },
+    { "form": "compile", "partOfSpeech": "verb", "definition": "to collect information from different sources and put it together", "translation": "彙整；編纂", "example": "Please compile all the feedback into one summary document.", "exampleTranslation": "請把所有意見彙整成一份總結文件。" },
+    { "form": "correction", "partOfSpeech": "noun", "definition": "a change made to fix an error", "translation": "更正；修正", "example": "A correction was issued after the report contained wrong figures.", "exampleTranslation": "由於報告內含錯誤數字，公司發出了更正說明。" },
+    { "form": "customize", "partOfSpeech": "verb", "definition": "to modify something to suit a particular person's or organization's needs", "translation": "客製化", "example": "We can customize the software to match your company's workflow.", "exampleTranslation": "我們可以將這套軟體客製化，配合貴公司的工作流程。" },
+    { "form": "diagnose", "partOfSpeech": "verb", "definition": "to identify the nature of a problem by examining it", "translation": "診斷", "example": "The technician diagnosed the issue as a faulty power supply.", "exampleTranslation": "技術人員診斷出問題出在電源供應器故障。" },
+    { "form": "discontinue", "partOfSpeech": "verb", "definition": "to stop producing, selling, or providing something", "translation": "停產；停止", "example": "The company will discontinue the older model next quarter.", "exampleTranslation": "公司下一季將停產舊型號。" },
+    { "form": "dishwasher", "partOfSpeech": "noun", "definition": "a machine that automatically washes dishes", "translation": "洗碗機", "example": "The break room dishwasher needs to be repaired.", "exampleTranslation": "休息室的洗碗機需要維修了。" },
+    { "form": "drought", "partOfSpeech": "noun", "definition": "a long period of unusually low rainfall causing a water shortage", "translation": "乾旱", "example": "The drought has affected crop supply and pushed prices up.", "exampleTranslation": "乾旱影響了作物供應，導致價格上漲。" },
+    { "form": "economize", "partOfSpeech": "verb", "definition": "to reduce spending or use resources more carefully", "translation": "節約；節省開支", "example": "The department economized by switching to digital invoices.", "exampleTranslation": "這個部門透過改用電子發票來節省開支。" },
+    { "form": "entrée", "partOfSpeech": "noun", "definition": "the main dish of a meal", "translation": "主菜", "example": "Guests can choose between three entrée options at the banquet.", "exampleTranslation": "賓客可以在宴會上從三道主菜中選擇。" },
+    { "form": "firework", "partOfSpeech": "noun", "definition": "a device that explodes to produce colorful light and sound, used for celebration", "translation": "煙火", "example": "A firework display will close out the company's anniversary event.", "exampleTranslation": "公司週年活動將以煙火表演作結。" },
+    { "form": "freight", "partOfSpeech": "noun", "definition": "goods transported in bulk by truck, train, ship, or aircraft", "translation": "貨運；運費", "example": "Freight costs have risen due to higher fuel prices.", "exampleTranslation": "由於燃料價格上漲，貨運成本也隨之提高。" },
+    { "form": "fry", "partOfSpeech": "verb", "definition": "to cook food in hot oil or fat", "translation": "油炸；煎", "example": "The new menu item is fried in a lighter, healthier oil.", "exampleTranslation": "新菜單品項改用較健康清爽的油來油炸。" },
+    { "form": "gallon", "partOfSpeech": "noun", "definition": "a unit of measurement for liquid volume", "translation": "加侖", "example": "The tank holds up to fifty gallons of cleaning solution.", "exampleTranslation": "這個儲槽最多可裝五十加侖的清潔液。" },
+    { "form": "gardener", "partOfSpeech": "noun", "definition": "a person who takes care of a garden, often as a job", "translation": "園丁", "example": "A gardener visits the office campus twice a week.", "exampleTranslation": "園丁每週來辦公園區兩次。" },
+    { "form": "ideally", "partOfSpeech": "adverb", "definition": "in a perfect or most desirable situation", "translation": "理想上；最好", "example": "Ideally, the report should be finished before Friday.", "exampleTranslation": "理想上，這份報告應該在週五前完成。" },
+    { "form": "inclusive", "partOfSpeech": "adjective", "definition": "including everything or everyone; not excluding any group", "translation": "包容的；包含在內的", "example": "The price is inclusive of tax and service charges.", "exampleTranslation": "這個價格已包含稅金與服務費。" },
+    { "form": "insufficient", "partOfSpeech": "adjective", "definition": "not enough for a particular purpose", "translation": "不足的", "example": "The application was rejected due to insufficient documentation.", "exampleTranslation": "這份申請因為文件不足而被拒絕。" },
+    { "form": "introductory", "partOfSpeech": "adjective", "definition": "serving as an introduction; presented at the beginning", "translation": "入門的；介紹性的", "example": "New members get an introductory discount on their first purchase.", "exampleTranslation": "新會員首次購物可享入門優惠折扣。" }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-0852-0871",
+  "title": "TOEIC 核心單字 852-871",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "chairperson", "partOfSpeech": "noun", "definition": "a person who leads a meeting or organization", "translation": "主席", "example": "The chairperson called the meeting to order at nine o'clock.", "exampleTranslation": "主席在九點時宣布會議開始。" },
+    { "form": "charitable", "partOfSpeech": "adjective", "definition": "relating to giving help to those in need", "translation": "慈善的", "example": "The company donates a portion of its profits to charitable causes.", "exampleTranslation": "這家公司會捐出部分利潤給慈善事業。" },
+    { "form": "checkup", "partOfSpeech": "noun", "definition": "a general examination, especially a medical one", "translation": "健康檢查", "example": "Employees are encouraged to get an annual checkup.", "exampleTranslation": "公司鼓勵員工每年做一次健康檢查。" },
+    { "form": "cooler", "partOfSpeech": "noun", "definition": "a container that keeps food or drinks cold", "translation": "冰桶；保冷箱", "example": "Bring a cooler with drinks for the company picnic.", "exampleTranslation": "請帶一個裝飲料的保冷箱來公司野餐。" },
+    { "form": "crane", "partOfSpeech": "noun", "definition": "a machine used for lifting heavy objects", "translation": "起重機", "example": "A crane was used to lift the equipment onto the roof.", "exampleTranslation": "起重機被用來把設備吊上屋頂。" },
+    { "form": "dealership", "partOfSpeech": "noun", "definition": "a business that sells products, especially cars, for a manufacturer", "translation": "經銷商；代理商", "example": "He bought his new car from a local dealership.", "exampleTranslation": "他從當地一家經銷商買了新車。" },
+    { "form": "dependable", "partOfSpeech": "adjective", "definition": "reliable and trustworthy", "translation": "可靠的", "example": "We need a dependable supplier who can meet tight deadlines.", "exampleTranslation": "我們需要一個能配合緊迫期限的可靠供應商。" },
+    { "form": "disconnect", "partOfSpeech": "verb", "definition": "to break a connection between two things", "translation": "中斷連接；斷開", "example": "Please disconnect the printer before attempting any repairs.", "exampleTranslation": "進行任何維修前請先拔掉印表機的連接。" },
+    { "form": "dispose", "partOfSpeech": "verb", "definition": "to get rid of something", "translation": "處理；丟棄", "example": "The factory must dispose of chemical waste properly.", "exampleTranslation": "這家工廠必須妥善處理化學廢棄物。" },
+    { "form": "disrupt", "partOfSpeech": "verb", "definition": "to interrupt or disturb the normal flow of something", "translation": "打亂；擾亂", "example": "The system outage disrupted operations for several hours.", "exampleTranslation": "系統故障讓營運中斷了好幾個小時。" },
+    { "form": "dynamic", "partOfSpeech": "adjective", "definition": "characterized by constant change or activity", "translation": "動態的；充滿活力的", "example": "The marketing team thrives in a dynamic, fast-paced environment.", "exampleTranslation": "行銷團隊在充滿活力、步調快速的環境中表現出色。" },
+    { "form": "enthusiastically", "partOfSpeech": "adverb", "definition": "with great excitement or interest", "translation": "熱情地", "example": "The audience enthusiastically applauded the keynote speaker.", "exampleTranslation": "觀眾熱情地為主題演講者鼓掌。" },
+    { "form": "freelance", "partOfSpeech": "adjective", "definition": "working independently rather than for a single employer", "translation": "自由接案的", "example": "She works as a freelance graphic designer for several agencies.", "exampleTranslation": "她是為好幾間公司接案的自由平面設計師。" },
+    { "form": "grill", "partOfSpeech": "noun", "definition": "a cooking device that uses direct heat, or to cook on one", "translation": "烤架；燒烤", "example": "The rooftop restaurant has a grill for outdoor dining.", "exampleTranslation": "這間頂樓餐廳有一個供戶外用餐使用的烤架。" },
+    { "form": "habitual", "partOfSpeech": "adjective", "definition": "done regularly as a habit", "translation": "習慣性的", "example": "His habitual lateness has become a concern for the team.", "exampleTranslation": "他習慣性的遲到已經成為團隊的隱憂。" },
+    { "form": "internationally", "partOfSpeech": "adverb", "definition": "across or involving multiple countries", "translation": "在國際上", "example": "The brand is recognized internationally for its quality.", "exampleTranslation": "這個品牌以其品質在國際上享有盛名。" },
+    { "form": "invaluable", "partOfSpeech": "adjective", "definition": "extremely useful; of great value", "translation": "非常寶貴的", "example": "Her experience in logistics was invaluable during the crisis.", "exampleTranslation": "她在物流方面的經驗在這次危機中極為寶貴。" },
+    { "form": "messenger", "partOfSpeech": "noun", "definition": "a person who carries messages or deliveries", "translation": "信差；快遞員", "example": "A messenger delivered the signed contract within the hour.", "exampleTranslation": "一位快遞員在一小時內送達了簽好的合約。" },
+    { "form": "paperback", "partOfSpeech": "noun", "definition": "a book with a flexible paper cover", "translation": "平裝本", "example": "The training manual is also available as a paperback.", "exampleTranslation": "這本訓練手冊也有平裝本可以取得。" },
+    { "form": "rebate", "partOfSpeech": "noun", "definition": "a partial refund on a purchase", "translation": "回扣；退款", "example": "Customers who register their product qualify for a cash rebate.", "exampleTranslation": "註冊產品的顧客可以獲得現金回扣。" }
+  ]
+}

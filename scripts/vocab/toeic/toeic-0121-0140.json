@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-0121-0140",
+  "title": "TOEIC 核心單字 0121-0140",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "expire", "partOfSpeech": "verb", "definition": "to come to an end and no longer be valid", "translation": "到期；失效", "example": "Your gym membership will expire at the end of this month.", "exampleTranslation": "你的健身房會員資格將在這個月底到期。" },
+    { "form": "folder", "partOfSpeech": "noun", "definition": "a cardboard or digital container used to hold and organize documents", "translation": "資料夾", "example": "Save the signed contract in the shared client folder.", "exampleTranslation": "把簽好的合約存進共用的客戶資料夾裡。" },
+    { "form": "photocopy", "partOfSpeech": "noun", "definition": "a copy of a document made using a photocopier", "translation": "影印本", "example": "Make a photocopy of your ID before submitting the application.", "exampleTranslation": "提交申請前請先影印一份身分證件。" },
+    { "form": "renovate", "partOfSpeech": "verb", "definition": "to repair and improve a building so it is in good condition again", "translation": "翻新；整修", "example": "The company plans to renovate the reception area next spring.", "exampleTranslation": "公司計劃明年春天翻新接待區。" },
+    { "form": "sunny", "partOfSpeech": "adjective", "definition": "bright with sunlight; having a lot of sunshine", "translation": "晴朗的", "example": "The forecast predicts a sunny weekend for the outdoor event.", "exampleTranslation": "預報顯示這場戶外活動的週末會是晴天。" },
+    { "form": "calendar", "partOfSpeech": "noun", "definition": "a chart or app showing the days, weeks, and months of a year", "translation": "行事曆", "example": "Please add the client call to your calendar for Thursday.", "exampleTranslation": "請把跟客戶的通話加進你星期四的行事曆。" },
+    { "form": "donation", "partOfSpeech": "noun", "definition": "money or goods given to help a person or cause", "translation": "捐款；捐贈", "example": "The company matches every employee donation to the charity drive.", "exampleTranslation": "公司會為每一筆員工捐款提供相同金額的配捐。" },
+    { "form": "feedback", "partOfSpeech": "noun", "definition": "opinions or reactions given about a product, performance, or idea", "translation": "回饋意見", "example": "We'd appreciate your feedback on the new customer service process.", "exampleTranslation": "我們很希望能得到你對新客服流程的回饋意見。" },
+    { "form": "shortly", "partOfSpeech": "adverb", "definition": "in a short time; soon", "translation": "不久後；很快地", "example": "The manager will join the call shortly after the introductions.", "exampleTranslation": "自我介紹結束後，經理很快就會加入這通電話。" },
+    { "form": "snack", "partOfSpeech": "noun", "definition": "a small amount of food eaten between meals", "translation": "點心", "example": "There are snacks and coffee available during the break.", "exampleTranslation": "休息時間有提供點心和咖啡。" },
+    { "form": "warehouse", "partOfSpeech": "noun", "definition": "a large building used for storing goods", "translation": "倉庫", "example": "The new warehouse can hold twice as much inventory.", "exampleTranslation": "這座新倉庫的存貨容量是原本的兩倍。" },
+    { "form": "copier", "partOfSpeech": "noun", "definition": "a machine that makes copies of documents", "translation": "影印機", "example": "The copier on the third floor is out of paper again.", "exampleTranslation": "三樓的影印機又沒紙了。" },
+    { "form": "provider", "partOfSpeech": "noun", "definition": "a person or company that supplies a service or product", "translation": "供應商；提供者", "example": "We switched to a new internet provider to lower monthly costs.", "exampleTranslation": "我們換了新的網路供應商來降低每月費用。" },
+    { "form": "beverage", "partOfSpeech": "noun", "definition": "a drink, especially one other than water", "translation": "飲料", "example": "Complimentary beverages are available at the hotel lounge all day.", "exampleTranslation": "飯店的交誼廳整天都有提供免費飲料。" },
+    { "form": "hungry", "partOfSpeech": "adjective", "definition": "feeling a need or desire to eat", "translation": "飢餓的", "example": "Let's break for lunch before everyone gets too hungry.", "exampleTranslation": "在大家太餓之前，我們先休息去吃午餐吧。" },
+    { "form": "inspection", "partOfSpeech": "noun", "definition": "a careful examination to check the condition or quality of something", "translation": "檢查；視察", "example": "The factory passed its annual safety inspection.", "exampleTranslation": "這間工廠通過了年度安全檢查。" },
+    { "form": "recipient", "partOfSpeech": "noun", "definition": "a person who receives something", "translation": "接收者；收件人", "example": "Make sure the recipient's address is correct before mailing the package.", "exampleTranslation": "寄出包裹前請確認收件人地址正確。" },
+    { "form": "aisle", "partOfSpeech": "noun", "definition": "a passage between rows of seats or shelves", "translation": "走道", "example": "He prefers an aisle seat so he can stretch his legs.", "exampleTranslation": "他偏好走道座位，這樣才能伸展雙腿。" },
+    { "form": "inspect", "partOfSpeech": "verb", "definition": "to examine something closely to check its condition or quality", "translation": "檢查；視察", "example": "A technician will inspect the equipment before it ships out.", "exampleTranslation": "設備出貨前會有技師進行檢查。" },
+    { "form": "mechanic", "partOfSpeech": "noun", "definition": "a skilled worker who repairs and maintains machines, especially vehicles", "translation": "技工；技師", "example": "The company van is at the mechanic's for its regular checkup.", "exampleTranslation": "公司的貨車正在技工那裡做定期檢查。" }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-0162-0181",
+  "title": "TOEIC 核心單字 0162-0181",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "respondent", "partOfSpeech": "noun", "definition": "a person who replies to a survey or questionnaire", "translation": "受訪者；回應者", "example": "Most respondents said they preferred remote work options.", "exampleTranslation": "大多數受訪者表示他們偏好遠距工作選項。" },
+    { "form": "jewelry", "partOfSpeech": "noun", "definition": "ornamental items worn for decoration, such as rings and necklaces", "translation": "珠寶；首飾", "example": "The store's jewelry display was updated for the holiday season.", "exampleTranslation": "這家店的珠寶展示櫃為了節慶季節更新過了。" },
+    { "form": "overtime", "partOfSpeech": "noun", "definition": "time worked beyond one's normal working hours", "translation": "加班；加班費", "example": "Staff will receive extra pay for any overtime this week.", "exampleTranslation": "員工這週的任何加班時數都會獲得額外薪資。" },
+    { "form": "battery", "partOfSpeech": "noun", "definition": "a device that stores and supplies electrical power", "translation": "電池", "example": "Please replace the battery in the conference room remote.", "exampleTranslation": "請更換會議室遙控器的電池。" },
+    { "form": "donate", "partOfSpeech": "verb", "definition": "to give money or goods to help a person or cause", "translation": "捐贈", "example": "The company encourages employees to donate to local charities.", "exampleTranslation": "公司鼓勵員工捐款給當地慈善機構。" },
+    { "form": "outstanding", "partOfSpeech": "adjective", "definition": "exceptionally good, or (of a debt) not yet paid", "translation": "傑出的；未償付的", "example": "Please settle any outstanding invoices before the end of the fiscal year.", "exampleTranslation": "請在會計年度結束前清償任何未償付的請款單。" },
+    { "form": "skim", "partOfSpeech": "verb", "definition": "to read something quickly without focusing on every detail", "translation": "略讀；瀏覽", "example": "I only had time to skim the report before the meeting.", "exampleTranslation": "我在會議前只有時間快速瀏覽這份報告。" },
+    { "form": "briefcase", "partOfSpeech": "noun", "definition": "a flat rectangular case for carrying documents, used mainly for business", "translation": "公事包", "example": "He left his briefcase with the contracts on the train.", "exampleTranslation": "他把裝著合約的公事包忘在火車上了。" },
+    { "form": "dessert", "partOfSpeech": "noun", "definition": "a sweet dish served after the main course of a meal", "translation": "甜點", "example": "The banquet menu includes three dessert options.", "exampleTranslation": "宴會菜單提供三種甜點選擇。" },
+    { "form": "impact", "partOfSpeech": "noun", "definition": "a strong effect or influence", "translation": "影響；衝擊", "example": "The new policy will have a major impact on shipping costs.", "exampleTranslation": "這項新政策將對運費造成重大影響。" },
+    { "form": "innovative", "partOfSpeech": "adjective", "definition": "featuring new ideas or methods; original and creative", "translation": "創新的", "example": "The startup is known for its innovative approach to logistics.", "exampleTranslation": "這家新創公司以創新的物流方式聞名。" },
+    { "form": "inquire", "partOfSpeech": "verb", "definition": "to ask for information about something", "translation": "詢問；查詢", "example": "Feel free to inquire about our group discount rates.", "exampleTranslation": "歡迎隨時詢問我們的團體優惠價格。" },
+    { "form": "overnight", "partOfSpeech": "adverb", "definition": "during the night, or happening very quickly", "translation": "過夜地；一夜之間", "example": "The documents were sent overnight to arrive by tomorrow morning.", "exampleTranslation": "這些文件透過連夜快遞寄出，明天早上就會送達。" },
+    { "form": "venue", "partOfSpeech": "noun", "definition": "the place where an event or meeting is held", "translation": "場地", "example": "We booked a larger venue to accommodate all the guests.", "exampleTranslation": "我們訂了一個更大的場地來容納所有賓客。" },
+    { "form": "commuter", "partOfSpeech": "noun", "definition": "a person who regularly travels between home and work", "translation": "通勤者", "example": "Commuters can save money with a monthly train pass.", "exampleTranslation": "通勤者可以透過月票省下不少交通費。" },
+    { "form": "logo", "partOfSpeech": "noun", "definition": "a symbol or design used by a company to identify its products", "translation": "商標；標誌", "example": "The new logo will appear on all packaging starting next quarter.", "exampleTranslation": "新的商標將從下一季開始出現在所有包裝上。" },
+    { "form": "newsletter", "partOfSpeech": "noun", "definition": "a printed or digital report sent regularly to members or subscribers", "translation": "電子報；通訊刊物", "example": "Subscribe to our newsletter for monthly industry updates.", "exampleTranslation": "訂閱我們的電子報以獲得每月產業動態。" },
+    { "form": "advisor", "partOfSpeech": "noun", "definition": "a person who gives expert guidance or recommendations", "translation": "顧問", "example": "A financial advisor reviewed the company's investment plan.", "exampleTranslation": "一位財務顧問審核了公司的投資計畫。" },
+    { "form": "cartridge", "partOfSpeech": "noun", "definition": "a removable container holding ink, toner, or other material for a device", "translation": "墨水匣", "example": "Order a new printer cartridge before this one runs out.", "exampleTranslation": "在墨水匣用完之前先訂購一個新的。" },
+    { "form": "cloudy", "partOfSpeech": "adjective", "definition": "covered with clouds; not sunny", "translation": "多雲的", "example": "It will be cloudy with a chance of rain during the outdoor tour.", "exampleTranslation": "戶外導覽期間預計是多雲天氣，並有機會下雨。" }
+  ]
+}

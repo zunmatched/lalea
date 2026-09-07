@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-1122-1141",
+  "title": "TOEIC 核心單字 1122-1141",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "diagram", "partOfSpeech": "noun", "definition": "a simplified drawing showing the structure or relationships of something", "translation": "圖表；示意圖", "example": "The manual includes a diagram showing how to assemble the desk.", "exampleTranslation": "這份說明書附有一張示意圖，說明如何組裝這張桌子。" },
+    { "form": "diamond", "partOfSpeech": "noun", "definition": "a precious stone made of pure crystallized carbon", "translation": "鑽石", "example": "The jeweler specializes in custom diamond rings.", "exampleTranslation": "這位珠寶商專門訂製鑽戒。" },
+    { "form": "disable", "partOfSpeech": "verb", "definition": "to make a device or system unable to function", "translation": "使失能；停用", "example": "IT can disable a lost employee laptop remotely.", "exampleTranslation": "IT 部門可以遠端停用遺失的員工筆電。" },
+    { "form": "disgust", "partOfSpeech": "noun", "definition": "a strong feeling of dislike or disapproval", "translation": "反感；厭惡", "example": "Customers expressed disgust over the delayed refund process.", "exampleTranslation": "顧客對於延遲的退款流程表示反感。" },
+    { "form": "donut", "partOfSpeech": "noun", "definition": "a small ring-shaped fried cake", "translation": "甜甜圈", "example": "Someone brought a box of donuts for the morning meeting.", "exampleTranslation": "有人為晨會帶了一盒甜甜圈。" },
+    { "form": "doorman", "partOfSpeech": "noun", "definition": "a person employed to greet visitors and open the door at a building entrance", "translation": "門房", "example": "The doorman greeted every guest by name.", "exampleTranslation": "這位門房會叫出每位客人的名字來打招呼。" },
+    { "form": "electronically", "partOfSpeech": "adverb", "definition": "by electronic means", "translation": "以電子方式", "example": "Invoices are now submitted electronically instead of by mail.", "exampleTranslation": "發票現在改成電子提交，不再郵寄。" },
+    { "form": "elevate", "partOfSpeech": "verb", "definition": "to raise something to a higher position or level", "translation": "提升；提高", "example": "The promotion elevated her to a senior management role.", "exampleTranslation": "這次升遷讓她晉升到資深管理職位。" },
+    { "form": "engagement", "partOfSpeech": "noun", "definition": "an arrangement to do something or meet someone at a set time", "translation": "約定；約會", "example": "The consultant has a prior engagement and can't attend Friday's call.", "exampleTranslation": "這位顧問已有其他約定，無法出席週五的通話。" },
+    { "form": "enrollment", "partOfSpeech": "noun", "definition": "the act of registering for a course or program", "translation": "報名；註冊", "example": "Enrollment for the training program closes next Friday.", "exampleTranslation": "這個訓練課程的報名將於下週五截止。" },
+    { "form": "euro", "partOfSpeech": "noun", "definition": "the official currency of the eurozone countries", "translation": "歐元", "example": "Prices in the Paris office are listed in euros.", "exampleTranslation": "巴黎辦公室的價格是以歐元標示。" },
+    { "form": "forbid", "partOfSpeech": "verb", "definition": "to refuse to allow something", "translation": "禁止", "example": "Company policy forbids employees from accepting gifts from vendors.", "exampleTranslation": "公司政策禁止員工接受廠商的禮物。" },
+    { "form": "fork", "partOfSpeech": "noun", "definition": "a point where something divides into two different directions or options", "translation": "分岔點；岔路", "example": "The project reached a fork where two very different approaches were possible.", "exampleTranslation": "這個專案來到一個分岔點，有兩種截然不同的做法可以選擇。" },
+    { "form": "foster", "partOfSpeech": "verb", "definition": "to encourage the development or growth of something", "translation": "培養；促進", "example": "The mentorship program aims to foster leadership skills.", "exampleTranslation": "這個師徒制計畫旨在培養領導能力。" },
+    { "form": "getaway", "partOfSpeech": "noun", "definition": "a short vacation or trip away from usual routine", "translation": "小旅行；短暫度假", "example": "The team planned a weekend getaway after finishing the project.", "exampleTranslation": "團隊在完成專案後規劃了一個週末小旅行。" },
+    { "form": "gossip", "partOfSpeech": "noun", "definition": "casual talk about other people, often unconfirmed", "translation": "閒話；八卦", "example": "Try to avoid workplace gossip during busy deadlines.", "exampleTranslation": "在忙碌的死線期間盡量避免辦公室閒話。" },
+    { "form": "hacker", "partOfSpeech": "noun", "definition": "a person who gains unauthorized access to computer systems", "translation": "駭客", "example": "The IT team detected an attempt by a hacker to access the server.", "exampleTranslation": "IT 團隊偵測到有駭客試圖存取伺服器。" },
+    { "form": "hardworking", "partOfSpeech": "adjective", "definition": "tending to work with a great deal of effort and dedication", "translation": "勤奮的；努力工作的", "example": "The manager praised the team for being hardworking under pressure.", "exampleTranslation": "經理稱讚團隊在壓力下依然努力工作。" },
+    { "form": "impatient", "partOfSpeech": "adjective", "definition": "having or showing a lack of patience", "translation": "不耐煩的", "example": "Clients grew impatient waiting for a reply to their email.", "exampleTranslation": "客戶等待信件回覆等得不耐煩了。" },
+    { "form": "indirect", "partOfSpeech": "adjective", "definition": "not going straight to the point; not direct", "translation": "間接的", "example": "The email gave only an indirect answer to the question.", "exampleTranslation": "這封信只給了問題一個間接的答案。" }
+  ]
+}

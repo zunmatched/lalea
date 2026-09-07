@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-0202-0222",
+  "title": "TOEIC 核心單字 0202-0222",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "developer", "partOfSpeech": "noun", "definition": "a person or company that creates software or property developments", "translation": "開發商；開發者", "example": "The developer plans to build a new office tower downtown.", "exampleTranslation": "這家開發商計劃在市中心興建一棟新的辦公大樓。" },
+    { "form": "headquarter", "partOfSpeech": "noun", "definition": "the main office of an organization (usually plural: headquarters)", "translation": "總部", "example": "The regional office reports directly to the company headquarters.", "exampleTranslation": "區域辦公室直接向公司總部回報。" },
+    { "form": "shuttle", "partOfSpeech": "noun", "definition": "a vehicle that travels regularly back and forth over a short route", "translation": "接駁車", "example": "A free shuttle runs between the hotel and the convention center.", "exampleTranslation": "飯店和會議中心之間有免費接駁車往返。" },
+    { "form": "stationery", "partOfSpeech": "noun", "definition": "writing materials such as paper, pens, and envelopes", "translation": "文具", "example": "Order more stationery before the office supply runs out.", "exampleTranslation": "在文具用完之前請再訂購一些。" },
+    { "form": "subscribe", "partOfSpeech": "verb", "definition": "to arrange to receive a publication or service regularly", "translation": "訂閱", "example": "Subscribe to the newsletter to receive weekly market updates.", "exampleTranslation": "訂閱電子報以獲得每週市場動態。" },
+    { "form": "alike", "partOfSpeech": "adverb", "definition": "in a similar way; resembling one another", "translation": "相似地", "example": "The two proposals look alike but differ in cost.", "exampleTranslation": "這兩份提案看起來很相似，但成本不同。" },
+    { "form": "flavor", "partOfSpeech": "noun", "definition": "the distinctive taste of a food or drink", "translation": "口味", "example": "The café added a new seasonal coffee flavor this month.", "exampleTranslation": "這家咖啡廳這個月新增了一款季節限定口味。" },
+    { "form": "picnic", "partOfSpeech": "noun", "definition": "an outdoor meal eaten as a casual social event", "translation": "野餐", "example": "The team is planning a picnic to celebrate the project's completion.", "exampleTranslation": "團隊正在計劃一場野餐來慶祝專案完成。" },
+    { "form": "recipe", "partOfSpeech": "noun", "definition": "a set of instructions for preparing a dish", "translation": "食譜", "example": "The chef shared his recipe for the restaurant's signature dish.", "exampleTranslation": "主廚分享了餐廳招牌菜的食譜。" },
+    { "form": "refreshment", "partOfSpeech": "noun", "definition": "food or drink provided at an event, especially light snacks", "translation": "茶點；點心", "example": "Refreshments will be served during the afternoon break.", "exampleTranslation": "下午的休息時間會提供茶點。" },
+    { "form": "administrative", "partOfSpeech": "adjective", "definition": "relating to the management and organization of a business or office", "translation": "行政的", "example": "She handles all the administrative tasks for the department.", "exampleTranslation": "她負責處理部門所有的行政事務。" },
+    { "form": "authorize", "partOfSpeech": "verb", "definition": "to give official permission for something", "translation": "授權；批准", "example": "Only the finance director can authorize expenses over a certain amount.", "exampleTranslation": "只有財務主管能批准超過一定金額的支出。" },
+    { "form": "commonly", "partOfSpeech": "adverb", "definition": "in a way that happens often or is usually the case", "translation": "普遍地；通常", "example": "This software is commonly used by small businesses.", "exampleTranslation": "這款軟體通常被小型企業使用。" },
+    { "form": "distribution", "partOfSpeech": "noun", "definition": "the process of supplying goods to stores or customers", "translation": "配送；分銷", "example": "The company improved its distribution network to reach rural areas.", "exampleTranslation": "這家公司改善了配送網絡以觸及鄉村地區。" },
+    { "form": "sofa", "partOfSpeech": "noun", "definition": "a long upholstered seat for more than one person", "translation": "沙發", "example": "A new sofa was added to the office waiting area.", "exampleTranslation": "辦公室的等候區新增了一張沙發。" },
+    { "form": "accommodate", "partOfSpeech": "verb", "definition": "to provide space or lodging for someone, or to adapt to their needs", "translation": "容納；配合", "example": "The venue can accommodate up to two hundred guests.", "exampleTranslation": "這個場地最多可以容納兩百位賓客。" },
+    { "form": "affordable", "partOfSpeech": "adjective", "definition": "priced at a level that people can reasonably pay", "translation": "負擔得起的；平價的", "example": "The company offers affordable health plans for all employees.", "exampleTranslation": "公司為所有員工提供負擔得起的健康保險方案。" },
+    { "form": "annoy", "partOfSpeech": "verb", "definition": "to make someone slightly angry or irritated", "translation": "使惱怒；打擾", "example": "Repeated system errors began to annoy the customer support team.", "exampleTranslation": "反覆出現的系統錯誤開始讓客服團隊感到惱怒。" },
+    { "form": "commute", "partOfSpeech": "verb", "definition": "to travel regularly between home and work", "translation": "通勤", "example": "Many employees commute by train from the suburbs.", "exampleTranslation": "許多員工從郊區搭火車通勤。" },
+    { "form": "paperwork", "partOfSpeech": "noun", "definition": "routine written or clerical work, such as forms and documents", "translation": "文書工作", "example": "New hires need to complete some paperwork on their first day.", "exampleTranslation": "新進員工在第一天需要完成一些文書工作。" }
+  ]
+}

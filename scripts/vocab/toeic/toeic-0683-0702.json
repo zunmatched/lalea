@@ -1,0 +1,26 @@
+{
+  "slug": "toeic-0683-0702",
+  "title": "TOEIC 核心單字 0683-0702",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "locker", "partOfSpeech": "noun", "definition": "a small, lockable storage compartment, often found in a shared space", "translation": "置物櫃", "example": "Staff can store personal items in a locker near the break room.", "exampleTranslation": "員工可以把私人物品存放在休息室附近的置物櫃裡。" },
+    { "form": "overlook", "partOfSpeech": "verb", "definition": "to fail to notice something, or to have a view over an area", "translation": "忽略；俯瞰", "example": "The reviewer overlooked a small error in the final draft.", "exampleTranslation": "審稿人忽略了最終稿裡的一個小錯誤。" },
+    { "form": "patent", "partOfSpeech": "noun", "definition": "a government-granted right giving an inventor exclusive control over their invention", "translation": "專利", "example": "The company filed a patent for its new packaging design.", "exampleTranslation": "公司為新的包裝設計申請了專利。" },
+    { "form": "payable", "partOfSpeech": "adjective", "definition": "required to be paid, or able to be paid", "translation": "應付的；可支付的", "example": "The invoice is payable within thirty days of receipt.", "exampleTranslation": "這張發票須在收到後三十天內付清。" },
+    { "form": "preliminary", "partOfSpeech": "adjective", "definition": "coming before the main part of something; introductory", "translation": "初步的", "example": "The preliminary results look promising, but more testing is needed.", "exampleTranslation": "初步結果看起來不錯，但還需要更多測試。" },
+    { "form": "salesman", "partOfSpeech": "noun", "definition": "a man whose job is to sell products or services", "translation": "業務員；銷售員", "example": "The salesman explained the warranty options in detail.", "exampleTranslation": "這位業務員詳細說明了保固方案的選項。" },
+    { "form": "sauna", "partOfSpeech": "noun", "definition": "a room designed to be heated to produce intense sweating for relaxation", "translation": "三溫暖；桑拿", "example": "The company gym includes a small sauna for employees.", "exampleTranslation": "公司健身房設有一間小型三溫暖供員工使用。" },
+    { "form": "smoothly", "partOfSpeech": "adverb", "definition": "in a way that happens without problems or interruptions", "translation": "順利地", "example": "The product launch went smoothly thanks to careful planning.", "exampleTranslation": "多虧了縝密的規劃，這次產品發表非常順利。" },
+    { "form": "sunshine", "partOfSpeech": "noun", "definition": "light and warmth from the sun", "translation": "陽光", "example": "The rooftop café is popular on days with plenty of sunshine.", "exampleTranslation": "這間屋頂咖啡廳在陽光充足的日子很受歡迎。" },
+    { "form": "tow", "partOfSpeech": "verb", "definition": "to pull a vehicle or object using a rope, chain, or another vehicle", "translation": "拖吊；拖曳", "example": "The delivery van had to be towed after it broke down.", "exampleTranslation": "送貨廂型車故障後被拖吊走了。" },
+    { "form": "translator", "partOfSpeech": "noun", "definition": "a person who converts written or spoken text from one language to another", "translation": "翻譯員", "example": "A translator was hired for the meeting with overseas partners.", "exampleTranslation": "與海外合作夥伴開會時，我們請了一位翻譯員。" },
+    { "form": "tuition", "partOfSpeech": "noun", "definition": "the fee charged for instruction, especially at a school or university", "translation": "學費", "example": "The company offers to cover part of employees' tuition for job-related courses.", "exampleTranslation": "公司提供補助員工修習與工作相關課程的部分學費。" },
+    { "form": "unavailable", "partOfSpeech": "adjective", "definition": "not able to be obtained, used, or reached", "translation": "無法取得的；沒空的", "example": "The manager is unavailable until Monday morning.", "exampleTranslation": "經理要到週一早上才有空。" },
+    { "form": "violation", "partOfSpeech": "noun", "definition": "an action that breaks a law, rule, or agreement", "translation": "違反；違規", "example": "The inspection found no violations of the safety code.", "exampleTranslation": "這次檢查沒有發現違反安全規範的情況。" },
+    { "form": "webpage", "partOfSpeech": "noun", "definition": "a single document viewable on the internet, part of a website", "translation": "網頁", "example": "Update the pricing on the webpage before the sale begins.", "exampleTranslation": "在特賣開始前，請更新網頁上的價格。" },
+    { "form": "acceptance", "partOfSpeech": "noun", "definition": "the act of agreeing to or approving something", "translation": "接受；認可", "example": "We're still waiting on the client's acceptance of the proposal.", "exampleTranslation": "我們還在等客戶對提案的認可。" },
+    { "form": "ambitious", "partOfSpeech": "adjective", "definition": "having a strong desire for success or achievement", "translation": "有野心的；雄心勃勃的", "example": "The company set an ambitious goal to double revenue this year.", "exampleTranslation": "公司設定了今年營收翻倍的雄心目標。" },
+    { "form": "appendix", "partOfSpeech": "noun", "definition": "additional material placed at the end of a document or book", "translation": "附錄", "example": "The full data set is included in the appendix.", "exampleTranslation": "完整的資料集附在附錄裡。" },
+    { "form": "booth", "partOfSpeech": "noun", "definition": "a small enclosed or partitioned space, often used at exhibitions or for seating", "translation": "攤位；隔間", "example": "Our company will have a booth at the trade show next month.", "exampleTranslation": "我們公司下個月的貿易展會有一個攤位。" }
+  ]
+}

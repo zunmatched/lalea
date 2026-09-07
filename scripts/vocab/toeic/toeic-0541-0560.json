@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-0541-0560",
+  "title": "TOEIC 核心單字 0541-0560",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "basket", "partOfSpeech": "noun", "definition": "a container made of woven material, used for carrying or holding things", "translation": "籃子", "example": "Shoppers can grab a basket near the store entrance.", "exampleTranslation": "顧客可以在店門口拿一個購物籃。" },
+    { "form": "certification", "partOfSpeech": "noun", "definition": "an official document or status confirming that a standard has been met", "translation": "認證", "example": "The factory recently earned ISO certification for its safety standards.", "exampleTranslation": "這間工廠最近取得了安全標準的 ISO 認證。" },
+    { "form": "closure", "partOfSpeech": "noun", "definition": "the act of shutting something down, often permanently or for a set period", "translation": "關閉；歇業", "example": "The road closure will affect deliveries to the downtown branch.", "exampleTranslation": "道路封閉將會影響市中心分店的送貨。" },
+    { "form": "dislike", "partOfSpeech": "verb", "definition": "to feel that you do not like something or someone", "translation": "不喜歡", "example": "Customers who dislike the new layout can share feedback online.", "exampleTranslation": "不喜歡新版面的顧客可以線上提供意見。" },
+    { "form": "downstairs", "partOfSpeech": "adverb", "definition": "on or to a lower floor of a building", "translation": "樓下", "example": "The meeting has been moved downstairs to the conference room.", "exampleTranslation": "會議已經改到樓下的會議室舉行。" },
+    { "form": "expiration", "partOfSpeech": "noun", "definition": "the point at which something ends or is no longer valid", "translation": "到期；失效", "example": "Check the coupon's expiration date before you use it.", "exampleTranslation": "使用優惠券前請先確認到期日。" },
+    { "form": "headache", "partOfSpeech": "noun", "definition": "a pain in the head, or informally, a problem that causes trouble", "translation": "頭痛；麻煩事", "example": "Renewing the permit late every year has become a real headache.", "exampleTranslation": "每年都拖到最後才更新許可證，已經變成一個麻煩事。" },
+    { "form": "jam", "partOfSpeech": "noun", "definition": "a situation where things are blocked or stuck, such as traffic; also a sweet spread", "translation": "堵塞；果醬", "example": "A traffic jam made the delivery truck an hour late.", "exampleTranslation": "塞車讓送貨卡車晚了一個小時。" },
+    { "form": "nail", "partOfSpeech": "noun", "definition": "a thin metal pin with a flat head, used to fasten things together", "translation": "釘子", "example": "The maintenance crew needs more nails to finish the shelving.", "exampleTranslation": "維修人員需要更多釘子才能完成架子的安裝。" },
+    { "form": "optimistic", "partOfSpeech": "adjective", "definition": "hopeful and confident about the future", "translation": "樂觀的", "example": "Management is optimistic about next quarter's sales figures.", "exampleTranslation": "管理層對下一季的銷售數字感到樂觀。" },
+    { "form": "pedestrian", "partOfSpeech": "noun", "definition": "a person walking rather than traveling in a vehicle", "translation": "行人", "example": "The new crosswalk was added to improve pedestrian safety.", "exampleTranslation": "新增了斑馬線是為了改善行人安全。" },
+    { "form": "projection", "partOfSpeech": "noun", "definition": "an estimate or forecast of future amounts or trends", "translation": "預測；預估", "example": "Our sales projection for next year looks promising.", "exampleTranslation": "我們對明年的銷售預估看起來很樂觀。" },
+    { "form": "sleeve", "partOfSpeech": "noun", "definition": "the part of a piece of clothing that covers the arm", "translation": "袖子", "example": "The uniform comes in both long-sleeve and short-sleeve versions.", "exampleTranslation": "制服有長袖跟短袖兩種版本。" },
+    { "form": "suburb", "partOfSpeech": "noun", "definition": "a residential area located on the outskirts of a city", "translation": "郊區", "example": "The warehouse is located in a suburb about an hour from downtown.", "exampleTranslation": "倉庫位在離市中心約一小時車程的郊區。" },
+    { "form": "takeover", "partOfSpeech": "noun", "definition": "the act of one company gaining control of another", "translation": "收購", "example": "The takeover was finalized after months of negotiation.", "exampleTranslation": "這次收購案在幾個月的談判後終於定案。" },
+    { "form": "unsure", "partOfSpeech": "adjective", "definition": "not certain or confident about something", "translation": "不確定的", "example": "I'm unsure whether the shipment will arrive before the weekend.", "exampleTranslation": "我不確定這批貨能不能在週末前送到。" },
+    { "form": "upstairs", "partOfSpeech": "adverb", "definition": "on or to an upper floor of a building", "translation": "樓上", "example": "The HR office moved upstairs to the third floor.", "exampleTranslation": "人資辦公室搬到樓上三樓了。" },
+    { "form": "verbal", "partOfSpeech": "adjective", "definition": "spoken rather than written", "translation": "口頭的", "example": "We received a verbal agreement, but the contract is still being drafted.", "exampleTranslation": "我們已經口頭達成協議，但合約還在擬定中。" },
+    { "form": "visa", "partOfSpeech": "noun", "definition": "an official document or stamp allowing someone to enter or stay in a foreign country", "translation": "簽證", "example": "Make sure your visa is valid before booking the business trip.", "exampleTranslation": "訂出差機票前請確認你的簽證還有效。" },
+    { "form": "wildlife", "partOfSpeech": "noun", "definition": "animals living in their natural environment", "translation": "野生動物", "example": "The new resort was designed to protect local wildlife.", "exampleTranslation": "這間新度假村的設計是為了保護當地的野生動物。" }
+  ]
+}

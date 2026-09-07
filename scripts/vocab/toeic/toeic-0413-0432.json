@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-0413-0432",
+  "title": "TOEIC 核心單字 413-432",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "cargo", "partOfSpeech": "noun", "definition": "goods transported by ship, aircraft, or truck", "translation": "貨物", "example": "The ship's cargo included electronics and machine parts.", "exampleTranslation": "這艘船的貨物包含電子產品和機械零件。" },
+    { "form": "cooperate", "partOfSpeech": "verb", "definition": "to work together toward a shared goal", "translation": "合作", "example": "The two departments agreed to cooperate on the new initiative.", "exampleTranslation": "這兩個部門同意在新專案上互相合作。" },
+    { "form": "distract", "partOfSpeech": "verb", "definition": "to take someone's attention away from what they are doing", "translation": "使分心", "example": "Please silence your phone so it doesn't distract others during the meeting.", "exampleTranslation": "請將手機靜音，以免在會議中讓其他人分心。" },
+    { "form": "dividend", "partOfSpeech": "noun", "definition": "a payment made by a company to its shareholders", "translation": "股利；股息", "example": "The company announced a higher dividend this quarter.", "exampleTranslation": "公司宣布這一季發放更高的股利。" },
+    { "form": "exemption", "partOfSpeech": "noun", "definition": "freedom from an obligation or requirement", "translation": "豁免；免除", "example": "The startup qualifies for a tax exemption in its first year.", "exampleTranslation": "這家新創公司在第一年符合資格享有稅務豁免。" },
+    { "form": "furnish", "partOfSpeech": "verb", "definition": "to provide furniture for a room, or to supply something needed", "translation": "配置家具；提供", "example": "The landlord agreed to furnish the apartment before move-in.", "exampleTranslation": "房東同意在入住前為公寓配置家具。" },
+    { "form": "hourly", "partOfSpeech": "adjective", "definition": "done or paid for each hour", "translation": "按小時計算的", "example": "Part-time staff are paid an hourly wage.", "exampleTranslation": "兼職員工是按小時領取薪資。" },
+    { "form": "laundry", "partOfSpeech": "noun", "definition": "clothes that need washing, or the act of washing them", "translation": "洗衣；待洗衣物", "example": "The hotel offers same-day laundry service.", "exampleTranslation": "這間飯店提供當日送洗服務。" },
+    { "form": "mandatory", "partOfSpeech": "adjective", "definition": "required by law or rule; compulsory", "translation": "強制性的；必須的", "example": "Safety training is mandatory for all warehouse staff.", "exampleTranslation": "安全訓練對所有倉庫員工都是強制性的。" },
+    { "form": "mechanical", "partOfSpeech": "adjective", "definition": "relating to machines or physical forces", "translation": "機械的", "example": "A mechanical failure delayed the production line.", "exampleTranslation": "機械故障延誤了生產線。" },
+    { "form": "pharmacy", "partOfSpeech": "noun", "definition": "a store or part of a store where medicine is sold", "translation": "藥局", "example": "The nearest pharmacy is two blocks from the office.", "exampleTranslation": "最近的藥局離辦公室兩個街區遠。" },
+    { "form": "promotional", "partOfSpeech": "adjective", "definition": "intended to advertise or publicize a product", "translation": "促銷的；宣傳的", "example": "The company printed promotional flyers for the new store opening.", "exampleTranslation": "公司為新店開幕印製了促銷傳單。" },
+    { "form": "quarterly", "partOfSpeech": "adjective", "definition": "happening once every three months", "translation": "每季的", "example": "The quarterly report is due at the end of this week.", "exampleTranslation": "本季報告必須在這週結束前繳交。" },
+    { "form": "residential", "partOfSpeech": "adjective", "definition": "relating to houses or where people live, rather than offices or shops", "translation": "住宅的", "example": "The new office is located near a quiet residential area.", "exampleTranslation": "新辦公室位於一個安靜的住宅區附近。" },
+    { "form": "scholarship", "partOfSpeech": "noun", "definition": "money given to a student to help pay for education", "translation": "獎學金", "example": "The company offers a scholarship to employees' children.", "exampleTranslation": "公司提供獎學金給員工的子女。" },
+    { "form": "seeker", "partOfSpeech": "noun", "definition": "a person who is looking for something, often used as 'job seeker'", "translation": "尋求者（常見於 job seeker 求職者）", "example": "The career fair attracted many job seekers.", "exampleTranslation": "這場就業博覽會吸引了許多求職者。" },
+    { "form": "temporarily", "partOfSpeech": "adverb", "definition": "for a limited period of time; not permanently", "translation": "暫時地", "example": "The office is temporarily closed for renovations.", "exampleTranslation": "辦公室因裝修而暫時關閉。" },
+    { "form": "towel", "partOfSpeech": "noun", "definition": "a piece of absorbent cloth used for drying", "translation": "毛巾", "example": "Fresh towels are provided daily in the guest rooms.", "exampleTranslation": "客房每天都會提供新的毛巾。" },
+    { "form": "unattended", "partOfSpeech": "adjective", "definition": "not watched or looked after", "translation": "無人看管的", "example": "Do not leave your luggage unattended at the airport.", "exampleTranslation": "在機場請勿讓行李無人看管。" },
+    { "form": "accessible", "partOfSpeech": "adjective", "definition": "able to be reached, entered, or used easily", "translation": "易於使用的；可及的", "example": "The building is fully accessible for wheelchair users.", "exampleTranslation": "這棟建築完全適合輪椅使用者出入。" }
+  ]
+}

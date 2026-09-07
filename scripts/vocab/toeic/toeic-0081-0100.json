@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-0081-0100",
+  "title": "TOEIC 核心單字 0081-0100",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "precede", "partOfSpeech": "verb", "definition": "to come before something else in time or order", "translation": "先於；在……之前發生", "example": "A short training video precedes the actual safety drill.", "exampleTranslation": "在正式的安全演習之前，會先播放一段簡短的訓練影片。" },
+    { "form": "replacement", "partOfSpeech": "noun", "definition": "a person or thing that takes the place of another", "translation": "替代品；替代人選", "example": "HR is still interviewing candidates for a replacement for the retiring manager.", "exampleTranslation": "人資部門還在面試即將退休經理的替代人選。" },
+    { "form": "dine", "partOfSpeech": "verb", "definition": "to eat dinner, especially in a formal or restaurant setting", "translation": "用餐；進餐", "example": "The clients will dine with us at a nearby restaurant tonight.", "exampleTranslation": "今晚客戶會跟我們在附近的餐廳一起用餐。" },
+    { "form": "passport", "partOfSpeech": "noun", "definition": "an official government document allowing travel to other countries", "translation": "護照", "example": "Make sure your passport is valid for at least six more months.", "exampleTranslation": "請確認你的護照至少還有六個月的有效期。" },
+    { "form": "coworker", "partOfSpeech": "noun", "definition": "a person who works with you at the same company", "translation": "同事", "example": "One of my coworkers is organizing the retirement party.", "exampleTranslation": "我有一位同事正在籌辦這場退休歡送會。" },
+    { "form": "upcoming", "partOfSpeech": "adjective", "definition": "happening or expected soon", "translation": "即將到來的", "example": "Details about the upcoming product launch will be shared next week.", "exampleTranslation": "關於即將到來的產品發表，詳情將於下週公布。" },
+    { "form": "cabinet", "partOfSpeech": "noun", "definition": "a piece of furniture with shelves or drawers used for storage", "translation": "櫃子", "example": "Extra office supplies are kept in the cabinet by the printer.", "exampleTranslation": "多餘的辦公用品放在印表機旁的櫃子裡。" },
+    { "form": "appliance", "partOfSpeech": "noun", "definition": "a device or machine, typically for household use", "translation": "家電；器具", "example": "The office kitchen was recently equipped with a new appliance.", "exampleTranslation": "辦公室茶水間最近添購了一台新的家電。" },
+    { "form": "explanatory", "partOfSpeech": "adjective", "definition": "serving to explain something", "translation": "解釋性的；說明性的", "example": "An explanatory note was attached to clarify the revised budget.", "exampleTranslation": "附上了一張說明性的便條，用來釐清修訂後的預算。" },
+    { "form": "instructor", "partOfSpeech": "noun", "definition": "a person who teaches a practical skill or subject", "translation": "講師；教練", "example": "The fitness instructor leads a class every Tuesday evening.", "exampleTranslation": "這位健身教練每週二晚上都會帶一堂課。" },
+    { "form": "keyboard", "partOfSpeech": "noun", "definition": "a set of keys used to input text into a computer", "translation": "鍵盤", "example": "IT replaced her broken keyboard the same day she reported it.", "exampleTranslation": "資訊部門在她通報的當天就更換了她壞掉的鍵盤。" },
+    { "form": "media", "partOfSpeech": "noun", "definition": "the organizations and channels used to communicate news and information to the public", "translation": "媒體", "example": "The company invited local media to cover the grand opening.", "exampleTranslation": "公司邀請了當地媒體來報導開幕典禮。" },
+    { "form": "supermarket", "partOfSpeech": "noun", "definition": "a large self-service store selling food and household goods", "translation": "超級市場", "example": "The new supermarket opened just down the street from the office.", "exampleTranslation": "新開的超市就在辦公室街尾。" },
+    { "form": "valid", "partOfSpeech": "adjective", "definition": "legally or officially acceptable at the present time", "translation": "有效的", "example": "Your parking permit is valid until the end of the year.", "exampleTranslation": "你的停車證有效期到今年年底。" },
+    { "form": "admission", "partOfSpeech": "noun", "definition": "permission to enter a place, or the fee charged for entry", "translation": "入場；入場費", "example": "Admission to the trade show is free with online registration.", "exampleTranslation": "只要線上完成報名，貿易展的入場就是免費的。" },
+    { "form": "laptop", "partOfSpeech": "noun", "definition": "a portable computer that can be used on one's lap", "translation": "筆記型電腦", "example": "Please bring your company laptop to the offsite meeting.", "exampleTranslation": "請攜帶你的公司筆電參加外部會議。" },
+    { "form": "underline", "partOfSpeech": "verb", "definition": "to draw a line under a word or phrase to emphasize it", "translation": "在……底下畫線；強調", "example": "She underlined the deadline in red so no one would miss it.", "exampleTranslation": "她用紅筆把截止日期畫底線，確保沒人會漏看。" },
+    { "form": "electrical", "partOfSpeech": "adjective", "definition": "relating to or powered by electricity", "translation": "電力的；電氣的", "example": "An electrical issue caused the office lights to flicker.", "exampleTranslation": "電力問題導致辦公室的燈忽明忽暗。" },
+    { "form": "airplane", "partOfSpeech": "noun", "definition": "a powered flying vehicle with fixed wings", "translation": "飛機", "example": "Our airplane was delayed by two hours due to weather.", "exampleTranslation": "我們搭的飛機因天氣因素延誤了兩小時。" },
+    { "form": "assignment", "partOfSpeech": "noun", "definition": "a task or piece of work given to someone", "translation": "任務；作業", "example": "Her next assignment is to lead the overseas expansion project.", "exampleTranslation": "她的下一個任務是主導海外擴張專案。" }
+  ]
+}

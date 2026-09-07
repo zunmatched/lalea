@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-1101-1121",
+  "title": "TOEIC 核心單字 1101-1121",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "arc", "partOfSpeech": "noun", "definition": "a curved shape or line, part of a circle", "translation": "弧形；弧線", "example": "The bridge design follows a graceful arc.", "exampleTranslation": "這座橋的設計呈現優雅的弧形。" },
+    { "form": "audition", "partOfSpeech": "noun", "definition": "a short performance to test a person's suitability for a role", "translation": "試鏡；試演", "example": "Actors will audition for the commercial next Monday.", "exampleTranslation": "演員將在下週一試鏡這支廣告。" },
+    { "form": "backpack", "partOfSpeech": "noun", "definition": "a bag carried on the back, supported by straps over the shoulders", "translation": "後背包", "example": "Employees received a company backpack as a welcome gift.", "exampleTranslation": "員工收到一個公司後背包作為歡迎禮物。" },
+    { "form": "ballroom", "partOfSpeech": "noun", "definition": "a large room used for dances or formal events", "translation": "宴會廳；舞廳", "example": "The awards ceremony will be held in the hotel's ballroom.", "exampleTranslation": "頒獎典禮將在飯店的宴會廳舉行。" },
+    { "form": "beneficial", "partOfSpeech": "adjective", "definition": "producing good or helpful results", "translation": "有益的", "example": "Flexible hours have proven beneficial for employee morale.", "exampleTranslation": "彈性工時已被證實對員工士氣有益。" },
+    { "form": "biography", "partOfSpeech": "noun", "definition": "an account of a person's life written by someone else", "translation": "傳記", "example": "The CEO's biography will be published next spring.", "exampleTranslation": "這位執行長的傳記將於明年春天出版。" },
+    { "form": "bound", "partOfSpeech": "adjective", "definition": "heading toward or intending to go to a particular place", "translation": "前往…的；開往…的", "example": "The shipment is bound for the Kaohsiung port.", "exampleTranslation": "這批貨物即將運往高雄港。" },
+    { "form": "broom", "partOfSpeech": "noun", "definition": "a long-handled brush used for sweeping", "translation": "掃把", "example": "The janitor keeps a broom in the supply closet.", "exampleTranslation": "工友把掃把放在儲藏櫃裡。" },
+    { "form": "cheeseburger", "partOfSpeech": "noun", "definition": "a hamburger with a slice of cheese added", "translation": "起司漢堡", "example": "The cafeteria added a cheeseburger to the lunch menu.", "exampleTranslation": "員工餐廳的午餐菜單新增了起司漢堡。" },
+    { "form": "chilly", "partOfSpeech": "adjective", "definition": "noticeably cold", "translation": "涼颼颼的；寒冷的", "example": "Bring a jacket; the conference hall tends to be chilly.", "exampleTranslation": "帶件外套，會議廳通常比較涼。" },
+    { "form": "circus", "partOfSpeech": "noun", "definition": "a traveling company of performers that puts on shows", "translation": "馬戲團", "example": "The city plaza will host a circus performance this weekend.", "exampleTranslation": "這座城市廣場這週末將舉辦馬戲表演。" },
+    { "form": "consignment", "partOfSpeech": "noun", "definition": "goods shipped or held by one party for sale by another", "translation": "寄售；託運貨物", "example": "The store sells clothing on consignment from local designers.", "exampleTranslation": "這間店寄售當地設計師的服飾。" },
+    { "form": "continental", "partOfSpeech": "adjective", "definition": "relating to a continent, especially mainland Europe", "translation": "大陸的；歐陸式的", "example": "The hotel offers a continental breakfast for guests.", "exampleTranslation": "這間飯店為房客提供歐陸式早餐。" },
+    { "form": "copyright", "partOfSpeech": "noun", "definition": "the exclusive legal right to reproduce or publish a work", "translation": "版權；著作權", "example": "The design is protected by copyright and cannot be reused.", "exampleTranslation": "這個設計受到版權保護，不得重複使用。" },
+    { "form": "countryside", "partOfSpeech": "noun", "definition": "rural land away from towns and cities", "translation": "鄉間；鄉村地區", "example": "The retreat took place at a hotel in the countryside.", "exampleTranslation": "這次靜修活動在鄉間的一間飯店舉行。" },
+    { "form": "demolish", "partOfSpeech": "verb", "definition": "to tear down or destroy a building", "translation": "拆除；摧毀", "example": "The old warehouse will be demolished to make room for parking.", "exampleTranslation": "這棟舊倉庫將被拆除以騰出停車空間。" },
+    { "form": "departmental", "partOfSpeech": "adjective", "definition": "relating to a department within an organization", "translation": "部門的", "example": "Each departmental budget must be approved by finance.", "exampleTranslation": "每個部門的預算都必須經過財務部核准。" },
+    { "form": "desperate", "partOfSpeech": "adjective", "definition": "feeling or showing a hopeless sense of urgency", "translation": "拼命的；不顧一切的", "example": "The team made a desperate attempt to meet the deadline.", "exampleTranslation": "團隊拼命嘗試趕上期限。" },
+    { "form": "devastate", "partOfSpeech": "verb", "definition": "to destroy or ruin something completely", "translation": "摧毀；重創", "example": "The delay devastated the client's launch schedule.", "exampleTranslation": "這次延誤重創了客戶的上市時程。" },
+    { "form": "diagnostic", "partOfSpeech": "adjective", "definition": "relating to the diagnosis of a problem", "translation": "診斷的", "example": "Run a diagnostic test before shipping the device.", "exampleTranslation": "出貨裝置前先執行診斷測試。" }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-1162-1181",
+  "title": "TOEIC 核心單字 1162-1181",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "plow", "partOfSpeech": "verb", "definition": "to work through something steadily and with effort, as in \"plow through\"", "translation": "費力做完（常用於 plow through）", "example": "She had to plow through a stack of resumes before the interviews.", "exampleTranslation": "她必須在面試前費力看完一疊履歷。" },
+    { "form": "query", "partOfSpeech": "noun", "definition": "a question, especially one expressing doubt or asking for information", "translation": "疑問；詢問", "example": "Please direct any billing queries to the accounting department.", "exampleTranslation": "任何帳務相關的疑問，請直接洽詢會計部門。" },
+    { "form": "railway", "partOfSpeech": "noun", "definition": "a track for trains, or the transport system using trains", "translation": "鐵路", "example": "The new office is a short walk from the railway station.", "exampleTranslation": "新辦公室走路到火車站只要幾分鐘。" },
+    { "form": "raincoat", "partOfSpeech": "noun", "definition": "a waterproof coat worn to keep dry in the rain", "translation": "雨衣", "example": "Keep a raincoat at your desk during the rainy season.", "exampleTranslation": "雨季期間在你的座位放件雨衣備用。" },
+    { "form": "reconsider", "partOfSpeech": "verb", "definition": "to think again about a decision or plan", "translation": "重新考慮", "example": "The board agreed to reconsider the proposal after new data came in.", "exampleTranslation": "董事會同意在收到新的數據後重新考慮這項提案。" },
+    { "form": "redesign", "partOfSpeech": "verb", "definition": "to design something again in a different way", "translation": "重新設計", "example": "The team plans to redesign the checkout process to reduce cart abandonment.", "exampleTranslation": "團隊計畫重新設計結帳流程，以降低棄單率。" },
+    { "form": "rehearsal", "partOfSpeech": "noun", "definition": "a practice session before an actual performance or event", "translation": "彩排；預演", "example": "A rehearsal for the product demo is scheduled for Thursday.", "exampleTranslation": "產品展示的彩排已排定於週四進行。" },
+    { "form": "relaxation", "partOfSpeech": "noun", "definition": "the state of being free from tension and anxiety", "translation": "放鬆；休閒", "example": "The lounge is meant for quiet relaxation between meetings.", "exampleTranslation": "這間休息室是為了讓人在會議間安靜放鬆而設的。" },
+    { "form": "repetition", "partOfSpeech": "noun", "definition": "the act of repeating something that has already happened", "translation": "重複；反覆", "example": "Repetition of the same mistake suggests a training gap.", "exampleTranslation": "同樣的錯誤一再發生，顯示訓練上有缺口。" },
+    { "form": "retreat", "partOfSpeech": "noun", "definition": "a period of group withdrawal for reflection, planning, or team-building", "translation": "靜修活動；企業outing", "example": "The company held its annual retreat at a mountain resort.", "exampleTranslation": "公司在一間山區度假村舉辦了年度靜修活動。" },
+    { "form": "salon", "partOfSpeech": "noun", "definition": "a business offering beauty or hairdressing services", "translation": "沙龍（美容／美髮）", "example": "There's a hair salon on the ground floor of the mall.", "exampleTranslation": "商場一樓有一間美髮沙龍。" },
+    { "form": "satellite", "partOfSpeech": "noun", "definition": "a smaller office or facility connected to and dependent on a main one", "translation": "衛星（辦公室／設施）", "example": "The firm opened a satellite office closer to its biggest client.", "exampleTranslation": "這間公司開設了一間離最大客戶更近的衛星辦公室。" },
+    { "form": "scenery", "partOfSpeech": "noun", "definition": "the natural features of a landscape considered in terms of their appearance", "translation": "風景；景色", "example": "Visitors often comment on the scenery near the campus.", "exampleTranslation": "訪客常常稱讚校園附近的風景。" },
+    { "form": "serial", "partOfSpeech": "adjective", "definition": "occurring repeatedly in a series or pattern", "translation": "連續發生的；一連串的", "example": "The report exposed a serial pattern of late deliveries.", "exampleTranslation": "這份報告揭露了一連串重複發生的延遲送貨模式。" },
+    { "form": "sew", "partOfSpeech": "verb", "definition": "to join or repair fabric using a needle and thread", "translation": "縫紉；縫補", "example": "The tailor can sew a button back onto the jacket.", "exampleTranslation": "這位裁縫可以把鈕扣重新縫回外套上。" },
+    { "form": "sketch", "partOfSpeech": "verb", "definition": "to make a rough or quick drawing of something", "translation": "畫草圖", "example": "The designer sketched three logo concepts for review.", "exampleTranslation": "設計師畫了三個標誌草稿供審閱。" },
+    { "form": "smartphone", "partOfSpeech": "noun", "definition": "a mobile phone with advanced computing capability", "translation": "智慧型手機", "example": "Employees can check their schedule from a company smartphone app.", "exampleTranslation": "員工可以透過公司的智慧型手機應用程式查看行程。" },
+    { "form": "soar", "partOfSpeech": "verb", "definition": "to increase rapidly to a high level", "translation": "飆升；急遽上升", "example": "Demand for the product soared after the review went viral.", "exampleTranslation": "這篇評論爆紅後，產品的需求量飆升。" },
+    { "form": "stimulus", "partOfSpeech": "noun", "definition": "something that encourages activity, growth, or a stronger response", "translation": "刺激；激勵措施", "example": "The government introduced a stimulus package to support small businesses.", "exampleTranslation": "政府推出了一項振興方案來支持小型企業。" },
+    { "form": "stockbroker", "partOfSpeech": "noun", "definition": "a person who buys and sells stocks and shares for clients", "translation": "證券經紀人", "example": "Her stockbroker recommended diversifying the portfolio.", "exampleTranslation": "她的證券經紀人建議分散投資組合。" }
+  ]
+}

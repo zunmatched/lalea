@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-1021-1040",
+  "title": "TOEIC 核心單字 1021-1040",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "ward", "partOfSpeech": "noun", "definition": "a room in a hospital for patients needing similar care", "translation": "病房", "example": "Visiting hours for the recovery ward end at 8 p.m.", "exampleTranslation": "恢復病房的探病時間到晚上八點結束。" },
+    { "form": "worthwhile", "partOfSpeech": "adjective", "definition": "worth the time, money, or effort spent", "translation": "值得的", "example": "Attending the conference turned out to be a worthwhile investment.", "exampleTranslation": "參加這場研討會證明是值得的投資。" },
+    { "form": "adapter", "partOfSpeech": "noun", "definition": "a device that connects pieces of equipment that would not otherwise fit together", "translation": "轉接器；轉接頭", "example": "Remember to pack a power adapter for your trip abroad.", "exampleTranslation": "出國旅行記得帶電源轉接頭。" },
+    { "form": "advisable", "partOfSpeech": "adjective", "definition": "sensible and prudent as a course of action", "translation": "明智的；可取的", "example": "It's advisable to back up your files before the system update.", "exampleTranslation": "在系統更新前備份檔案是明智的做法。" },
+    { "form": "archive", "partOfSpeech": "verb", "definition": "to store records or documents for future reference", "translation": "歸檔；存檔", "example": "Old invoices are archived after seven years.", "exampleTranslation": "舊發票在七年後會被歸檔。" },
+    { "form": "artistic", "partOfSpeech": "adjective", "definition": "relating to or having a talent for art or creative design", "translation": "藝術的；有藝術天分的", "example": "The lobby's artistic design impressed every visitor.", "exampleTranslation": "大廳富有藝術感的設計讓每位訪客都印象深刻。" },
+    { "form": "assurance", "partOfSpeech": "noun", "definition": "a positive declaration intended to give confidence", "translation": "保證；擔保", "example": "The supplier gave assurance that the order would arrive on time.", "exampleTranslation": "供應商保證訂單會準時送達。" },
+    { "form": "athletic", "partOfSpeech": "adjective", "definition": "physically strong, fit, and active", "translation": "運動的；體格健壯的", "example": "The company sponsors an athletic club for its employees.", "exampleTranslation": "公司為員工贊助一個運動俱樂部。" },
+    { "form": "attire", "partOfSpeech": "noun", "definition": "clothing, especially formal or specific clothing", "translation": "服裝；衣著", "example": "Business attire is required for the client meeting.", "exampleTranslation": "這場客戶會議要求穿著商務服裝。" },
+    { "form": "auditor", "partOfSpeech": "noun", "definition": "a person who officially examines financial accounts", "translation": "稽核員；審計員", "example": "An external auditor reviewed the company's financial statements.", "exampleTranslation": "一位外部稽核員審查了公司的財務報表。" },
+    { "form": "bankruptcy", "partOfSpeech": "noun", "definition": "the legal state of being unable to pay one's debts", "translation": "破產", "example": "The retailer filed for bankruptcy after years of declining sales.", "exampleTranslation": "這家零售商在銷售額連年下滑後申請破產。" },
+    { "form": "bulk", "partOfSpeech": "noun", "definition": "the majority of something, or a large quantity", "translation": "大量；主體", "example": "Buying supplies in bulk reduces the overall cost.", "exampleTranslation": "大量採購用品可以降低整體成本。" },
+    { "form": "butter", "partOfSpeech": "noun", "definition": "a soft dairy product made from cream, used in cooking", "translation": "奶油", "example": "The recipe calls for two tablespoons of butter.", "exampleTranslation": "這份食譜需要兩湯匙的奶油。" },
+    { "form": "centimeter", "partOfSpeech": "noun", "definition": "a metric unit of length equal to one hundredth of a meter", "translation": "公分", "example": "Please measure the package to the nearest centimeter.", "exampleTranslation": "請將包裹測量到最接近的公分。" },
+    { "form": "circulate", "partOfSpeech": "verb", "definition": "to move around and be distributed among a group", "translation": "傳閱；流通", "example": "The memo was circulated to all department heads.", "exampleTranslation": "這份備忘錄已經傳閱給所有部門主管。" },
+    { "form": "comb", "partOfSpeech": "verb", "definition": "to search through something thoroughly", "translation": "仔細搜查", "example": "Investigators combed through the records looking for errors.", "exampleTranslation": "調查人員仔細搜查紀錄，尋找錯誤。" },
+    { "form": "comfortably", "partOfSpeech": "adverb", "definition": "in a way that is physically comfortable", "translation": "舒適地", "example": "The new office chairs let staff sit comfortably all day.", "exampleTranslation": "新的辦公椅讓員工可以整天舒適地坐著。" },
+    { "form": "compliance", "partOfSpeech": "noun", "definition": "the act of conforming to a rule, standard, or law", "translation": "合規；遵守", "example": "The audit confirmed the factory's compliance with safety regulations.", "exampleTranslation": "稽核確認了工廠符合安全法規。" },
+    { "form": "contraction", "partOfSpeech": "noun", "definition": "a reduction in size, amount, or activity", "translation": "緊縮；收縮", "example": "Economic contraction forced the company to cut costs.", "exampleTranslation": "經濟緊縮迫使公司削減成本。" },
+    { "form": "cookbook", "partOfSpeech": "noun", "definition": "a book containing recipes", "translation": "食譜", "example": "The chef published a cookbook featuring local ingredients.", "exampleTranslation": "這位主廚出版了一本以在地食材為主題的食譜。" }
+  ]
+}

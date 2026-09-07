@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-0521-0540",
+  "title": "TOEIC 核心單字 0521-0540",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "enthusiastic", "partOfSpeech": "adjective", "definition": "showing strong excitement and interest about something", "translation": "熱情的；熱衷的", "example": "The new hire seems enthusiastic about joining the sales team.", "exampleTranslation": "這位新進員工似乎對加入業務團隊充滿熱情。" },
+    { "form": "graduation", "partOfSpeech": "noun", "definition": "the act of completing a course of study, or the ceremony marking that", "translation": "畢業；畢業典禮", "example": "Several interns joined us right after their graduation.", "exampleTranslation": "有幾位實習生一畢業就加入了我們。" },
+    { "form": "icy", "partOfSpeech": "adjective", "definition": "covered with or very cold like ice", "translation": "結冰的；冰冷的", "example": "Deliveries were delayed because of icy roads this morning.", "exampleTranslation": "今天早上因為路面結冰，配送延誤了。" },
+    { "form": "irregular", "partOfSpeech": "adjective", "definition": "not following a normal, expected, or consistent pattern", "translation": "不規則的；不定期的", "example": "We noticed some irregular charges on last month's invoice.", "exampleTranslation": "我們注意到上個月的帳單有一些異常的收費。" },
+    { "form": "login", "partOfSpeech": "noun", "definition": "the process of, or credentials for, accessing a computer system or account", "translation": "登入；登入帳號", "example": "Your login details were emailed to you when the account was created.", "exampleTranslation": "帳號建立時，你的登入資訊已經寄到你的信箱了。" },
+    { "form": "managerial", "partOfSpeech": "adjective", "definition": "relating to the responsibilities or skills of a manager", "translation": "管理的；管理階層的", "example": "She was promoted to a managerial position after two years.", "exampleTranslation": "她工作兩年後就升遷到管理職。" },
+    { "form": "mineral", "partOfSpeech": "noun", "definition": "a naturally occurring solid substance found in the earth, such as a metal", "translation": "礦物", "example": "The region is known for its rich mineral deposits.", "exampleTranslation": "這個地區以豐富的礦藏聞名。" },
+    { "form": "motorcycle", "partOfSpeech": "noun", "definition": "a two-wheeled vehicle powered by an engine", "translation": "機車；摩托車", "example": "Couriers use motorcycles to make quick deliveries downtown.", "exampleTranslation": "快遞員用機車在市中心快速送貨。" },
+    { "form": "necessity", "partOfSpeech": "noun", "definition": "something that is essential or absolutely needed", "translation": "必需品；必要性", "example": "A reliable internet connection is a necessity for remote work.", "exampleTranslation": "穩定的網路連線是遠端工作的必需品。" },
+    { "form": "planner", "partOfSpeech": "noun", "definition": "a person, or a tool such as a calendar, used to organize and schedule tasks", "translation": "規劃師；行事曆", "example": "The event planner confirmed the venue for next month's conference.", "exampleTranslation": "活動規劃師確認了下個月研討會的場地。" },
+    { "form": "programmer", "partOfSpeech": "noun", "definition": "a person who writes computer programs", "translation": "程式設計師", "example": "The team is hiring two more programmers to finish the app on time.", "exampleTranslation": "團隊正在多招募兩位程式設計師，好準時完成這個應用程式。" },
+    { "form": "proofread", "partOfSpeech": "verb", "definition": "to carefully check a text for errors before it is published", "translation": "校對", "example": "Please proofread the press release before it goes out to the media.", "exampleTranslation": "請在新聞稿發給媒體之前先校對過。" },
+    { "form": "recruiter", "partOfSpeech": "noun", "definition": "a person whose job is to find and hire new employees", "translation": "招募人員", "example": "The recruiter scheduled a phone screening for Thursday afternoon.", "exampleTranslation": "招募人員安排了週四下午的電話初篩。" },
+    { "form": "remainder", "partOfSpeech": "noun", "definition": "the part of something that is left over after the rest has been used or dealt with", "translation": "剩餘部分", "example": "Please pay the remainder of the invoice within thirty days.", "exampleTranslation": "請在三十天內付清帳單的剩餘款項。" },
+    { "form": "statue", "partOfSpeech": "noun", "definition": "a carved or cast figure of a person or animal", "translation": "雕像", "example": "The lobby features a large statue donated by the founder's family.", "exampleTranslation": "大廳裡有一座創辦人家族捐贈的大雕像。" },
+    { "form": "steadily", "partOfSpeech": "adverb", "definition": "in a way that is constant and does not change suddenly", "translation": "穩定地", "example": "Revenue has grown steadily since the new product launched.", "exampleTranslation": "自從新產品上市以來，營收就穩定成長。" },
+    { "form": "stockholder", "partOfSpeech": "noun", "definition": "a person who owns shares in a company", "translation": "股東", "example": "The annual report will be mailed to all stockholders next week.", "exampleTranslation": "年度報告下週會寄給所有股東。" },
+    { "form": "vacant", "partOfSpeech": "adjective", "definition": "not occupied or filled; empty", "translation": "空缺的；空著的", "example": "There are two vacant positions on the marketing team.", "exampleTranslation": "行銷團隊目前有兩個職缺。" },
+    { "form": "accessory", "partOfSpeech": "noun", "definition": "an extra item added to something for decoration or convenience", "translation": "配件；飾品", "example": "The store also sells phone cases and other accessories.", "exampleTranslation": "這家店也有賣手機殼跟其他配件。" },
+    { "form": "assembly", "partOfSpeech": "noun", "definition": "the process of putting parts together to make a product, or a gathering of people", "translation": "組裝；集會", "example": "The furniture requires some assembly before use.", "exampleTranslation": "這件家具在使用前需要自行組裝。" }
+  ]
+}

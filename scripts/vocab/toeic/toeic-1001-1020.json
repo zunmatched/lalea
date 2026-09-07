@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-1001-1020",
+  "title": "TOEIC 核心單字 1001-1020",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "pastry", "partOfSpeech": "noun", "definition": "a baked food made of dough, such as a pie or tart", "translation": "糕點；酥皮點心", "example": "The bakery near the office sells fresh pastries every morning.", "exampleTranslation": "辦公室附近的麵包店每天早上都賣新鮮的糕點。" },
+    { "form": "personalize", "partOfSpeech": "verb", "definition": "to make something suited to a particular person's needs or tastes", "translation": "個人化；客製化", "example": "We can personalize the welcome packet with each new hire's name.", "exampleTranslation": "我們可以用每位新進員工的名字把歡迎資料包個人化。" },
+    { "form": "poorly", "partOfSpeech": "adverb", "definition": "in a way that is not good; badly", "translation": "差勁地；不佳地", "example": "The product launch was poorly planned and missed its deadline.", "exampleTranslation": "這次產品發表規劃得很差，並且錯過了期限。" },
+    { "form": "prestigious", "partOfSpeech": "adjective", "definition": "respected and admired as very important or of high quality", "translation": "有聲望的；知名的", "example": "She was offered a position at a prestigious accounting firm.", "exampleTranslation": "她獲得一間知名會計事務所的職缺邀約。" },
+    { "form": "purser", "partOfSpeech": "noun", "definition": "an officer on a ship or aircraft responsible for accounts and passenger services", "translation": "事務長；出納長", "example": "The purser's office can exchange currency for passengers.", "exampleTranslation": "事務長辦公室可以幫乘客兌換外幣。" },
+    { "form": "reassure", "partOfSpeech": "verb", "definition": "to say or do something to remove someone's doubts or fears", "translation": "使安心；向…保證", "example": "The manager reassured the team that the layoffs would not affect their department.", "exampleTranslation": "經理向團隊保證裁員不會影響到他們的部門。" },
+    { "form": "resume", "partOfSpeech": "verb", "definition": "to start again after a pause or interruption", "translation": "恢復；繼續", "example": "Production will resume once the new parts arrive.", "exampleTranslation": "新零件到貨後，生產將會恢復進行。" },
+    { "form": "reunion", "partOfSpeech": "noun", "definition": "a gathering of people who have not seen each other for some time", "translation": "團聚；聚會", "example": "Former employees gathered for their annual reunion dinner.", "exampleTranslation": "前員工們聚集參加他們的年度聚餐。" },
+    { "form": "revolutionize", "partOfSpeech": "verb", "definition": "to change something radically and fundamentally", "translation": "徹底改變；革新", "example": "The new software revolutionized how the warehouse tracks inventory.", "exampleTranslation": "這套新軟體徹底改變了倉庫追蹤庫存的方式。" },
+    { "form": "seafood", "partOfSpeech": "noun", "definition": "fish and shellfish eaten as food", "translation": "海鮮", "example": "The restaurant is known for its fresh seafood platter.", "exampleTranslation": "這間餐廳以新鮮海鮮拼盤聞名。" },
+    { "form": "signify", "partOfSpeech": "verb", "definition": "to be a sign of something; to indicate", "translation": "表示；意味著", "example": "A green light on the machine signifies that it is ready for use.", "exampleTranslation": "機器上的綠燈表示它已經準備好可以使用了。" },
+    { "form": "slot", "partOfSpeech": "noun", "definition": "a designated time or space for something", "translation": "時段；空檔", "example": "Please choose an available time slot for your interview.", "exampleTranslation": "請為你的面試選擇一個可用的時段。" },
+    { "form": "steer", "partOfSpeech": "verb", "definition": "to guide the direction of something", "translation": "引導；駕駛", "example": "The new director will steer the project toward its final launch.", "exampleTranslation": "新任總監將帶領這個專案朝最終上市的方向前進。" },
+    { "form": "sue", "partOfSpeech": "verb", "definition": "to bring a legal action against someone", "translation": "控告；提告", "example": "The client threatened to sue the company over the delayed shipment.", "exampleTranslation": "客戶威脅要因貨物延遲出貨而對公司提告。" },
+    { "form": "superb", "partOfSpeech": "adjective", "definition": "excellent; outstanding", "translation": "極好的；出色的", "example": "The client praised the superb customer service they received.", "exampleTranslation": "客戶稱讚他們得到的服務非常出色。" },
+    { "form": "traditionally", "partOfSpeech": "adverb", "definition": "in a way that follows long-established custom", "translation": "傳統上", "example": "Traditionally, the year-end bonus is paid in December.", "exampleTranslation": "傳統上，年終獎金是在十二月發放的。" },
+    { "form": "tremendous", "partOfSpeech": "adjective", "definition": "very great in amount, scale, or intensity", "translation": "巨大的；驚人的", "example": "The merger created a tremendous opportunity for growth.", "exampleTranslation": "這次合併創造了巨大的成長機會。" },
+    { "form": "underway", "partOfSpeech": "adjective", "definition": "already started and in progress", "translation": "進行中的", "example": "Renovations on the new office are already underway.", "exampleTranslation": "新辦公室的整修工程已經在進行中了。" },
+    { "form": "unpleasant", "partOfSpeech": "adjective", "definition": "not pleasant; disagreeable", "translation": "令人不快的", "example": "Nobody wants to be the one to deliver unpleasant news.", "exampleTranslation": "沒有人想當那個要傳達令人不快消息的人。" },
+    { "form": "violin", "partOfSpeech": "noun", "definition": "a stringed musical instrument played with a bow", "translation": "小提琴", "example": "The music school offers violin lessons for beginners.", "exampleTranslation": "這間音樂學校提供給初學者的小提琴課程。" }
+  ]
+}

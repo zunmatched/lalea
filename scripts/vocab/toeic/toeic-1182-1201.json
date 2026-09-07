@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-1182-1201",
+  "title": "TOEIC 核心單字 1182-1201",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "tablecloth", "partOfSpeech": "noun", "definition": "a cloth used to cover a table", "translation": "桌布", "example": "Set a fresh tablecloth before the client dinner.", "exampleTranslation": "在客戶晚宴前鋪上一條乾淨的桌布。" },
+    { "form": "thirsty", "partOfSpeech": "adjective", "definition": "feeling a need to drink", "translation": "口渴的", "example": "Bottled water is provided for thirsty attendees during the seminar.", "exampleTranslation": "研討會期間為口渴的與會者提供瓶裝水。" },
+    { "form": "thrill", "partOfSpeech": "noun", "definition": "a sudden feeling of excitement or pleasure", "translation": "興奮；激動", "example": "There was a real thrill in the office when the deal closed.", "exampleTranslation": "交易完成的那一刻，辦公室裡瀰漫著真正的興奮之情。" },
+    { "form": "tile", "partOfSpeech": "noun", "definition": "a thin piece of material used for covering floors, walls, or roofs", "translation": "磁磚", "example": "The renovation includes new tile flooring for the lobby.", "exampleTranslation": "這次整修包含大廳的新磁磚地板。" },
+    { "form": "toiletry", "partOfSpeech": "noun", "definition": "an item used in washing or personal hygiene, usually used in plural", "translation": "盥洗用品", "example": "The hotel provides basic toiletries in every room.", "exampleTranslation": "這間飯店每個房間都提供基本盥洗用品。" },
+    { "form": "trademark", "partOfSpeech": "noun", "definition": "a symbol, word, or phrase legally registered to represent a company or product", "translation": "商標", "example": "The company registered its new slogan as a trademark.", "exampleTranslation": "這間公司將新的口號註冊為商標。" },
+    { "form": "tropical", "partOfSpeech": "adjective", "definition": "relating to or typical of the hot, humid regions near the equator", "translation": "熱帶的", "example": "The resort is located in a tropical climate zone.", "exampleTranslation": "這間度假村位於熱帶氣候區。" },
+    { "form": "tuna", "partOfSpeech": "noun", "definition": "a large marine fish, often eaten canned", "translation": "鮪魚", "example": "The cafeteria's tuna sandwich is a popular lunch choice.", "exampleTranslation": "員工餐廳的鮪魚三明治是熱門的午餐選擇。" },
+    { "form": "unemployed", "partOfSpeech": "adjective", "definition": "not having a paid job", "translation": "失業的", "example": "The program offers training for recently unemployed workers.", "exampleTranslation": "這項計畫為最近失業的勞工提供訓練。" },
+    { "form": "validate", "partOfSpeech": "verb", "definition": "to check or confirm the accuracy or validity of something", "translation": "驗證；確認有效", "example": "The system automatically validates the entered shipping address.", "exampleTranslation": "這套系統會自動驗證輸入的送貨地址。" },
+    { "form": "vanilla", "partOfSpeech": "noun", "definition": "a flavoring derived from the pods of a certain orchid", "translation": "香草", "example": "The bakery's best-seller is a simple vanilla cake.", "exampleTranslation": "這間烘焙坊最暢銷的商品是一款簡單的香草蛋糕。" },
+    { "form": "willingness", "partOfSpeech": "noun", "definition": "the quality of being ready or prepared to do something", "translation": "意願；樂意", "example": "Her willingness to work overtime impressed the manager.", "exampleTranslation": "她願意加班的態度讓經理印象深刻。" },
+    { "form": "wristwatch", "partOfSpeech": "noun", "definition": "a watch worn on a strap around the wrist", "translation": "手錶", "example": "He received a wristwatch as a retirement gift.", "exampleTranslation": "他收到一支手錶作為退休禮物。" },
+    { "form": "abide", "partOfSpeech": "verb", "definition": "to accept and act in accordance with a rule, often used as \"abide by\"", "translation": "遵守（常用 abide by）", "example": "All contractors must abide by the site's safety rules.", "exampleTranslation": "所有承包商都必須遵守工地的安全規定。" },
+    { "form": "actively", "partOfSpeech": "adverb", "definition": "in an energetic and engaged way", "translation": "積極地", "example": "The recruiter is actively looking for candidates with sales experience.", "exampleTranslation": "這位招募人員正積極尋找有業務經驗的候選人。" },
+    { "form": "allergy", "partOfSpeech": "noun", "definition": "a damaging immune response to a substance that is usually harmless", "translation": "過敏", "example": "Please note any food allergies when registering for the banquet.", "exampleTranslation": "報名宴會時請註明任何食物過敏。" },
+    { "form": "apprehensive", "partOfSpeech": "adjective", "definition": "anxious or fearful about something that might happen", "translation": "憂慮的；不安的", "example": "New hires are often apprehensive during their first week.", "exampleTranslation": "新進員工在第一週通常會感到不安。" },
+    { "form": "automotive", "partOfSpeech": "adjective", "definition": "relating to motor vehicles", "translation": "汽車的", "example": "The factory supplies parts to several automotive brands.", "exampleTranslation": "這間工廠為好幾個汽車品牌供應零件。" },
+    { "form": "bacteria", "partOfSpeech": "noun", "definition": "microscopic single-celled living organisms", "translation": "細菌", "example": "Regular cleaning helps reduce bacteria in the break room.", "exampleTranslation": "定期清潔有助於減少休息室裡的細菌。" },
+    { "form": "broaden", "partOfSpeech": "verb", "definition": "to make or become wider or more general in scope", "translation": "拓寬；擴展", "example": "The internship helped her broaden her professional network.", "exampleTranslation": "這次實習幫助她拓展了專業人脈。" }
+  ]
+}

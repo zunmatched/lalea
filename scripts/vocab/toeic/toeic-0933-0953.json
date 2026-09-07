@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-0933-0953",
+  "title": "TOEIC 核心單字 933-953",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "pottery", "partOfSpeech": "noun", "definition": "objects made of clay, especially decorative ones", "translation": "陶器", "example": "The gift shop sells handmade pottery from local artisans.", "exampleTranslation": "這間禮品店販售當地工匠手工製作的陶器。" },
+    { "form": "professionally", "partOfSpeech": "adverb", "definition": "in a manner suitable for a profession", "translation": "專業地", "example": "Please respond to client complaints professionally and promptly.", "exampleTranslation": "請以專業且迅速的方式回應客戶投訴。" },
+    { "form": "publicize", "partOfSpeech": "verb", "definition": "to make something widely known", "translation": "宣傳；公開", "example": "The event was publicized through social media and email.", "exampleTranslation": "這場活動透過社群媒體和電子郵件宣傳。" },
+    { "form": "ray", "partOfSpeech": "noun", "definition": "a narrow beam of light", "translation": "光線", "example": "A ray of sunlight came through the office window.", "exampleTranslation": "一道陽光透過辦公室窗戶照射進來。" },
+    { "form": "redecorate", "partOfSpeech": "verb", "definition": "to decorate a room or building again", "translation": "重新裝潢", "example": "The company plans to redecorate the lobby next quarter.", "exampleTranslation": "這家公司計畫在下一季重新裝潢大廳。" },
+    { "form": "refinery", "partOfSpeech": "noun", "definition": "an industrial plant that purifies raw materials", "translation": "煉油廠；精煉廠", "example": "The oil refinery increased production to meet rising demand.", "exampleTranslation": "這座煉油廠提高了產量以因應需求上升。" },
+    { "form": "refresh", "partOfSpeech": "verb", "definition": "to make something fresh again, or to reload", "translation": "重新整理；更新", "example": "Refresh the page if the data doesn't load correctly.", "exampleTranslation": "如果資料沒有正確載入，請重新整理頁面。" },
+    { "form": "refundable", "partOfSpeech": "adjective", "definition": "able to be refunded", "translation": "可退款的", "example": "The deposit is fully refundable if you cancel within 24 hours.", "exampleTranslation": "如果你在 24 小時內取消，訂金可全額退款。" },
+    { "form": "reliability", "partOfSpeech": "noun", "definition": "the quality of being trustworthy or performing consistently well", "translation": "可靠性", "example": "Customers value the reliability of our delivery service.", "exampleTranslation": "顧客重視我們送貨服務的可靠性。" },
+    { "form": "reluctant", "partOfSpeech": "adjective", "definition": "unwilling to do something", "translation": "不情願的", "example": "He was reluctant to sign the contract without legal advice.", "exampleTranslation": "沒有法律建議的情況下，他不太願意簽約。" },
+    { "form": "sewer", "partOfSpeech": "noun", "definition": "an underground pipe system for waste water", "translation": "下水道", "example": "The city is repairing a broken sewer line downtown.", "exampleTranslation": "市府正在修復市中心一條損壞的下水道管線。" },
+    { "form": "skate", "partOfSpeech": "verb", "definition": "to move smoothly on skates", "translation": "溜冰", "example": "The park has a rink where visitors can skate for free.", "exampleTranslation": "這座公園有一個遊客可以免費溜冰的場地。" },
+    { "form": "skateboard", "partOfSpeech": "noun", "definition": "a board with wheels ridden for sport", "translation": "滑板", "example": "The store added skateboards to its sporting goods section.", "exampleTranslation": "這間商店在運動用品區新增了滑板。" },
+    { "form": "sleepy", "partOfSpeech": "adjective", "definition": "feeling drowsy or tired", "translation": "想睡的；睏倦的", "example": "Long meetings after lunch tend to make employees sleepy.", "exampleTranslation": "午餐後的長會議容易讓員工感到睏倦。" },
+    { "form": "tailor", "partOfSpeech": "noun", "definition": "a person who makes or alters clothing; also used as a verb meaning to customize", "translation": "裁縫師；訂製", "example": "The tailor adjusted the suit to fit perfectly.", "exampleTranslation": "這位裁縫師調整了西裝讓它完全合身。" },
+    { "form": "termination", "partOfSpeech": "noun", "definition": "the act of ending something, such as employment", "translation": "終止；解雇", "example": "The contract includes a termination clause for either party.", "exampleTranslation": "這份合約包含雙方都適用的終止條款。" },
+    { "form": "theft", "partOfSpeech": "noun", "definition": "the act of stealing", "translation": "竊盜", "example": "The store installed cameras to prevent theft.", "exampleTranslation": "這間商店安裝了攝影機以防止竊盜。" },
+    { "form": "thunderstorm", "partOfSpeech": "noun", "definition": "a storm with thunder and lightning", "translation": "雷雨", "example": "The outdoor event was postponed due to a thunderstorm.", "exampleTranslation": "這場戶外活動因為雷雨而延期。" },
+    { "form": "transmission", "partOfSpeech": "noun", "definition": "the act of sending or passing something on", "translation": "傳輸；傳送", "example": "The data transmission failed because of a weak signal.", "exampleTranslation": "因為訊號微弱，資料傳輸失敗了。" },
+    { "form": "transmit", "partOfSpeech": "verb", "definition": "to send or pass something from one place to another", "translation": "傳送；傳輸", "example": "The device transmits data to the server every hour.", "exampleTranslation": "這台裝置每小時會把資料傳送到伺服器。" }
+  ]
+}

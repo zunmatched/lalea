@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-0581-0600",
+  "title": "TOEIC 核心單字 0581-0600",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "payroll", "partOfSpeech": "noun", "definition": "the total amount of money a company pays its employees, or the process of managing it", "translation": "薪資名冊；薪資作業", "example": "The payroll department processes salaries on the last day of each month.", "exampleTranslation": "薪資部門在每個月最後一天處理薪水發放。" },
+    { "form": "pharmaceutical", "partOfSpeech": "adjective", "definition": "relating to the production and sale of medicines", "translation": "製藥的", "example": "She works as a sales representative for a pharmaceutical company.", "exampleTranslation": "她在一家製藥公司擔任業務代表。" },
+    { "form": "plausible", "partOfSpeech": "adjective", "definition": "seeming reasonable or likely to be true", "translation": "看似合理的", "example": "The client offered a plausible explanation for the missed deadline.", "exampleTranslation": "客戶對於錯過截止日期提出了一個看似合理的解釋。" },
+    { "form": "premium", "partOfSpeech": "noun", "definition": "an amount paid regularly for insurance, or a higher price for extra quality", "translation": "保費；額外費用", "example": "Your insurance premium will increase slightly next year.", "exampleTranslation": "你的保費明年會小幅調漲。" },
+    { "form": "safely", "partOfSpeech": "adverb", "definition": "in a way that avoids danger or risk", "translation": "安全地", "example": "Please store the chemicals safely away from the food supplies.", "exampleTranslation": "請把化學品安全地存放，遠離食品。" },
+    { "form": "simplify", "partOfSpeech": "verb", "definition": "to make something easier to understand or do", "translation": "簡化", "example": "The new form was designed to simplify the reimbursement process.", "exampleTranslation": "這份新表格是為了簡化報銷流程而設計的。" },
+    { "form": "specialty", "partOfSpeech": "noun", "definition": "a particular area of skill, product, or interest that someone focuses on", "translation": "專長；招牌菜", "example": "Seafood pasta is the restaurant's specialty.", "exampleTranslation": "海鮮義大利麵是這家餐廳的招牌菜。" },
+    { "form": "tech", "partOfSpeech": "noun", "definition": "short for technology, or a technician", "translation": "科技；技術人員", "example": "A tech from IT support fixed the printer this morning.", "exampleTranslation": "今天早上 IT 支援的技術人員修好了印表機。" },
+    { "form": "unexpected", "partOfSpeech": "adjective", "definition": "not anticipated or expected", "translation": "意外的；未預期的", "example": "We ran into an unexpected delay during shipping.", "exampleTranslation": "我們在運送過程中遇到了意外的延誤。" },
+    { "form": "unspecified", "partOfSpeech": "adjective", "definition": "not stated or named exactly", "translation": "未指明的", "example": "The contract allows for an unspecified number of revisions.", "exampleTranslation": "合約允許未指明次數的修改。" },
+    { "form": "adhere", "partOfSpeech": "verb", "definition": "to stick firmly to a surface, or to follow a rule or standard closely", "translation": "遵守；黏附", "example": "All contractors must adhere to the company's safety guidelines.", "exampleTranslation": "所有承包商都必須遵守公司的安全規範。" },
+    { "form": "bankrupt", "partOfSpeech": "adjective", "definition": "legally declared unable to pay debts owed", "translation": "破產的", "example": "The supplier went bankrupt before delivering our order.", "exampleTranslation": "這家供應商在交付我們的訂單前就破產了。" },
+    { "form": "caution", "partOfSpeech": "noun", "definition": "great care taken to avoid danger or mistakes", "translation": "謹慎；小心", "example": "Handle the fragile items with caution during shipping.", "exampleTranslation": "運送易碎物品時請小心處理。" },
+    { "form": "clip", "partOfSpeech": "noun", "definition": "a small device used to hold things together, or a short section of video", "translation": "夾子；片段", "example": "Use a clip to attach the receipt to the expense report.", "exampleTranslation": "請用夾子把收據附在報帳單上。" },
+    { "form": "comply", "partOfSpeech": "verb", "definition": "to act in accordance with a rule, request, or command", "translation": "遵從；符合規定", "example": "The factory must comply with new environmental regulations.", "exampleTranslation": "這間工廠必須遵守新的環保法規。" },
+    { "form": "diner", "partOfSpeech": "noun", "definition": "a small, casual restaurant, or a person eating at a restaurant", "translation": "小餐館；用餐的人", "example": "We held the informal meeting at a diner near the office.", "exampleTranslation": "我們在辦公室附近的一家小餐館開了非正式會議。" },
+    { "form": "duplicate", "partOfSpeech": "verb", "definition": "to make an exact copy of something", "translation": "複製；重複", "example": "Please duplicate the report and send one copy to accounting.", "exampleTranslation": "請複製一份報告，寄一份給會計部。" },
+    { "form": "eager", "partOfSpeech": "adjective", "definition": "having a strong desire to do or achieve something", "translation": "渴望的；急切的", "example": "The new intern is eager to take on more responsibility.", "exampleTranslation": "這位新實習生很渴望承擔更多責任。" },
+    { "form": "economist", "partOfSpeech": "noun", "definition": "an expert who studies economics", "translation": "經濟學家", "example": "An economist was invited to speak at the finance conference.", "exampleTranslation": "這場財經研討會邀請了一位經濟學家演講。" },
+    { "form": "embassy", "partOfSpeech": "noun", "definition": "the official residence and offices of an ambassador in a foreign country", "translation": "大使館", "example": "You'll need to apply for the visa at the embassy in person.", "exampleTranslation": "你需要親自到大使館申請簽證。" }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-1222-1241",
+  "title": "TOEIC 核心單字 1222-1241",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "incoming", "partOfSpeech": "adjective", "definition": "arriving or about to arrive", "translation": "進來的；即將到任的", "example": "Please forward all incoming calls to my mobile this afternoon.", "exampleTranslation": "今天下午請把所有進來的電話轉接到我的手機。" },
+    { "form": "induction", "partOfSpeech": "noun", "definition": "a formal process of introducing someone to a new job or organization", "translation": "新進人員訓練；就任", "example": "New hires attend an induction session on their first day.", "exampleTranslation": "新進員工在第一天會參加新人訓練。" },
+    { "form": "inspiration", "partOfSpeech": "noun", "definition": "something that encourages creative ideas or motivation", "translation": "靈感", "example": "The design team drew inspiration from last year's customer feedback.", "exampleTranslation": "設計團隊從去年的顧客回饋中獲得靈感。" },
+    { "form": "intently", "partOfSpeech": "adverb", "definition": "with close attention and concentration", "translation": "專注地", "example": "The interviewer listened intently as the candidate described the project.", "exampleTranslation": "面試官專注地聽著應徵者描述這個專案。" },
+    { "form": "mower", "partOfSpeech": "noun", "definition": "a machine used for cutting grass", "translation": "割草機", "example": "The facilities team ordered a new mower for the office lawn.", "exampleTranslation": "設施團隊訂了一台新割草機來整理辦公室草坪。" },
+    { "form": "nutrition", "partOfSpeech": "noun", "definition": "the process of getting the food needed for health and growth", "translation": "營養", "example": "The cafeteria menu now includes nutrition information for every dish.", "exampleTranslation": "自助餐廳的菜單現在會附上每道菜的營養資訊。" },
+    { "form": "restatement", "partOfSpeech": "noun", "definition": "the act of expressing something again, often more clearly", "translation": "重申；重新陳述", "example": "The memo is simply a restatement of last week's policy.", "exampleTranslation": "這份備忘錄只是重申上週的政策。" },
+    { "form": "sedan", "partOfSpeech": "noun", "definition": "a car with a separate trunk and usually four doors", "translation": "轎車", "example": "The company provides a sedan for airport pickups.", "exampleTranslation": "公司提供轎車接送機場。" },
+    { "form": "sunscreen", "partOfSpeech": "noun", "definition": "a lotion applied to skin to protect it from the sun", "translation": "防曬乳", "example": "Remember to pack sunscreen for the outdoor company retreat.", "exampleTranslation": "別忘了為戶外的公司團建帶防曬乳。" },
+    { "form": "wellness", "partOfSpeech": "noun", "definition": "the state of being in good physical and mental health", "translation": "健康；養生", "example": "The company launched a wellness program to reduce employee stress.", "exampleTranslation": "公司推出了一個健康計畫來減輕員工壓力。" },
+    { "form": "workbook", "partOfSpeech": "noun", "definition": "a book with exercises for a student to complete", "translation": "練習本；工作手冊", "example": "Each new employee receives a training workbook during orientation.", "exampleTranslation": "每位新員工在新人訓練時都會拿到一本訓練手冊。" },
+    { "form": "bookcase", "partOfSpeech": "noun", "definition": "a piece of furniture with shelves for storing books", "translation": "書櫃", "example": "The office bookcase is full of old policy manuals.", "exampleTranslation": "辦公室的書櫃裡塞滿了舊的政策手冊。" },
+    { "form": "cleanliness", "partOfSpeech": "noun", "definition": "the state of being clean or kept clean", "translation": "整潔；清潔", "example": "The restaurant chain is known for the cleanliness of its kitchens.", "exampleTranslation": "這家連鎖餐廳以廚房的整潔聞名。" },
+    { "form": "contestant", "partOfSpeech": "noun", "definition": "a person who takes part in a competition", "translation": "參賽者", "example": "Every contestant in the sales competition received a small prize.", "exampleTranslation": "這次業績競賽的每位參賽者都拿到一份小獎品。" },
+    { "form": "ethics", "partOfSpeech": "noun", "definition": "moral principles that govern a person's or organization's behavior", "translation": "倫理；道德規範", "example": "All new hires must complete a business ethics training course.", "exampleTranslation": "所有新進員工都必須完成商業倫理訓練課程。" },
+    { "form": "healthful", "partOfSpeech": "adjective", "definition": "good for one's health", "translation": "有益健康的", "example": "The cafeteria added more healthful options to the lunch menu.", "exampleTranslation": "自助餐廳在午餐菜單裡加了更多有益健康的選項。" },
+    { "form": "inefficient", "partOfSpeech": "adjective", "definition": "not making the best use of time, effort, or resources", "translation": "效率低的", "example": "The old approval process was slow and inefficient.", "exampleTranslation": "舊的核准流程既慢又沒效率。" },
+    { "form": "liter", "partOfSpeech": "noun", "definition": "a metric unit of volume", "translation": "公升", "example": "The catering order includes twenty liters of bottled water.", "exampleTranslation": "這次外燴訂單包含二十公升的瓶裝水。" },
+    { "form": "recession", "partOfSpeech": "noun", "definition": "a period of temporary economic decline", "translation": "經濟衰退", "example": "The company cut travel expenses during the recession.", "exampleTranslation": "公司在經濟衰退期間削減了出差費用。" },
+    { "form": "timeline", "partOfSpeech": "noun", "definition": "a schedule of events or tasks in the order they happen", "translation": "時間表；時程", "example": "The project timeline was pushed back by two weeks.", "exampleTranslation": "這個專案的時程往後延了兩週。" }
+  ]
+}

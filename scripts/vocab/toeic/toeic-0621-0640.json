@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-0621-0640",
+  "title": "TOEIC 核心單字 0621-0640",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "unnecessary", "partOfSpeech": "adjective", "definition": "not needed; more than what is required", "translation": "不必要的", "example": "The audit found several unnecessary expenses in the budget.", "exampleTranslation": "稽核發現預算裡有幾筆不必要的支出。" },
+    { "form": "accordingly", "partOfSpeech": "adverb", "definition": "in a way that matches or corresponds to the situation just mentioned", "translation": "相應地；因此", "example": "The schedule changed, so please plan your tasks accordingly.", "exampleTranslation": "行程改變了，所以請相應地調整你的工作安排。" },
+    { "form": "apple", "partOfSpeech": "noun", "definition": "a round fruit with red, green, or yellow skin", "translation": "蘋果", "example": "The cafeteria offers a free apple with every lunch set.", "exampleTranslation": "自助餐廳的每份午餐套餐都附贈一顆免費蘋果。" },
+    { "form": "applicable", "partOfSpeech": "adjective", "definition": "relevant or appropriate to a particular situation", "translation": "適用的", "example": "This discount is only applicable to first-time customers.", "exampleTranslation": "這個折扣只適用於首次消費的顧客。" },
+    { "form": "auction", "partOfSpeech": "noun", "definition": "a public sale where items are sold to the highest bidder", "translation": "拍賣", "example": "The old office furniture will be sold at auction next week.", "exampleTranslation": "舊的辦公家具下週會進行拍賣。" },
+    { "form": "balcony", "partOfSpeech": "noun", "definition": "a platform on the outside of a building, enclosed by a rail", "translation": "陽台", "example": "The hotel room comes with a small balcony overlooking the city.", "exampleTranslation": "這間飯店房間附有一個俯瞰市區的小陽台。" },
+    { "form": "basement", "partOfSpeech": "noun", "definition": "a room or floor of a building that is below ground level", "translation": "地下室", "example": "Extra inventory is stored in the basement.", "exampleTranslation": "多餘的庫存都存放在地下室。" },
+    { "form": "beforehand", "partOfSpeech": "adverb", "definition": "before a particular time or event", "translation": "事先", "example": "Please submit your expense report beforehand so it can be approved in time.", "exampleTranslation": "請事先提交你的報帳單，才能及時獲得核准。" },
+    { "form": "culinary", "partOfSpeech": "adjective", "definition": "relating to cooking or the kitchen", "translation": "烹飪的", "example": "The chef trained at a top culinary school in Paris.", "exampleTranslation": "這位主廚曾在巴黎一所頂尖的烹飪學校受訓。" },
+    { "form": "documentary", "partOfSpeech": "noun", "definition": "a film or program presenting factual information about a subject", "translation": "紀錄片", "example": "The company produced a short documentary about its founding.", "exampleTranslation": "公司製作了一部關於創立過程的短紀錄片。" },
+    { "form": "downturn", "partOfSpeech": "noun", "definition": "a decline in economic activity or business performance", "translation": "衰退；下滑", "example": "The industry saw a downturn during the last recession.", "exampleTranslation": "這個產業在上一次經濟衰退期間出現了下滑。" },
+    { "form": "earthquake", "partOfSpeech": "noun", "definition": "a sudden violent shaking of the ground caused by movement of the earth's crust", "translation": "地震", "example": "The office has an emergency plan in case of an earthquake.", "exampleTranslation": "辦公室有一套應對地震的緊急計畫。" },
+    { "form": "elegant", "partOfSpeech": "adjective", "definition": "graceful and stylish in appearance or manner", "translation": "優雅的；精緻的", "example": "The venue has an elegant design suited for formal events.", "exampleTranslation": "這個場地的設計優雅，很適合正式活動。" },
+    { "form": "excessive", "partOfSpeech": "adjective", "definition": "more than what is necessary, reasonable, or normal", "translation": "過度的", "example": "The manager flagged the excessive overtime hours this month.", "exampleTranslation": "經理注意到這個月的加班時數過度了。" },
+    { "form": "generic", "partOfSpeech": "adjective", "definition": "not specific or branded; general in nature", "translation": "通用的；非品牌的", "example": "The pharmacy offers a cheaper generic version of the medicine.", "exampleTranslation": "藥局有提供比較便宜的通用版藥品。" },
+    { "form": "jazz", "partOfSpeech": "noun", "definition": "a style of music characterized by improvisation and syncopated rhythms", "translation": "爵士樂", "example": "A live jazz band will perform at the company gala.", "exampleTranslation": "公司晚宴會有現場爵士樂團演出。" },
+    { "form": "lifetime", "partOfSpeech": "noun", "definition": "the length of time that something or someone exists or lasts", "translation": "終身；使用壽命", "example": "The product comes with a lifetime warranty.", "exampleTranslation": "這項產品附有終身保固。" },
+    { "form": "massage", "partOfSpeech": "noun", "definition": "the rubbing and kneading of muscles for relaxation or therapy", "translation": "按摩", "example": "The wellness room offers a free ten-minute massage during breaks.", "exampleTranslation": "健康室在休息時間提供十分鐘的免費按摩。" },
+    { "form": "maximize", "partOfSpeech": "verb", "definition": "to make something as large or great as possible", "translation": "最大化", "example": "The new layout maximizes storage space in the warehouse.", "exampleTranslation": "新的配置讓倉庫的儲存空間達到最大化。" },
+    { "form": "mild", "partOfSpeech": "adjective", "definition": "not strong or severe in effect; gentle", "translation": "溫和的", "example": "Customer feedback about the price increase was surprisingly mild.", "exampleTranslation": "顧客對漲價的反應意外地溫和。" }
+  ]
+}

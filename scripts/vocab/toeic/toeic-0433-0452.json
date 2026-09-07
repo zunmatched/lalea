@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-0433-0452",
+  "title": "TOEIC 核心單字 433-452",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "afterward", "partOfSpeech": "adverb", "definition": "at a later time; after something else has happened", "translation": "之後", "example": "We'll have dinner and go over the contract afterward.", "exampleTranslation": "我們會先吃晚餐，之後再討論合約。" },
+    { "form": "apology", "partOfSpeech": "noun", "definition": "a statement expressing regret for a mistake", "translation": "道歉", "example": "The company sent a formal apology for the shipping error.", "exampleTranslation": "公司針對出貨錯誤發出了正式道歉。" },
+    { "form": "assemble", "partOfSpeech": "verb", "definition": "to put the parts of something together, or to gather in a group", "translation": "組裝；集合", "example": "Workers assemble the furniture before it's shipped to stores.", "exampleTranslation": "工人在家具送到店面前先組裝好。" },
+    { "form": "automatic", "partOfSpeech": "adjective", "definition": "operating without direct human control", "translation": "自動的", "example": "The building has automatic doors at the main entrance.", "exampleTranslation": "這棟大樓的正門有自動門。" },
+    { "form": "boardroom", "partOfSpeech": "noun", "definition": "a room where a company's board of directors meets", "translation": "董事會議室", "example": "The final decision was made in the boardroom this morning.", "exampleTranslation": "最終決定是今天早上在董事會議室做出的。" },
+    { "form": "carpenter", "partOfSpeech": "noun", "definition": "a person who builds and repairs wooden structures", "translation": "木匠", "example": "A carpenter was hired to build custom shelving for the office.", "exampleTranslation": "有人請了木匠來為辦公室打造訂製層架。" },
+    { "form": "caterer", "partOfSpeech": "noun", "definition": "a person or company that provides food for events", "translation": "外燴業者", "example": "We booked a caterer for the company's anniversary dinner.", "exampleTranslation": "我們為公司週年晚宴預訂了外燴業者。" },
+    { "form": "classify", "partOfSpeech": "verb", "definition": "to arrange things into groups based on shared characteristics", "translation": "分類", "example": "Please classify these expenses by department before submitting the report.", "exampleTranslation": "提交報告前請先依部門將這些費用分類。" },
+    { "form": "consultation", "partOfSpeech": "noun", "definition": "a meeting to discuss something or get expert advice", "translation": "諮詢；會診", "example": "The lawyer offers a free consultation for new clients.", "exampleTranslation": "這位律師提供新客戶免費諮詢。" },
+    { "form": "durable", "partOfSpeech": "adjective", "definition": "able to withstand wear and last a long time", "translation": "耐用的", "example": "The packaging is designed to be durable during long shipments.", "exampleTranslation": "這款包裝設計成能在長途運送中保持耐用。" },
+    { "form": "glove", "partOfSpeech": "noun", "definition": "a covering for the hand, usually with separate parts for each finger", "translation": "手套", "example": "Warehouse staff must wear gloves when handling the equipment.", "exampleTranslation": "倉庫人員在操作設備時必須戴手套。" },
+    { "form": "hardware", "partOfSpeech": "noun", "definition": "the physical components of a computer system, or tools and equipment", "translation": "硬體；五金工具", "example": "The IT department will replace outdated hardware next month.", "exampleTranslation": "資訊部門下個月會更換過時的硬體設備。" },
+    { "form": "malfunction", "partOfSpeech": "noun", "definition": "a failure to work correctly", "translation": "故障", "example": "A system malfunction caused the website to go offline briefly.", "exampleTranslation": "一次系統故障導致網站短暫離線。" },
+    { "form": "outdated", "partOfSpeech": "adjective", "definition": "no longer modern or in use; old-fashioned", "translation": "過時的", "example": "The manual contains outdated information about the return policy.", "exampleTranslation": "這本手冊裡有關於退貨政策的過時資訊。" },
+    { "form": "patience", "partOfSpeech": "noun", "definition": "the ability to wait calmly without becoming annoyed", "translation": "耐心", "example": "We appreciate your patience while we resolve this issue.", "exampleTranslation": "感謝您在我們解決這個問題時的耐心等候。" },
+    { "form": "postcard", "partOfSpeech": "noun", "definition": "a card used for sending a short message without an envelope", "translation": "明信片", "example": "The hotel gift shop sells postcards of the local area.", "exampleTranslation": "飯店禮品店有販售當地風景的明信片。" },
+    { "form": "prospective", "partOfSpeech": "adjective", "definition": "likely to happen or become something in the future; potential", "translation": "潛在的；未來的", "example": "The recruiter is meeting with several prospective candidates this week.", "exampleTranslation": "招募人員這週要跟幾位潛在候選人面談。" },
+    { "form": "revision", "partOfSpeech": "noun", "definition": "a change or correction made to a document or plan", "translation": "修訂", "example": "Please review the latest revision of the contract before signing.", "exampleTranslation": "簽署前請先檢閱合約的最新修訂版本。" },
+    { "form": "strictly", "partOfSpeech": "adverb", "definition": "in a way that is exact and rigorously enforced", "translation": "嚴格地", "example": "Smoking is strictly prohibited inside the building.", "exampleTranslation": "建築物內嚴格禁止吸菸。" },
+    { "form": "tomato", "partOfSpeech": "noun", "definition": "a red fruit commonly used as a vegetable in cooking", "translation": "番茄", "example": "The cafeteria menu features a fresh tomato soup today.", "exampleTranslation": "員工餐廳今天的菜單有新鮮番茄湯。" }
+  ]
+}

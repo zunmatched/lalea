@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-0141-0161",
+  "title": "TOEIC 核心單字 0141-0161",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "merger", "partOfSpeech": "noun", "definition": "the combining of two or more companies into one", "translation": "合併", "example": "The merger between the two firms was announced this morning.", "exampleTranslation": "這兩家公司的合併案於今早正式公布。" },
+    { "form": "soccer", "partOfSpeech": "noun", "definition": "a team sport played by kicking a ball into a goal", "translation": "足球", "example": "The office hosts a friendly soccer match every summer.", "exampleTranslation": "公司每年夏天都會舉辦友誼足球賽。" },
+    { "form": "sweater", "partOfSpeech": "noun", "definition": "a knitted garment worn on the upper body", "translation": "毛衣", "example": "Bring a sweater; the conference room tends to be cold.", "exampleTranslation": "帶件毛衣吧，會議室通常都很冷。" },
+    { "form": "ingredient", "partOfSpeech": "noun", "definition": "one of the items used to make a food dish", "translation": "食材；成分", "example": "The recipe lists every ingredient needed for the banquet menu.", "exampleTranslation": "這份食譜列出了宴會菜單所需的每一項食材。" },
+    { "form": "rewrite", "partOfSpeech": "verb", "definition": "to write something again, usually to improve or correct it", "translation": "改寫；重寫", "example": "Please rewrite the summary so it's easier to understand.", "exampleTranslation": "請把摘要改寫得更容易理解。" },
+    { "form": "itinerary", "partOfSpeech": "noun", "definition": "a planned route or schedule for a trip", "translation": "行程表", "example": "Your travel itinerary includes two connecting flights.", "exampleTranslation": "你的旅行行程表包含兩段轉機航班。" },
+    { "form": "workplace", "partOfSpeech": "noun", "definition": "a place where people work, such as an office or factory", "translation": "職場；工作場所", "example": "The survey measures employee satisfaction in the workplace.", "exampleTranslation": "這份調查用來衡量員工在職場中的滿意度。" },
+    { "form": "architect", "partOfSpeech": "noun", "definition": "a person who designs buildings and oversees their construction", "translation": "建築師", "example": "The architect presented three design options for the new office.", "exampleTranslation": "這位建築師為新辦公室提出了三個設計方案。" },
+    { "form": "convenience", "partOfSpeech": "noun", "definition": "the quality of being easy to use or suited to one's needs", "translation": "便利", "example": "For your convenience, online check-in opens twenty-four hours before departure.", "exampleTranslation": "為了您的便利，線上報到在出發前二十四小時開放。" },
+    { "form": "eligible", "partOfSpeech": "adjective", "definition": "having the right to be included in or considered for something", "translation": "有資格的", "example": "Employees are eligible for the bonus after one year of service.", "exampleTranslation": "員工任職滿一年後就有資格領取獎金。" },
+    { "form": "indoor", "partOfSpeech": "adjective", "definition": "located, happening, or used inside a building", "translation": "室內的", "example": "The reception will move to the indoor hall if it rains.", "exampleTranslation": "如果下雨，接待會就會移到室內大廳舉行。" },
+    { "form": "baggage", "partOfSpeech": "noun", "definition": "bags and suitcases carried while traveling", "translation": "行李", "example": "Passengers can check two pieces of baggage for free.", "exampleTranslation": "乘客可以免費託運兩件行李。" },
+    { "form": "dial", "partOfSpeech": "verb", "definition": "to press buttons or turn a device to make a phone call", "translation": "撥打（電話）", "example": "Dial nine to reach an outside line from your office phone.", "exampleTranslation": "從辦公室電話撥打外線請先撥九。" },
+    { "form": "container", "partOfSpeech": "noun", "definition": "an object used to hold or transport goods", "translation": "容器；貨櫃", "example": "The shipment will arrive in a single sea container next week.", "exampleTranslation": "這批貨會在下週以一個海運貨櫃運抵。" },
+    { "form": "drawer", "partOfSpeech": "noun", "definition": "a sliding storage compartment in a desk or cabinet", "translation": "抽屜", "example": "Extra pens and paper clips are kept in the bottom drawer.", "exampleTranslation": "多的筆和迴紋針放在最下面的抽屜裡。" },
+    { "form": "lab", "partOfSpeech": "noun", "definition": "a room or building equipped for scientific research or testing (short for laboratory)", "translation": "實驗室", "example": "Samples are sent to the lab for quality testing.", "exampleTranslation": "樣品會被送到實驗室做品質檢測。" },
+    { "form": "submission", "partOfSpeech": "noun", "definition": "the act of presenting something, such as a document, for consideration", "translation": "提交；投稿", "example": "The submission deadline for conference proposals is next Friday.", "exampleTranslation": "研討會提案的提交截止日是下週五。" },
+    { "form": "bulletin", "partOfSpeech": "noun", "definition": "a short official statement or announcement", "translation": "公告；快報", "example": "A bulletin was posted about the upcoming office closure.", "exampleTranslation": "有一則關於辦公室即將休館的公告已張貼出來。" },
+    { "form": "gym", "partOfSpeech": "noun", "definition": "a place equipped for physical exercise and training (short for gymnasium)", "translation": "健身房", "example": "The hotel gym is open twenty-four hours for guests.", "exampleTranslation": "飯店的健身房全天二十四小時開放給住客使用。" },
+    { "form": "highway", "partOfSpeech": "noun", "definition": "a main public road connecting towns or cities", "translation": "公路", "example": "Expect heavy traffic on the highway during rush hour.", "exampleTranslation": "尖峰時段公路上預期會有大量車流。" }
+  ]
+}

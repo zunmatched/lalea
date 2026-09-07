@@ -1,0 +1,14 @@
+{
+  "slug": "toeic-0744-0750",
+  "title": "TOEIC 核心單字 0744-0750",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "spouse", "partOfSpeech": "noun", "definition": "a husband or wife", "translation": "配偶", "example": "The health plan also covers each employee's spouse.", "exampleTranslation": "這份健康保險方案也涵蓋每位員工的配偶。" },
+    { "form": "subtract", "partOfSpeech": "verb", "definition": "to take one number or amount away from another", "translation": "減去；扣除", "example": "Subtract the discount before calculating the final total.", "exampleTranslation": "計算最終總額前，請先扣除折扣金額。" },
+    { "form": "tablet", "partOfSpeech": "noun", "definition": "a small portable computer with a touchscreen, or a small pill", "translation": "平板電腦；藥片", "example": "Sales staff use a tablet to process orders on the floor.", "exampleTranslation": "銷售人員在賣場用平板電腦處理訂單。" },
+    { "form": "ton", "partOfSpeech": "noun", "definition": "a unit of weight equal to 2,000 pounds (or 1,000 kilograms in the metric system)", "translation": "噸", "example": "The warehouse can store up to five hundred tons of goods.", "exampleTranslation": "這座倉庫最多可以儲存五百噸的貨物。" },
+    { "form": "vend", "partOfSpeech": "verb", "definition": "to sell something, especially from a small stall or machine", "translation": "販售", "example": "Snacks are vended from a machine on the second floor.", "exampleTranslation": "二樓有一台自動販賣機可以買零食。" },
+    { "form": "yoga", "partOfSpeech": "noun", "definition": "a physical and mental practice involving postures, breathing, and meditation", "translation": "瑜伽", "example": "The company offers a free yoga class every Wednesday morning.", "exampleTranslation": "公司每週三早上都提供免費的瑜伽課。" },
+    { "form": "accent", "partOfSpeech": "noun", "definition": "a distinctive way of pronouncing words, associated with a region or country", "translation": "口音", "example": "The trainer speaks with a slight British accent.", "exampleTranslation": "這位培訓師講話帶有一點英式口音。" }
+  ]
+}

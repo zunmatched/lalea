@@ -1,0 +1,27 @@
+{
+  "slug": "toeic-1081-1100",
+  "title": "TOEIC 核心單字 1081-1100",
+  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "words": [
+    { "form": "sharply", "partOfSpeech": "adverb", "definition": "in a sudden and significant way", "translation": "急遽地；劇烈地", "example": "Sales dropped sharply after the price increase.", "exampleTranslation": "漲價後銷售額急遽下滑。" },
+    { "form": "similarity", "partOfSpeech": "noun", "definition": "the state of being similar to something else", "translation": "相似之處；相似性", "example": "There's a striking similarity between the two proposals.", "exampleTranslation": "這兩份提案之間有著驚人的相似之處。" },
+    { "form": "someday", "partOfSpeech": "adverb", "definition": "at some unspecified time in the future", "translation": "有朝一日；改天", "example": "The founder hopes to open a second branch someday.", "exampleTranslation": "創辦人希望有朝一日能開設第二家分店。" },
+    { "form": "spectator", "partOfSpeech": "noun", "definition": "a person who watches an event, especially a sports event", "translation": "觀眾", "example": "Spectators lined up outside the stadium before the event.", "exampleTranslation": "觀眾在活動開始前在體育場外排隊。" },
+    { "form": "stereo", "partOfSpeech": "noun", "definition": "a sound system that reproduces sound through two or more speakers", "translation": "音響（系統）", "example": "The conference room was upgraded with a new stereo system.", "exampleTranslation": "會議室升級了一套新的音響系統。" },
+    { "form": "storeroom", "partOfSpeech": "noun", "definition": "a room used for storing things", "translation": "儲藏室", "example": "Extra chairs are kept in the storeroom next to the kitchen.", "exampleTranslation": "多餘的椅子放在廚房旁邊的儲藏室裡。" },
+    { "form": "subsidize", "partOfSpeech": "verb", "definition": "to support financially, typically to reduce the cost for the user", "translation": "補貼；資助", "example": "The government subsidizes public transportation for commuters.", "exampleTranslation": "政府補貼通勤族的大眾運輸費用。" },
+    { "form": "suspicious", "partOfSpeech": "adjective", "definition": "having or showing a feeling that something is wrong or dishonest", "translation": "可疑的", "example": "The bank flagged the transaction as suspicious.", "exampleTranslation": "銀行將這筆交易標記為可疑。" },
+    { "form": "tasty", "partOfSpeech": "adjective", "definition": "having a pleasant, strong flavor", "translation": "美味的", "example": "Reviewers described the new menu item as tasty and affordable.", "exampleTranslation": "評論者形容這道新菜色美味又實惠。" },
+    { "form": "terrific", "partOfSpeech": "adjective", "definition": "excellent; extremely good", "translation": "極好的；棒極了的", "example": "The client was terrific to work with on this project.", "exampleTranslation": "這位客戶在這個專案上合作起來非常棒。" },
+    { "form": "underground", "partOfSpeech": "adjective", "definition": "situated beneath the surface of the ground", "translation": "地下的", "example": "The new office is connected to an underground parking garage.", "exampleTranslation": "新辦公室與地下停車場相連。" },
+    { "form": "unpaid", "partOfSpeech": "adjective", "definition": "not yet paid, or without receiving payment", "translation": "未付的；無薪的", "example": "She took two weeks of unpaid leave to travel.", "exampleTranslation": "她請了兩週的無薪假去旅行。" },
+    { "form": "volleyball", "partOfSpeech": "noun", "definition": "a team sport in which players hit a ball over a net", "translation": "排球", "example": "The company hosts a volleyball tournament every summer.", "exampleTranslation": "公司每年夏天都會舉辦排球錦標賽。" },
+    { "form": "wheelchair", "partOfSpeech": "noun", "definition": "a chair fitted with wheels for use by a person who cannot walk", "translation": "輪椅", "example": "The building's entrance is wheelchair accessible.", "exampleTranslation": "這棟建築的入口可供輪椅通行。" },
+    { "form": "whoever", "partOfSpeech": "pronoun", "definition": "any person that; no matter who", "translation": "不論是誰；任何人", "example": "Whoever finishes the report first can leave early.", "exampleTranslation": "不管是誰先完成報告，都可以提早下班。" },
+    { "form": "wool", "partOfSpeech": "noun", "definition": "the soft hair of sheep, used to make fabric and yarn", "translation": "羊毛", "example": "The factory imports wool from several countries.", "exampleTranslation": "這間工廠從好幾個國家進口羊毛。" },
+    { "form": "wrinkle", "partOfSpeech": "noun", "definition": "a small crease or fold, especially in fabric or skin", "translation": "皺褶；皺紋", "example": "Steam the shirt to remove any wrinkles before the interview.", "exampleTranslation": "面試前先用蒸氣熨燙襯衫去除皺褶。" },
+    { "form": "accuracy", "partOfSpeech": "noun", "definition": "the quality of being correct and precise", "translation": "準確性", "example": "Double-check the figures to ensure accuracy before submitting.", "exampleTranslation": "提交前請再次確認數字以確保準確性。" },
+    { "form": "anyhow", "partOfSpeech": "adverb", "definition": "in any case; regardless of other circumstances", "translation": "無論如何；反正", "example": "The meeting was postponed, but we reviewed the notes anyhow.", "exampleTranslation": "會議雖然被延後了，但我們還是看了一下筆記。" },
+    { "form": "appetizer", "partOfSpeech": "noun", "definition": "a small dish served before the main course of a meal", "translation": "開胃菜", "example": "The set menu includes an appetizer, main course, and dessert.", "exampleTranslation": "套餐包含開胃菜、主餐和甜點。" }
+  ]
+}
