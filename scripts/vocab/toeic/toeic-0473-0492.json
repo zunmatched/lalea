@@ -1,27 +1,170 @@
 {
   "slug": "toeic-0473-0492",
-  "title": "TOEIC 核心單字 473-492",
-  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "title": "TOEIC 核心單字 0473-0492",
+  "group": {
+    "slug": "toeic-service-list",
+    "title": "TOEIC 核心單字"
+  },
   "words": [
-    { "form": "resignation", "partOfSpeech": "noun", "definition": "the act of formally leaving a job or position", "translation": "辭職", "example": "She submitted her resignation letter to HR this morning.", "exampleTranslation": "她今天早上向人資部門提交了辭職信。" },
-    { "form": "reviewer", "partOfSpeech": "noun", "definition": "a person who examines and gives an opinion on something", "translation": "審查者；評論者", "example": "A senior reviewer checked the report before it was published.", "exampleTranslation": "一位資深審查者在報告發布前先做了檢查。" },
-    { "form": "terminate", "partOfSpeech": "verb", "definition": "to end something, such as a contract or employment", "translation": "終止", "example": "Either party may terminate the contract with 30 days' notice.", "exampleTranslation": "任一方都可以提前三十天通知終止合約。" },
-    { "form": "translation", "partOfSpeech": "noun", "definition": "the process of changing text from one language into another", "translation": "翻譯", "example": "The manual needs a Chinese translation before it ships overseas.", "exampleTranslation": "這本手冊在海外出貨前需要中文翻譯。" },
-    { "form": "unfamiliar", "partOfSpeech": "adjective", "definition": "not known or recognized; not experienced with something", "translation": "不熟悉的", "example": "The new hire is still unfamiliar with our internal systems.", "exampleTranslation": "這位新進員工還不熟悉我們的內部系統。" },
-    { "form": "actress", "partOfSpeech": "noun", "definition": "a woman who performs in plays, films, or television", "translation": "女演員", "example": "A well-known actress appeared in the company's new commercial.", "exampleTranslation": "一位知名女演員出現在公司的新廣告中。" },
-    { "form": "adjacent", "partOfSpeech": "adjective", "definition": "next to or near something", "translation": "鄰近的；毗鄰的", "example": "The parking lot is adjacent to the main office building.", "exampleTranslation": "停車場就在主辦公大樓的旁邊。" },
-    { "form": "alternate", "partOfSpeech": "adjective", "definition": "another option available in place of the usual one", "translation": "替代的", "example": "Please provide an alternate contact in case we can't reach you.", "exampleTranslation": "請提供一個替代聯絡人，以防我們聯絡不到您。" },
-    { "form": "congratulate", "partOfSpeech": "verb", "definition": "to praise someone for an achievement or happy event", "translation": "祝賀", "example": "The CEO congratulated the sales team on reaching their target.", "exampleTranslation": "執行長祝賀業務團隊達成了目標。" },
-    { "form": "escort", "partOfSpeech": "verb", "definition": "to accompany someone, often for protection or guidance", "translation": "護送；陪同", "example": "A staff member will escort visitors to the meeting room.", "exampleTranslation": "會有一位員工陪同訪客前往會議室。" },
-    { "form": "inexpensive", "partOfSpeech": "adjective", "definition": "not costing a lot of money; cheap", "translation": "不貴的；便宜的", "example": "The company chose an inexpensive but reliable supplier.", "exampleTranslation": "公司選擇了一家不貴但可靠的供應商。" },
-    { "form": "mask", "partOfSpeech": "noun", "definition": "a covering worn over the face for protection or disguise", "translation": "口罩；面具", "example": "Staff are asked to wear a mask in the production area.", "exampleTranslation": "員工在生產區域被要求配戴口罩。" },
-    { "form": "purchaser", "partOfSpeech": "noun", "definition": "a person or company that buys something", "translation": "買方；採購者", "example": "The purchaser requested an itemized receipt for the order.", "exampleTranslation": "買方要求提供這筆訂單的明細收據。" },
-    { "form": "purse", "partOfSpeech": "noun", "definition": "a small bag used to carry money and personal items", "translation": "手提包；錢包", "example": "She keeps her badge and keys in her purse.", "exampleTranslation": "她把識別證和鑰匙放在手提包裡。" },
-    { "form": "realtor", "partOfSpeech": "noun", "definition": "a person who sells property or real estate", "translation": "房地產經紀人", "example": "The realtor showed us three available office spaces.", "exampleTranslation": "房地產經紀人帶我們看了三間可租的辦公空間。" },
-    { "form": "rearrange", "partOfSpeech": "verb", "definition": "to change the position or order of something", "translation": "重新安排", "example": "We had to rearrange the schedule due to the client's request.", "exampleTranslation": "我們因為客戶的要求而重新安排了行程。" },
-    { "form": "reopen", "partOfSpeech": "verb", "definition": "to open again after being closed", "translation": "重新開放", "example": "The store will reopen after renovations next Monday.", "exampleTranslation": "這間店裝修完後將於下週一重新開放。" },
-    { "form": "soap", "partOfSpeech": "noun", "definition": "a substance used with water for washing", "translation": "肥皂", "example": "The restroom was restocked with soap and paper towels.", "exampleTranslation": "洗手間補充了肥皂和擦手紙。" },
-    { "form": "spokesperson", "partOfSpeech": "noun", "definition": "a person who speaks officially on behalf of a group", "translation": "發言人", "example": "The company spokesperson issued a statement about the recall.", "exampleTranslation": "公司發言人針對這次召回發表了聲明。" },
-    { "form": "superior", "partOfSpeech": "adjective", "definition": "higher in rank, quality, or status", "translation": "上級的；優越的", "example": "The new material is superior to what we used before.", "exampleTranslation": "這種新材料比我們之前用的更優越。" }
+    {
+      "form": "resignation",
+      "partOfSpeech": "noun",
+      "definition": "the act of formally leaving a job or position",
+      "translation": "辭職",
+      "example": "She submitted her resignation letter to HR this morning.",
+      "exampleTranslation": "她今天早上向人資部門提交了辭職信。"
+    },
+    {
+      "form": "reviewer",
+      "partOfSpeech": "noun",
+      "definition": "a person who examines and gives an opinion on something",
+      "translation": "審查者；評論者",
+      "example": "A senior reviewer checked the report before it was published.",
+      "exampleTranslation": "一位資深審查者在報告發布前先做了檢查。"
+    },
+    {
+      "form": "terminate",
+      "partOfSpeech": "verb",
+      "definition": "to end something, such as a contract or employment",
+      "translation": "終止",
+      "example": "Either party may terminate the contract with 30 days' notice.",
+      "exampleTranslation": "任一方都可以提前三十天通知終止合約。"
+    },
+    {
+      "form": "translation",
+      "partOfSpeech": "noun",
+      "definition": "the process of changing text from one language into another",
+      "translation": "翻譯",
+      "example": "The manual needs a Chinese translation before it ships overseas.",
+      "exampleTranslation": "這本手冊在海外出貨前需要中文翻譯。"
+    },
+    {
+      "form": "unfamiliar",
+      "partOfSpeech": "adjective",
+      "definition": "not known or recognized; not experienced with something",
+      "translation": "不熟悉的",
+      "example": "The new hire is still unfamiliar with our internal systems.",
+      "exampleTranslation": "這位新進員工還不熟悉我們的內部系統。"
+    },
+    {
+      "form": "actress",
+      "partOfSpeech": "noun",
+      "definition": "a woman who performs in plays, films, or television",
+      "translation": "女演員",
+      "example": "A well-known actress appeared in the company's new commercial.",
+      "exampleTranslation": "一位知名女演員出現在公司的新廣告中。"
+    },
+    {
+      "form": "adjacent",
+      "partOfSpeech": "adjective",
+      "definition": "next to or near something",
+      "translation": "鄰近的；毗鄰的",
+      "example": "The parking lot is adjacent to the main office building.",
+      "exampleTranslation": "停車場就在主辦公大樓的旁邊。"
+    },
+    {
+      "form": "alternate",
+      "partOfSpeech": "adjective",
+      "definition": "another option available in place of the usual one",
+      "translation": "替代的",
+      "example": "Please provide an alternate contact in case we can't reach you.",
+      "exampleTranslation": "請提供一個替代聯絡人，以防我們聯絡不到您。"
+    },
+    {
+      "form": "congratulate",
+      "partOfSpeech": "verb",
+      "definition": "to praise someone for an achievement or happy event",
+      "translation": "祝賀",
+      "example": "The CEO congratulated the sales team on reaching their target.",
+      "exampleTranslation": "執行長祝賀業務團隊達成了目標。"
+    },
+    {
+      "form": "escort",
+      "partOfSpeech": "verb",
+      "definition": "to accompany someone, often for protection or guidance",
+      "translation": "護送；陪同",
+      "example": "A staff member will escort visitors to the meeting room.",
+      "exampleTranslation": "會有一位員工陪同訪客前往會議室。"
+    },
+    {
+      "form": "inexpensive",
+      "partOfSpeech": "adjective",
+      "definition": "not costing a lot of money; cheap",
+      "translation": "不貴的；便宜的",
+      "example": "The company chose an inexpensive but reliable supplier.",
+      "exampleTranslation": "公司選擇了一家不貴但可靠的供應商。"
+    },
+    {
+      "form": "mask",
+      "partOfSpeech": "noun",
+      "definition": "a covering worn over the face for protection or disguise",
+      "translation": "口罩；面具",
+      "example": "Staff are asked to wear a mask in the production area.",
+      "exampleTranslation": "員工在生產區域被要求配戴口罩。"
+    },
+    {
+      "form": "purchaser",
+      "partOfSpeech": "noun",
+      "definition": "a person or company that buys something",
+      "translation": "買方；採購者",
+      "example": "The purchaser requested an itemized receipt for the order.",
+      "exampleTranslation": "買方要求提供這筆訂單的明細收據。"
+    },
+    {
+      "form": "purse",
+      "partOfSpeech": "noun",
+      "definition": "a small bag used to carry money and personal items",
+      "translation": "手提包；錢包",
+      "example": "She keeps her badge and keys in her purse.",
+      "exampleTranslation": "她把識別證和鑰匙放在手提包裡。"
+    },
+    {
+      "form": "realtor",
+      "partOfSpeech": "noun",
+      "definition": "a person who sells property or real estate",
+      "translation": "房地產經紀人",
+      "example": "The realtor showed us three available office spaces.",
+      "exampleTranslation": "房地產經紀人帶我們看了三間可租的辦公空間。"
+    },
+    {
+      "form": "rearrange",
+      "partOfSpeech": "verb",
+      "definition": "to change the position or order of something",
+      "translation": "重新安排",
+      "example": "We had to rearrange the schedule due to the client's request.",
+      "exampleTranslation": "我們因為客戶的要求而重新安排了行程。"
+    },
+    {
+      "form": "reopen",
+      "partOfSpeech": "verb",
+      "definition": "to open again after being closed",
+      "translation": "重新開放",
+      "example": "The store will reopen after renovations next Monday.",
+      "exampleTranslation": "這間店裝修完後將於下週一重新開放。"
+    },
+    {
+      "form": "soap",
+      "partOfSpeech": "noun",
+      "definition": "a substance used with water for washing",
+      "translation": "肥皂",
+      "example": "The restroom was restocked with soap and paper towels.",
+      "exampleTranslation": "洗手間補充了肥皂和擦手紙。"
+    },
+    {
+      "form": "spokesperson",
+      "partOfSpeech": "noun",
+      "definition": "a person who speaks officially on behalf of a group",
+      "translation": "發言人",
+      "example": "The company spokesperson issued a statement about the recall.",
+      "exampleTranslation": "公司發言人針對這次召回發表了聲明。"
+    },
+    {
+      "form": "superior",
+      "partOfSpeech": "adjective",
+      "definition": "higher in rank, quality, or status",
+      "translation": "上級的；優越的",
+      "example": "The new material is superior to what we used before.",
+      "exampleTranslation": "這種新材料比我們之前用的更優越。"
+    }
   ]
 }

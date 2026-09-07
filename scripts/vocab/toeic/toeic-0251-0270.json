@@ -1,27 +1,170 @@
 {
   "slug": "toeic-0251-0270",
-  "title": "TOEIC 核心單字 251-270",
-  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "title": "TOEIC 核心單字 0251-0270",
+  "group": {
+    "slug": "toeic-service-list",
+    "title": "TOEIC 核心單字"
+  },
   "words": [
-    { "form": "seldom", "partOfSpeech": "adverb", "definition": "not often; rarely", "translation": "很少；不常", "example": "The manager seldom approves overtime without a written request.", "exampleTranslation": "經理很少在沒有書面申請的情況下核准加班。" },
-    { "form": "signature", "partOfSpeech": "noun", "definition": "a person's name written by hand to confirm agreement or identity", "translation": "簽名", "example": "Please provide your signature at the bottom of the contract.", "exampleTranslation": "請在合約底部簽名。" },
-    { "form": "worldwide", "partOfSpeech": "adjective", "definition": "extending to or involving the entire world", "translation": "全球的；全世界的", "example": "The company has worldwide distribution for its products.", "exampleTranslation": "這家公司的產品有全球性的通路。" },
-    { "form": "carrier", "partOfSpeech": "noun", "definition": "a company that transports goods or passengers", "translation": "運輸業者；貨運公司", "example": "We switched to a different carrier to reduce shipping costs.", "exampleTranslation": "我們換了另一家運輸公司以降低運費。" },
-    { "form": "designate", "partOfSpeech": "verb", "definition": "to officially choose someone or something for a particular role or purpose", "translation": "指定；指派", "example": "She was designated as the project's main contact.", "exampleTranslation": "她被指定為這個專案的主要聯絡人。" },
-    { "form": "exclusive", "partOfSpeech": "adjective", "definition": "limited to a particular person or group; not shared", "translation": "獨家的；專屬的", "example": "The store offers exclusive discounts to loyalty club members.", "exampleTranslation": "這間店提供給忠誠會員專屬折扣。" },
-    { "form": "grocery", "partOfSpeech": "noun", "definition": "food and household items sold in a store, or the store itself", "translation": "雜貨；雜貨店", "example": "I need to stop by the grocery store on my way home.", "exampleTranslation": "我回家路上得去一趟雜貨店。" },
-    { "form": "homework", "partOfSpeech": "noun", "definition": "preparation or research done before a meeting or task", "translation": "事前準備；功課", "example": "Do your homework on the client before the negotiation.", "exampleTranslation": "在談判前先做好對這位客戶的功課。" },
-    { "form": "memorandum", "partOfSpeech": "noun", "definition": "a short written note used for internal communication in an office", "translation": "備忘錄", "example": "A memorandum was sent to all staff about the new dress code.", "exampleTranslation": "一份關於新服裝規定的備忘錄發給了全體員工。" },
-    { "form": "photocopier", "partOfSpeech": "noun", "definition": "a machine that makes copies of documents", "translation": "影印機", "example": "The photocopier on the third floor is out of paper again.", "exampleTranslation": "三樓的影印機又沒紙了。" },
-    { "form": "suite", "partOfSpeech": "noun", "definition": "a set of connected rooms, especially in a hotel or office", "translation": "套房；套間", "example": "The conference is being held in the hotel's executive suite.", "exampleTranslation": "這場會議在飯店的行政套房舉行。" },
-    { "form": "thorough", "partOfSpeech": "adjective", "definition": "done completely and carefully, with nothing left out", "translation": "徹底的；完善的", "example": "A thorough inspection revealed no defects in the shipment.", "exampleTranslation": "一次徹底的檢查顯示這批貨沒有瑕疵。" },
-    { "form": "bookstore", "partOfSpeech": "noun", "definition": "a shop that sells books", "translation": "書店", "example": "The bookstore downtown is having a clearance sale this weekend.", "exampleTranslation": "市區那間書店這週末在辦出清特賣。" },
-    { "form": "cater", "partOfSpeech": "verb", "definition": "to provide food and drinks for an event, or to serve the needs of a group", "translation": "提供餐飲；迎合", "example": "A local restaurant will cater the company's annual dinner.", "exampleTranslation": "一家在地餐廳將負責公司年度晚宴的餐飲。" },
-    { "form": "dental", "partOfSpeech": "adjective", "definition": "relating to teeth or dentistry", "translation": "牙科的", "example": "The benefits package includes dental insurance.", "exampleTranslation": "這個福利方案包含牙科保險。" },
-    { "form": "duration", "partOfSpeech": "noun", "definition": "the length of time something lasts", "translation": "期間；持續時間", "example": "The warranty is valid for the duration of two years.", "exampleTranslation": "保固期間為兩年。" },
-    { "form": "lounge", "partOfSpeech": "noun", "definition": "a comfortable room for waiting or relaxing", "translation": "休息室；候機室", "example": "Passengers with priority status can wait in the airport lounge.", "exampleTranslation": "擁有優先身份的乘客可以在機場貴賓室等候。" },
-    { "form": "painter", "partOfSpeech": "noun", "definition": "a person who paints, either as an artist or as a trade", "translation": "畫家；油漆工", "example": "We hired a painter to repaint the office walls.", "exampleTranslation": "我們請了一位油漆工來重新粉刷辦公室牆面。" },
-    { "form": "patron", "partOfSpeech": "noun", "definition": "a regular customer of a shop, restaurant, or other business", "translation": "顧客；贊助人", "example": "Regular patrons receive a discount on their monthly bill.", "exampleTranslation": "常客在每月帳單上可以享有折扣。" },
-    { "form": "prescription", "partOfSpeech": "noun", "definition": "a written order from a doctor for medicine", "translation": "處方；處方箋", "example": "You'll need a prescription to pick up that medication.", "exampleTranslation": "你需要一張處方箋才能領取那個藥。" }
+    {
+      "form": "seldom",
+      "partOfSpeech": "adverb",
+      "definition": "not often; rarely",
+      "translation": "很少；不常",
+      "example": "The manager seldom approves overtime without a written request.",
+      "exampleTranslation": "經理很少在沒有書面申請的情況下核准加班。"
+    },
+    {
+      "form": "signature",
+      "partOfSpeech": "noun",
+      "definition": "a person's name written by hand to confirm agreement or identity",
+      "translation": "簽名",
+      "example": "Please provide your signature at the bottom of the contract.",
+      "exampleTranslation": "請在合約底部簽名。"
+    },
+    {
+      "form": "worldwide",
+      "partOfSpeech": "adjective",
+      "definition": "extending to or involving the entire world",
+      "translation": "全球的；全世界的",
+      "example": "The company has worldwide distribution for its products.",
+      "exampleTranslation": "這家公司的產品有全球性的通路。"
+    },
+    {
+      "form": "carrier",
+      "partOfSpeech": "noun",
+      "definition": "a company that transports goods or passengers",
+      "translation": "運輸業者；貨運公司",
+      "example": "We switched to a different carrier to reduce shipping costs.",
+      "exampleTranslation": "我們換了另一家運輸公司以降低運費。"
+    },
+    {
+      "form": "designate",
+      "partOfSpeech": "verb",
+      "definition": "to officially choose someone or something for a particular role or purpose",
+      "translation": "指定；指派",
+      "example": "She was designated as the project's main contact.",
+      "exampleTranslation": "她被指定為這個專案的主要聯絡人。"
+    },
+    {
+      "form": "exclusive",
+      "partOfSpeech": "adjective",
+      "definition": "limited to a particular person or group; not shared",
+      "translation": "獨家的；專屬的",
+      "example": "The store offers exclusive discounts to loyalty club members.",
+      "exampleTranslation": "這間店提供給忠誠會員專屬折扣。"
+    },
+    {
+      "form": "grocery",
+      "partOfSpeech": "noun",
+      "definition": "food and household items sold in a store, or the store itself",
+      "translation": "雜貨；雜貨店",
+      "example": "I need to stop by the grocery store on my way home.",
+      "exampleTranslation": "我回家路上得去一趟雜貨店。"
+    },
+    {
+      "form": "homework",
+      "partOfSpeech": "noun",
+      "definition": "preparation or research done before a meeting or task",
+      "translation": "事前準備；功課",
+      "example": "Do your homework on the client before the negotiation.",
+      "exampleTranslation": "在談判前先做好對這位客戶的功課。"
+    },
+    {
+      "form": "memorandum",
+      "partOfSpeech": "noun",
+      "definition": "a short written note used for internal communication in an office",
+      "translation": "備忘錄",
+      "example": "A memorandum was sent to all staff about the new dress code.",
+      "exampleTranslation": "一份關於新服裝規定的備忘錄發給了全體員工。"
+    },
+    {
+      "form": "photocopier",
+      "partOfSpeech": "noun",
+      "definition": "a machine that makes copies of documents",
+      "translation": "影印機",
+      "example": "The photocopier on the third floor is out of paper again.",
+      "exampleTranslation": "三樓的影印機又沒紙了。"
+    },
+    {
+      "form": "suite",
+      "partOfSpeech": "noun",
+      "definition": "a set of connected rooms, especially in a hotel or office",
+      "translation": "套房；套間",
+      "example": "The conference is being held in the hotel's executive suite.",
+      "exampleTranslation": "這場會議在飯店的行政套房舉行。"
+    },
+    {
+      "form": "thorough",
+      "partOfSpeech": "adjective",
+      "definition": "done completely and carefully, with nothing left out",
+      "translation": "徹底的；完善的",
+      "example": "A thorough inspection revealed no defects in the shipment.",
+      "exampleTranslation": "一次徹底的檢查顯示這批貨沒有瑕疵。"
+    },
+    {
+      "form": "bookstore",
+      "partOfSpeech": "noun",
+      "definition": "a shop that sells books",
+      "translation": "書店",
+      "example": "The bookstore downtown is having a clearance sale this weekend.",
+      "exampleTranslation": "市區那間書店這週末在辦出清特賣。"
+    },
+    {
+      "form": "cater",
+      "partOfSpeech": "verb",
+      "definition": "to provide food and drinks for an event, or to serve the needs of a group",
+      "translation": "提供餐飲；迎合",
+      "example": "A local restaurant will cater the company's annual dinner.",
+      "exampleTranslation": "一家在地餐廳將負責公司年度晚宴的餐飲。"
+    },
+    {
+      "form": "dental",
+      "partOfSpeech": "adjective",
+      "definition": "relating to teeth or dentistry",
+      "translation": "牙科的",
+      "example": "The benefits package includes dental insurance.",
+      "exampleTranslation": "這個福利方案包含牙科保險。"
+    },
+    {
+      "form": "duration",
+      "partOfSpeech": "noun",
+      "definition": "the length of time something lasts",
+      "translation": "期間；持續時間",
+      "example": "The warranty is valid for the duration of two years.",
+      "exampleTranslation": "保固期間為兩年。"
+    },
+    {
+      "form": "lounge",
+      "partOfSpeech": "noun",
+      "definition": "a comfortable room for waiting or relaxing",
+      "translation": "休息室；候機室",
+      "example": "Passengers with priority status can wait in the airport lounge.",
+      "exampleTranslation": "擁有優先身份的乘客可以在機場貴賓室等候。"
+    },
+    {
+      "form": "painter",
+      "partOfSpeech": "noun",
+      "definition": "a person who paints, either as an artist or as a trade",
+      "translation": "畫家；油漆工",
+      "example": "We hired a painter to repaint the office walls.",
+      "exampleTranslation": "我們請了一位油漆工來重新粉刷辦公室牆面。"
+    },
+    {
+      "form": "patron",
+      "partOfSpeech": "noun",
+      "definition": "a regular customer of a shop, restaurant, or other business",
+      "translation": "顧客；贊助人",
+      "example": "Regular patrons receive a discount on their monthly bill.",
+      "exampleTranslation": "常客在每月帳單上可以享有折扣。"
+    },
+    {
+      "form": "prescription",
+      "partOfSpeech": "noun",
+      "definition": "a written order from a doctor for medicine",
+      "translation": "處方；處方箋",
+      "example": "You'll need a prescription to pick up that medication.",
+      "exampleTranslation": "你需要一張處方箋才能領取那個藥。"
+    }
   ]
 }

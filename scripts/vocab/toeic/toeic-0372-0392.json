@@ -1,27 +1,170 @@
 {
   "slug": "toeic-0372-0392",
-  "title": "TOEIC 核心單字 372-392",
-  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "title": "TOEIC 核心單字 0372-0392",
+  "group": {
+    "slug": "toeic-service-list",
+    "title": "TOEIC 核心單字"
+  },
   "words": [
-    { "form": "pant", "partOfSpeech": "noun", "definition": "a piece of clothing covering the legs; usually used as 'pants'", "translation": "褲子（常用複數 pants）", "example": "The uniform includes a matching pant and jacket.", "exampleTranslation": "這套制服包含成套的褲子和外套。" },
-    { "form": "profitable", "partOfSpeech": "adjective", "definition": "yielding financial gain", "translation": "有利可圖的；賺錢的", "example": "The new product line became profitable within a year.", "exampleTranslation": "這條新產品線在一年內就開始獲利。" },
-    { "form": "refrigerator", "partOfSpeech": "noun", "definition": "an appliance used to keep food cold", "translation": "冰箱", "example": "Please label your food before storing it in the office refrigerator.", "exampleTranslation": "把食物放進辦公室冰箱前請先標示名字。" },
-    { "form": "showroom", "partOfSpeech": "noun", "definition": "a room used to display products for sale", "translation": "展示間", "example": "Customers can test drive vehicles at the showroom.", "exampleTranslation": "顧客可以在展示間試駕車輛。" },
-    { "form": "vegetarian", "partOfSpeech": "adjective", "definition": "not eating meat or fish", "translation": "素食的", "example": "The caterer offers a vegetarian option for every meal.", "exampleTranslation": "外燴業者每一餐都提供素食選項。" },
-    { "form": "administrator", "partOfSpeech": "noun", "definition": "a person who manages the operations of an organization", "translation": "管理員；行政人員", "example": "The system administrator reset everyone's password this morning.", "exampleTranslation": "系統管理員今天早上重設了大家的密碼。" },
-    { "form": "broker", "partOfSpeech": "noun", "definition": "a person who arranges deals between buyers and sellers", "translation": "經紀人", "example": "A real estate broker helped us find the new office space.", "exampleTranslation": "一位房地產經紀人幫我們找到了新的辦公空間。" },
-    { "form": "cancellation", "partOfSpeech": "noun", "definition": "the act of stopping something that was planned", "translation": "取消", "example": "The cancellation of the flight was announced an hour before departure.", "exampleTranslation": "這班航班在起飛前一小時被宣布取消。" },
-    { "form": "confidential", "partOfSpeech": "adjective", "definition": "intended to be kept secret", "translation": "機密的", "example": "Please treat this salary information as confidential.", "exampleTranslation": "請將這份薪資資訊視為機密。" },
-    { "form": "jet", "partOfSpeech": "noun", "definition": "an aircraft powered by jet engines", "translation": "噴射機", "example": "The executives traveled by private jet for the meeting.", "exampleTranslation": "主管們搭乘私人噴射機前往開會。" },
-    { "form": "realistic", "partOfSpeech": "adjective", "definition": "having sensible expectations that are achievable", "translation": "務實的；符合現實的", "example": "We need to set a realistic deadline for the launch.", "exampleTranslation": "我們需要為上線設定一個務實的期限。" },
-    { "form": "thoroughly", "partOfSpeech": "adverb", "definition": "in a way that is complete and careful", "translation": "徹底地", "example": "The contract should be reviewed thoroughly before signing.", "exampleTranslation": "合約在簽署前應該被徹底審閱過。" },
-    { "form": "trash", "partOfSpeech": "noun", "definition": "waste material; garbage", "translation": "垃圾", "example": "Please empty the trash bins before you leave.", "exampleTranslation": "離開前請把垃圾桶清空。" },
-    { "form": "usage", "partOfSpeech": "noun", "definition": "the act of using something, or the amount used", "translation": "使用；用量", "example": "Electricity usage is monitored to control costs.", "exampleTranslation": "用電量會被監控以控制成本。" },
-    { "form": "windy", "partOfSpeech": "adjective", "definition": "having a lot of wind", "translation": "多風的", "example": "The outdoor event was postponed due to windy conditions.", "exampleTranslation": "戶外活動因為風大而延期了。" },
-    { "form": "automate", "partOfSpeech": "verb", "definition": "to make a process operate automatically, using machines or software", "translation": "使自動化", "example": "The team plans to automate the monthly reporting process.", "exampleTranslation": "團隊計畫將每月報表流程自動化。" },
-    { "form": "ferry", "partOfSpeech": "noun", "definition": "a boat used to carry passengers or vehicles across water", "translation": "渡輪", "example": "Take the ferry across the harbor to reach the office.", "exampleTranslation": "搭渡輪穿越港灣就能到辦公室。" },
-    { "form": "finalize", "partOfSpeech": "verb", "definition": "to complete or settle the last details of something", "translation": "敲定；使定案", "example": "Let's finalize the budget before the end of the week.", "exampleTranslation": "我們在這週結束前把預算敲定吧。" },
-    { "form": "incur", "partOfSpeech": "verb", "definition": "to experience something unpleasant as a result of one's actions", "translation": "招致；產生（費用等）", "example": "Late payments will incur an additional fee.", "exampleTranslation": "逾期付款將產生額外費用。" },
-    { "form": "instruct", "partOfSpeech": "verb", "definition": "to give someone official directions or orders", "translation": "指示；指導", "example": "The manager instructed the team to prioritize the client's request.", "exampleTranslation": "經理指示團隊優先處理客戶的請求。" }
+    {
+      "form": "pant",
+      "partOfSpeech": "noun",
+      "definition": "a piece of clothing covering the legs; usually used as 'pants'",
+      "translation": "褲子（常用複數 pants）",
+      "example": "The uniform includes a matching pant and jacket.",
+      "exampleTranslation": "這套制服包含成套的褲子和外套。"
+    },
+    {
+      "form": "profitable",
+      "partOfSpeech": "adjective",
+      "definition": "yielding financial gain",
+      "translation": "有利可圖的；賺錢的",
+      "example": "The new product line became profitable within a year.",
+      "exampleTranslation": "這條新產品線在一年內就開始獲利。"
+    },
+    {
+      "form": "refrigerator",
+      "partOfSpeech": "noun",
+      "definition": "an appliance used to keep food cold",
+      "translation": "冰箱",
+      "example": "Please label your food before storing it in the office refrigerator.",
+      "exampleTranslation": "把食物放進辦公室冰箱前請先標示名字。"
+    },
+    {
+      "form": "showroom",
+      "partOfSpeech": "noun",
+      "definition": "a room used to display products for sale",
+      "translation": "展示間",
+      "example": "Customers can test drive vehicles at the showroom.",
+      "exampleTranslation": "顧客可以在展示間試駕車輛。"
+    },
+    {
+      "form": "vegetarian",
+      "partOfSpeech": "adjective",
+      "definition": "not eating meat or fish",
+      "translation": "素食的",
+      "example": "The caterer offers a vegetarian option for every meal.",
+      "exampleTranslation": "外燴業者每一餐都提供素食選項。"
+    },
+    {
+      "form": "administrator",
+      "partOfSpeech": "noun",
+      "definition": "a person who manages the operations of an organization",
+      "translation": "管理員；行政人員",
+      "example": "The system administrator reset everyone's password this morning.",
+      "exampleTranslation": "系統管理員今天早上重設了大家的密碼。"
+    },
+    {
+      "form": "broker",
+      "partOfSpeech": "noun",
+      "definition": "a person who arranges deals between buyers and sellers",
+      "translation": "經紀人",
+      "example": "A real estate broker helped us find the new office space.",
+      "exampleTranslation": "一位房地產經紀人幫我們找到了新的辦公空間。"
+    },
+    {
+      "form": "cancellation",
+      "partOfSpeech": "noun",
+      "definition": "the act of stopping something that was planned",
+      "translation": "取消",
+      "example": "The cancellation of the flight was announced an hour before departure.",
+      "exampleTranslation": "這班航班在起飛前一小時被宣布取消。"
+    },
+    {
+      "form": "confidential",
+      "partOfSpeech": "adjective",
+      "definition": "intended to be kept secret",
+      "translation": "機密的",
+      "example": "Please treat this salary information as confidential.",
+      "exampleTranslation": "請將這份薪資資訊視為機密。"
+    },
+    {
+      "form": "jet",
+      "partOfSpeech": "noun",
+      "definition": "an aircraft powered by jet engines",
+      "translation": "噴射機",
+      "example": "The executives traveled by private jet for the meeting.",
+      "exampleTranslation": "主管們搭乘私人噴射機前往開會。"
+    },
+    {
+      "form": "realistic",
+      "partOfSpeech": "adjective",
+      "definition": "having sensible expectations that are achievable",
+      "translation": "務實的；符合現實的",
+      "example": "We need to set a realistic deadline for the launch.",
+      "exampleTranslation": "我們需要為上線設定一個務實的期限。"
+    },
+    {
+      "form": "thoroughly",
+      "partOfSpeech": "adverb",
+      "definition": "in a way that is complete and careful",
+      "translation": "徹底地",
+      "example": "The contract should be reviewed thoroughly before signing.",
+      "exampleTranslation": "合約在簽署前應該被徹底審閱過。"
+    },
+    {
+      "form": "trash",
+      "partOfSpeech": "noun",
+      "definition": "waste material; garbage",
+      "translation": "垃圾",
+      "example": "Please empty the trash bins before you leave.",
+      "exampleTranslation": "離開前請把垃圾桶清空。"
+    },
+    {
+      "form": "usage",
+      "partOfSpeech": "noun",
+      "definition": "the act of using something, or the amount used",
+      "translation": "使用；用量",
+      "example": "Electricity usage is monitored to control costs.",
+      "exampleTranslation": "用電量會被監控以控制成本。"
+    },
+    {
+      "form": "windy",
+      "partOfSpeech": "adjective",
+      "definition": "having a lot of wind",
+      "translation": "多風的",
+      "example": "The outdoor event was postponed due to windy conditions.",
+      "exampleTranslation": "戶外活動因為風大而延期了。"
+    },
+    {
+      "form": "automate",
+      "partOfSpeech": "verb",
+      "definition": "to make a process operate automatically, using machines or software",
+      "translation": "使自動化",
+      "example": "The team plans to automate the monthly reporting process.",
+      "exampleTranslation": "團隊計畫將每月報表流程自動化。"
+    },
+    {
+      "form": "ferry",
+      "partOfSpeech": "noun",
+      "definition": "a boat used to carry passengers or vehicles across water",
+      "translation": "渡輪",
+      "example": "Take the ferry across the harbor to reach the office.",
+      "exampleTranslation": "搭渡輪穿越港灣就能到辦公室。"
+    },
+    {
+      "form": "finalize",
+      "partOfSpeech": "verb",
+      "definition": "to complete or settle the last details of something",
+      "translation": "敲定；使定案",
+      "example": "Let's finalize the budget before the end of the week.",
+      "exampleTranslation": "我們在這週結束前把預算敲定吧。"
+    },
+    {
+      "form": "incur",
+      "partOfSpeech": "verb",
+      "definition": "to experience something unpleasant as a result of one's actions",
+      "translation": "招致；產生（費用等）",
+      "example": "Late payments will incur an additional fee.",
+      "exampleTranslation": "逾期付款將產生額外費用。"
+    },
+    {
+      "form": "instruct",
+      "partOfSpeech": "verb",
+      "definition": "to give someone official directions or orders",
+      "translation": "指示；指導",
+      "example": "The manager instructed the team to prioritize the client's request.",
+      "exampleTranslation": "經理指示團隊優先處理客戶的請求。"
+    }
   ]
 }

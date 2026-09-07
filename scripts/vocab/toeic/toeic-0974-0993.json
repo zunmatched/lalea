@@ -1,27 +1,170 @@
 {
   "slug": "toeic-0974-0993",
-  "title": "TOEIC 核心單字 974-993",
-  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "title": "TOEIC 核心單字 0974-0993",
+  "group": {
+    "slug": "toeic-service-list",
+    "title": "TOEIC 核心單字"
+  },
   "words": [
-    { "form": "economically", "partOfSpeech": "adverb", "definition": "in a way that relates to the economy, or cost-effectively", "translation": "經濟地；節約地", "example": "The new process allows the factory to operate more economically.", "exampleTranslation": "這套新流程讓工廠能更節約地運作。" },
-    { "form": "evenly", "partOfSpeech": "adverb", "definition": "in a uniform or equal manner", "translation": "平均地", "example": "Divide the workload evenly among all team members.", "exampleTranslation": "把工作量平均分配給所有團隊成員。" },
-    { "form": "excellence", "partOfSpeech": "noun", "definition": "the quality of being outstanding", "translation": "卓越", "example": "The award recognizes excellence in customer service.", "exampleTranslation": "這個獎項表揚在客戶服務方面表現卓越的人。" },
-    { "form": "exclusively", "partOfSpeech": "adverb", "definition": "only, not including anything else", "translation": "專門地；獨家地", "example": "This offer is available exclusively to premium members.", "exampleTranslation": "這項優惠僅限尊榮會員享有。" },
-    { "form": "farewell", "partOfSpeech": "noun", "definition": "an expression of good wishes when parting", "translation": "告別", "example": "The office held a farewell party for the retiring manager.", "exampleTranslation": "辦公室為即將退休的經理舉辦了一場歡送會。" },
-    { "form": "fatigue", "partOfSpeech": "noun", "definition": "extreme tiredness", "translation": "疲勞", "example": "Long shifts can lead to fatigue among warehouse staff.", "exampleTranslation": "長時間輪班可能導致倉庫員工感到疲勞。" },
-    { "form": "fiscal", "partOfSpeech": "adjective", "definition": "relating to government revenue or financial matters", "translation": "財政的；會計的", "example": "The company's fiscal year begins in April.", "exampleTranslation": "這家公司的會計年度從四月開始。" },
-    { "form": "fleet", "partOfSpeech": "noun", "definition": "a group of vehicles operated together", "translation": "車隊；船隊", "example": "The delivery company expanded its fleet of electric vans.", "exampleTranslation": "這家快遞公司擴充了旗下的電動廂型車車隊。" },
-    { "form": "flour", "partOfSpeech": "noun", "definition": "a powder made from ground grain, used in baking", "translation": "麵粉", "example": "The bakery orders flour in bulk from a local mill.", "exampleTranslation": "這間麵包店向當地的磨坊大量訂購麵粉。" },
-    { "form": "fog", "partOfSpeech": "noun", "definition": "a thick cloud of tiny water droplets near the ground", "translation": "霧", "example": "Dense fog caused several flight delays this morning.", "exampleTranslation": "濃霧導致今天早上好幾班航班延誤。" },
-    { "form": "formally", "partOfSpeech": "adverb", "definition": "in an official or formal way", "translation": "正式地", "example": "The merger was formally announced at the press conference.", "exampleTranslation": "這次合併在記者會上正式宣布。" },
-    { "form": "gram", "partOfSpeech": "noun", "definition": "a metric unit of mass", "translation": "公克", "example": "The recipe calls for two hundred grams of flour.", "exampleTranslation": "這道食譜需要兩百公克的麵粉。" },
-    { "form": "handbook", "partOfSpeech": "noun", "definition": "a reference book giving instructions or information", "translation": "手冊", "example": "New hires receive an employee handbook on their first day.", "exampleTranslation": "新進員工在第一天會收到一本員工手冊。" },
-    { "form": "headphone", "partOfSpeech": "noun", "definition": "a device worn over the ears to listen to audio", "translation": "耳機", "example": "Wear headphones so you don't disturb your coworkers.", "exampleTranslation": "戴上耳機以免打擾到同事。" },
-    { "form": "heater", "partOfSpeech": "noun", "definition": "a device that produces heat", "translation": "暖氣機", "example": "The office installed a new heater for the winter.", "exampleTranslation": "辦公室為了冬天安裝了新的暖氣機。" },
-    { "form": "helmet", "partOfSpeech": "noun", "definition": "a protective covering for the head", "translation": "安全帽", "example": "All construction workers must wear a helmet on site.", "exampleTranslation": "所有工地工人都必須戴安全帽。" },
-    { "form": "hiker", "partOfSpeech": "noun", "definition": "a person who walks long distances for pleasure", "translation": "健行者", "example": "The trail is popular among hikers on weekends.", "exampleTranslation": "這條步道在週末很受健行者歡迎。" },
-    { "form": "homeless", "partOfSpeech": "adjective", "definition": "without a home", "translation": "無家可歸的", "example": "The charity provides meals for homeless individuals downtown.", "exampleTranslation": "這個慈善機構為市中心無家可歸的人提供餐點。" },
-    { "form": "lighter", "partOfSpeech": "noun", "definition": "a small device used to light fires or cigarettes", "translation": "打火機", "example": "He looked for a lighter to light the candle at the reception.", "exampleTranslation": "他在接待會上找打火機來點蠟燭。" },
-    { "form": "loudly", "partOfSpeech": "adverb", "definition": "in a loud manner", "translation": "大聲地", "example": "Please don't speak loudly during the presentation.", "exampleTranslation": "簡報期間請不要大聲說話。" }
+    {
+      "form": "economically",
+      "partOfSpeech": "adverb",
+      "definition": "in a way that relates to the economy, or cost-effectively",
+      "translation": "經濟地；節約地",
+      "example": "The new process allows the factory to operate more economically.",
+      "exampleTranslation": "這套新流程讓工廠能更節約地運作。"
+    },
+    {
+      "form": "evenly",
+      "partOfSpeech": "adverb",
+      "definition": "in a uniform or equal manner",
+      "translation": "平均地",
+      "example": "Divide the workload evenly among all team members.",
+      "exampleTranslation": "把工作量平均分配給所有團隊成員。"
+    },
+    {
+      "form": "excellence",
+      "partOfSpeech": "noun",
+      "definition": "the quality of being outstanding",
+      "translation": "卓越",
+      "example": "The award recognizes excellence in customer service.",
+      "exampleTranslation": "這個獎項表揚在客戶服務方面表現卓越的人。"
+    },
+    {
+      "form": "exclusively",
+      "partOfSpeech": "adverb",
+      "definition": "only, not including anything else",
+      "translation": "專門地；獨家地",
+      "example": "This offer is available exclusively to premium members.",
+      "exampleTranslation": "這項優惠僅限尊榮會員享有。"
+    },
+    {
+      "form": "farewell",
+      "partOfSpeech": "noun",
+      "definition": "an expression of good wishes when parting",
+      "translation": "告別",
+      "example": "The office held a farewell party for the retiring manager.",
+      "exampleTranslation": "辦公室為即將退休的經理舉辦了一場歡送會。"
+    },
+    {
+      "form": "fatigue",
+      "partOfSpeech": "noun",
+      "definition": "extreme tiredness",
+      "translation": "疲勞",
+      "example": "Long shifts can lead to fatigue among warehouse staff.",
+      "exampleTranslation": "長時間輪班可能導致倉庫員工感到疲勞。"
+    },
+    {
+      "form": "fiscal",
+      "partOfSpeech": "adjective",
+      "definition": "relating to government revenue or financial matters",
+      "translation": "財政的；會計的",
+      "example": "The company's fiscal year begins in April.",
+      "exampleTranslation": "這家公司的會計年度從四月開始。"
+    },
+    {
+      "form": "fleet",
+      "partOfSpeech": "noun",
+      "definition": "a group of vehicles operated together",
+      "translation": "車隊；船隊",
+      "example": "The delivery company expanded its fleet of electric vans.",
+      "exampleTranslation": "這家快遞公司擴充了旗下的電動廂型車車隊。"
+    },
+    {
+      "form": "flour",
+      "partOfSpeech": "noun",
+      "definition": "a powder made from ground grain, used in baking",
+      "translation": "麵粉",
+      "example": "The bakery orders flour in bulk from a local mill.",
+      "exampleTranslation": "這間麵包店向當地的磨坊大量訂購麵粉。"
+    },
+    {
+      "form": "fog",
+      "partOfSpeech": "noun",
+      "definition": "a thick cloud of tiny water droplets near the ground",
+      "translation": "霧",
+      "example": "Dense fog caused several flight delays this morning.",
+      "exampleTranslation": "濃霧導致今天早上好幾班航班延誤。"
+    },
+    {
+      "form": "formally",
+      "partOfSpeech": "adverb",
+      "definition": "in an official or formal way",
+      "translation": "正式地",
+      "example": "The merger was formally announced at the press conference.",
+      "exampleTranslation": "這次合併在記者會上正式宣布。"
+    },
+    {
+      "form": "gram",
+      "partOfSpeech": "noun",
+      "definition": "a metric unit of mass",
+      "translation": "公克",
+      "example": "The recipe calls for two hundred grams of flour.",
+      "exampleTranslation": "這道食譜需要兩百公克的麵粉。"
+    },
+    {
+      "form": "handbook",
+      "partOfSpeech": "noun",
+      "definition": "a reference book giving instructions or information",
+      "translation": "手冊",
+      "example": "New hires receive an employee handbook on their first day.",
+      "exampleTranslation": "新進員工在第一天會收到一本員工手冊。"
+    },
+    {
+      "form": "headphone",
+      "partOfSpeech": "noun",
+      "definition": "a device worn over the ears to listen to audio",
+      "translation": "耳機",
+      "example": "Wear headphones so you don't disturb your coworkers.",
+      "exampleTranslation": "戴上耳機以免打擾到同事。"
+    },
+    {
+      "form": "heater",
+      "partOfSpeech": "noun",
+      "definition": "a device that produces heat",
+      "translation": "暖氣機",
+      "example": "The office installed a new heater for the winter.",
+      "exampleTranslation": "辦公室為了冬天安裝了新的暖氣機。"
+    },
+    {
+      "form": "helmet",
+      "partOfSpeech": "noun",
+      "definition": "a protective covering for the head",
+      "translation": "安全帽",
+      "example": "All construction workers must wear a helmet on site.",
+      "exampleTranslation": "所有工地工人都必須戴安全帽。"
+    },
+    {
+      "form": "hiker",
+      "partOfSpeech": "noun",
+      "definition": "a person who walks long distances for pleasure",
+      "translation": "健行者",
+      "example": "The trail is popular among hikers on weekends.",
+      "exampleTranslation": "這條步道在週末很受健行者歡迎。"
+    },
+    {
+      "form": "homeless",
+      "partOfSpeech": "adjective",
+      "definition": "without a home",
+      "translation": "無家可歸的",
+      "example": "The charity provides meals for homeless individuals downtown.",
+      "exampleTranslation": "這個慈善機構為市中心無家可歸的人提供餐點。"
+    },
+    {
+      "form": "lighter",
+      "partOfSpeech": "noun",
+      "definition": "a small device used to light fires or cigarettes",
+      "translation": "打火機",
+      "example": "He looked for a lighter to light the candle at the reception.",
+      "exampleTranslation": "他在接待會上找打火機來點蠟燭。"
+    },
+    {
+      "form": "loudly",
+      "partOfSpeech": "adverb",
+      "definition": "in a loud manner",
+      "translation": "大聲地",
+      "example": "Please don't speak loudly during the presentation.",
+      "exampleTranslation": "簡報期間請不要大聲說話。"
+    }
   ]
 }

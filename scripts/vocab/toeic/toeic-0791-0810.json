@@ -1,27 +1,170 @@
 {
   "slug": "toeic-0791-0810",
-  "title": "TOEIC 核心單字 791-810",
-  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "title": "TOEIC 核心單字 0791-0810",
+  "group": {
+    "slug": "toeic-service-list",
+    "title": "TOEIC 核心單字"
+  },
   "words": [
-    { "form": "spreadsheet", "partOfSpeech": "noun", "definition": "a computer document for organizing data in rows and columns", "translation": "試算表", "example": "Update the spreadsheet with this month's expenses.", "exampleTranslation": "請把這個月的支出更新到試算表裡。" },
-    { "form": "stapler", "partOfSpeech": "noun", "definition": "a device used to fasten papers together with staples", "translation": "訂書機", "example": "Could you pass me the stapler on your desk?", "exampleTranslation": "可以把你桌上的訂書機遞給我嗎？" },
-    { "form": "streamline", "partOfSpeech": "verb", "definition": "to make a process more efficient by simplifying it", "translation": "簡化；使流線化", "example": "The new software helps streamline the approval process.", "exampleTranslation": "這套新軟體有助於簡化核准流程。" },
-    { "form": "substantially", "partOfSpeech": "adverb", "definition": "to a great or significant extent", "translation": "大幅地；實質上", "example": "Sales have increased substantially since the marketing campaign began.", "exampleTranslation": "自從行銷活動開始後，銷售額大幅成長。" },
-    { "form": "teller", "partOfSpeech": "noun", "definition": "a bank employee who handles customer transactions", "translation": "銀行行員；出納員", "example": "The teller processed the deposit within minutes.", "exampleTranslation": "這位行員幾分鐘內就處理完存款。" },
-    { "form": "tidy", "partOfSpeech": "adjective", "definition": "neat and orderly", "translation": "整潔的", "example": "Keep your desk tidy before the client visits.", "exampleTranslation": "客戶來訪前請保持桌面整潔。" },
-    { "form": "toll", "partOfSpeech": "noun", "definition": "a fee paid for using a road or bridge, or a serious negative effect", "translation": "過路費；代價", "example": "Drivers must pay a toll to cross the bridge.", "exampleTranslation": "駕駛人過橋必須支付過路費。" },
-    { "form": "toner", "partOfSpeech": "noun", "definition": "powder ink used in printers and photocopiers", "translation": "碳粉", "example": "Order more toner before the printer runs out.", "exampleTranslation": "在印表機沒碳粉之前先訂購一些。" },
-    { "form": "urgently", "partOfSpeech": "adverb", "definition": "in a way that requires immediate attention", "translation": "緊急地", "example": "The client urgently requested a revised quote by tomorrow.", "exampleTranslation": "客戶緊急要求明天前提供修改後的報價。" },
-    { "form": "walkway", "partOfSpeech": "noun", "definition": "a path for walking, especially one connecting two places", "translation": "走道；人行道", "example": "Follow the covered walkway to reach the conference center.", "exampleTranslation": "沿著有頂棚的走道走就能到會議中心。" },
-    { "form": "absorb", "partOfSpeech": "verb", "definition": "to take in or soak up, or to fully bear a cost or impact", "translation": "吸收", "example": "The company had to absorb the extra shipping costs.", "exampleTranslation": "這家公司必須自行吸收額外的運費。" },
-    { "form": "administer", "partOfSpeech": "verb", "definition": "to manage or oversee the operation of something", "translation": "管理；執行", "example": "The HR department administers the new benefits program.", "exampleTranslation": "人資部門負責管理這項新的福利方案。" },
-    { "form": "ample", "partOfSpeech": "adjective", "definition": "more than enough; plentiful", "translation": "充足的", "example": "There is ample parking space near the office building.", "exampleTranslation": "辦公大樓附近有充足的停車空間。" },
-    { "form": "antique", "partOfSpeech": "adjective", "definition": "old and often valuable, especially furniture or art", "translation": "古董的", "example": "The lobby is decorated with several antique furniture pieces.", "exampleTranslation": "大廳擺放了幾件古董家具作為裝飾。" },
-    { "form": "bean", "partOfSpeech": "noun", "definition": "the seed of certain plants, used as food", "translation": "豆子", "example": "The cafeteria serves a salad with black beans and corn.", "exampleTranslation": "自助餐廳供應一道有黑豆和玉米的沙拉。" },
-    { "form": "browse", "partOfSpeech": "verb", "definition": "to look through items casually, or to look through a website", "translation": "瀏覽", "example": "Customers can browse the catalog online before placing an order.", "exampleTranslation": "顧客可以在下單前先在網路上瀏覽型錄。" },
-    { "form": "bye", "partOfSpeech": "phrase", "definition": "an informal way of saying goodbye", "translation": "再見（口語）", "example": "She waved bye to her coworkers as she left for the day.", "exampleTranslation": "她下班離開時朝同事揮手說再見。" },
-    { "form": "careless", "partOfSpeech": "adjective", "definition": "not giving enough attention or thought to something", "translation": "粗心的", "example": "A careless mistake in the report delayed the approval.", "exampleTranslation": "報告裡一個粗心的錯誤延誤了核准。" },
-    { "form": "collector", "partOfSpeech": "noun", "definition": "a person who collects things, or one who gathers payments", "translation": "收藏家；收款員", "example": "He is a collector of vintage postage stamps.", "exampleTranslation": "他是古董郵票的收藏家。" },
-    { "form": "conform", "partOfSpeech": "verb", "definition": "to comply with rules, standards, or expectations", "translation": "遵從；符合", "example": "All products must conform to the safety regulations.", "exampleTranslation": "所有產品都必須符合安全規範。" }
+    {
+      "form": "spreadsheet",
+      "partOfSpeech": "noun",
+      "definition": "a computer document for organizing data in rows and columns",
+      "translation": "試算表",
+      "example": "Update the spreadsheet with this month's expenses.",
+      "exampleTranslation": "請把這個月的支出更新到試算表裡。"
+    },
+    {
+      "form": "stapler",
+      "partOfSpeech": "noun",
+      "definition": "a device used to fasten papers together with staples",
+      "translation": "訂書機",
+      "example": "Could you pass me the stapler on your desk?",
+      "exampleTranslation": "可以把你桌上的訂書機遞給我嗎？"
+    },
+    {
+      "form": "streamline",
+      "partOfSpeech": "verb",
+      "definition": "to make a process more efficient by simplifying it",
+      "translation": "簡化；使流線化",
+      "example": "The new software helps streamline the approval process.",
+      "exampleTranslation": "這套新軟體有助於簡化核准流程。"
+    },
+    {
+      "form": "substantially",
+      "partOfSpeech": "adverb",
+      "definition": "to a great or significant extent",
+      "translation": "大幅地；實質上",
+      "example": "Sales have increased substantially since the marketing campaign began.",
+      "exampleTranslation": "自從行銷活動開始後，銷售額大幅成長。"
+    },
+    {
+      "form": "teller",
+      "partOfSpeech": "noun",
+      "definition": "a bank employee who handles customer transactions",
+      "translation": "銀行行員；出納員",
+      "example": "The teller processed the deposit within minutes.",
+      "exampleTranslation": "這位行員幾分鐘內就處理完存款。"
+    },
+    {
+      "form": "tidy",
+      "partOfSpeech": "adjective",
+      "definition": "neat and orderly",
+      "translation": "整潔的",
+      "example": "Keep your desk tidy before the client visits.",
+      "exampleTranslation": "客戶來訪前請保持桌面整潔。"
+    },
+    {
+      "form": "toll",
+      "partOfSpeech": "noun",
+      "definition": "a fee paid for using a road or bridge, or a serious negative effect",
+      "translation": "過路費；代價",
+      "example": "Drivers must pay a toll to cross the bridge.",
+      "exampleTranslation": "駕駛人過橋必須支付過路費。"
+    },
+    {
+      "form": "toner",
+      "partOfSpeech": "noun",
+      "definition": "powder ink used in printers and photocopiers",
+      "translation": "碳粉",
+      "example": "Order more toner before the printer runs out.",
+      "exampleTranslation": "在印表機沒碳粉之前先訂購一些。"
+    },
+    {
+      "form": "urgently",
+      "partOfSpeech": "adverb",
+      "definition": "in a way that requires immediate attention",
+      "translation": "緊急地",
+      "example": "The client urgently requested a revised quote by tomorrow.",
+      "exampleTranslation": "客戶緊急要求明天前提供修改後的報價。"
+    },
+    {
+      "form": "walkway",
+      "partOfSpeech": "noun",
+      "definition": "a path for walking, especially one connecting two places",
+      "translation": "走道；人行道",
+      "example": "Follow the covered walkway to reach the conference center.",
+      "exampleTranslation": "沿著有頂棚的走道走就能到會議中心。"
+    },
+    {
+      "form": "absorb",
+      "partOfSpeech": "verb",
+      "definition": "to take in or soak up, or to fully bear a cost or impact",
+      "translation": "吸收",
+      "example": "The company had to absorb the extra shipping costs.",
+      "exampleTranslation": "這家公司必須自行吸收額外的運費。"
+    },
+    {
+      "form": "administer",
+      "partOfSpeech": "verb",
+      "definition": "to manage or oversee the operation of something",
+      "translation": "管理；執行",
+      "example": "The HR department administers the new benefits program.",
+      "exampleTranslation": "人資部門負責管理這項新的福利方案。"
+    },
+    {
+      "form": "ample",
+      "partOfSpeech": "adjective",
+      "definition": "more than enough; plentiful",
+      "translation": "充足的",
+      "example": "There is ample parking space near the office building.",
+      "exampleTranslation": "辦公大樓附近有充足的停車空間。"
+    },
+    {
+      "form": "antique",
+      "partOfSpeech": "adjective",
+      "definition": "old and often valuable, especially furniture or art",
+      "translation": "古董的",
+      "example": "The lobby is decorated with several antique furniture pieces.",
+      "exampleTranslation": "大廳擺放了幾件古董家具作為裝飾。"
+    },
+    {
+      "form": "bean",
+      "partOfSpeech": "noun",
+      "definition": "the seed of certain plants, used as food",
+      "translation": "豆子",
+      "example": "The cafeteria serves a salad with black beans and corn.",
+      "exampleTranslation": "自助餐廳供應一道有黑豆和玉米的沙拉。"
+    },
+    {
+      "form": "browse",
+      "partOfSpeech": "verb",
+      "definition": "to look through items casually, or to look through a website",
+      "translation": "瀏覽",
+      "example": "Customers can browse the catalog online before placing an order.",
+      "exampleTranslation": "顧客可以在下單前先在網路上瀏覽型錄。"
+    },
+    {
+      "form": "bye",
+      "partOfSpeech": "phrase",
+      "definition": "an informal way of saying goodbye",
+      "translation": "再見（口語）",
+      "example": "She waved bye to her coworkers as she left for the day.",
+      "exampleTranslation": "她下班離開時朝同事揮手說再見。"
+    },
+    {
+      "form": "careless",
+      "partOfSpeech": "adjective",
+      "definition": "not giving enough attention or thought to something",
+      "translation": "粗心的",
+      "example": "A careless mistake in the report delayed the approval.",
+      "exampleTranslation": "報告裡一個粗心的錯誤延誤了核准。"
+    },
+    {
+      "form": "collector",
+      "partOfSpeech": "noun",
+      "definition": "a person who collects things, or one who gathers payments",
+      "translation": "收藏家；收款員",
+      "example": "He is a collector of vintage postage stamps.",
+      "exampleTranslation": "他是古董郵票的收藏家。"
+    },
+    {
+      "form": "conform",
+      "partOfSpeech": "verb",
+      "definition": "to comply with rules, standards, or expectations",
+      "translation": "遵從；符合",
+      "example": "All products must conform to the safety regulations.",
+      "exampleTranslation": "所有產品都必須符合安全規範。"
+    }
   ]
 }

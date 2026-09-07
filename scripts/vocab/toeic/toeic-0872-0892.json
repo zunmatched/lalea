@@ -1,27 +1,170 @@
 {
   "slug": "toeic-0872-0892",
-  "title": "TOEIC 核心單字 872-892",
-  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "title": "TOEIC 核心單字 0872-0892",
+  "group": {
+    "slug": "toeic-service-list",
+    "title": "TOEIC 核心單字"
+  },
   "words": [
-    { "form": "recur", "partOfSpeech": "verb", "definition": "to happen again", "translation": "再度發生", "example": "Make sure this billing error doesn't recur next month.", "exampleTranslation": "請確保這個帳單錯誤下個月不會再度發生。" },
-    { "form": "reproduce", "partOfSpeech": "verb", "definition": "to make a copy of something, or to produce offspring", "translation": "複製；再現", "example": "The printer can reproduce documents in high resolution.", "exampleTranslation": "這台印表機可以高解析度複製文件。" },
-    { "form": "spray", "partOfSpeech": "verb", "definition": "to scatter liquid in fine drops", "translation": "噴灑", "example": "Workers spray the equipment with disinfectant every evening.", "exampleTranslation": "工人每天傍晚都會用消毒劑噴灑設備。" },
-    { "form": "staple", "partOfSpeech": "noun", "definition": "a small piece of wire for fastening paper, or a basic and regularly used item", "translation": "訂書針；主要項目", "example": "Rice is a dietary staple in many Asian countries.", "exampleTranslation": "米飯是許多亞洲國家的主食。" },
-    { "form": "strategic", "partOfSpeech": "adjective", "definition": "relating to a plan aimed at a long-term goal", "translation": "策略性的", "example": "The company formed a strategic partnership with a logistics firm.", "exampleTranslation": "這家公司跟一間物流公司建立了策略性夥伴關係。" },
-    { "form": "stripe", "partOfSpeech": "noun", "definition": "a long narrow band of a different color", "translation": "條紋", "example": "The uniform features a blue stripe down each sleeve.", "exampleTranslation": "這套制服的每隻袖子上都有一道藍色條紋。" },
-    { "form": "teen", "partOfSpeech": "noun", "definition": "a person aged thirteen to nineteen", "translation": "青少年", "example": "The clothing line targets teens and young adults.", "exampleTranslation": "這個服飾系列鎖定青少年和年輕成人。" },
-    { "form": "tempt", "partOfSpeech": "verb", "definition": "to attract someone to do something, especially something unwise", "translation": "誘惑", "example": "The discount was designed to tempt customers into buying more.", "exampleTranslation": "這個折扣是設計來誘使顧客買更多。" },
-    { "form": "timer", "partOfSpeech": "noun", "definition": "a device that measures or counts time", "translation": "計時器", "example": "Set a timer to remind you when the meeting ends.", "exampleTranslation": "設定一個計時器來提醒你會議何時結束。" },
-    { "form": "unload", "partOfSpeech": "verb", "definition": "to remove goods or cargo from a vehicle", "translation": "卸貨", "example": "The crew unloaded the truck within thirty minutes.", "exampleTranslation": "工作人員在三十分鐘內把貨車卸完貨。" },
-    { "form": "unusually", "partOfSpeech": "adverb", "definition": "in a way that is not typical", "translation": "異常地", "example": "Sales were unusually high during the holiday season.", "exampleTranslation": "假期期間銷售異常地好。" },
-    { "form": "vacate", "partOfSpeech": "verb", "definition": "to leave a place, making it available for others", "translation": "騰出；搬出", "example": "Tenants must vacate the building by the end of the month.", "exampleTranslation": "房客必須在月底前搬出這棟大樓。" },
-    { "form": "whale", "partOfSpeech": "noun", "definition": "a large marine mammal", "translation": "鯨魚", "example": "The tour company offers whale watching excursions.", "exampleTranslation": "這間旅遊公司提供賞鯨行程。" },
-    { "form": "wisely", "partOfSpeech": "adverb", "definition": "in a sensible or knowledgeable way", "translation": "明智地", "example": "Invest your budget wisely to avoid overspending.", "exampleTranslation": "明智地運用你的預算，避免超支。" },
-    { "form": "amateur", "partOfSpeech": "adjective", "definition": "done or engaged in without professional training", "translation": "業餘的", "example": "The photography contest is open to both amateurs and professionals.", "exampleTranslation": "這場攝影比賽開放給業餘和專業人士參加。" },
-    { "form": "ambassador", "partOfSpeech": "noun", "definition": "an official representative, especially of a country or brand", "translation": "大使；代表", "example": "She was appointed brand ambassador for the new product line.", "exampleTranslation": "她被任命為這個新產品系列的品牌大使。" },
-    { "form": "anew", "partOfSpeech": "adverb", "definition": "again, in a new or different way", "translation": "重新", "example": "The team decided to start the project anew after the setback.", "exampleTranslation": "團隊在遭遇挫折後決定重新展開這個專案。" },
-    { "form": "attain", "partOfSpeech": "verb", "definition": "to achieve or reach a goal", "translation": "達成；獲得", "example": "The sales team worked hard to attain their quarterly target.", "exampleTranslation": "業務團隊努力達成他們的季度目標。" },
-    { "form": "balloon", "partOfSpeech": "verb", "definition": "to increase rapidly in size or amount", "translation": "急遽膨脹", "example": "Costs ballooned after the project scope expanded.", "exampleTranslation": "專案範圍擴大後，成本急遽膨脹。" },
-    { "form": "blueprint", "partOfSpeech": "noun", "definition": "a detailed plan or technical drawing", "translation": "藍圖；詳細計畫", "example": "The architect presented the blueprint for the new office building.", "exampleTranslation": "建築師展示了這棟新辦公大樓的藍圖。" }
+    {
+      "form": "recur",
+      "partOfSpeech": "verb",
+      "definition": "to happen again",
+      "translation": "再度發生",
+      "example": "Make sure this billing error doesn't recur next month.",
+      "exampleTranslation": "請確保這個帳單錯誤下個月不會再度發生。"
+    },
+    {
+      "form": "reproduce",
+      "partOfSpeech": "verb",
+      "definition": "to make a copy of something, or to produce offspring",
+      "translation": "複製；再現",
+      "example": "The printer can reproduce documents in high resolution.",
+      "exampleTranslation": "這台印表機可以高解析度複製文件。"
+    },
+    {
+      "form": "spray",
+      "partOfSpeech": "verb",
+      "definition": "to scatter liquid in fine drops",
+      "translation": "噴灑",
+      "example": "Workers spray the equipment with disinfectant every evening.",
+      "exampleTranslation": "工人每天傍晚都會用消毒劑噴灑設備。"
+    },
+    {
+      "form": "staple",
+      "partOfSpeech": "noun",
+      "definition": "a small piece of wire for fastening paper, or a basic and regularly used item",
+      "translation": "訂書針；主要項目",
+      "example": "Rice is a dietary staple in many Asian countries.",
+      "exampleTranslation": "米飯是許多亞洲國家的主食。"
+    },
+    {
+      "form": "strategic",
+      "partOfSpeech": "adjective",
+      "definition": "relating to a plan aimed at a long-term goal",
+      "translation": "策略性的",
+      "example": "The company formed a strategic partnership with a logistics firm.",
+      "exampleTranslation": "這家公司跟一間物流公司建立了策略性夥伴關係。"
+    },
+    {
+      "form": "stripe",
+      "partOfSpeech": "noun",
+      "definition": "a long narrow band of a different color",
+      "translation": "條紋",
+      "example": "The uniform features a blue stripe down each sleeve.",
+      "exampleTranslation": "這套制服的每隻袖子上都有一道藍色條紋。"
+    },
+    {
+      "form": "teen",
+      "partOfSpeech": "noun",
+      "definition": "a person aged thirteen to nineteen",
+      "translation": "青少年",
+      "example": "The clothing line targets teens and young adults.",
+      "exampleTranslation": "這個服飾系列鎖定青少年和年輕成人。"
+    },
+    {
+      "form": "tempt",
+      "partOfSpeech": "verb",
+      "definition": "to attract someone to do something, especially something unwise",
+      "translation": "誘惑",
+      "example": "The discount was designed to tempt customers into buying more.",
+      "exampleTranslation": "這個折扣是設計來誘使顧客買更多。"
+    },
+    {
+      "form": "timer",
+      "partOfSpeech": "noun",
+      "definition": "a device that measures or counts time",
+      "translation": "計時器",
+      "example": "Set a timer to remind you when the meeting ends.",
+      "exampleTranslation": "設定一個計時器來提醒你會議何時結束。"
+    },
+    {
+      "form": "unload",
+      "partOfSpeech": "verb",
+      "definition": "to remove goods or cargo from a vehicle",
+      "translation": "卸貨",
+      "example": "The crew unloaded the truck within thirty minutes.",
+      "exampleTranslation": "工作人員在三十分鐘內把貨車卸完貨。"
+    },
+    {
+      "form": "unusually",
+      "partOfSpeech": "adverb",
+      "definition": "in a way that is not typical",
+      "translation": "異常地",
+      "example": "Sales were unusually high during the holiday season.",
+      "exampleTranslation": "假期期間銷售異常地好。"
+    },
+    {
+      "form": "vacate",
+      "partOfSpeech": "verb",
+      "definition": "to leave a place, making it available for others",
+      "translation": "騰出；搬出",
+      "example": "Tenants must vacate the building by the end of the month.",
+      "exampleTranslation": "房客必須在月底前搬出這棟大樓。"
+    },
+    {
+      "form": "whale",
+      "partOfSpeech": "noun",
+      "definition": "a large marine mammal",
+      "translation": "鯨魚",
+      "example": "The tour company offers whale watching excursions.",
+      "exampleTranslation": "這間旅遊公司提供賞鯨行程。"
+    },
+    {
+      "form": "wisely",
+      "partOfSpeech": "adverb",
+      "definition": "in a sensible or knowledgeable way",
+      "translation": "明智地",
+      "example": "Invest your budget wisely to avoid overspending.",
+      "exampleTranslation": "明智地運用你的預算，避免超支。"
+    },
+    {
+      "form": "amateur",
+      "partOfSpeech": "adjective",
+      "definition": "done or engaged in without professional training",
+      "translation": "業餘的",
+      "example": "The photography contest is open to both amateurs and professionals.",
+      "exampleTranslation": "這場攝影比賽開放給業餘和專業人士參加。"
+    },
+    {
+      "form": "ambassador",
+      "partOfSpeech": "noun",
+      "definition": "an official representative, especially of a country or brand",
+      "translation": "大使；代表",
+      "example": "She was appointed brand ambassador for the new product line.",
+      "exampleTranslation": "她被任命為這個新產品系列的品牌大使。"
+    },
+    {
+      "form": "anew",
+      "partOfSpeech": "adverb",
+      "definition": "again, in a new or different way",
+      "translation": "重新",
+      "example": "The team decided to start the project anew after the setback.",
+      "exampleTranslation": "團隊在遭遇挫折後決定重新展開這個專案。"
+    },
+    {
+      "form": "attain",
+      "partOfSpeech": "verb",
+      "definition": "to achieve or reach a goal",
+      "translation": "達成；獲得",
+      "example": "The sales team worked hard to attain their quarterly target.",
+      "exampleTranslation": "業務團隊努力達成他們的季度目標。"
+    },
+    {
+      "form": "balloon",
+      "partOfSpeech": "verb",
+      "definition": "to increase rapidly in size or amount",
+      "translation": "急遽膨脹",
+      "example": "Costs ballooned after the project scope expanded.",
+      "exampleTranslation": "專案範圍擴大後，成本急遽膨脹。"
+    },
+    {
+      "form": "blueprint",
+      "partOfSpeech": "noun",
+      "definition": "a detailed plan or technical drawing",
+      "translation": "藍圖；詳細計畫",
+      "example": "The architect presented the blueprint for the new office building.",
+      "exampleTranslation": "建築師展示了這棟新辦公大樓的藍圖。"
+    }
   ]
 }

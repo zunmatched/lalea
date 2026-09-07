@@ -1,27 +1,170 @@
 {
   "slug": "toeic-0292-0311",
-  "title": "TOEIC 核心單字 292-311",
-  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "title": "TOEIC 核心單字 0292-0311",
+  "group": {
+    "slug": "toeic-service-list",
+    "title": "TOEIC 核心單字"
+  },
   "words": [
-    { "form": "leak", "partOfSpeech": "noun", "definition": "an unintended escape of liquid, gas, or information", "translation": "漏水／漏氣；洩漏", "example": "Maintenance is checking the pipe for a possible leak.", "exampleTranslation": "維修人員正在檢查管線是否有漏水。" },
-    { "form": "occupancy", "partOfSpeech": "noun", "definition": "the state of using or living in a building or room", "translation": "使用率；入住率", "example": "The hotel reported high occupancy during the holiday season.", "exampleTranslation": "這間飯店在假期期間的入住率很高。" },
-    { "form": "proficiency", "partOfSpeech": "noun", "definition": "a high degree of skill or competence", "translation": "熟練度；精通程度", "example": "The job requires proficiency in at least two languages.", "exampleTranslation": "這份工作要求至少精通兩種語言。" },
-    { "form": "renewal", "partOfSpeech": "noun", "definition": "the act of extending the validity of something, such as a contract", "translation": "續約；更新", "example": "The lease renewal must be signed before the end of the month.", "exampleTranslation": "租約續約必須在月底前簽署。" },
-    { "form": "urgent", "partOfSpeech": "adjective", "definition": "requiring immediate action or attention", "translation": "緊急的", "example": "This is an urgent request, so please respond by noon.", "exampleTranslation": "這是緊急請求，請在中午前回覆。" },
-    { "form": "annually", "partOfSpeech": "adverb", "definition": "once a year; every year", "translation": "每年一次地", "example": "The conference is held annually in a different city.", "exampleTranslation": "這場研討會每年在不同城市舉行一次。" },
-    { "form": "basketball", "partOfSpeech": "noun", "definition": "a team sport played by throwing a ball through a hoop", "translation": "籃球", "example": "The company sponsors a basketball tournament for local schools.", "exampleTranslation": "公司贊助了一場給當地學校的籃球賽。" },
-    { "form": "delete", "partOfSpeech": "verb", "definition": "to remove something, especially from a computer file", "translation": "刪除", "example": "Please delete any outdated files from the shared drive.", "exampleTranslation": "請把共用硬碟裡過時的檔案刪除。" },
-    { "form": "illogical", "partOfSpeech": "adjective", "definition": "not sensible or reasonable", "translation": "不合邏輯的", "example": "It seems illogical to cancel the project this close to launch.", "exampleTranslation": "在這麼接近上線的時候取消專案似乎不合邏輯。" },
-    { "form": "pet", "partOfSpeech": "noun", "definition": "an animal kept for companionship", "translation": "寵物", "example": "The office recently introduced a pet-friendly policy.", "exampleTranslation": "辦公室最近推出了寵物友善政策。" },
-    { "form": "textbook", "partOfSpeech": "noun", "definition": "a book used for studying a subject", "translation": "教科書", "example": "New employees receive a training textbook during orientation.", "exampleTranslation": "新進員工在職前訓練時會收到一本訓練教材。" },
-    { "form": "accurately", "partOfSpeech": "adverb", "definition": "in a way that is correct and precise", "translation": "準確地", "example": "Please fill out the form accurately to avoid delays.", "exampleTranslation": "請準確填寫表格以避免延誤。" },
-    { "form": "cabin", "partOfSpeech": "noun", "definition": "a small wooden house, or the passenger area of an aircraft", "translation": "小屋；機艙", "example": "Flight attendants will ask passengers to fasten their seatbelts before the cabin doors close.", "exampleTranslation": "機艙門關閉前，空服員會請乘客繫好安全帶。" },
-    { "form": "conductor", "partOfSpeech": "noun", "definition": "a person who leads an orchestra, or an official on a train", "translation": "指揮；車掌", "example": "The train conductor announced a delay due to signal problems.", "exampleTranslation": "列車車掌宣布因為號誌問題而誤點。" },
-    { "form": "inspector", "partOfSpeech": "noun", "definition": "a person who officially examines something to check its quality or safety", "translation": "檢查員；督察", "example": "A safety inspector will visit the factory next week.", "exampleTranslation": "一位安全檢查員下週會來工廠訪查。" },
-    { "form": "intern", "partOfSpeech": "noun", "definition": "a student or trainee who works, sometimes without pay, to gain experience", "translation": "實習生", "example": "The marketing team hired two interns for the summer.", "exampleTranslation": "行銷團隊雇用了兩名暑期實習生。" },
-    { "form": "semester", "partOfSpeech": "noun", "definition": "half of an academic year", "translation": "學期", "example": "The training program runs for one semester.", "exampleTranslation": "這個訓練課程為期一個學期。" },
-    { "form": "confirmation", "partOfSpeech": "noun", "definition": "a statement or document that proves something is true or agreed", "translation": "確認；確認函", "example": "You will receive a confirmation email once your order ships.", "exampleTranslation": "訂單出貨後你會收到一封確認信。" },
-    { "form": "congratulation", "partOfSpeech": "noun", "definition": "an expression of praise for someone's achievement or success", "translation": "祝賀", "example": "Please accept our congratulations on your promotion.", "exampleTranslation": "請接受我們對你升遷的祝賀。" },
-    { "form": "expertise", "partOfSpeech": "noun", "definition": "expert skill or knowledge in a particular field", "translation": "專業知識；專長", "example": "We need someone with expertise in international tax law.", "exampleTranslation": "我們需要在國際稅法方面有專業知識的人。" }
+    {
+      "form": "leak",
+      "partOfSpeech": "noun",
+      "definition": "an unintended escape of liquid, gas, or information",
+      "translation": "漏水／漏氣；洩漏",
+      "example": "Maintenance is checking the pipe for a possible leak.",
+      "exampleTranslation": "維修人員正在檢查管線是否有漏水。"
+    },
+    {
+      "form": "occupancy",
+      "partOfSpeech": "noun",
+      "definition": "the state of using or living in a building or room",
+      "translation": "使用率；入住率",
+      "example": "The hotel reported high occupancy during the holiday season.",
+      "exampleTranslation": "這間飯店在假期期間的入住率很高。"
+    },
+    {
+      "form": "proficiency",
+      "partOfSpeech": "noun",
+      "definition": "a high degree of skill or competence",
+      "translation": "熟練度；精通程度",
+      "example": "The job requires proficiency in at least two languages.",
+      "exampleTranslation": "這份工作要求至少精通兩種語言。"
+    },
+    {
+      "form": "renewal",
+      "partOfSpeech": "noun",
+      "definition": "the act of extending the validity of something, such as a contract",
+      "translation": "續約；更新",
+      "example": "The lease renewal must be signed before the end of the month.",
+      "exampleTranslation": "租約續約必須在月底前簽署。"
+    },
+    {
+      "form": "urgent",
+      "partOfSpeech": "adjective",
+      "definition": "requiring immediate action or attention",
+      "translation": "緊急的",
+      "example": "This is an urgent request, so please respond by noon.",
+      "exampleTranslation": "這是緊急請求，請在中午前回覆。"
+    },
+    {
+      "form": "annually",
+      "partOfSpeech": "adverb",
+      "definition": "once a year; every year",
+      "translation": "每年一次地",
+      "example": "The conference is held annually in a different city.",
+      "exampleTranslation": "這場研討會每年在不同城市舉行一次。"
+    },
+    {
+      "form": "basketball",
+      "partOfSpeech": "noun",
+      "definition": "a team sport played by throwing a ball through a hoop",
+      "translation": "籃球",
+      "example": "The company sponsors a basketball tournament for local schools.",
+      "exampleTranslation": "公司贊助了一場給當地學校的籃球賽。"
+    },
+    {
+      "form": "delete",
+      "partOfSpeech": "verb",
+      "definition": "to remove something, especially from a computer file",
+      "translation": "刪除",
+      "example": "Please delete any outdated files from the shared drive.",
+      "exampleTranslation": "請把共用硬碟裡過時的檔案刪除。"
+    },
+    {
+      "form": "illogical",
+      "partOfSpeech": "adjective",
+      "definition": "not sensible or reasonable",
+      "translation": "不合邏輯的",
+      "example": "It seems illogical to cancel the project this close to launch.",
+      "exampleTranslation": "在這麼接近上線的時候取消專案似乎不合邏輯。"
+    },
+    {
+      "form": "pet",
+      "partOfSpeech": "noun",
+      "definition": "an animal kept for companionship",
+      "translation": "寵物",
+      "example": "The office recently introduced a pet-friendly policy.",
+      "exampleTranslation": "辦公室最近推出了寵物友善政策。"
+    },
+    {
+      "form": "textbook",
+      "partOfSpeech": "noun",
+      "definition": "a book used for studying a subject",
+      "translation": "教科書",
+      "example": "New employees receive a training textbook during orientation.",
+      "exampleTranslation": "新進員工在職前訓練時會收到一本訓練教材。"
+    },
+    {
+      "form": "accurately",
+      "partOfSpeech": "adverb",
+      "definition": "in a way that is correct and precise",
+      "translation": "準確地",
+      "example": "Please fill out the form accurately to avoid delays.",
+      "exampleTranslation": "請準確填寫表格以避免延誤。"
+    },
+    {
+      "form": "cabin",
+      "partOfSpeech": "noun",
+      "definition": "a small wooden house, or the passenger area of an aircraft",
+      "translation": "小屋；機艙",
+      "example": "Flight attendants will ask passengers to fasten their seatbelts before the cabin doors close.",
+      "exampleTranslation": "機艙門關閉前，空服員會請乘客繫好安全帶。"
+    },
+    {
+      "form": "conductor",
+      "partOfSpeech": "noun",
+      "definition": "a person who leads an orchestra, or an official on a train",
+      "translation": "指揮；車掌",
+      "example": "The train conductor announced a delay due to signal problems.",
+      "exampleTranslation": "列車車掌宣布因為號誌問題而誤點。"
+    },
+    {
+      "form": "inspector",
+      "partOfSpeech": "noun",
+      "definition": "a person who officially examines something to check its quality or safety",
+      "translation": "檢查員；督察",
+      "example": "A safety inspector will visit the factory next week.",
+      "exampleTranslation": "一位安全檢查員下週會來工廠訪查。"
+    },
+    {
+      "form": "intern",
+      "partOfSpeech": "noun",
+      "definition": "a student or trainee who works, sometimes without pay, to gain experience",
+      "translation": "實習生",
+      "example": "The marketing team hired two interns for the summer.",
+      "exampleTranslation": "行銷團隊雇用了兩名暑期實習生。"
+    },
+    {
+      "form": "semester",
+      "partOfSpeech": "noun",
+      "definition": "half of an academic year",
+      "translation": "學期",
+      "example": "The training program runs for one semester.",
+      "exampleTranslation": "這個訓練課程為期一個學期。"
+    },
+    {
+      "form": "confirmation",
+      "partOfSpeech": "noun",
+      "definition": "a statement or document that proves something is true or agreed",
+      "translation": "確認；確認函",
+      "example": "You will receive a confirmation email once your order ships.",
+      "exampleTranslation": "訂單出貨後你會收到一封確認信。"
+    },
+    {
+      "form": "congratulation",
+      "partOfSpeech": "noun",
+      "definition": "an expression of praise for someone's achievement or success",
+      "translation": "祝賀",
+      "example": "Please accept our congratulations on your promotion.",
+      "exampleTranslation": "請接受我們對你升遷的祝賀。"
+    },
+    {
+      "form": "expertise",
+      "partOfSpeech": "noun",
+      "definition": "expert skill or knowledge in a particular field",
+      "translation": "專業知識；專長",
+      "example": "We need someone with expertise in international tax law.",
+      "exampleTranslation": "我們需要在國際稅法方面有專業知識的人。"
+    }
   ]
 }

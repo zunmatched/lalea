@@ -1,27 +1,170 @@
 {
   "slug": "toeic-0832-0851",
-  "title": "TOEIC 核心單字 832-851",
-  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "title": "TOEIC 核心單字 0832-0851",
+  "group": {
+    "slug": "toeic-service-list",
+    "title": "TOEIC 核心單字"
+  },
   "words": [
-    { "form": "orchestra", "partOfSpeech": "noun", "definition": "a large group of musicians playing together", "translation": "管弦樂團", "example": "The company sponsored a local orchestra's charity concert.", "exampleTranslation": "這家公司贊助了當地一個管弦樂團的慈善音樂會。" },
-    { "form": "organizational", "partOfSpeech": "adjective", "definition": "relating to the structure or management of an organization", "translation": "組織的", "example": "The merger required significant organizational changes.", "exampleTranslation": "這次合併需要重大的組織變革。" },
-    { "form": "outlook", "partOfSpeech": "noun", "definition": "a general view or expectation about the future", "translation": "展望；前景", "example": "Analysts remain optimistic about the company's outlook for next year.", "exampleTranslation": "分析師對這家公司明年的前景仍持樂觀態度。" },
-    { "form": "physics", "partOfSpeech": "noun", "definition": "the science of matter and energy", "translation": "物理學", "example": "He studied physics before switching to a career in finance.", "exampleTranslation": "他在轉換到金融業之前主修物理學。" },
-    { "form": "pole", "partOfSpeech": "noun", "definition": "a long, slender rod, or a geographic extreme point", "translation": "桿子；電線桿", "example": "Workers installed a new utility pole outside the office.", "exampleTranslation": "工人在辦公室外裝了一根新的電線桿。" },
-    { "form": "puzzle", "partOfSpeech": "verb", "definition": "to confuse someone, or (as a noun) a problem to solve", "translation": "使困惑；謎題", "example": "The unexpected delay puzzled the entire logistics team.", "exampleTranslation": "這次意外的延誤讓整個物流團隊感到困惑。" },
-    { "form": "reflexive", "partOfSpeech": "adjective", "definition": "occurring automatically as a response, without conscious thought", "translation": "反射性的", "example": "Checking email first thing in the morning has become a reflexive habit for him.", "exampleTranslation": "早上第一件事就查看電子郵件已經成為他反射性的習慣。" },
-    { "form": "snowy", "partOfSpeech": "adjective", "definition": "covered with or characterized by snow", "translation": "下雪的", "example": "Flights were delayed due to snowy conditions at the airport.", "exampleTranslation": "因為機場下雪，班機延誤了。" },
-    { "form": "steak", "partOfSpeech": "noun", "definition": "a thick slice of meat, especially beef", "translation": "牛排", "example": "The restaurant is famous for its grilled steak.", "exampleTranslation": "這間餐廳以烤牛排聞名。" },
-    { "form": "sticker", "partOfSpeech": "noun", "definition": "a small adhesive label", "translation": "貼紙；標籤", "example": "Attach a price sticker to each item before display.", "exampleTranslation": "陳列前請在每件商品貼上價格標籤。" },
-    { "form": "telecommunication", "partOfSpeech": "noun", "definition": "the transmission of information over distance by electronic means", "translation": "電信", "example": "The telecommunication industry has grown rapidly with 5G technology.", "exampleTranslation": "電信產業因為 5G 技術而快速成長。" },
-    { "form": "timely", "partOfSpeech": "adjective", "definition": "happening at a suitable or opportune time", "translation": "及時的", "example": "We appreciate your timely response to our inquiry.", "exampleTranslation": "我們很感謝您對我們詢問的及時回覆。" },
-    { "form": "uncomfortable", "partOfSpeech": "adjective", "definition": "causing or feeling physical or mental discomfort", "translation": "不舒服的；不自在的", "example": "The chairs in the waiting room are quite uncomfortable.", "exampleTranslation": "候診室的椅子相當不舒服。" },
-    { "form": "amenity", "partOfSpeech": "noun", "definition": "a feature that provides comfort or convenience", "translation": "設施；便利設施", "example": "The apartment complex offers amenities like a gym and pool.", "exampleTranslation": "這個公寓社區提供健身房和游泳池等設施。" },
-    { "form": "approximate", "partOfSpeech": "adjective", "definition": "close to accurate but not exact", "translation": "大約的", "example": "The approximate cost of the renovation is fifty thousand dollars.", "exampleTranslation": "這次翻修的大約成本是五萬美元。" },
-    { "form": "await", "partOfSpeech": "verb", "definition": "to wait for", "translation": "等待", "example": "We await your confirmation before finalizing the order.", "exampleTranslation": "我們在最終確認訂單之前等待您的確認。" },
-    { "form": "barbecue", "partOfSpeech": "noun", "definition": "a meal cooked outdoors over an open flame", "translation": "烤肉", "example": "The company held a barbecue to celebrate the successful product launch.", "exampleTranslation": "這家公司舉辦烤肉活動來慶祝產品成功上市。" },
-    { "form": "beginner", "partOfSpeech": "noun", "definition": "a person just starting to learn a skill", "translation": "初學者", "example": "The workshop is designed for beginners with no prior experience.", "exampleTranslation": "這場工作坊是為完全沒有經驗的初學者設計的。" },
-    { "form": "biology", "partOfSpeech": "noun", "definition": "the science of living organisms", "translation": "生物學", "example": "She majored in biology before joining the pharmaceutical company.", "exampleTranslation": "她在加入這家製藥公司之前主修生物學。" },
-    { "form": "blanket", "partOfSpeech": "noun", "definition": "a soft covering used for warmth", "translation": "毯子", "example": "The airline provides a blanket and pillow for long-haul flights.", "exampleTranslation": "這家航空公司在長途航班上提供毯子和枕頭。" }
+    {
+      "form": "orchestra",
+      "partOfSpeech": "noun",
+      "definition": "a large group of musicians playing together",
+      "translation": "管弦樂團",
+      "example": "The company sponsored a local orchestra's charity concert.",
+      "exampleTranslation": "這家公司贊助了當地一個管弦樂團的慈善音樂會。"
+    },
+    {
+      "form": "organizational",
+      "partOfSpeech": "adjective",
+      "definition": "relating to the structure or management of an organization",
+      "translation": "組織的",
+      "example": "The merger required significant organizational changes.",
+      "exampleTranslation": "這次合併需要重大的組織變革。"
+    },
+    {
+      "form": "outlook",
+      "partOfSpeech": "noun",
+      "definition": "a general view or expectation about the future",
+      "translation": "展望；前景",
+      "example": "Analysts remain optimistic about the company's outlook for next year.",
+      "exampleTranslation": "分析師對這家公司明年的前景仍持樂觀態度。"
+    },
+    {
+      "form": "physics",
+      "partOfSpeech": "noun",
+      "definition": "the science of matter and energy",
+      "translation": "物理學",
+      "example": "He studied physics before switching to a career in finance.",
+      "exampleTranslation": "他在轉換到金融業之前主修物理學。"
+    },
+    {
+      "form": "pole",
+      "partOfSpeech": "noun",
+      "definition": "a long, slender rod, or a geographic extreme point",
+      "translation": "桿子；電線桿",
+      "example": "Workers installed a new utility pole outside the office.",
+      "exampleTranslation": "工人在辦公室外裝了一根新的電線桿。"
+    },
+    {
+      "form": "puzzle",
+      "partOfSpeech": "verb",
+      "definition": "to confuse someone, or (as a noun) a problem to solve",
+      "translation": "使困惑；謎題",
+      "example": "The unexpected delay puzzled the entire logistics team.",
+      "exampleTranslation": "這次意外的延誤讓整個物流團隊感到困惑。"
+    },
+    {
+      "form": "reflexive",
+      "partOfSpeech": "adjective",
+      "definition": "occurring automatically as a response, without conscious thought",
+      "translation": "反射性的",
+      "example": "Checking email first thing in the morning has become a reflexive habit for him.",
+      "exampleTranslation": "早上第一件事就查看電子郵件已經成為他反射性的習慣。"
+    },
+    {
+      "form": "snowy",
+      "partOfSpeech": "adjective",
+      "definition": "covered with or characterized by snow",
+      "translation": "下雪的",
+      "example": "Flights were delayed due to snowy conditions at the airport.",
+      "exampleTranslation": "因為機場下雪，班機延誤了。"
+    },
+    {
+      "form": "steak",
+      "partOfSpeech": "noun",
+      "definition": "a thick slice of meat, especially beef",
+      "translation": "牛排",
+      "example": "The restaurant is famous for its grilled steak.",
+      "exampleTranslation": "這間餐廳以烤牛排聞名。"
+    },
+    {
+      "form": "sticker",
+      "partOfSpeech": "noun",
+      "definition": "a small adhesive label",
+      "translation": "貼紙；標籤",
+      "example": "Attach a price sticker to each item before display.",
+      "exampleTranslation": "陳列前請在每件商品貼上價格標籤。"
+    },
+    {
+      "form": "telecommunication",
+      "partOfSpeech": "noun",
+      "definition": "the transmission of information over distance by electronic means",
+      "translation": "電信",
+      "example": "The telecommunication industry has grown rapidly with 5G technology.",
+      "exampleTranslation": "電信產業因為 5G 技術而快速成長。"
+    },
+    {
+      "form": "timely",
+      "partOfSpeech": "adjective",
+      "definition": "happening at a suitable or opportune time",
+      "translation": "及時的",
+      "example": "We appreciate your timely response to our inquiry.",
+      "exampleTranslation": "我們很感謝您對我們詢問的及時回覆。"
+    },
+    {
+      "form": "uncomfortable",
+      "partOfSpeech": "adjective",
+      "definition": "causing or feeling physical or mental discomfort",
+      "translation": "不舒服的；不自在的",
+      "example": "The chairs in the waiting room are quite uncomfortable.",
+      "exampleTranslation": "候診室的椅子相當不舒服。"
+    },
+    {
+      "form": "amenity",
+      "partOfSpeech": "noun",
+      "definition": "a feature that provides comfort or convenience",
+      "translation": "設施；便利設施",
+      "example": "The apartment complex offers amenities like a gym and pool.",
+      "exampleTranslation": "這個公寓社區提供健身房和游泳池等設施。"
+    },
+    {
+      "form": "approximate",
+      "partOfSpeech": "adjective",
+      "definition": "close to accurate but not exact",
+      "translation": "大約的",
+      "example": "The approximate cost of the renovation is fifty thousand dollars.",
+      "exampleTranslation": "這次翻修的大約成本是五萬美元。"
+    },
+    {
+      "form": "await",
+      "partOfSpeech": "verb",
+      "definition": "to wait for",
+      "translation": "等待",
+      "example": "We await your confirmation before finalizing the order.",
+      "exampleTranslation": "我們在最終確認訂單之前等待您的確認。"
+    },
+    {
+      "form": "barbecue",
+      "partOfSpeech": "noun",
+      "definition": "a meal cooked outdoors over an open flame",
+      "translation": "烤肉",
+      "example": "The company held a barbecue to celebrate the successful product launch.",
+      "exampleTranslation": "這家公司舉辦烤肉活動來慶祝產品成功上市。"
+    },
+    {
+      "form": "beginner",
+      "partOfSpeech": "noun",
+      "definition": "a person just starting to learn a skill",
+      "translation": "初學者",
+      "example": "The workshop is designed for beginners with no prior experience.",
+      "exampleTranslation": "這場工作坊是為完全沒有經驗的初學者設計的。"
+    },
+    {
+      "form": "biology",
+      "partOfSpeech": "noun",
+      "definition": "the science of living organisms",
+      "translation": "生物學",
+      "example": "She majored in biology before joining the pharmaceutical company.",
+      "exampleTranslation": "她在加入這家製藥公司之前主修生物學。"
+    },
+    {
+      "form": "blanket",
+      "partOfSpeech": "noun",
+      "definition": "a soft covering used for warmth",
+      "translation": "毯子",
+      "example": "The airline provides a blanket and pillow for long-haul flights.",
+      "exampleTranslation": "這家航空公司在長途航班上提供毯子和枕頭。"
+    }
   ]
 }

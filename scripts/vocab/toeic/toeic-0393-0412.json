@@ -1,27 +1,170 @@
 {
   "slug": "toeic-0393-0412",
-  "title": "TOEIC 核心單字 393-412",
-  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "title": "TOEIC 核心單字 0393-0412",
+  "group": {
+    "slug": "toeic-service-list",
+    "title": "TOEIC 核心單字"
+  },
   "words": [
-    { "form": "loyal", "partOfSpeech": "adjective", "definition": "showing firm and constant support", "translation": "忠誠的", "example": "The brand rewards its loyal customers with special offers.", "exampleTranslation": "這個品牌會用特別優惠回饋忠誠顧客。" },
-    { "form": "luncheon", "partOfSpeech": "noun", "definition": "a formal lunch, often for a special occasion", "translation": "午宴", "example": "The retirement luncheon will be held in the main dining room.", "exampleTranslation": "退休午宴將在主餐廳舉行。" },
-    { "form": "microphone", "partOfSpeech": "noun", "definition": "a device used to make sound louder or to record it", "translation": "麥克風", "example": "Please speak clearly into the microphone during the presentation.", "exampleTranslation": "簡報時請對著麥克風清楚說話。" },
-    { "form": "overview", "partOfSpeech": "noun", "definition": "a general summary of something", "translation": "概述；總覽", "example": "The report begins with an overview of last year's results.", "exampleTranslation": "這份報告以去年結果的概述作為開頭。" },
-    { "form": "projector", "partOfSpeech": "noun", "definition": "a device that displays images or video onto a screen", "translation": "投影機", "example": "The projector in the conference room needs a new bulb.", "exampleTranslation": "會議室的投影機需要換一顆新燈泡。" },
-    { "form": "shortage", "partOfSpeech": "noun", "definition": "a situation in which there is not enough of something", "translation": "短缺", "example": "The factory is dealing with a shortage of raw materials.", "exampleTranslation": "工廠正面臨原物料短缺的問題。" },
-    { "form": "spacious", "partOfSpeech": "adjective", "definition": "having a lot of space; roomy", "translation": "寬敞的", "example": "The new office has a spacious meeting area.", "exampleTranslation": "新辦公室有一個寬敞的會議區域。" },
-    { "form": "accomplishment", "partOfSpeech": "noun", "definition": "something successfully achieved", "translation": "成就", "example": "Completing the merger was a major accomplishment for the team.", "exampleTranslation": "完成這次合併對團隊來說是一項重大成就。" },
-    { "form": "accustom", "partOfSpeech": "verb", "definition": "to make someone familiar with something through experience", "translation": "使習慣於", "example": "New hires need time to accustom themselves to the software.", "exampleTranslation": "新進員工需要時間讓自己習慣這套軟體。" },
-    { "form": "clinic", "partOfSpeech": "noun", "definition": "a place where medical treatment is given, often for a specific purpose", "translation": "診所", "example": "The company arranged an on-site flu clinic for employees.", "exampleTranslation": "公司安排了現場流感疫苗診所給員工使用。" },
-    { "form": "desktop", "partOfSpeech": "noun", "definition": "a personal computer designed for stationary use on a desk", "translation": "桌上型電腦", "example": "Each cubicle is equipped with a desktop computer.", "exampleTranslation": "每個隔間都配有一台桌上型電腦。" },
-    { "form": "jog", "partOfSpeech": "verb", "definition": "to run at a slow, steady pace, usually for exercise", "translation": "慢跑", "example": "Many employees jog around the building during their lunch break.", "exampleTranslation": "許多員工會利用午休時間繞著大樓慢跑。" },
-    { "form": "leisure", "partOfSpeech": "noun", "definition": "free time when one is not working", "translation": "休閒；閒暇", "example": "The resort offers plenty of leisure activities for guests.", "exampleTranslation": "這間度假村為房客提供許多休閒活動。" },
-    { "form": "nap", "partOfSpeech": "noun", "definition": "a short period of sleep, especially during the day", "translation": "小睡", "example": "The office added a quiet room where staff can take a short nap.", "exampleTranslation": "辦公室新增了一間安靜的房間，讓員工可以小睡片刻。" },
-    { "form": "reinforce", "partOfSpeech": "verb", "definition": "to strengthen or support something", "translation": "強化；加強", "example": "The training session helped reinforce our safety procedures.", "exampleTranslation": "這場訓練有助於強化我們的安全流程。" },
-    { "form": "sender", "partOfSpeech": "noun", "definition": "a person who sends something, such as a letter or package", "translation": "寄件人", "example": "Contact the sender if the package arrives damaged.", "exampleTranslation": "如果包裹送達時已損壞，請聯繫寄件人。" },
-    { "form": "vacuum", "partOfSpeech": "noun", "definition": "a device that cleans by sucking up dirt and dust", "translation": "吸塵器", "example": "The cleaning crew uses a vacuum every evening after closing.", "exampleTranslation": "清潔人員每天打烊後都會用吸塵器清潔。" },
-    { "form": "wireless", "partOfSpeech": "adjective", "definition": "operating without wires, using radio signals", "translation": "無線的", "example": "The conference room has a stable wireless connection.", "exampleTranslation": "會議室有穩定的無線網路連線。" },
-    { "form": "yearly", "partOfSpeech": "adjective", "definition": "happening once a year", "translation": "每年的；年度的", "example": "The yearly performance review is scheduled for next month.", "exampleTranslation": "年度績效考核排定在下個月進行。" },
-    { "form": "appreciation", "partOfSpeech": "noun", "definition": "recognition and enjoyment of the value of something; gratitude", "translation": "感激；賞識", "example": "The manager expressed appreciation for the team's extra effort.", "exampleTranslation": "經理對團隊的額外努力表達了感激。" }
+    {
+      "form": "loyal",
+      "partOfSpeech": "adjective",
+      "definition": "showing firm and constant support",
+      "translation": "忠誠的",
+      "example": "The brand rewards its loyal customers with special offers.",
+      "exampleTranslation": "這個品牌會用特別優惠回饋忠誠顧客。"
+    },
+    {
+      "form": "luncheon",
+      "partOfSpeech": "noun",
+      "definition": "a formal lunch, often for a special occasion",
+      "translation": "午宴",
+      "example": "The retirement luncheon will be held in the main dining room.",
+      "exampleTranslation": "退休午宴將在主餐廳舉行。"
+    },
+    {
+      "form": "microphone",
+      "partOfSpeech": "noun",
+      "definition": "a device used to make sound louder or to record it",
+      "translation": "麥克風",
+      "example": "Please speak clearly into the microphone during the presentation.",
+      "exampleTranslation": "簡報時請對著麥克風清楚說話。"
+    },
+    {
+      "form": "overview",
+      "partOfSpeech": "noun",
+      "definition": "a general summary of something",
+      "translation": "概述；總覽",
+      "example": "The report begins with an overview of last year's results.",
+      "exampleTranslation": "這份報告以去年結果的概述作為開頭。"
+    },
+    {
+      "form": "projector",
+      "partOfSpeech": "noun",
+      "definition": "a device that displays images or video onto a screen",
+      "translation": "投影機",
+      "example": "The projector in the conference room needs a new bulb.",
+      "exampleTranslation": "會議室的投影機需要換一顆新燈泡。"
+    },
+    {
+      "form": "shortage",
+      "partOfSpeech": "noun",
+      "definition": "a situation in which there is not enough of something",
+      "translation": "短缺",
+      "example": "The factory is dealing with a shortage of raw materials.",
+      "exampleTranslation": "工廠正面臨原物料短缺的問題。"
+    },
+    {
+      "form": "spacious",
+      "partOfSpeech": "adjective",
+      "definition": "having a lot of space; roomy",
+      "translation": "寬敞的",
+      "example": "The new office has a spacious meeting area.",
+      "exampleTranslation": "新辦公室有一個寬敞的會議區域。"
+    },
+    {
+      "form": "accomplishment",
+      "partOfSpeech": "noun",
+      "definition": "something successfully achieved",
+      "translation": "成就",
+      "example": "Completing the merger was a major accomplishment for the team.",
+      "exampleTranslation": "完成這次合併對團隊來說是一項重大成就。"
+    },
+    {
+      "form": "accustom",
+      "partOfSpeech": "verb",
+      "definition": "to make someone familiar with something through experience",
+      "translation": "使習慣於",
+      "example": "New hires need time to accustom themselves to the software.",
+      "exampleTranslation": "新進員工需要時間讓自己習慣這套軟體。"
+    },
+    {
+      "form": "clinic",
+      "partOfSpeech": "noun",
+      "definition": "a place where medical treatment is given, often for a specific purpose",
+      "translation": "診所",
+      "example": "The company arranged an on-site flu clinic for employees.",
+      "exampleTranslation": "公司安排了現場流感疫苗診所給員工使用。"
+    },
+    {
+      "form": "desktop",
+      "partOfSpeech": "noun",
+      "definition": "a personal computer designed for stationary use on a desk",
+      "translation": "桌上型電腦",
+      "example": "Each cubicle is equipped with a desktop computer.",
+      "exampleTranslation": "每個隔間都配有一台桌上型電腦。"
+    },
+    {
+      "form": "jog",
+      "partOfSpeech": "verb",
+      "definition": "to run at a slow, steady pace, usually for exercise",
+      "translation": "慢跑",
+      "example": "Many employees jog around the building during their lunch break.",
+      "exampleTranslation": "許多員工會利用午休時間繞著大樓慢跑。"
+    },
+    {
+      "form": "leisure",
+      "partOfSpeech": "noun",
+      "definition": "free time when one is not working",
+      "translation": "休閒；閒暇",
+      "example": "The resort offers plenty of leisure activities for guests.",
+      "exampleTranslation": "這間度假村為房客提供許多休閒活動。"
+    },
+    {
+      "form": "nap",
+      "partOfSpeech": "noun",
+      "definition": "a short period of sleep, especially during the day",
+      "translation": "小睡",
+      "example": "The office added a quiet room where staff can take a short nap.",
+      "exampleTranslation": "辦公室新增了一間安靜的房間，讓員工可以小睡片刻。"
+    },
+    {
+      "form": "reinforce",
+      "partOfSpeech": "verb",
+      "definition": "to strengthen or support something",
+      "translation": "強化；加強",
+      "example": "The training session helped reinforce our safety procedures.",
+      "exampleTranslation": "這場訓練有助於強化我們的安全流程。"
+    },
+    {
+      "form": "sender",
+      "partOfSpeech": "noun",
+      "definition": "a person who sends something, such as a letter or package",
+      "translation": "寄件人",
+      "example": "Contact the sender if the package arrives damaged.",
+      "exampleTranslation": "如果包裹送達時已損壞，請聯繫寄件人。"
+    },
+    {
+      "form": "vacuum",
+      "partOfSpeech": "noun",
+      "definition": "a device that cleans by sucking up dirt and dust",
+      "translation": "吸塵器",
+      "example": "The cleaning crew uses a vacuum every evening after closing.",
+      "exampleTranslation": "清潔人員每天打烊後都會用吸塵器清潔。"
+    },
+    {
+      "form": "wireless",
+      "partOfSpeech": "adjective",
+      "definition": "operating without wires, using radio signals",
+      "translation": "無線的",
+      "example": "The conference room has a stable wireless connection.",
+      "exampleTranslation": "會議室有穩定的無線網路連線。"
+    },
+    {
+      "form": "yearly",
+      "partOfSpeech": "adjective",
+      "definition": "happening once a year",
+      "translation": "每年的；年度的",
+      "example": "The yearly performance review is scheduled for next month.",
+      "exampleTranslation": "年度績效考核排定在下個月進行。"
+    },
+    {
+      "form": "appreciation",
+      "partOfSpeech": "noun",
+      "definition": "recognition and enjoyment of the value of something; gratitude",
+      "translation": "感激；賞識",
+      "example": "The manager expressed appreciation for the team's extra effort.",
+      "exampleTranslation": "經理對團隊的額外努力表達了感激。"
+    }
   ]
 }

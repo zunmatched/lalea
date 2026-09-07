@@ -1,27 +1,170 @@
 {
   "slug": "toeic-0893-0912",
-  "title": "TOEIC 核心單字 893-912",
-  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "title": "TOEIC 核心單字 0893-0912",
+  "group": {
+    "slug": "toeic-service-list",
+    "title": "TOEIC 核心單字"
+  },
   "words": [
-    { "form": "bug", "partOfSpeech": "noun", "definition": "an error in a computer program", "translation": "程式錯誤", "example": "The developer fixed a critical bug before the software launch.", "exampleTranslation": "開發人員在軟體上線前修正了一個重大的程式錯誤。" },
-    { "form": "cautious", "partOfSpeech": "adjective", "definition": "careful to avoid risk or danger", "translation": "謹慎的", "example": "Investors are being cautious given the current market volatility.", "exampleTranslation": "由於目前市場波動，投資人變得謹慎。" },
-    { "form": "circuit", "partOfSpeech": "noun", "definition": "a closed path for electrical current, or a circular route", "translation": "電路；巡迴", "example": "An electrician checked the circuit for any faults.", "exampleTranslation": "一位電工檢查了電路是否有故障。" },
-    { "form": "clap", "partOfSpeech": "verb", "definition": "to strike palms together as applause", "translation": "鼓掌", "example": "The audience clapped enthusiastically after the presentation.", "exampleTranslation": "觀眾在簡報結束後熱烈鼓掌。" },
-    { "form": "commerce", "partOfSpeech": "noun", "definition": "the activity of buying and selling goods", "translation": "商業；貿易", "example": "E-commerce has changed how consumers shop for products.", "exampleTranslation": "電子商務改變了消費者購物的方式。" },
-    { "form": "convey", "partOfSpeech": "verb", "definition": "to communicate an idea, or to transport", "translation": "傳達；運送", "example": "The email failed to convey the urgency of the situation.", "exampleTranslation": "這封電子郵件沒能傳達出情況的緊急性。" },
-    { "form": "cord", "partOfSpeech": "noun", "definition": "a length of flexible material, especially electrical wire", "translation": "電線；繩索", "example": "Unplug the power cord before cleaning the machine.", "exampleTranslation": "清潔機器前請先拔掉電源線。" },
-    { "form": "counselor", "partOfSpeech": "noun", "definition": "a person who gives advice, especially professional guidance", "translation": "顧問；諮商師", "example": "The career counselor helped him prepare for the interview.", "exampleTranslation": "職涯顧問協助他準備面試。" },
-    { "form": "debit", "partOfSpeech": "noun", "definition": "money withdrawn from an account", "translation": "借記；扣款", "example": "The monthly fee is automatically debited from your account.", "exampleTranslation": "每月費用會自動從你的帳戶扣款。" },
-    { "form": "delicate", "partOfSpeech": "adjective", "definition": "fragile or requiring careful handling", "translation": "精緻的；易碎的", "example": "Handle the delicate equipment with extra care during shipping.", "exampleTranslation": "運送這台精密設備時要格外小心。" },
-    { "form": "dependence", "partOfSpeech": "noun", "definition": "the state of relying on something or someone", "translation": "依賴", "example": "The company is reducing its dependence on a single supplier.", "exampleTranslation": "這家公司正在減少對單一供應商的依賴。" },
-    { "form": "distraction", "partOfSpeech": "noun", "definition": "something that diverts attention away from a task", "translation": "分心的事物", "example": "Turn off notifications to avoid distraction during work hours.", "exampleTranslation": "上班時間關閉通知以避免分心。" },
-    { "form": "downsize", "partOfSpeech": "verb", "definition": "to reduce the size of a company or workforce", "translation": "裁員；縮編", "example": "The firm decided to downsize its regional offices.", "exampleTranslation": "這家公司決定縮編其地區辦公室。" },
-    { "form": "elephant", "partOfSpeech": "noun", "definition": "a large mammal with a trunk", "translation": "大象", "example": "The zoo's new elephant exhibit opens next month.", "exampleTranslation": "動物園新的大象展區下個月開放。" },
-    { "form": "enthusiasm", "partOfSpeech": "noun", "definition": "intense excitement or interest", "translation": "熱忱", "example": "She approached the new project with great enthusiasm.", "exampleTranslation": "她以極大的熱忱投入這個新專案。" },
-    { "form": "enthusiast", "partOfSpeech": "noun", "definition": "a person with intense interest in a particular subject", "translation": "愛好者", "example": "The store caters to outdoor enthusiasts and hikers.", "exampleTranslation": "這間店服務戶外運動愛好者和健行者。" },
-    { "form": "evident", "partOfSpeech": "adjective", "definition": "clearly seen or understood", "translation": "明顯的", "example": "It was evident that the team needed more resources.", "exampleTranslation": "很明顯這個團隊需要更多資源。" },
-    { "form": "flexibility", "partOfSpeech": "noun", "definition": "the ability to adapt or change easily", "translation": "彈性", "example": "Remote work offers employees greater flexibility in their schedule.", "exampleTranslation": "遠距工作讓員工在時間安排上有更大的彈性。" },
-    { "form": "flextime", "partOfSpeech": "noun", "definition": "a system allowing employees to choose flexible working hours", "translation": "彈性工時", "example": "The company introduced flextime to improve work-life balance.", "exampleTranslation": "這家公司導入彈性工時以改善工作與生活的平衡。" },
-    { "form": "fortunately", "partOfSpeech": "adverb", "definition": "luckily", "translation": "幸運地", "example": "Fortunately, the shipment arrived before the deadline.", "exampleTranslation": "幸運的是，貨物在截止日期前抵達了。" }
+    {
+      "form": "bug",
+      "partOfSpeech": "noun",
+      "definition": "an error in a computer program",
+      "translation": "程式錯誤",
+      "example": "The developer fixed a critical bug before the software launch.",
+      "exampleTranslation": "開發人員在軟體上線前修正了一個重大的程式錯誤。"
+    },
+    {
+      "form": "cautious",
+      "partOfSpeech": "adjective",
+      "definition": "careful to avoid risk or danger",
+      "translation": "謹慎的",
+      "example": "Investors are being cautious given the current market volatility.",
+      "exampleTranslation": "由於目前市場波動，投資人變得謹慎。"
+    },
+    {
+      "form": "circuit",
+      "partOfSpeech": "noun",
+      "definition": "a closed path for electrical current, or a circular route",
+      "translation": "電路；巡迴",
+      "example": "An electrician checked the circuit for any faults.",
+      "exampleTranslation": "一位電工檢查了電路是否有故障。"
+    },
+    {
+      "form": "clap",
+      "partOfSpeech": "verb",
+      "definition": "to strike palms together as applause",
+      "translation": "鼓掌",
+      "example": "The audience clapped enthusiastically after the presentation.",
+      "exampleTranslation": "觀眾在簡報結束後熱烈鼓掌。"
+    },
+    {
+      "form": "commerce",
+      "partOfSpeech": "noun",
+      "definition": "the activity of buying and selling goods",
+      "translation": "商業；貿易",
+      "example": "E-commerce has changed how consumers shop for products.",
+      "exampleTranslation": "電子商務改變了消費者購物的方式。"
+    },
+    {
+      "form": "convey",
+      "partOfSpeech": "verb",
+      "definition": "to communicate an idea, or to transport",
+      "translation": "傳達；運送",
+      "example": "The email failed to convey the urgency of the situation.",
+      "exampleTranslation": "這封電子郵件沒能傳達出情況的緊急性。"
+    },
+    {
+      "form": "cord",
+      "partOfSpeech": "noun",
+      "definition": "a length of flexible material, especially electrical wire",
+      "translation": "電線；繩索",
+      "example": "Unplug the power cord before cleaning the machine.",
+      "exampleTranslation": "清潔機器前請先拔掉電源線。"
+    },
+    {
+      "form": "counselor",
+      "partOfSpeech": "noun",
+      "definition": "a person who gives advice, especially professional guidance",
+      "translation": "顧問；諮商師",
+      "example": "The career counselor helped him prepare for the interview.",
+      "exampleTranslation": "職涯顧問協助他準備面試。"
+    },
+    {
+      "form": "debit",
+      "partOfSpeech": "noun",
+      "definition": "money withdrawn from an account",
+      "translation": "借記；扣款",
+      "example": "The monthly fee is automatically debited from your account.",
+      "exampleTranslation": "每月費用會自動從你的帳戶扣款。"
+    },
+    {
+      "form": "delicate",
+      "partOfSpeech": "adjective",
+      "definition": "fragile or requiring careful handling",
+      "translation": "精緻的；易碎的",
+      "example": "Handle the delicate equipment with extra care during shipping.",
+      "exampleTranslation": "運送這台精密設備時要格外小心。"
+    },
+    {
+      "form": "dependence",
+      "partOfSpeech": "noun",
+      "definition": "the state of relying on something or someone",
+      "translation": "依賴",
+      "example": "The company is reducing its dependence on a single supplier.",
+      "exampleTranslation": "這家公司正在減少對單一供應商的依賴。"
+    },
+    {
+      "form": "distraction",
+      "partOfSpeech": "noun",
+      "definition": "something that diverts attention away from a task",
+      "translation": "分心的事物",
+      "example": "Turn off notifications to avoid distraction during work hours.",
+      "exampleTranslation": "上班時間關閉通知以避免分心。"
+    },
+    {
+      "form": "downsize",
+      "partOfSpeech": "verb",
+      "definition": "to reduce the size of a company or workforce",
+      "translation": "裁員；縮編",
+      "example": "The firm decided to downsize its regional offices.",
+      "exampleTranslation": "這家公司決定縮編其地區辦公室。"
+    },
+    {
+      "form": "elephant",
+      "partOfSpeech": "noun",
+      "definition": "a large mammal with a trunk",
+      "translation": "大象",
+      "example": "The zoo's new elephant exhibit opens next month.",
+      "exampleTranslation": "動物園新的大象展區下個月開放。"
+    },
+    {
+      "form": "enthusiasm",
+      "partOfSpeech": "noun",
+      "definition": "intense excitement or interest",
+      "translation": "熱忱",
+      "example": "She approached the new project with great enthusiasm.",
+      "exampleTranslation": "她以極大的熱忱投入這個新專案。"
+    },
+    {
+      "form": "enthusiast",
+      "partOfSpeech": "noun",
+      "definition": "a person with intense interest in a particular subject",
+      "translation": "愛好者",
+      "example": "The store caters to outdoor enthusiasts and hikers.",
+      "exampleTranslation": "這間店服務戶外運動愛好者和健行者。"
+    },
+    {
+      "form": "evident",
+      "partOfSpeech": "adjective",
+      "definition": "clearly seen or understood",
+      "translation": "明顯的",
+      "example": "It was evident that the team needed more resources.",
+      "exampleTranslation": "很明顯這個團隊需要更多資源。"
+    },
+    {
+      "form": "flexibility",
+      "partOfSpeech": "noun",
+      "definition": "the ability to adapt or change easily",
+      "translation": "彈性",
+      "example": "Remote work offers employees greater flexibility in their schedule.",
+      "exampleTranslation": "遠距工作讓員工在時間安排上有更大的彈性。"
+    },
+    {
+      "form": "flextime",
+      "partOfSpeech": "noun",
+      "definition": "a system allowing employees to choose flexible working hours",
+      "translation": "彈性工時",
+      "example": "The company introduced flextime to improve work-life balance.",
+      "exampleTranslation": "這家公司導入彈性工時以改善工作與生活的平衡。"
+    },
+    {
+      "form": "fortunately",
+      "partOfSpeech": "adverb",
+      "definition": "luckily",
+      "translation": "幸運地",
+      "example": "Fortunately, the shipment arrived before the deadline.",
+      "exampleTranslation": "幸運的是，貨物在截止日期前抵達了。"
+    }
   ]
 }

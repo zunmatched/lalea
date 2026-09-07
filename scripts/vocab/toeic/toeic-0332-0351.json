@@ -1,27 +1,170 @@
 {
   "slug": "toeic-0332-0351",
-  "title": "TOEIC 核心單字 332-351",
-  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "title": "TOEIC 核心單字 0332-0351",
+  "group": {
+    "slug": "toeic-service-list",
+    "title": "TOEIC 核心單字"
+  },
   "words": [
-    { "form": "fountain", "partOfSpeech": "noun", "definition": "a structure that shoots water into the air for decoration", "translation": "噴泉", "example": "The lobby's fountain is a popular photo spot for visitors.", "exampleTranslation": "大廳的噴泉是訪客熱門的拍照景點。" },
-    { "form": "juice", "partOfSpeech": "noun", "definition": "the liquid extracted from fruit or vegetables", "translation": "果汁", "example": "Fresh juice is served at the welcome reception.", "exampleTranslation": "歡迎茶會上供應新鮮果汁。" },
-    { "form": "lane", "partOfSpeech": "noun", "definition": "a narrow road, or one of the marked sections of a road", "translation": "車道；巷道", "example": "The left lane is closed for road maintenance.", "exampleTranslation": "左側車道因道路維修而封閉。" },
-    { "form": "popularity", "partOfSpeech": "noun", "definition": "the state of being liked or supported by many people", "translation": "受歡迎的程度；人氣", "example": "The product's popularity grew quickly after the ad campaign.", "exampleTranslation": "這項產品在廣告活動後人氣迅速上升。" },
-    { "form": "poster", "partOfSpeech": "noun", "definition": "a large printed picture or notice displayed in public", "translation": "海報", "example": "A poster announcing the sale was put up in the window.", "exampleTranslation": "櫥窗貼上了一張宣傳特賣的海報。" },
-    { "form": "promptly", "partOfSpeech": "adverb", "definition": "immediately or without delay", "translation": "準時地；立刻地", "example": "Please arrive promptly at nine for the meeting.", "exampleTranslation": "請在九點準時抵達開會。" },
-    { "form": "retailer", "partOfSpeech": "noun", "definition": "a business that sells goods directly to consumers", "translation": "零售商", "example": "The retailer is expanding into three new markets.", "exampleTranslation": "這家零售商正在擴展到三個新市場。" },
-    { "form": "vacancy", "partOfSpeech": "noun", "definition": "an unoccupied position or room available", "translation": "空缺；空房", "example": "There is a vacancy for a senior accountant in our finance team.", "exampleTranslation": "我們財務團隊有一個資深會計師的職缺。" },
-    { "form": "bench", "partOfSpeech": "noun", "definition": "a long seat for several people", "translation": "長椅", "example": "Visitors can rest on a bench in the courtyard.", "exampleTranslation": "訪客可以在中庭的長椅上休息。" },
-    { "form": "cumulative", "partOfSpeech": "adjective", "definition": "increasing by successive additions over time", "translation": "累積的", "example": "The cumulative effect of small savings adds up over a year.", "exampleTranslation": "小額節省的累積效果，一年下來會相當可觀。" },
-    { "form": "directory", "partOfSpeech": "noun", "definition": "a list of names, addresses, or files organized for easy reference", "translation": "名錄；目錄", "example": "You can find her extension in the staff directory.", "exampleTranslation": "你可以在員工名錄裡找到她的分機號碼。" },
-    { "form": "disposal", "partOfSpeech": "noun", "definition": "the act of getting rid of something", "translation": "處置；棄置", "example": "The company follows strict rules for waste disposal.", "exampleTranslation": "公司在廢棄物處置上遵守嚴格規定。" },
-    { "form": "housekeeper", "partOfSpeech": "noun", "definition": "a person employed to clean and maintain a house or hotel room", "translation": "管家；房務人員", "example": "The housekeeper will service the room after checkout.", "exampleTranslation": "退房後房務人員會來整理房間。" },
-    { "form": "internship", "partOfSpeech": "noun", "definition": "a temporary position for gaining work experience", "translation": "實習職位", "example": "She completed a six-month internship before being hired full time.", "exampleTranslation": "她完成了六個月的實習後才被正式錄用。" },
-    { "form": "knowledgeable", "partOfSpeech": "adjective", "definition": "having a lot of knowledge or information about a subject", "translation": "見多識廣的；博學的", "example": "The staff are knowledgeable about all the products in the store.", "exampleTranslation": "店裡的員工對所有產品都很了解。" },
-    { "form": "organizer", "partOfSpeech": "noun", "definition": "a person or thing that arranges or plans an event", "translation": "主辦人；整理工具", "example": "The event organizer confirmed the venue for next month.", "exampleTranslation": "活動主辦人確認了下個月的場地。" },
-    { "form": "overdue", "partOfSpeech": "adjective", "definition": "not paid, done, or arrived by the expected time", "translation": "逾期的", "example": "Please settle any overdue invoices by the end of the week.", "exampleTranslation": "請在週末前結清任何逾期的發票款項。" },
-    { "form": "prediction", "partOfSpeech": "noun", "definition": "a statement about what will happen in the future", "translation": "預測", "example": "Analysts made a prediction about next quarter's sales growth.", "exampleTranslation": "分析師對下季的銷售成長做出了預測。" },
-    { "form": "subscriber", "partOfSpeech": "noun", "definition": "a person who pays to regularly receive a service or publication", "translation": "訂閱者", "example": "The newsletter now has over ten thousand subscribers.", "exampleTranslation": "這份電子報現在有超過一萬名訂閱者。" },
-    { "form": "booklet", "partOfSpeech": "noun", "definition": "a small thin book, often with information or instructions", "translation": "小冊子", "example": "A booklet explaining the benefits plan was mailed to all staff.", "exampleTranslation": "一本說明福利方案的小冊子已寄給全體員工。" }
+    {
+      "form": "fountain",
+      "partOfSpeech": "noun",
+      "definition": "a structure that shoots water into the air for decoration",
+      "translation": "噴泉",
+      "example": "The lobby's fountain is a popular photo spot for visitors.",
+      "exampleTranslation": "大廳的噴泉是訪客熱門的拍照景點。"
+    },
+    {
+      "form": "juice",
+      "partOfSpeech": "noun",
+      "definition": "the liquid extracted from fruit or vegetables",
+      "translation": "果汁",
+      "example": "Fresh juice is served at the welcome reception.",
+      "exampleTranslation": "歡迎茶會上供應新鮮果汁。"
+    },
+    {
+      "form": "lane",
+      "partOfSpeech": "noun",
+      "definition": "a narrow road, or one of the marked sections of a road",
+      "translation": "車道；巷道",
+      "example": "The left lane is closed for road maintenance.",
+      "exampleTranslation": "左側車道因道路維修而封閉。"
+    },
+    {
+      "form": "popularity",
+      "partOfSpeech": "noun",
+      "definition": "the state of being liked or supported by many people",
+      "translation": "受歡迎的程度；人氣",
+      "example": "The product's popularity grew quickly after the ad campaign.",
+      "exampleTranslation": "這項產品在廣告活動後人氣迅速上升。"
+    },
+    {
+      "form": "poster",
+      "partOfSpeech": "noun",
+      "definition": "a large printed picture or notice displayed in public",
+      "translation": "海報",
+      "example": "A poster announcing the sale was put up in the window.",
+      "exampleTranslation": "櫥窗貼上了一張宣傳特賣的海報。"
+    },
+    {
+      "form": "promptly",
+      "partOfSpeech": "adverb",
+      "definition": "immediately or without delay",
+      "translation": "準時地；立刻地",
+      "example": "Please arrive promptly at nine for the meeting.",
+      "exampleTranslation": "請在九點準時抵達開會。"
+    },
+    {
+      "form": "retailer",
+      "partOfSpeech": "noun",
+      "definition": "a business that sells goods directly to consumers",
+      "translation": "零售商",
+      "example": "The retailer is expanding into three new markets.",
+      "exampleTranslation": "這家零售商正在擴展到三個新市場。"
+    },
+    {
+      "form": "vacancy",
+      "partOfSpeech": "noun",
+      "definition": "an unoccupied position or room available",
+      "translation": "空缺；空房",
+      "example": "There is a vacancy for a senior accountant in our finance team.",
+      "exampleTranslation": "我們財務團隊有一個資深會計師的職缺。"
+    },
+    {
+      "form": "bench",
+      "partOfSpeech": "noun",
+      "definition": "a long seat for several people",
+      "translation": "長椅",
+      "example": "Visitors can rest on a bench in the courtyard.",
+      "exampleTranslation": "訪客可以在中庭的長椅上休息。"
+    },
+    {
+      "form": "cumulative",
+      "partOfSpeech": "adjective",
+      "definition": "increasing by successive additions over time",
+      "translation": "累積的",
+      "example": "The cumulative effect of small savings adds up over a year.",
+      "exampleTranslation": "小額節省的累積效果，一年下來會相當可觀。"
+    },
+    {
+      "form": "directory",
+      "partOfSpeech": "noun",
+      "definition": "a list of names, addresses, or files organized for easy reference",
+      "translation": "名錄；目錄",
+      "example": "You can find her extension in the staff directory.",
+      "exampleTranslation": "你可以在員工名錄裡找到她的分機號碼。"
+    },
+    {
+      "form": "disposal",
+      "partOfSpeech": "noun",
+      "definition": "the act of getting rid of something",
+      "translation": "處置；棄置",
+      "example": "The company follows strict rules for waste disposal.",
+      "exampleTranslation": "公司在廢棄物處置上遵守嚴格規定。"
+    },
+    {
+      "form": "housekeeper",
+      "partOfSpeech": "noun",
+      "definition": "a person employed to clean and maintain a house or hotel room",
+      "translation": "管家；房務人員",
+      "example": "The housekeeper will service the room after checkout.",
+      "exampleTranslation": "退房後房務人員會來整理房間。"
+    },
+    {
+      "form": "internship",
+      "partOfSpeech": "noun",
+      "definition": "a temporary position for gaining work experience",
+      "translation": "實習職位",
+      "example": "She completed a six-month internship before being hired full time.",
+      "exampleTranslation": "她完成了六個月的實習後才被正式錄用。"
+    },
+    {
+      "form": "knowledgeable",
+      "partOfSpeech": "adjective",
+      "definition": "having a lot of knowledge or information about a subject",
+      "translation": "見多識廣的；博學的",
+      "example": "The staff are knowledgeable about all the products in the store.",
+      "exampleTranslation": "店裡的員工對所有產品都很了解。"
+    },
+    {
+      "form": "organizer",
+      "partOfSpeech": "noun",
+      "definition": "a person or thing that arranges or plans an event",
+      "translation": "主辦人；整理工具",
+      "example": "The event organizer confirmed the venue for next month.",
+      "exampleTranslation": "活動主辦人確認了下個月的場地。"
+    },
+    {
+      "form": "overdue",
+      "partOfSpeech": "adjective",
+      "definition": "not paid, done, or arrived by the expected time",
+      "translation": "逾期的",
+      "example": "Please settle any overdue invoices by the end of the week.",
+      "exampleTranslation": "請在週末前結清任何逾期的發票款項。"
+    },
+    {
+      "form": "prediction",
+      "partOfSpeech": "noun",
+      "definition": "a statement about what will happen in the future",
+      "translation": "預測",
+      "example": "Analysts made a prediction about next quarter's sales growth.",
+      "exampleTranslation": "分析師對下季的銷售成長做出了預測。"
+    },
+    {
+      "form": "subscriber",
+      "partOfSpeech": "noun",
+      "definition": "a person who pays to regularly receive a service or publication",
+      "translation": "訂閱者",
+      "example": "The newsletter now has over ten thousand subscribers.",
+      "exampleTranslation": "這份電子報現在有超過一萬名訂閱者。"
+    },
+    {
+      "form": "booklet",
+      "partOfSpeech": "noun",
+      "definition": "a small thin book, often with information or instructions",
+      "translation": "小冊子",
+      "example": "A booklet explaining the benefits plan was mailed to all staff.",
+      "exampleTranslation": "一本說明福利方案的小冊子已寄給全體員工。"
+    }
   ]
 }

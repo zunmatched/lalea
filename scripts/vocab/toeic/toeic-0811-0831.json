@@ -1,27 +1,170 @@
 {
   "slug": "toeic-0811-0831",
-  "title": "TOEIC 核心單字 811-831",
-  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "title": "TOEIC 核心單字 0811-0831",
+  "group": {
+    "slug": "toeic-service-list",
+    "title": "TOEIC 核心單字"
+  },
   "words": [
-    { "form": "congestion", "partOfSpeech": "noun", "definition": "overcrowding that causes a blockage, such as in traffic", "translation": "壅塞；擁擠", "example": "Traffic congestion during rush hour adds twenty minutes to the commute.", "exampleTranslation": "尖峰時段的交通壅塞讓通勤多花二十分鐘。" },
-    { "form": "contradiction", "partOfSpeech": "noun", "definition": "a statement or situation that is opposed to another", "translation": "矛盾", "example": "There is a contradiction between the two reports on quarterly earnings.", "exampleTranslation": "這兩份關於季度盈餘的報告之間存在矛盾。" },
-    { "form": "contrary", "partOfSpeech": "adjective", "definition": "opposite in nature or direction", "translation": "相反的", "example": "Contrary to expectations, the new product sold out within a week.", "exampleTranslation": "跟預期相反，這項新產品一週內就賣完了。" },
-    { "form": "diploma", "partOfSpeech": "noun", "definition": "a certificate awarded for completing a course of study", "translation": "文憑；畢業證書", "example": "She proudly displayed her diploma on the office wall.", "exampleTranslation": "她驕傲地把畢業證書掛在辦公室牆上。" },
-    { "form": "distributor", "partOfSpeech": "noun", "definition": "a company or person that supplies goods to retailers", "translation": "經銷商", "example": "The company signed a new distributor to expand into overseas markets.", "exampleTranslation": "這家公司簽了一位新的經銷商以拓展海外市場。" },
-    { "form": "dive", "partOfSpeech": "verb", "definition": "to plunge into water headfirst, or to drop sharply", "translation": "潛水；驟降", "example": "Stock prices took a dive after the disappointing earnings report.", "exampleTranslation": "令人失望的財報公布後，股價驟然下跌。" },
-    { "form": "energetic", "partOfSpeech": "adjective", "definition": "having or showing a lot of energy", "translation": "精力充沛的", "example": "The new intern is energetic and eager to learn.", "exampleTranslation": "這位新來的實習生精力充沛且渴望學習。" },
-    { "form": "environmentally", "partOfSpeech": "adverb", "definition": "in a way relating to the natural environment", "translation": "對環境而言；環保方面", "example": "The factory switched to environmentally friendly packaging last year.", "exampleTranslation": "這家工廠去年改用對環境友善的包裝。" },
-    { "form": "escalator", "partOfSpeech": "noun", "definition": "a moving staircase", "translation": "電扶梯", "example": "Take the escalator to the second floor for the electronics department.", "exampleTranslation": "搭電扶梯到二樓就是電子產品部門。" },
-    { "form": "exotic", "partOfSpeech": "adjective", "definition": "unusual or foreign in an interesting way", "translation": "異國風情的", "example": "The restaurant menu features exotic spices from Southeast Asia.", "exampleTranslation": "這間餐廳的菜單有來自東南亞的異國香料。" },
-    { "form": "fabric", "partOfSpeech": "noun", "definition": "cloth material", "translation": "布料；織物", "example": "The tailor selected a durable fabric for the winter coats.", "exampleTranslation": "裁縫師為冬季外套挑選了耐用的布料。" },
-    { "form": "generalization", "partOfSpeech": "noun", "definition": "a broad statement based on limited specifics", "translation": "概括；泛論", "example": "Avoid making generalizations about customer preferences without data.", "exampleTranslation": "沒有數據支持時，避免對顧客偏好做概括性的論斷。" },
-    { "form": "guidance", "partOfSpeech": "noun", "definition": "advice or direction given to someone", "translation": "指導；引導", "example": "New employees receive guidance from a mentor during their first month.", "exampleTranslation": "新進員工在第一個月會有導師提供指導。" },
-    { "form": "gum", "partOfSpeech": "noun", "definition": "a soft, sweet substance chewed for flavor, or a sticky plant sap", "translation": "口香糖；樹膠", "example": "Chewing gum is not allowed during client presentations.", "exampleTranslation": "客戶簡報期間不可以嚼口香糖。" },
-    { "form": "hesitant", "partOfSpeech": "adjective", "definition": "slow to act or speak because of uncertainty", "translation": "猶豫的", "example": "The board was hesitant to approve the merger without more data.", "exampleTranslation": "董事會在沒有更多資料前對核准合併感到猶豫。" },
-    { "form": "indicator", "partOfSpeech": "noun", "definition": "a sign or measure that shows a trend or condition", "translation": "指標", "example": "Rising sales are a strong indicator of market recovery.", "exampleTranslation": "銷售上升是市場復甦的強烈指標。" },
-    { "form": "individually", "partOfSpeech": "adverb", "definition": "separately, one at a time", "translation": "個別地", "example": "Each item will be inspected individually before shipping.", "exampleTranslation": "每件商品出貨前都會個別檢查。" },
-    { "form": "junior", "partOfSpeech": "adjective", "definition": "lower in rank or younger/less experienced", "translation": "資淺的；初級的", "example": "She was recently promoted from a junior to a senior analyst position.", "exampleTranslation": "她最近從資淺分析師晉升為資深分析師。" },
-    { "form": "lifestyle", "partOfSpeech": "noun", "definition": "the way a person or group lives", "translation": "生活方式", "example": "The brand targets consumers with an active, health-conscious lifestyle.", "exampleTranslation": "這個品牌鎖定生活方式積極且注重健康的消費者。" },
-    { "form": "morale", "partOfSpeech": "noun", "definition": "the confidence, enthusiasm, and discipline of a group", "translation": "士氣", "example": "Team morale improved after the company announced the bonus program.", "exampleTranslation": "公司宣布獎金方案後，團隊士氣提升了。" }
+    {
+      "form": "congestion",
+      "partOfSpeech": "noun",
+      "definition": "overcrowding that causes a blockage, such as in traffic",
+      "translation": "壅塞；擁擠",
+      "example": "Traffic congestion during rush hour adds twenty minutes to the commute.",
+      "exampleTranslation": "尖峰時段的交通壅塞讓通勤多花二十分鐘。"
+    },
+    {
+      "form": "contradiction",
+      "partOfSpeech": "noun",
+      "definition": "a statement or situation that is opposed to another",
+      "translation": "矛盾",
+      "example": "There is a contradiction between the two reports on quarterly earnings.",
+      "exampleTranslation": "這兩份關於季度盈餘的報告之間存在矛盾。"
+    },
+    {
+      "form": "contrary",
+      "partOfSpeech": "adjective",
+      "definition": "opposite in nature or direction",
+      "translation": "相反的",
+      "example": "Contrary to expectations, the new product sold out within a week.",
+      "exampleTranslation": "跟預期相反，這項新產品一週內就賣完了。"
+    },
+    {
+      "form": "diploma",
+      "partOfSpeech": "noun",
+      "definition": "a certificate awarded for completing a course of study",
+      "translation": "文憑；畢業證書",
+      "example": "She proudly displayed her diploma on the office wall.",
+      "exampleTranslation": "她驕傲地把畢業證書掛在辦公室牆上。"
+    },
+    {
+      "form": "distributor",
+      "partOfSpeech": "noun",
+      "definition": "a company or person that supplies goods to retailers",
+      "translation": "經銷商",
+      "example": "The company signed a new distributor to expand into overseas markets.",
+      "exampleTranslation": "這家公司簽了一位新的經銷商以拓展海外市場。"
+    },
+    {
+      "form": "dive",
+      "partOfSpeech": "verb",
+      "definition": "to plunge into water headfirst, or to drop sharply",
+      "translation": "潛水；驟降",
+      "example": "Stock prices took a dive after the disappointing earnings report.",
+      "exampleTranslation": "令人失望的財報公布後，股價驟然下跌。"
+    },
+    {
+      "form": "energetic",
+      "partOfSpeech": "adjective",
+      "definition": "having or showing a lot of energy",
+      "translation": "精力充沛的",
+      "example": "The new intern is energetic and eager to learn.",
+      "exampleTranslation": "這位新來的實習生精力充沛且渴望學習。"
+    },
+    {
+      "form": "environmentally",
+      "partOfSpeech": "adverb",
+      "definition": "in a way relating to the natural environment",
+      "translation": "對環境而言；環保方面",
+      "example": "The factory switched to environmentally friendly packaging last year.",
+      "exampleTranslation": "這家工廠去年改用對環境友善的包裝。"
+    },
+    {
+      "form": "escalator",
+      "partOfSpeech": "noun",
+      "definition": "a moving staircase",
+      "translation": "電扶梯",
+      "example": "Take the escalator to the second floor for the electronics department.",
+      "exampleTranslation": "搭電扶梯到二樓就是電子產品部門。"
+    },
+    {
+      "form": "exotic",
+      "partOfSpeech": "adjective",
+      "definition": "unusual or foreign in an interesting way",
+      "translation": "異國風情的",
+      "example": "The restaurant menu features exotic spices from Southeast Asia.",
+      "exampleTranslation": "這間餐廳的菜單有來自東南亞的異國香料。"
+    },
+    {
+      "form": "fabric",
+      "partOfSpeech": "noun",
+      "definition": "cloth material",
+      "translation": "布料；織物",
+      "example": "The tailor selected a durable fabric for the winter coats.",
+      "exampleTranslation": "裁縫師為冬季外套挑選了耐用的布料。"
+    },
+    {
+      "form": "generalization",
+      "partOfSpeech": "noun",
+      "definition": "a broad statement based on limited specifics",
+      "translation": "概括；泛論",
+      "example": "Avoid making generalizations about customer preferences without data.",
+      "exampleTranslation": "沒有數據支持時，避免對顧客偏好做概括性的論斷。"
+    },
+    {
+      "form": "guidance",
+      "partOfSpeech": "noun",
+      "definition": "advice or direction given to someone",
+      "translation": "指導；引導",
+      "example": "New employees receive guidance from a mentor during their first month.",
+      "exampleTranslation": "新進員工在第一個月會有導師提供指導。"
+    },
+    {
+      "form": "gum",
+      "partOfSpeech": "noun",
+      "definition": "a soft, sweet substance chewed for flavor, or a sticky plant sap",
+      "translation": "口香糖；樹膠",
+      "example": "Chewing gum is not allowed during client presentations.",
+      "exampleTranslation": "客戶簡報期間不可以嚼口香糖。"
+    },
+    {
+      "form": "hesitant",
+      "partOfSpeech": "adjective",
+      "definition": "slow to act or speak because of uncertainty",
+      "translation": "猶豫的",
+      "example": "The board was hesitant to approve the merger without more data.",
+      "exampleTranslation": "董事會在沒有更多資料前對核准合併感到猶豫。"
+    },
+    {
+      "form": "indicator",
+      "partOfSpeech": "noun",
+      "definition": "a sign or measure that shows a trend or condition",
+      "translation": "指標",
+      "example": "Rising sales are a strong indicator of market recovery.",
+      "exampleTranslation": "銷售上升是市場復甦的強烈指標。"
+    },
+    {
+      "form": "individually",
+      "partOfSpeech": "adverb",
+      "definition": "separately, one at a time",
+      "translation": "個別地",
+      "example": "Each item will be inspected individually before shipping.",
+      "exampleTranslation": "每件商品出貨前都會個別檢查。"
+    },
+    {
+      "form": "junior",
+      "partOfSpeech": "adjective",
+      "definition": "lower in rank or younger/less experienced",
+      "translation": "資淺的；初級的",
+      "example": "She was recently promoted from a junior to a senior analyst position.",
+      "exampleTranslation": "她最近從資淺分析師晉升為資深分析師。"
+    },
+    {
+      "form": "lifestyle",
+      "partOfSpeech": "noun",
+      "definition": "the way a person or group lives",
+      "translation": "生活方式",
+      "example": "The brand targets consumers with an active, health-conscious lifestyle.",
+      "exampleTranslation": "這個品牌鎖定生活方式積極且注重健康的消費者。"
+    },
+    {
+      "form": "morale",
+      "partOfSpeech": "noun",
+      "definition": "the confidence, enthusiasm, and discipline of a group",
+      "translation": "士氣",
+      "example": "Team morale improved after the company announced the bonus program.",
+      "exampleTranslation": "公司宣布獎金方案後，團隊士氣提升了。"
+    }
   ]
 }

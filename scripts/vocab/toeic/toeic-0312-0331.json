@@ -1,27 +1,170 @@
 {
   "slug": "toeic-0312-0331",
-  "title": "TOEIC 核心單字 312-331",
-  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "title": "TOEIC 核心單字 0312-0331",
+  "group": {
+    "slug": "toeic-service-list",
+    "title": "TOEIC 核心單字"
+  },
   "words": [
-    { "form": "graph", "partOfSpeech": "noun", "definition": "a visual diagram showing the relationship between numbers or quantities", "translation": "圖表", "example": "The graph shows a steady increase in quarterly revenue.", "exampleTranslation": "這張圖表顯示季度營收穩定成長。" },
-    { "form": "taker", "partOfSpeech": "noun", "definition": "a person who accepts an offer or takes something", "translation": "接受者（常見於 test-taker 應試者）", "example": "Test-takers must arrive thirty minutes before the exam begins.", "exampleTranslation": "應試者必須在考試開始前三十分鐘抵達。" },
-    { "form": "utility", "partOfSpeech": "noun", "definition": "a public service such as electricity, gas, or water", "translation": "公用事業；水電瓦斯", "example": "Utility costs are included in the monthly office rent.", "exampleTranslation": "水電瓦斯費用已包含在每月的辦公室租金中。" },
-    { "form": "voucher", "partOfSpeech": "noun", "definition": "a document that can be exchanged for goods or services", "translation": "抵用券；憑證", "example": "Employees received a meal voucher for the training day.", "exampleTranslation": "員工在訓練當天收到了一張餐飲抵用券。" },
-    { "form": "banker", "partOfSpeech": "noun", "definition": "a person who works in a bank, especially in a senior role", "translation": "銀行家；銀行從業人員", "example": "The investment banker advised the company on the merger.", "exampleTranslation": "那位投資銀行家為公司的合併案提供建議。" },
-    { "form": "behalf", "partOfSpeech": "noun", "definition": "used in 'on behalf of' to mean acting as a representative of someone", "translation": "代表（常用 on behalf of）", "example": "I'm signing this document on behalf of the director.", "exampleTranslation": "我是代表主任簽署這份文件。" },
-    { "form": "minimize", "partOfSpeech": "verb", "definition": "to reduce something to the smallest possible amount", "translation": "使降到最低；最小化", "example": "We rescheduled the shipment to minimize delivery delays.", "exampleTranslation": "我們重新安排出貨時間，以將配送延誤降到最低。" },
-    { "form": "optional", "partOfSpeech": "adjective", "definition": "available to choose but not required", "translation": "選擇性的；非必要的", "example": "Attendance at the workshop is optional this year.", "exampleTranslation": "今年參加這場工作坊是自由選擇的。" },
-    { "form": "paycheck", "partOfSpeech": "noun", "definition": "a payment of wages, especially in the form of a check", "translation": "薪水支票；薪資", "example": "Direct deposit means your paycheck arrives automatically each month.", "exampleTranslation": "直接存款代表你的薪水每個月會自動入帳。" },
-    { "form": "polite", "partOfSpeech": "adjective", "definition": "showing good manners and respect toward others", "translation": "有禮貌的", "example": "Always be polite to customers, even when they are frustrated.", "exampleTranslation": "即使顧客不耐煩，也要一直保持禮貌。" },
-    { "form": "protective", "partOfSpeech": "adjective", "definition": "providing protection or intended to prevent damage or injury", "translation": "保護性的；防護的", "example": "Workers must wear protective gear in the warehouse.", "exampleTranslation": "工人在倉庫裡必須穿戴防護裝備。" },
-    { "form": "seller", "partOfSpeech": "noun", "definition": "a person or company that sells something", "translation": "賣家", "example": "The seller agreed to lower the price after negotiation.", "exampleTranslation": "賣家在協商後同意降價。" },
-    { "form": "sidewalk", "partOfSpeech": "noun", "definition": "a paved path for pedestrians beside a road", "translation": "人行道", "example": "Construction has closed part of the sidewalk outside the building.", "exampleTranslation": "施工工程封閉了大樓外部分人行道。" },
-    { "form": "sightsee", "partOfSpeech": "verb", "definition": "to visit famous or interesting places as a tourist", "translation": "觀光；遊覽", "example": "After the conference, several attendees stayed to sightsee.", "exampleTranslation": "會議結束後，幾位與會者留下來觀光。" },
-    { "form": "soup", "partOfSpeech": "noun", "definition": "a liquid food made by boiling ingredients together", "translation": "湯", "example": "The menu includes soup as a starter for the business lunch.", "exampleTranslation": "菜單上把湯品列為商務午餐的前菜。" },
-    { "form": "transit", "partOfSpeech": "noun", "definition": "the transportation of people or goods from one place to another", "translation": "運輸；轉運", "example": "The package is currently in transit and should arrive tomorrow.", "exampleTranslation": "這個包裹目前正在運送中，預計明天送達。" },
-    { "form": "wallet", "partOfSpeech": "noun", "definition": "a small flat case for carrying money and cards", "translation": "皮夾；錢包", "example": "He left his wallet at the reception desk.", "exampleTranslation": "他把皮夾忘在櫃檯了。" },
-    { "form": "cashier", "partOfSpeech": "noun", "definition": "a person who handles payments in a store or bank", "translation": "收銀員；出納", "example": "The cashier processed the refund without any issue.", "exampleTranslation": "收銀員順利處理了退款，沒有任何問題。" },
-    { "form": "casual", "partOfSpeech": "adjective", "definition": "relaxed and informal in style or manner", "translation": "休閒的；非正式的", "example": "Employees can wear casual clothing on Fridays.", "exampleTranslation": "員工在星期五可以穿休閒服裝。" },
-    { "form": "drill", "partOfSpeech": "noun", "definition": "a repeated exercise or practice, or a tool for making holes", "translation": "演習；鑽孔機", "example": "The office held a fire drill this morning.", "exampleTranslation": "辦公室今天早上舉行了消防演習。" }
+    {
+      "form": "graph",
+      "partOfSpeech": "noun",
+      "definition": "a visual diagram showing the relationship between numbers or quantities",
+      "translation": "圖表",
+      "example": "The graph shows a steady increase in quarterly revenue.",
+      "exampleTranslation": "這張圖表顯示季度營收穩定成長。"
+    },
+    {
+      "form": "taker",
+      "partOfSpeech": "noun",
+      "definition": "a person who accepts an offer or takes something",
+      "translation": "接受者（常見於 test-taker 應試者）",
+      "example": "Test-takers must arrive thirty minutes before the exam begins.",
+      "exampleTranslation": "應試者必須在考試開始前三十分鐘抵達。"
+    },
+    {
+      "form": "utility",
+      "partOfSpeech": "noun",
+      "definition": "a public service such as electricity, gas, or water",
+      "translation": "公用事業；水電瓦斯",
+      "example": "Utility costs are included in the monthly office rent.",
+      "exampleTranslation": "水電瓦斯費用已包含在每月的辦公室租金中。"
+    },
+    {
+      "form": "voucher",
+      "partOfSpeech": "noun",
+      "definition": "a document that can be exchanged for goods or services",
+      "translation": "抵用券；憑證",
+      "example": "Employees received a meal voucher for the training day.",
+      "exampleTranslation": "員工在訓練當天收到了一張餐飲抵用券。"
+    },
+    {
+      "form": "banker",
+      "partOfSpeech": "noun",
+      "definition": "a person who works in a bank, especially in a senior role",
+      "translation": "銀行家；銀行從業人員",
+      "example": "The investment banker advised the company on the merger.",
+      "exampleTranslation": "那位投資銀行家為公司的合併案提供建議。"
+    },
+    {
+      "form": "behalf",
+      "partOfSpeech": "noun",
+      "definition": "used in 'on behalf of' to mean acting as a representative of someone",
+      "translation": "代表（常用 on behalf of）",
+      "example": "I'm signing this document on behalf of the director.",
+      "exampleTranslation": "我是代表主任簽署這份文件。"
+    },
+    {
+      "form": "minimize",
+      "partOfSpeech": "verb",
+      "definition": "to reduce something to the smallest possible amount",
+      "translation": "使降到最低；最小化",
+      "example": "We rescheduled the shipment to minimize delivery delays.",
+      "exampleTranslation": "我們重新安排出貨時間，以將配送延誤降到最低。"
+    },
+    {
+      "form": "optional",
+      "partOfSpeech": "adjective",
+      "definition": "available to choose but not required",
+      "translation": "選擇性的；非必要的",
+      "example": "Attendance at the workshop is optional this year.",
+      "exampleTranslation": "今年參加這場工作坊是自由選擇的。"
+    },
+    {
+      "form": "paycheck",
+      "partOfSpeech": "noun",
+      "definition": "a payment of wages, especially in the form of a check",
+      "translation": "薪水支票；薪資",
+      "example": "Direct deposit means your paycheck arrives automatically each month.",
+      "exampleTranslation": "直接存款代表你的薪水每個月會自動入帳。"
+    },
+    {
+      "form": "polite",
+      "partOfSpeech": "adjective",
+      "definition": "showing good manners and respect toward others",
+      "translation": "有禮貌的",
+      "example": "Always be polite to customers, even when they are frustrated.",
+      "exampleTranslation": "即使顧客不耐煩，也要一直保持禮貌。"
+    },
+    {
+      "form": "protective",
+      "partOfSpeech": "adjective",
+      "definition": "providing protection or intended to prevent damage or injury",
+      "translation": "保護性的；防護的",
+      "example": "Workers must wear protective gear in the warehouse.",
+      "exampleTranslation": "工人在倉庫裡必須穿戴防護裝備。"
+    },
+    {
+      "form": "seller",
+      "partOfSpeech": "noun",
+      "definition": "a person or company that sells something",
+      "translation": "賣家",
+      "example": "The seller agreed to lower the price after negotiation.",
+      "exampleTranslation": "賣家在協商後同意降價。"
+    },
+    {
+      "form": "sidewalk",
+      "partOfSpeech": "noun",
+      "definition": "a paved path for pedestrians beside a road",
+      "translation": "人行道",
+      "example": "Construction has closed part of the sidewalk outside the building.",
+      "exampleTranslation": "施工工程封閉了大樓外部分人行道。"
+    },
+    {
+      "form": "sightsee",
+      "partOfSpeech": "verb",
+      "definition": "to visit famous or interesting places as a tourist",
+      "translation": "觀光；遊覽",
+      "example": "After the conference, several attendees stayed to sightsee.",
+      "exampleTranslation": "會議結束後，幾位與會者留下來觀光。"
+    },
+    {
+      "form": "soup",
+      "partOfSpeech": "noun",
+      "definition": "a liquid food made by boiling ingredients together",
+      "translation": "湯",
+      "example": "The menu includes soup as a starter for the business lunch.",
+      "exampleTranslation": "菜單上把湯品列為商務午餐的前菜。"
+    },
+    {
+      "form": "transit",
+      "partOfSpeech": "noun",
+      "definition": "the transportation of people or goods from one place to another",
+      "translation": "運輸；轉運",
+      "example": "The package is currently in transit and should arrive tomorrow.",
+      "exampleTranslation": "這個包裹目前正在運送中，預計明天送達。"
+    },
+    {
+      "form": "wallet",
+      "partOfSpeech": "noun",
+      "definition": "a small flat case for carrying money and cards",
+      "translation": "皮夾；錢包",
+      "example": "He left his wallet at the reception desk.",
+      "exampleTranslation": "他把皮夾忘在櫃檯了。"
+    },
+    {
+      "form": "cashier",
+      "partOfSpeech": "noun",
+      "definition": "a person who handles payments in a store or bank",
+      "translation": "收銀員；出納",
+      "example": "The cashier processed the refund without any issue.",
+      "exampleTranslation": "收銀員順利處理了退款，沒有任何問題。"
+    },
+    {
+      "form": "casual",
+      "partOfSpeech": "adjective",
+      "definition": "relaxed and informal in style or manner",
+      "translation": "休閒的；非正式的",
+      "example": "Employees can wear casual clothing on Fridays.",
+      "exampleTranslation": "員工在星期五可以穿休閒服裝。"
+    },
+    {
+      "form": "drill",
+      "partOfSpeech": "noun",
+      "definition": "a repeated exercise or practice, or a tool for making holes",
+      "translation": "演習；鑽孔機",
+      "example": "The office held a fire drill this morning.",
+      "exampleTranslation": "辦公室今天早上舉行了消防演習。"
+    }
   ]
 }

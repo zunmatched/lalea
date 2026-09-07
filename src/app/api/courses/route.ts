@@ -36,7 +36,7 @@ export async function GET(){
 
  const fullyDone=(c:typeof list[number])=>c.totalUnits>0&&c.completedUnits>=c.totalUnits;
  const completionRatio=(c:typeof list[number])=>c.totalUnits>0?c.completedUnits/c.totalUnits:0;
- list.sort((a,b)=>{const doneDiff=Number(fullyDone(a))-Number(fullyDone(b));if(doneDiff!==0)return doneDiff;return completionRatio(b)-completionRatio(a)});
+ list.sort((a,b)=>{const doneDiff=Number(fullyDone(a))-Number(fullyDone(b));if(doneDiff!==0)return doneDiff;const ratioDiff=completionRatio(b)-completionRatio(a);if(ratioDiff!==0)return ratioDiff;return a.title.localeCompare(b.title)});
 
  if(!list.length)return Response.json({groups:[]});
  return Response.json({groups:[{id:path.id,title:path.title,courses:list}]});

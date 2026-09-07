@@ -40,7 +40,7 @@ export async function GET(){
 
  const fullyDone=(s:typeof sources[number])=>s.totalWords>0&&s.everMasteredCount>=s.totalWords;
  const completionRatio=(s:typeof sources[number])=>s.totalWords>0?s.everMasteredCount/s.totalWords:0;
- const bySources=(a:typeof sources[number],b:typeof sources[number])=>{const doneDiff=Number(fullyDone(a))-Number(fullyDone(b));if(doneDiff!==0)return doneDiff;return completionRatio(b)-completionRatio(a)};
+ const bySources=(a:typeof sources[number],b:typeof sources[number])=>{const doneDiff=Number(fullyDone(a))-Number(fullyDone(b));if(doneDiff!==0)return doneDiff;const ratioDiff=completionRatio(b)-completionRatio(a);if(ratioDiff!==0)return ratioDiff;return a.label.localeCompare(b.label)};
 
  const groups=[...grouped.values()]
   .sort((a,b)=>a.position-b.position||a.title.localeCompare(b.title))

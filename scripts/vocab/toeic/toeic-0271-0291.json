@@ -1,27 +1,170 @@
 {
   "slug": "toeic-0271-0291",
-  "title": "TOEIC 核心單字 271-291",
-  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "title": "TOEIC 核心單字 0271-0291",
+  "group": {
+    "slug": "toeic-service-list",
+    "title": "TOEIC 核心單字"
+  },
   "words": [
-    { "form": "productive", "partOfSpeech": "adjective", "definition": "producing a lot of good or useful results", "translation": "有生產力的；富有成效的", "example": "The team had a productive meeting and finalized the schedule.", "exampleTranslation": "團隊開了一場有成效的會議，敲定了時程。" },
-    { "form": "salad", "partOfSpeech": "noun", "definition": "a cold dish of mixed vegetables or other ingredients", "translation": "沙拉", "example": "The cafeteria offers a fresh salad bar at lunch.", "exampleTranslation": "員工餐廳午餐時段有新鮮的沙拉吧。" },
-    { "form": "stack", "partOfSpeech": "noun", "definition": "a neat pile of things placed one on top of another", "translation": "一疊；堆", "example": "There's a stack of invoices waiting for your signature.", "exampleTranslation": "有一疊發票等著你簽名。" },
-    { "form": "salesperson", "partOfSpeech": "noun", "definition": "a person whose job is to sell products or services", "translation": "銷售員", "example": "The salesperson explained the warranty options in detail.", "exampleTranslation": "那位銷售員詳細說明了保固方案。" },
-    { "form": "calculator", "partOfSpeech": "noun", "definition": "a device used to perform mathematical calculations", "translation": "計算機", "example": "Keep a calculator handy when reviewing the budget spreadsheet.", "exampleTranslation": "檢查預算表時，手邊放一台計算機比較方便。" },
-    { "form": "completion", "partOfSpeech": "noun", "definition": "the act of finishing something", "translation": "完成", "example": "The project is expected to reach completion by the end of the quarter.", "exampleTranslation": "這個專案預計在本季末完成。" },
-    { "form": "defect", "partOfSpeech": "noun", "definition": "a fault or imperfection in something", "translation": "瑕疵；缺陷", "example": "The factory found a defect in the last batch of parts.", "exampleTranslation": "工廠在最後一批零件裡發現了瑕疵。" },
-    { "form": "garbage", "partOfSpeech": "noun", "definition": "waste material that is thrown away", "translation": "垃圾", "example": "Please take out the garbage before you leave the office.", "exampleTranslation": "離開辦公室前請把垃圾拿出去丟。" },
-    { "form": "omit", "partOfSpeech": "verb", "definition": "to leave something out or not include it", "translation": "省略；遺漏", "example": "Don't omit your contact information from the application.", "exampleTranslation": "申請表上請不要漏掉你的聯絡資訊。" },
-    { "form": "spite", "partOfSpeech": "noun", "definition": "used in the phrase 'in spite of' to mean despite", "translation": "儘管（常用 in spite of）", "example": "In spite of the delay, the shipment arrived in good condition.", "exampleTranslation": "儘管有延誤，這批貨還是完好送達了。" },
-    { "form": "bathroom", "partOfSpeech": "noun", "definition": "a room containing a toilet and sink", "translation": "浴室；洗手間", "example": "The bathroom on this floor is currently being cleaned.", "exampleTranslation": "這層樓的洗手間目前正在清潔中。" },
-    { "form": "cab", "partOfSpeech": "noun", "definition": "a taxi", "translation": "計程車", "example": "I'll take a cab to the airport to save time.", "exampleTranslation": "我會搭計程車去機場以節省時間。" },
-    { "form": "correspondence", "partOfSpeech": "noun", "definition": "letters or emails exchanged between people", "translation": "通信；往來信件", "example": "Please keep a record of all correspondence with the vendor.", "exampleTranslation": "請保留與供應商之間所有往來信件的紀錄。" },
-    { "form": "ladder", "partOfSpeech": "noun", "definition": "a structure used for climbing up or down, or a metaphor for career progress", "translation": "梯子；階梯（喻晉升途徑）", "example": "She worked her way up the corporate ladder over ten years.", "exampleTranslation": "她花了十年時間一步步爬上公司的職涯階梯。" },
-    { "form": "photography", "partOfSpeech": "noun", "definition": "the art or practice of taking photographs", "translation": "攝影", "example": "The company hired a professional for the product photography.", "exampleTranslation": "公司請了專業人士來拍攝產品攝影照。" },
-    { "form": "sculpture", "partOfSpeech": "noun", "definition": "a work of art made by carving or shaping material", "translation": "雕塑", "example": "A large sculpture stands in front of the corporate headquarters.", "exampleTranslation": "公司總部前面立著一座大型雕塑。" },
-    { "form": "anniversary", "partOfSpeech": "noun", "definition": "the date on which an event took place in a previous year", "translation": "週年紀念日", "example": "The store is celebrating its tenth anniversary with a sale.", "exampleTranslation": "這間店正在以特賣慶祝十週年紀念。" },
-    { "form": "buffet", "partOfSpeech": "noun", "definition": "a meal where guests serve themselves from dishes laid out on a table", "translation": "自助餐", "example": "Lunch will be a buffet in the hotel's main hall.", "exampleTranslation": "午餐將在飯店大廳以自助餐形式供應。" },
-    { "form": "defective", "partOfSpeech": "adjective", "definition": "having a fault; not working correctly", "translation": "有瑕疵的；故障的", "example": "Customers can return any defective merchandise for a full refund.", "exampleTranslation": "顧客可以退還任何有瑕疵的商品並獲得全額退款。" },
-    { "form": "ice cream", "partOfSpeech": "noun", "definition": "a frozen sweet food made from cream", "translation": "冰淇淋", "example": "The cafeteria added a new ice cream flavor this month.", "exampleTranslation": "員工餐廳這個月新增了一種冰淇淋口味。" }
+    {
+      "form": "productive",
+      "partOfSpeech": "adjective",
+      "definition": "producing a lot of good or useful results",
+      "translation": "有生產力的；富有成效的",
+      "example": "The team had a productive meeting and finalized the schedule.",
+      "exampleTranslation": "團隊開了一場有成效的會議，敲定了時程。"
+    },
+    {
+      "form": "salad",
+      "partOfSpeech": "noun",
+      "definition": "a cold dish of mixed vegetables or other ingredients",
+      "translation": "沙拉",
+      "example": "The cafeteria offers a fresh salad bar at lunch.",
+      "exampleTranslation": "員工餐廳午餐時段有新鮮的沙拉吧。"
+    },
+    {
+      "form": "stack",
+      "partOfSpeech": "noun",
+      "definition": "a neat pile of things placed one on top of another",
+      "translation": "一疊；堆",
+      "example": "There's a stack of invoices waiting for your signature.",
+      "exampleTranslation": "有一疊發票等著你簽名。"
+    },
+    {
+      "form": "salesperson",
+      "partOfSpeech": "noun",
+      "definition": "a person whose job is to sell products or services",
+      "translation": "銷售員",
+      "example": "The salesperson explained the warranty options in detail.",
+      "exampleTranslation": "那位銷售員詳細說明了保固方案。"
+    },
+    {
+      "form": "calculator",
+      "partOfSpeech": "noun",
+      "definition": "a device used to perform mathematical calculations",
+      "translation": "計算機",
+      "example": "Keep a calculator handy when reviewing the budget spreadsheet.",
+      "exampleTranslation": "檢查預算表時，手邊放一台計算機比較方便。"
+    },
+    {
+      "form": "completion",
+      "partOfSpeech": "noun",
+      "definition": "the act of finishing something",
+      "translation": "完成",
+      "example": "The project is expected to reach completion by the end of the quarter.",
+      "exampleTranslation": "這個專案預計在本季末完成。"
+    },
+    {
+      "form": "defect",
+      "partOfSpeech": "noun",
+      "definition": "a fault or imperfection in something",
+      "translation": "瑕疵；缺陷",
+      "example": "The factory found a defect in the last batch of parts.",
+      "exampleTranslation": "工廠在最後一批零件裡發現了瑕疵。"
+    },
+    {
+      "form": "garbage",
+      "partOfSpeech": "noun",
+      "definition": "waste material that is thrown away",
+      "translation": "垃圾",
+      "example": "Please take out the garbage before you leave the office.",
+      "exampleTranslation": "離開辦公室前請把垃圾拿出去丟。"
+    },
+    {
+      "form": "omit",
+      "partOfSpeech": "verb",
+      "definition": "to leave something out or not include it",
+      "translation": "省略；遺漏",
+      "example": "Don't omit your contact information from the application.",
+      "exampleTranslation": "申請表上請不要漏掉你的聯絡資訊。"
+    },
+    {
+      "form": "spite",
+      "partOfSpeech": "noun",
+      "definition": "used in the phrase 'in spite of' to mean despite",
+      "translation": "儘管（常用 in spite of）",
+      "example": "In spite of the delay, the shipment arrived in good condition.",
+      "exampleTranslation": "儘管有延誤，這批貨還是完好送達了。"
+    },
+    {
+      "form": "bathroom",
+      "partOfSpeech": "noun",
+      "definition": "a room containing a toilet and sink",
+      "translation": "浴室；洗手間",
+      "example": "The bathroom on this floor is currently being cleaned.",
+      "exampleTranslation": "這層樓的洗手間目前正在清潔中。"
+    },
+    {
+      "form": "cab",
+      "partOfSpeech": "noun",
+      "definition": "a taxi",
+      "translation": "計程車",
+      "example": "I'll take a cab to the airport to save time.",
+      "exampleTranslation": "我會搭計程車去機場以節省時間。"
+    },
+    {
+      "form": "correspondence",
+      "partOfSpeech": "noun",
+      "definition": "letters or emails exchanged between people",
+      "translation": "通信；往來信件",
+      "example": "Please keep a record of all correspondence with the vendor.",
+      "exampleTranslation": "請保留與供應商之間所有往來信件的紀錄。"
+    },
+    {
+      "form": "ladder",
+      "partOfSpeech": "noun",
+      "definition": "a structure used for climbing up or down, or a metaphor for career progress",
+      "translation": "梯子；階梯（喻晉升途徑）",
+      "example": "She worked her way up the corporate ladder over ten years.",
+      "exampleTranslation": "她花了十年時間一步步爬上公司的職涯階梯。"
+    },
+    {
+      "form": "photography",
+      "partOfSpeech": "noun",
+      "definition": "the art or practice of taking photographs",
+      "translation": "攝影",
+      "example": "The company hired a professional for the product photography.",
+      "exampleTranslation": "公司請了專業人士來拍攝產品攝影照。"
+    },
+    {
+      "form": "sculpture",
+      "partOfSpeech": "noun",
+      "definition": "a work of art made by carving or shaping material",
+      "translation": "雕塑",
+      "example": "A large sculpture stands in front of the corporate headquarters.",
+      "exampleTranslation": "公司總部前面立著一座大型雕塑。"
+    },
+    {
+      "form": "anniversary",
+      "partOfSpeech": "noun",
+      "definition": "the date on which an event took place in a previous year",
+      "translation": "週年紀念日",
+      "example": "The store is celebrating its tenth anniversary with a sale.",
+      "exampleTranslation": "這間店正在以特賣慶祝十週年紀念。"
+    },
+    {
+      "form": "buffet",
+      "partOfSpeech": "noun",
+      "definition": "a meal where guests serve themselves from dishes laid out on a table",
+      "translation": "自助餐",
+      "example": "Lunch will be a buffet in the hotel's main hall.",
+      "exampleTranslation": "午餐將在飯店大廳以自助餐形式供應。"
+    },
+    {
+      "form": "defective",
+      "partOfSpeech": "adjective",
+      "definition": "having a fault; not working correctly",
+      "translation": "有瑕疵的；故障的",
+      "example": "Customers can return any defective merchandise for a full refund.",
+      "exampleTranslation": "顧客可以退還任何有瑕疵的商品並獲得全額退款。"
+    },
+    {
+      "form": "ice cream",
+      "partOfSpeech": "noun",
+      "definition": "a frozen sweet food made from cream",
+      "translation": "冰淇淋",
+      "example": "The cafeteria added a new ice cream flavor this month.",
+      "exampleTranslation": "員工餐廳這個月新增了一種冰淇淋口味。"
+    }
   ]
 }

@@ -1,27 +1,170 @@
 {
   "slug": "toeic-0352-0371",
-  "title": "TOEIC 核心單字 352-371",
-  "group": { "slug": "toeic-service-list", "title": "TOEIC 核心單字" },
+  "title": "TOEIC 核心單字 0352-0371",
+  "group": {
+    "slug": "toeic-service-list",
+    "title": "TOEIC 核心單字"
+  },
   "words": [
-    { "form": "conditioner", "partOfSpeech": "noun", "definition": "a product or device that improves the condition of something, such as hair or air", "translation": "調節劑；冷氣機（air conditioner）", "example": "The air conditioner in the meeting room needs repair.", "exampleTranslation": "會議室的冷氣機需要維修。" },
-    { "form": "enroll", "partOfSpeech": "verb", "definition": "to officially register for a course or program", "translation": "註冊；報名", "example": "New employees must enroll in the benefits program within 30 days.", "exampleTranslation": "新進員工必須在三十天內報名福利方案。" },
-    { "form": "frustrate", "partOfSpeech": "verb", "definition": "to cause someone to feel annoyed or discouraged", "translation": "使沮喪；使受挫", "example": "The repeated delays frustrated the entire project team.", "exampleTranslation": "一再的延誤讓整個專案團隊都感到挫折。" },
-    { "form": "garment", "partOfSpeech": "noun", "definition": "an item of clothing", "translation": "衣物；服裝", "example": "Each garment is inspected before it leaves the factory.", "exampleTranslation": "每件衣物離開工廠前都會經過檢查。" },
-    { "form": "orientation", "partOfSpeech": "noun", "definition": "an introductory session to help someone become familiar with a new place or job", "translation": "新人訓練；引導說明", "example": "All new hires attend an orientation on their first day.", "exampleTranslation": "所有新進人員在到職第一天都要參加新人訓練。" },
-    { "form": "outlet", "partOfSpeech": "noun", "definition": "a store that sells goods directly, or a socket for electrical devices", "translation": "暢貨中心；插座", "example": "The factory outlet sells last season's stock at a discount.", "exampleTranslation": "工廠暢貨中心以折扣價出售上一季的庫存。" },
-    { "form": "packet", "partOfSpeech": "noun", "definition": "a small package or a set of papers bundled together", "translation": "小包裝；資料袋", "example": "Each attendee received an information packet at registration.", "exampleTranslation": "每位與會者在報到時都收到一份資料袋。" },
-    { "form": "plumber", "partOfSpeech": "noun", "definition": "a person who installs and repairs water pipes and fixtures", "translation": "水管工", "example": "A plumber was called to fix the leak in the restroom.", "exampleTranslation": "有人請了水管工來修理洗手間的漏水。" },
-    { "form": "specification", "partOfSpeech": "noun", "definition": "a detailed description of requirements or standards", "translation": "規格；規範", "example": "The parts must meet the client's exact specifications.", "exampleTranslation": "這些零件必須符合客戶精確的規格要求。" },
-    { "form": "auto", "partOfSpeech": "noun", "definition": "short for automobile; a car", "translation": "汽車", "example": "The company provides an auto allowance for sales staff.", "exampleTranslation": "公司提供給業務人員汽車補助。" },
-    { "form": "decorate", "partOfSpeech": "verb", "definition": "to make something look more attractive by adding items", "translation": "裝飾", "example": "The team decorated the office for the holiday party.", "exampleTranslation": "團隊為了節慶派對佈置了辦公室。" },
-    { "form": "deduction", "partOfSpeech": "noun", "definition": "an amount subtracted from a total, especially from pay or tax", "translation": "扣除額", "example": "Tax deductions are listed on the back of your pay stub.", "exampleTranslation": "薪資單背面列出了稅務扣除額。" },
-    { "form": "definite", "partOfSpeech": "adjective", "definition": "clearly certain and not likely to change", "translation": "確定的；明確的", "example": "We need a definite answer from the supplier by Friday.", "exampleTranslation": "我們需要供應商在週五前給出明確的答覆。" },
-    { "form": "economical", "partOfSpeech": "adjective", "definition": "giving good value for the money spent", "translation": "經濟實惠的；節省的", "example": "Buying supplies in bulk is more economical.", "exampleTranslation": "大量採購用品比較經濟實惠。" },
-    { "form": "efficiently", "partOfSpeech": "adverb", "definition": "in a way that achieves results without wasting time or resources", "translation": "有效率地", "example": "The new software helps the team process orders more efficiently.", "exampleTranslation": "新軟體幫助團隊更有效率地處理訂單。" },
-    { "form": "flyer", "partOfSpeech": "noun", "definition": "a printed sheet advertising an event or product", "translation": "傳單", "example": "Flyers for the grand opening were distributed downtown.", "exampleTranslation": "開幕活動的傳單在市中心被發放。" },
-    { "form": "franchise", "partOfSpeech": "noun", "definition": "authorization to sell a company's goods or services in a particular area", "translation": "加盟；特許經營權", "example": "She purchased a franchise for the coffee shop chain.", "exampleTranslation": "她買下了那間連鎖咖啡店的加盟權。" },
-    { "form": "generous", "partOfSpeech": "adjective", "definition": "willing to give more than what is expected, especially money or time", "translation": "慷慨的；大方的", "example": "The company offers a generous vacation policy.", "exampleTranslation": "這家公司提供很優渥的休假政策。" },
-    { "form": "interrupt", "partOfSpeech": "verb", "definition": "to stop something from continuing by breaking in", "translation": "打斷；中斷", "example": "Sorry to interrupt, but the client is on the phone.", "exampleTranslation": "抱歉打斷一下，客戶來電話了。" },
-    { "form": "oven", "partOfSpeech": "noun", "definition": "an enclosed appliance used for cooking or baking food", "translation": "烤箱", "example": "The break room's oven is available for staff use.", "exampleTranslation": "茶水間的烤箱開放給員工使用。" }
+    {
+      "form": "conditioner",
+      "partOfSpeech": "noun",
+      "definition": "a product or device that improves the condition of something, such as hair or air",
+      "translation": "調節劑；冷氣機（air conditioner）",
+      "example": "The air conditioner in the meeting room needs repair.",
+      "exampleTranslation": "會議室的冷氣機需要維修。"
+    },
+    {
+      "form": "enroll",
+      "partOfSpeech": "verb",
+      "definition": "to officially register for a course or program",
+      "translation": "註冊；報名",
+      "example": "New employees must enroll in the benefits program within 30 days.",
+      "exampleTranslation": "新進員工必須在三十天內報名福利方案。"
+    },
+    {
+      "form": "frustrate",
+      "partOfSpeech": "verb",
+      "definition": "to cause someone to feel annoyed or discouraged",
+      "translation": "使沮喪；使受挫",
+      "example": "The repeated delays frustrated the entire project team.",
+      "exampleTranslation": "一再的延誤讓整個專案團隊都感到挫折。"
+    },
+    {
+      "form": "garment",
+      "partOfSpeech": "noun",
+      "definition": "an item of clothing",
+      "translation": "衣物；服裝",
+      "example": "Each garment is inspected before it leaves the factory.",
+      "exampleTranslation": "每件衣物離開工廠前都會經過檢查。"
+    },
+    {
+      "form": "orientation",
+      "partOfSpeech": "noun",
+      "definition": "an introductory session to help someone become familiar with a new place or job",
+      "translation": "新人訓練；引導說明",
+      "example": "All new hires attend an orientation on their first day.",
+      "exampleTranslation": "所有新進人員在到職第一天都要參加新人訓練。"
+    },
+    {
+      "form": "outlet",
+      "partOfSpeech": "noun",
+      "definition": "a store that sells goods directly, or a socket for electrical devices",
+      "translation": "暢貨中心；插座",
+      "example": "The factory outlet sells last season's stock at a discount.",
+      "exampleTranslation": "工廠暢貨中心以折扣價出售上一季的庫存。"
+    },
+    {
+      "form": "packet",
+      "partOfSpeech": "noun",
+      "definition": "a small package or a set of papers bundled together",
+      "translation": "小包裝；資料袋",
+      "example": "Each attendee received an information packet at registration.",
+      "exampleTranslation": "每位與會者在報到時都收到一份資料袋。"
+    },
+    {
+      "form": "plumber",
+      "partOfSpeech": "noun",
+      "definition": "a person who installs and repairs water pipes and fixtures",
+      "translation": "水管工",
+      "example": "A plumber was called to fix the leak in the restroom.",
+      "exampleTranslation": "有人請了水管工來修理洗手間的漏水。"
+    },
+    {
+      "form": "specification",
+      "partOfSpeech": "noun",
+      "definition": "a detailed description of requirements or standards",
+      "translation": "規格；規範",
+      "example": "The parts must meet the client's exact specifications.",
+      "exampleTranslation": "這些零件必須符合客戶精確的規格要求。"
+    },
+    {
+      "form": "auto",
+      "partOfSpeech": "noun",
+      "definition": "short for automobile; a car",
+      "translation": "汽車",
+      "example": "The company provides an auto allowance for sales staff.",
+      "exampleTranslation": "公司提供給業務人員汽車補助。"
+    },
+    {
+      "form": "decorate",
+      "partOfSpeech": "verb",
+      "definition": "to make something look more attractive by adding items",
+      "translation": "裝飾",
+      "example": "The team decorated the office for the holiday party.",
+      "exampleTranslation": "團隊為了節慶派對佈置了辦公室。"
+    },
+    {
+      "form": "deduction",
+      "partOfSpeech": "noun",
+      "definition": "an amount subtracted from a total, especially from pay or tax",
+      "translation": "扣除額",
+      "example": "Tax deductions are listed on the back of your pay stub.",
+      "exampleTranslation": "薪資單背面列出了稅務扣除額。"
+    },
+    {
+      "form": "definite",
+      "partOfSpeech": "adjective",
+      "definition": "clearly certain and not likely to change",
+      "translation": "確定的；明確的",
+      "example": "We need a definite answer from the supplier by Friday.",
+      "exampleTranslation": "我們需要供應商在週五前給出明確的答覆。"
+    },
+    {
+      "form": "economical",
+      "partOfSpeech": "adjective",
+      "definition": "giving good value for the money spent",
+      "translation": "經濟實惠的；節省的",
+      "example": "Buying supplies in bulk is more economical.",
+      "exampleTranslation": "大量採購用品比較經濟實惠。"
+    },
+    {
+      "form": "efficiently",
+      "partOfSpeech": "adverb",
+      "definition": "in a way that achieves results without wasting time or resources",
+      "translation": "有效率地",
+      "example": "The new software helps the team process orders more efficiently.",
+      "exampleTranslation": "新軟體幫助團隊更有效率地處理訂單。"
+    },
+    {
+      "form": "flyer",
+      "partOfSpeech": "noun",
+      "definition": "a printed sheet advertising an event or product",
+      "translation": "傳單",
+      "example": "Flyers for the grand opening were distributed downtown.",
+      "exampleTranslation": "開幕活動的傳單在市中心被發放。"
+    },
+    {
+      "form": "franchise",
+      "partOfSpeech": "noun",
+      "definition": "authorization to sell a company's goods or services in a particular area",
+      "translation": "加盟；特許經營權",
+      "example": "She purchased a franchise for the coffee shop chain.",
+      "exampleTranslation": "她買下了那間連鎖咖啡店的加盟權。"
+    },
+    {
+      "form": "generous",
+      "partOfSpeech": "adjective",
+      "definition": "willing to give more than what is expected, especially money or time",
+      "translation": "慷慨的；大方的",
+      "example": "The company offers a generous vacation policy.",
+      "exampleTranslation": "這家公司提供很優渥的休假政策。"
+    },
+    {
+      "form": "interrupt",
+      "partOfSpeech": "verb",
+      "definition": "to stop something from continuing by breaking in",
+      "translation": "打斷；中斷",
+      "example": "Sorry to interrupt, but the client is on the phone.",
+      "exampleTranslation": "抱歉打斷一下，客戶來電話了。"
+    },
+    {
+      "form": "oven",
+      "partOfSpeech": "noun",
+      "definition": "an enclosed appliance used for cooking or baking food",
+      "translation": "烤箱",
+      "example": "The break room's oven is available for staff use.",
+      "exampleTranslation": "茶水間的烤箱開放給員工使用。"
+    }
   ]
 }
