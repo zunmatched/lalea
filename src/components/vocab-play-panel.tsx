@@ -5,7 +5,7 @@ import { repeatModeLabels,RepeatMode,shuffle } from "@/lib/repeat-mode";
 import { speakSequence } from "@/lib/speech";
 import { useWakeLock,wakeLockStatusLabels } from "@/lib/wake-lock";
 
-type Item={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;example:string|null;exampleTranslation:string|null;starred:boolean};
+type Item={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;note:string|null;example:string|null;exampleTranslation:string|null;starred:boolean};
 type Queue={due:Item[];new:Item[]};
 type Source={key:string;label:string};
 
@@ -117,6 +117,7 @@ export function VocabPlayPanel({source}:{source:Source}){
    {item.partOfSpeech&&<span className="context" style={{display:"inline-block",margin:"10px 0 10px",padding:"3px 10px"}}>{item.partOfSpeech}</span>}
    {item.translation&&<p className="context"><strong>{item.translation}</strong></p>}
    {item.example&&<p className="context">{item.example}{item.exampleTranslation&&<><br/><span>{item.exampleTranslation}</span></>}</p>}
+   {item.note&&<p className="context">📝 {item.note}</p>}
    <div style={{display:"flex",gap:10,marginTop:14}}>
     <button onClick={goBack} style={{flex:1,border:"1px solid var(--line)",borderRadius:16,background:"white",color:"var(--ink)",cursor:"pointer",padding:"12px 10px",fontWeight:800}}>上一個</button>
     <button aria-label={speaking?"暫停":"播放"} onClick={togglePlayPause} style={{flex:1,border:0,borderRadius:16,background:"var(--mint)",color:"var(--ink)",cursor:"pointer",padding:"12px 10px",fontWeight:800,whiteSpace:"nowrap"}}>{speaking?"Ⅱ 暫停":"▶ 播放"}</button>

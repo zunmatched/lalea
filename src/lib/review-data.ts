@@ -4,7 +4,7 @@ import { and,eq,inArray,isNull } from "drizzle-orm";
 import { computeProficiency,correctTypeOnDay,proficiencyMax,ProficiencyEvent,reviewedOnDay } from "./proficiency";
 import { loadCourseSources,sourceFor } from "./review-sources";
 
-const cardFields={userVocabularyId:userVocabulary.id,lexemeSenseId:userVocabulary.lexemeSenseId,form:lexemes.canonicalForm,partOfSpeech:lexemeSenses.partOfSpeech,translation:senseTranslations.translation,example:vocabularyExamples.text,exampleTranslation:vocabularyExamples.translation,starred:userVocabulary.starred,everMastered:userVocabulary.everMastered};
+const cardFields={userVocabularyId:userVocabulary.id,lexemeSenseId:userVocabulary.lexemeSenseId,form:lexemes.canonicalForm,partOfSpeech:lexemeSenses.partOfSpeech,translation:senseTranslations.translation,note:senseTranslations.usageNote,example:vocabularyExamples.text,exampleTranslation:vocabularyExamples.translation,starred:userVocabulary.starred,everMastered:userVocabulary.everMastered};
 
 export async function loadDueCards(userId:string,windowDays:number,now=new Date(),options?:{includeMastered?:boolean}){
  const{bySense}=await loadCourseSources(userId);

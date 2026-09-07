@@ -5,8 +5,8 @@ import { DEFAULT_REVIEW_WINDOW_DAYS } from "@/lib/proficiency";
 import { speakSequence } from "@/lib/speech";
 
 type Pool={form:string;translation:string|null;partOfSpeech:string|null};
-type Due={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;example:string|null;exampleTranslation:string|null;dimension:"reading_recognition"|"listening_recognition"|"active_recall";proficiency:number;reviewCount:number;reviewedToday:boolean};
-type Fresh={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;example:string|null;exampleTranslation:string|null};
+type Due={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;note:string|null;example:string|null;exampleTranslation:string|null;dimension:"reading_recognition"|"listening_recognition"|"active_recall";proficiency:number;reviewCount:number;reviewedToday:boolean};
+type Fresh={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;note:string|null;example:string|null;exampleTranslation:string|null};
 type Queue={due:Due[];new:Fresh[];pool:Pool[];policy:{dueFirst:boolean};proficiencyMax:number};
 type SessionItem=(Due&{isNew:false})|(Fresh&{isNew:true;dimension:"reading_recognition";proficiency:0;reviewCount:0});
 type Source={key:string;label:string};
@@ -179,6 +179,7 @@ export function ReviewPanel({source}:{source:Source}){
    {message&&<p className="context" role="status">{message}</p>}
    <div style={{display:"flex",alignItems:"center",gap:10,marginTop:14}}>{item.partOfSpeech&&<span className="context" style={{margin:0,padding:"3px 10px"}}>{item.partOfSpeech}</span>}<button aria-label="播放發音" onClick={speak} style={{border:0,borderRadius:"50%",width:36,height:36,background:"var(--mint)",color:"var(--ink)",cursor:"pointer"}}>🔊</button></div>
    {item.example&&<p className="context"><strong>{item.example}</strong>{item.exampleTranslation&&<><br/><span>{item.exampleTranslation}</span></>}</p>}
+   {item.note&&<p className="context">📝 {item.note}</p>}
   </>}
  </section>
  </main>

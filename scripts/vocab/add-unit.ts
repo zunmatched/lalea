@@ -4,7 +4,7 @@ import { z } from "zod";
 
 loadEnvConfig(process.cwd());
 
-const wordSchema = z.object({ form: z.string().min(1), partOfSpeech: z.string().min(1), definition: z.string().min(1), translation: z.string().min(1), example: z.string().min(1), exampleTranslation: z.string().min(1) });
+const wordSchema = z.object({ form: z.string().min(1), partOfSpeech: z.string().min(1), definition: z.string().min(1), translation: z.string().min(1), example: z.string().min(1), exampleTranslation: z.string().min(1), note: z.string().min(1).optional() });
 const groupSchema = z.object({ slug: z.string().min(1).regex(/^[a-z0-9-]+$/, "slug 只能用小寫字母、數字與連字號"), title: z.string().min(1) });
 const unitSchema = z.object({ slug: z.string().min(1).regex(/^[a-z0-9-]+$/, "slug 只能用小寫字母、數字與連字號"), title: z.string().min(1), group: groupSchema.optional(), words: z.array(wordSchema).min(1) });
 
@@ -57,7 +57,11 @@ async function main() {
       let [sense] = await db.select().from(s.lexemeSenses).where(and(eq(s.lexemeSenses.lexemeId, lexeme.id), eq(s.lexemeSenses.definition, word.definition))).limit(1);
       if (!sense) [sense] = await db.insert(s.lexemeSenses).values({ lexemeId: lexeme.id, partOfSpeech: word.partOfSpeech, definitionLanguageId: learningPath.targetLanguageId, definition: word.definition, status: "approved", source: { type: "project_authored" } }).returning();
 
-      await db.insert(s.senseTranslations).values({ lexemeSenseId: sense.id, languageId: learningPath.supportLanguageId, translation: word.translation, status: "approved" }).onConflictDoNothing();
+      if (word.note) {
+        await db.insert(s.senseTranslations).values({ lexemeSenseId: sense.id, languageId: learningPath.supportLanguageId, translation: word.translation, usageNote: word.note, status: "approved" }).onConflictDoUpdate({ target: [s.senseTranslations.lexemeSenseId, s.senseTranslations.languageId, s.senseTranslations.translation], set: { usageNote: word.note } });
+      } else {
+        await db.insert(s.senseTranslations).values({ lexemeSenseId: sense.id, languageId: learningPath.supportLanguageId, translation: word.translation, status: "approved" }).onConflictDoNothing();
+      }
       await db.insert(s.vocabularyExamples).values({ lexemeSenseId: sense.id, textLanguageId: learningPath.targetLanguageId, text: word.example, translationLanguageId: learningPath.supportLanguageId, translation: word.exampleTranslation, status: "approved", source: { type: "project_authored" } }).onConflictDoNothing();
       await db.insert(s.lessonVocabulary).values({ learningUnitId: unit.id, lexemeSenseId: sense.id, position: index + 1 }).onConflictDoNothing();
       await db.insert(s.userVocabulary).values({ userLearningPathId: userLearningPath.id, lexemeSenseId: sense.id, status: "ready_to_learn" }).onConflictDoNothing();
