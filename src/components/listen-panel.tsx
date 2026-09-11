@@ -2,7 +2,7 @@
 import { useEffect,useRef,useState } from "react";
 import { AudioPlayer } from "./audio-player";
 import { repeatModeLabels,RepeatMode,shuffle } from "@/lib/repeat-mode";
-import { useWakeLock,wakeLockStatusLabels } from "@/lib/wake-lock";
+import { useWakeLock } from "@/lib/wake-lock";
 
 type Item={id:string;exerciseId:string;text:string;translation:string|null;status:string;url:string|null;voice:string|null;durationMs:number|null;category:string};
 const categoryLabels:Record<string,string>={due:"到期複習",weak:"弱項加強",recent:"最近學過",new:"新內容"};
@@ -15,8 +15,8 @@ export function ListenPanel({course}:{course:{key:string;label:string}}){
  useEffect(()=>{modeRef.current=mode},[mode]);
  const[hasStarted,setHasStarted]=useState(false);
  const[replayTick,setReplayTick]=useState(0);
- const[wakeLockStatus,retryWakeLock]=useWakeLock(Boolean(items&&items.length>0));
  const[userPaused,setUserPaused]=useState(false);
+ useWakeLock(Boolean(items&&items.length>0)&&!userPaused);
 
  useEffect(()=>{
   let active=true;
@@ -61,9 +61,6 @@ export function ListenPanel({course}:{course:{key:string;label:string}}){
   <div className="pills">
    {(Object.keys(repeatModeLabels) as RepeatMode[]).map(value=><button key={value} className="pill" aria-pressed={mode===value} onClick={()=>selectMode(value)}>{repeatModeLabels[value]}</button>)}
   </div>
-  {wakeLockStatus==="active"||wakeLockStatus==="unsupported"
-   ?<p className="lead" style={{margin:"10px 0 0"}}>{wakeLockStatusLabels[wakeLockStatus]}</p>
-   :<button onClick={retryWakeLock} className="lead" style={{margin:"10px 0 0",background:"none",border:0,padding:0,font:"inherit",color:"inherit",textDecoration:"underline",cursor:"pointer"}}>{wakeLockStatusLabels[wakeLockStatus]}</button>}
   <section className="card">
    <span className="label">{index+1} / {items.length} · {categoryLabels[item.category]??item.category}</span>
    <AudioPlayer key={`${item.id}-${replayTick}`} exerciseId={item.exerciseId} text={item.text} asset={item} autoPlay={hasStarted&&!userPaused} onComplete={()=>advance(true)} onPrevious={goBack} onNext={()=>advance()} onPauseStateChange={setUserPaused}/>

@@ -1,6 +1,7 @@
 services:
   postgres-dev:
     image: postgres:17-alpine
+    restart: unless-stopped
     environment:
       POSTGRES_DB: lalea_dev
       POSTGRES_USER: lalea
@@ -17,6 +18,7 @@ services:
 
   postgres-test:
     image: postgres:17-alpine
+    restart: unless-stopped
     environment:
       POSTGRES_DB: lalea_test
       POSTGRES_USER: lalea

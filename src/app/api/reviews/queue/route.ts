@@ -16,7 +16,8 @@ export async function GET(request:Request){
  const[path]=await db.select({id:userLearningPaths.id,reviewWindowDays:userLearningPaths.reviewWindowDays}).from(userLearningPaths).where(eq(userLearningPaths.userId,userId)).limit(1);
  if(!path)return Response.json({due:[],new:[],pool:[],policy:{dueFirst:true},proficiencyMax:0});
 
- let due=(await loadDueCards(userId,path.reviewWindowDays,now)).sort((a,b)=>Number(a.reviewedToday)-Number(b.reviewedToday)||a.proficiency-b.proficiency);
+ // 滿分的字不會從題庫消失，還是會跟其他字一起洗牌出現
+ let due=shuffle(await loadDueCards(userId,path.reviewWindowDays,now,{includeMastered:true}));
  if(sourceFilter)due=due.filter(item=>item.sourceKey===sourceFilter);
 
  let freshPool=await loadFreshCandidates(userId);

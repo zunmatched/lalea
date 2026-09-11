@@ -3,7 +3,7 @@ import { useEffect,useRef,useState } from "react";
 import Link from "next/link";
 import { repeatModeLabels,RepeatMode,shuffle } from "@/lib/repeat-mode";
 import { speakSequence } from "@/lib/speech";
-import { useWakeLock,wakeLockStatusLabels } from "@/lib/wake-lock";
+import { useWakeLock } from "@/lib/wake-lock";
 
 type Item={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;note:string|null;example:string|null;exampleTranslation:string|null;starred:boolean};
 type Queue={due:Item[];new:Item[]};
@@ -18,6 +18,8 @@ export function VocabPlayPanel({source}:{source:Source}){
  const[starredOnly,setStarredOnly]=useState(false);
  const allItemsRef=useRef<Item[]|null>(null);
  const userPausedRef=useRef(false);
+ const[userPaused,setUserPausedState]=useState(false);
+ function setUserPaused(value:boolean){userPausedRef.current=value;setUserPausedState(value)}
 
  useEffect(()=>{
   let active=true;
@@ -27,7 +29,7 @@ export function VocabPlayPanel({source}:{source:Source}){
    if(!active)return;
    const list=[...data.due,...data.new];
    allItemsRef.current=list;
-   userPausedRef.current=false;
+   setUserPaused(false);
    setStarredOnly(false);
    setItems(shuffle(list));
    setIndex(0);
@@ -65,7 +67,7 @@ export function VocabPlayPanel({source}:{source:Source}){
  }
 
  const item=items?.[index];
- const[wakeLockStatus,retryWakeLock]=useWakeLock(Boolean(item));
+ useWakeLock(Boolean(item)&&!userPaused);
  const[speaking,setSpeaking]=useState(false);
  const autoAdvanceTimeout=useRef<ReturnType<typeof setTimeout>|undefined>(undefined);
  function clearAutoAdvance(){if(autoAdvanceTimeout.current){clearTimeout(autoAdvanceTimeout.current);autoAdvanceTimeout.current=undefined}}
@@ -81,8 +83,8 @@ export function VocabPlayPanel({source}:{source:Source}){
  }
  function togglePlayPause(){
   if(!("speechSynthesis"in window))return;
-  if(speaking){window.speechSynthesis.pause();setSpeaking(false);userPausedRef.current=true;return}
-  userPausedRef.current=false;
+  if(speaking){window.speechSynthesis.pause();setSpeaking(false);setUserPaused(true);return}
+  setUserPaused(false);
   play();
  }
  function toggleStar(){
@@ -105,9 +107,6 @@ export function VocabPlayPanel({source}:{source:Source}){
    {(Object.keys(repeatModeLabels) as RepeatMode[]).map(value=><button key={value} className="pill" aria-pressed={mode===value} onClick={()=>selectMode(value)}>{repeatModeLabels[value]}</button>)}
    <button className="pill" aria-pressed={starredOnly} onClick={()=>applyStarredOnly(!starredOnly)}>★ 只看星號</button>
   </div>
-  {wakeLockStatus==="active"||wakeLockStatus==="unsupported"
-   ?<p className="lead" style={{margin:"10px 0 0"}}>{wakeLockStatusLabels[wakeLockStatus]}</p>
-   :<button onClick={retryWakeLock} className="lead" style={{margin:"10px 0 0",background:"none",border:0,padding:0,font:"inherit",color:"inherit",textDecoration:"underline",cursor:"pointer"}}>{wakeLockStatusLabels[wakeLockStatus]}</button>}
   <section className="card">
    <span className="label">{index+1} / {items.length}</span>
    <div style={{display:"flex",alignItems:"center",gap:10}}>

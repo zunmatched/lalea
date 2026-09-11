@@ -20,7 +20,7 @@ async function main() {
 
   const { db, pool } = await import("../../src/db/client");
   const s = await import("../../src/db/schema");
-  const { and, eq } = await import("drizzle-orm");
+  const { and, eq, inArray } = await import("drizzle-orm");
 
   try {
     const [learningPath] = await db.select().from(s.learningPaths).limit(1);
@@ -30,6 +30,33 @@ async function main() {
 
     let [course] = await db.select().from(s.courses).where(and(eq(s.courses.learningPathId, learningPath.id), eq(s.courses.slug, courseSlug))).limit(1);
     if (!course) [course] = await db.insert(s.courses).values({ learningPathId: learningPath.id, slug: courseSlug, title: courseTitle }).returning();
+
+    // 跨課程重複字：不再自動跳過，一律先攔下來回報，由人來決定要不要繼續（加 --allow-duplicates 略過）
+    const normalizedForms = [...new Set(words.map((word) => normalize(word.form)))];
+    const existingLexemes = normalizedForms.length
+      ? await db.select({ id: s.lexemes.id, canonicalForm: s.lexemes.canonicalForm }).from(s.lexemes).where(and(eq(s.lexemes.languageId, learningPath.targetLanguageId), inArray(s.lexemes.normalizedForm, normalizedForms)))
+      : [];
+    if (existingLexemes.length && !process.argv.includes("--allow-duplicates")) {
+      const duplicates: { form: string; courses: string[] }[] = [];
+      for (const lexeme of existingLexemes) {
+        const usages = await db.select({ courseId: s.courses.id, courseTitle: s.courses.title })
+          .from(s.lexemeSenses)
+          .innerJoin(s.lessonVocabulary, eq(s.lessonVocabulary.lexemeSenseId, s.lexemeSenses.id))
+          .innerJoin(s.learningUnits, eq(s.learningUnits.id, s.lessonVocabulary.learningUnitId))
+          .innerJoin(s.courseVersions, eq(s.courseVersions.id, s.learningUnits.courseVersionId))
+          .innerJoin(s.courses, eq(s.courses.id, s.courseVersions.courseId))
+          .where(eq(s.lexemeSenses.lexemeId, lexeme.id));
+        const otherCourses = [...new Set(usages.filter((u) => u.courseId !== course.id).map((u) => u.courseTitle))];
+        if (otherCourses.length) duplicates.push({ form: lexeme.canonicalForm, courses: otherCourses });
+      }
+      if (duplicates.length) {
+        console.error(`發現 ${duplicates.length} 個字已存在於其他課程，先跟使用者確認要不要匯入：`);
+        for (const d of duplicates) console.error(`  - ${d.form}（已存在於：${d.courses.join("、")}）`);
+        console.error("確認後可加上 --allow-duplicates 參數重新執行以繼續匯入。");
+        process.exitCode = 1;
+        return;
+      }
+    }
 
     if (group) {
       let [vocabGroup] = await db.select().from(s.vocabGroups).where(eq(s.vocabGroups.slug, group.slug)).limit(1);

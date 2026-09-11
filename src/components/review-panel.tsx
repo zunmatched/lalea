@@ -5,8 +5,8 @@ import { DEFAULT_REVIEW_WINDOW_DAYS } from "@/lib/proficiency";
 import { speakSequence } from "@/lib/speech";
 
 type Pool={form:string;translation:string|null;partOfSpeech:string|null};
-type Due={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;note:string|null;example:string|null;exampleTranslation:string|null;dimension:"reading_recognition"|"listening_recognition"|"active_recall";proficiency:number;reviewCount:number;reviewedToday:boolean};
-type Fresh={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;note:string|null;example:string|null;exampleTranslation:string|null};
+type Due={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;note:string|null;example:string|null;exampleTranslation:string|null;dimension:"reading_recognition"|"listening_recognition"|"active_recall";proficiency:number;reviewCount:number;reviewedToday:boolean;starred:boolean};
+type Fresh={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;note:string|null;example:string|null;exampleTranslation:string|null;starred:boolean};
 type Queue={due:Due[];new:Fresh[];pool:Pool[];policy:{dueFirst:boolean};proficiencyMax:number};
 type SessionItem=(Due&{isNew:false})|(Fresh&{isNew:true;dimension:"reading_recognition";proficiency:0;reviewCount:0});
 type Source={key:string;label:string};
@@ -17,6 +17,7 @@ type ChallengeType=typeof challengeTypes[number];
 type QuizCategory=ChallengeType;
 const categoryLabels:Record<QuizCategory,string>={recognize_zh:"中選英",recognize_en:"英選中",dictation:"聽力拼字",spell:"看中文寫英文"};
 function shuffle<T>(items:T[]):T[]{return [...items].sort(()=>Math.random()-0.5)}
+function foldAccents(value:string){return value.normalize("NFD").replace(/[\u0300-\u036f]/g,"")}
 function spellHint(form:string){const words=form.trim().split(/\s+/);const letters=words.join("").length;return`共 ${letters} 個字母${words.length>1?`（${words.length} 個單字）`:""}，開頭字母：${words[0][0].toUpperCase()}`}
 const emptyQueue:Queue={due:[],new:[],pool:[],policy:{dueFirst:true},proficiencyMax:DEFAULT_REVIEW_WINDOW_DAYS};
 
@@ -88,15 +89,21 @@ export function ReviewPanel({source}:{source:Source}){
  }
  function checkSpelling(){
   if(!item||checked||!spelling.trim())return;
-  const correct=spelling.trim().toLowerCase()===item.form.toLowerCase();
+  const correct=foldAccents(spelling.trim().toLowerCase())===foldAccents(item.form.toLowerCase());
   setChecked({correct});submitReview(item,correct,"spell");
  }
  function checkDictation(){
   if(!item||checked||!spelling.trim()||!selectedOption)return;
-  const spellingCorrect=spelling.trim().toLowerCase()===item.form.toLowerCase();
+  const spellingCorrect=foldAccents(spelling.trim().toLowerCase())===foldAccents(item.form.toLowerCase());
   const optionCorrect=selectedOption===(item.translation??item.form);
   const correct=spellingCorrect&&optionCorrect;
   setChecked({correct});submitReview(item,correct,"dictation");
+ }
+ function toggleStar(){
+  if(!item)return;
+  const nextStarred=!item.starred;
+  setSession(list=>list?list.map((entry,i)=>i===sessionIndex?{...entry,starred:nextStarred}:entry):list);
+  fetch(`/api/vocabulary/${item.userVocabularyId}`,{method:"PATCH",headers:{"content-type":"application/json"},body:JSON.stringify({starred:nextStarred})}).catch(()=>{});
  }
  function playWord(){if(item)speakSequence([{text:item.form,lang:"en-US"}])}
  useEffect(()=>{if(challengeType==="dictation"&&item)playWord()},[item?.userVocabularyId,challengeType]);
@@ -150,13 +157,16 @@ export function ReviewPanel({source}:{source:Source}){
   </main>;
  }
 
- if(session===null)return <main className="shell"><p className="eyebrow">詞彙 · 測驗 · {source.label} · {categoryLabels[category]}</p><h1>先處理最需要加強的內容。</h1><section className="card">載入中…</section></main>;
+ if(session===null)return <main className="shell"><p className="eyebrow">詞彙 · 測驗 · {source.label} · {categoryLabels[category]}</p><h1>本輪隨機出題。</h1><section className="card">載入中…</section></main>;
 
  if(!item)return <main className="shell finish"><div className="mark">✓</div><p className="eyebrow">本輪複習完成</p><h1>{session.length===0?"目前沒有需要複習的內容。":"這輪的內容都練過一次了。"}</h1>{session.length>0&&<div className="stats"><div className="stat"><strong>{correctCount}/{session.length}</strong><span>答對</span></div></div>}{wrongItems.length>0&&<section className="card" style={{textAlign:"left"}}><span className="label">答錯的字</span>{wrongItems.map(wrong=><p key={wrong.userVocabularyId} className="context" style={{margin:"8px 0"}}>{wrong.form}{wrong.translation?`（${wrong.translation}）`:""}</p>)}</section>}<button className="primary resume" onClick={backToCategories}>返回選單</button></main>;
 
- return <main className="shell"><p className="eyebrow">詞彙 · 測驗 · {source.label} · {categoryLabels[category]}</p><h1>先處理最需要加強的內容。</h1><p className="lead">依熟練度由低到高排序，本輪固定內容跑完一遍；聽力拼字與看中文寫英文同一天都答對才計分，近 {proficiencyMax} 天內每天最高分累計，最高 {proficiencyMax} 分，不練會掉分。</p>
+ return <main className="shell"><p className="eyebrow">詞彙 · 測驗 · {source.label} · {categoryLabels[category]}</p><h1>本輪隨機出題。</h1><p className="lead">隨機排序，本輪固定內容跑完一遍；聽力拼字與看中文寫英文同一天都答對才計分，近 {proficiencyMax} 天內每天最高分累計，最高 {proficiencyMax} 分，不練會掉分。</p>
  <section className="card">
-  <span className="label">{isFirstLearning?"首次學習":labels[item.dimension]} · {isFirstLearning?"":`熟練度 ${item.proficiency}/${proficiencyMax} · `}本輪剩餘 {session.length-sessionIndex}</span>
+  <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",gap:10,marginBottom:10}}>
+   <span className="label" style={{margin:0}}>{isFirstLearning?"首次學習":labels[item.dimension]} · {isFirstLearning?"":`熟練度 ${item.proficiency}/${proficiencyMax} · `}本輪剩餘 {session.length-sessionIndex}</span>
+   <button aria-label={item.starred?"取消星號":"加上星號"} onClick={toggleStar} style={{border:0,background:"none",cursor:"pointer",fontSize:22,lineHeight:1,padding:0,flexShrink:0}}>{item.starred?"★":"☆"}</button>
+  </div>
   {challengeType==="recognize_en"&&<h1 style={{fontSize:30}}>{item.form}</h1>}
   {(challengeType==="recognize_zh"||challengeType==="spell")&&<h1 style={{fontSize:30}}>{item.translation??item.form}</h1>}
   <span className="label">{challengeType&&prompts[challengeType]}</span>

@@ -13,14 +13,15 @@ export async function GET(){
 
  const[allReviewed,fresh,{courseLabels}]=await Promise.all([loadDueCards(userId,path.reviewWindowDays,new Date(),{includeMastered:true}),loadFreshCandidates(userId),loadCourseSources(userId)]);
 
- const stats=new Map<string,{sum:number;count:number;spellDoneToday:number;dictationDoneToday:number;everMastered:number;label:string}>();
- const bump=(key:string,label:string,proficiency:number,spellDoneToday:boolean,dictationDoneToday:boolean,everMastered:boolean)=>{const entry=stats.get(key)??{sum:0,count:0,spellDoneToday:0,dictationDoneToday:0,everMastered:0,label};entry.sum+=proficiency;entry.count+=1;if(spellDoneToday)entry.spellDoneToday+=1;if(dictationDoneToday)entry.dictationDoneToday+=1;if(everMastered)entry.everMastered+=1;stats.set(key,entry)};
+ // 顯示的複習頻率取這個關卡裡最弱的字（min），不取平均——要整關都到某個分數才算到那個分數
+ const stats=new Map<string,{min:number;count:number;spellDoneToday:number;dictationDoneToday:number;everMastered:number;label:string}>();
+ const bump=(key:string,label:string,proficiency:number,spellDoneToday:boolean,dictationDoneToday:boolean,everMastered:boolean)=>{const entry=stats.get(key)??{min:proficiency,count:0,spellDoneToday:0,dictationDoneToday:0,everMastered:0,label};entry.min=Math.min(entry.min,proficiency);entry.count+=1;if(spellDoneToday)entry.spellDoneToday+=1;if(dictationDoneToday)entry.dictationDoneToday+=1;if(everMastered)entry.everMastered+=1;stats.set(key,entry)};
  for(const item of allReviewed)bump(item.sourceKey,item.sourceLabel,item.proficiency,item.spellDoneToday,item.dictationDoneToday,item.everMastered);
  for(const item of fresh)bump(item.sourceKey,item.sourceLabel,0,false,false,false);
 
  const keys=new Set([MANUAL_SOURCE_KEY,...courseLabels.keys()]);
  const sources=[...keys]
-  .map(key=>{const entry=stats.get(key);return{key,label:key===MANUAL_SOURCE_KEY?MANUAL_SOURCE_LABEL:(courseLabels.get(key)??key),totalWords:entry?.count??0,proficiency:entry&&entry.count?Math.round(entry.sum/entry.count):0,spellDoneToday:entry?.spellDoneToday??0,dictationDoneToday:entry?.dictationDoneToday??0,everMasteredCount:entry?.everMastered??0}})
+  .map(key=>{const entry=stats.get(key);return{key,label:key===MANUAL_SOURCE_KEY?MANUAL_SOURCE_LABEL:(courseLabels.get(key)??key),totalWords:entry?.count??0,proficiency:entry&&entry.count?entry.min:0,spellDoneToday:entry?.spellDoneToday??0,dictationDoneToday:entry?.dictationDoneToday??0,everMasteredCount:entry?.everMastered??0}})
   .filter(source=>source.totalWords>0);
 
  const groupIdBySource=await ensureGroupAssignments(sources.map(source=>source.key));
