@@ -99,12 +99,13 @@ export function ReviewPanel({source}:{source:Source}){
   const correct=spellingCorrect&&optionCorrect;
   setChecked({correct});submitReview(item,correct,"dictation");
  }
- function toggleStar(){
-  if(!item)return;
-  const nextStarred=!item.starred;
-  setSession(list=>list?list.map((entry,i)=>i===sessionIndex?{...entry,starred:nextStarred}:entry):list);
-  fetch(`/api/vocabulary/${item.userVocabularyId}`,{method:"PATCH",headers:{"content-type":"application/json"},body:JSON.stringify({starred:nextStarred})}).catch(()=>{});
+ function toggleStarFor(target:SessionItem){
+  const nextStarred=!target.starred;
+  setSession(list=>list?list.map(entry=>entry.userVocabularyId===target.userVocabularyId?{...entry,starred:nextStarred}:entry):list);
+  setWrongItems(list=>list.map(entry=>entry.userVocabularyId===target.userVocabularyId?{...entry,starred:nextStarred}:entry));
+  fetch(`/api/vocabulary/${target.userVocabularyId}`,{method:"PATCH",headers:{"content-type":"application/json"},body:JSON.stringify({starred:nextStarred})}).catch(()=>{});
  }
+ function toggleStar(){if(item)toggleStarFor(item)}
  function playWord(){if(item)speakSequence([{text:item.form,lang:"en-US"}])}
  useEffect(()=>{if(challengeType==="dictation"&&item)playWord()},[item?.userVocabularyId,challengeType]);
  function speak(){
@@ -159,7 +160,7 @@ export function ReviewPanel({source}:{source:Source}){
 
  if(session===null)return <main className="shell"><p className="eyebrow">詞彙 · 測驗 · {source.label} · {categoryLabels[category]}</p><h1>本輪隨機出題。</h1><section className="card">載入中…</section></main>;
 
- if(!item)return <main className="shell finish"><div className="mark">✓</div><p className="eyebrow">本輪複習完成</p><h1>{session.length===0?"目前沒有需要複習的內容。":"這輪的內容都練過一次了。"}</h1>{session.length>0&&<div className="stats"><div className="stat"><strong>{correctCount}/{session.length}</strong><span>答對</span></div></div>}{wrongItems.length>0&&<section className="card" style={{textAlign:"left"}}><span className="label">答錯的字</span>{wrongItems.map(wrong=><p key={wrong.userVocabularyId} className="context" style={{margin:"8px 0"}}>{wrong.form}{wrong.translation?`（${wrong.translation}）`:""}</p>)}</section>}<button className="primary resume" onClick={backToCategories}>返回選單</button></main>;
+ if(!item)return <main className="shell finish"><div className="mark">✓</div><p className="eyebrow">本輪複習完成</p><h1>{session.length===0?"目前沒有需要複習的內容。":"這輪的內容都練過一次了。"}</h1>{session.length>0&&<div className="stats"><div className="stat"><strong>{correctCount}/{session.length}</strong><span>答對</span></div></div>}{wrongItems.length>0&&<section className="card" style={{textAlign:"left"}}><span className="label">答錯的字</span>{wrongItems.map(wrong=><div key={wrong.userVocabularyId} className="context" style={{margin:"8px 0",display:"flex",justifyContent:"space-between",alignItems:"center",gap:10}}><span>{wrong.form}{wrong.translation?`（${wrong.translation}）`:""}</span><button aria-label={wrong.starred?"取消星號":"加上星號"} onClick={()=>toggleStarFor(wrong)} style={{border:0,background:"none",cursor:"pointer",fontSize:20,lineHeight:1,padding:0,flexShrink:0}}>{wrong.starred?"★":"☆"}</button></div>)}</section>}<button className="primary resume" onClick={backToCategories}>返回選單</button></main>;
 
  return <main className="shell"><p className="eyebrow">詞彙 · 測驗 · {source.label} · {categoryLabels[category]}</p><h1>本輪隨機出題。</h1><p className="lead">隨機排序，本輪固定內容跑完一遍；聽力拼字與看中文寫英文同一天都答對才計分，近 {proficiencyMax} 天內每天最高分累計，最高 {proficiencyMax} 分，不練會掉分。</p>
  <section className="card">

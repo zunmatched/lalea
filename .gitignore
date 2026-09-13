@@ -15,6 +15,7 @@ test-results/
 # Local data and generated media
 .data/
 audio/generated/
+images/uploaded/
 backups/
 
 # Next.js generated types and local tooling

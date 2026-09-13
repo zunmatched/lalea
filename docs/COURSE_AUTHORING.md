@@ -33,14 +33,6 @@
           "feedbackIncorrect": "..."
         },
         {
-          "type": "chunk_ordering",
-          "prompt": "題目文字",
-          "options": [{ "id": "a", "text": "句塊一" }, { "id": "b", "text": "句塊二" }],
-          "correctIds": ["a", "b"],
-          "feedbackCorrect": "...",
-          "feedbackIncorrect": "..."
-        },
-        {
           "type": "branched_dialogue",
           "prompt": "對話情境",
           "options": [{ "id": "a", "text": "合適的回應" }, { "id": "b", "text": "不合適的回應" }],
@@ -54,7 +46,42 @@
 }
 ```
 
-四種題型都要有 `options`／`correctIds`／`feedbackCorrect`／`feedbackIncorrect`；`chunk_ordering` 的 `options` 順序就是正確順序（前端會自動打亂顯示，`correctIds` 需與 `options` 順序一致）。
+三種題型都要有 `options`／`correctIds`／`feedbackCorrect`／`feedbackIncorrect`。（原本還有一種點句塊排序的 `chunk_ordering`，因為只要看句塊的大小寫、標點符號跟長度就能用猜的、不用真的看懂句子，已經停用；同類需求請改用 `reading_choice` 寫成挖空選擇題，例如 `context` 用 `"Could you ______ me through the process?"`，`options` 放候選單字/片語，這樣才需要真的理解語意才能選對。）
+
+## 多題共用一份素材（`group`）
+
+多益 Part 1（看圖）、Part 3/4（一段對話/獨白配 2-3 題）、Part 6/7（一篇文章配多題）都是「一份素材、多道題目」，不是每題各自獨立。這種情況用 `type: "group"` 包起來，不要把同一篇文章/音檔複製貼到每一題：
+
+```json
+{
+  "type": "group",
+  "context": "選填，共用的文章全文或對話逐字稿",
+  "image": "選填，圖片檔名，例如 toeic-p1-office-desk.jpg（要先用 pnpm images:import 匯入）",
+  "speech": "選填，共用的音檔文字（有這個欄位，底下每一小題的題型會自動變成 listening_choice；沒有就是 reading_choice）",
+  "speechTranslation": "選填",
+  "generateAudio": true,
+  "questions": [
+    { "prompt": "第一小題", "options": [{ "id": "a", "text": "選項一" }], "correctIds": ["a"], "feedbackCorrect": "...", "feedbackIncorrect": "..." },
+    { "prompt": "第二小題", "options": [{ "id": "a", "text": "選項一" }], "correctIds": ["a"], "feedbackCorrect": "...", "feedbackIncorrect": "..." }
+  ]
+}
+```
+
+- `context`／`image`／`speech` 只需要寫一次，`questions` 底下每一小題只放自己的 `prompt`／`options`／`correctIds`／`feedbackCorrect`／`feedbackIncorrect`，畫面上每一小題都會自動帶出同一份文章/圖片/音檔。
+- `questions` 陣列裡每個小題匯入後都會變成一筆獨立的 `exercises` 資料列（跟獨立題目一樣可以各自作答、各自計分），只是共用同一個 group 的素材。
+- Part 1（看圖敘述）：通常只放 `image` + `speech`（單句敘述音檔）+ 一題 `questions`。
+- Part 3/4（對話/獨白）：`context` 放逐字稿、`speech` 放同一段文字讓系統轉語音，`questions` 放 2-3 題。
+- Part 6/7（段落填空/閱讀理解）：只放 `context`（文章全文，填空題可以把空格直接寫在文章裡，例如 `"...relocate to the fourth floor ______ (1) further notice..."`），不用 `speech`，`questions` 放對應的每一題。
+
+## 圖片（Part 1 專用）
+
+圖片要自己準備檔案，不會自動產生。先把圖片複製進圖片資料夾：
+
+```bash
+pnpm images:import path/to/photo.jpg toeic-p1-office-desk.jpg
+```
+
+目標檔名只能用小寫字母、數字、連字號，副檔名限 `jpg`／`jpeg`／`png`／`webp`。複製完成後，在課程 JSON 的 `group.image` 填一樣的檔名（純檔名，不用寫路徑），`pnpm courses:import` 匯入時會檢查檔案是否存在，找不到會直接報錯並告訴你要先跑哪個指令。圖片實際存放在 `LALEA_IMAGE_DIR`（預設 `./images/uploaded`，不會進 Git），畫面上顯示的網址是 `/media/images/<檔名>`。
 
 ## 匯入
 
@@ -68,7 +95,7 @@ pnpm courses:import path/to/course.json
 
 ## 聽力題音檔
 
-`listening_choice` 題目預設 `generateAudio: true`，匯入時會自動建立一筆 `pending_generation` 狀態的音訊資產（`audio_assets`），接續原本的音訊流程：
+`listening_choice` 題目、以及帶 `speech` 的 `group`，預設 `generateAudio: true`，匯入時會自動建立一筆 `pending_generation` 狀態的音訊資產（`audio_assets`，`group` 產生的音檔會掛在 group 底下、該 group 內所有小題共用同一份音檔），接續原本的音訊流程：
 
 ```bash
 PIPER_DATA_DIR=~/.piper-voices/lalea LALEA_PYTHON=~/.venvs/lalea-audio/bin/python3 pnpm audio:generate

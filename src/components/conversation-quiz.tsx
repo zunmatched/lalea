@@ -6,7 +6,7 @@ import { randomUUID } from "@/lib/client-id";
 
 type Option={id:string;text:string};
 type Asset={id:string;status:string;url:string|null;voice:string|null;durationMs:number|null};
-type Exercise={id:string;position:number;type:string;prompt:string;content:{context?:string;speech?:string;options?:Option[];audio?:Asset}};
+type Exercise={id:string;position:number;type:string;prompt:string;content:{context?:string;speech?:string;image?:string;options?:Option[];audio?:Asset}};
 type Run={id:string;currentPosition:number;status:string;exercises:Exercise[]};
 type Feedback={isCorrect:boolean;correctIds:string[];message:string};
 
@@ -41,8 +41,7 @@ export function ConversationQuiz({courseId}:{courseId:string}){
 
  function choose(id:string){
   if(feedback)return;
-  if(exercise?.type==="chunk_ordering")setSelected(value=>value.includes(id)?value.filter(item=>item!==id):[...value,id]);
-  else setSelected([id]);
+  setSelected([id]);
  }
  async function submit(){
   if(!run||!exercise||!selected.length)return;setBusy(true);setError("");
@@ -75,16 +74,15 @@ export function ConversationQuiz({courseId}:{courseId:string}){
  </main>;
 
  if(!exercise||!run)return null;
- const chunks=exercise.type==="chunk_ordering";
  return <main className="shell">
   <div className="lesson-head"><div><p className="eyebrow">會話 · 測驗</p><strong>{index+1} / {run.exercises.length}</strong></div></div>
   <div className="progress" aria-label="課程進度"><div style={{width:`${(index+1)/run.exercises.length*100}%`}}/></div>
   <section className="card">
    <h1 style={{fontSize:25}}>{exercise.prompt}</h1>
+   {exercise.content.image&&<img src={exercise.content.image} alt="" style={{width:"100%",borderRadius:16,margin:"0 0 14px",display:"block"}}/>}
    {exercise.content.context&&<p className="context">{exercise.content.context}</p>}
    {exercise.type==="listening_choice"&&exercise.content.speech&&<AudioPlayer exerciseId={exercise.id} text={exercise.content.speech} asset={exercise.content.audio}/>}
-   {chunks&&<div className="answer-line">{selected.map(id=>optionMap.get(id)).join(" ")||"依序點選句塊…"}</div>}
-   <div className={chunks?"chunks":"options"}>{exercise.content.options?.map(option=><button key={option.id} className={`${chunks?"chunk":"option"}${selected.includes(option.id)?" selected":""}`} onClick={()=>choose(option.id)} disabled={Boolean(feedback)}>{option.text}</button>)}</div>
+   <div className="options">{exercise.content.options?.map(option=><button key={option.id} className={`option${selected.includes(option.id)?" selected":""}`} onClick={()=>choose(option.id)} disabled={Boolean(feedback)}>{option.text}</button>)}</div>
    {error&&<p className="error" role="alert">{error}</p>}
    {!feedback?<button className="primary" onClick={submit} disabled={busy||!selected.length}>{busy?"送出中…":"確認答案"}</button>:<button className="primary" onClick={next} disabled={busy}>{index===run.exercises.length-1?"完成短課":"下一題"}</button>}
    {feedback&&<div className={`feedback ${feedback.isCorrect?"correct":"wrong"}`} role="status"><strong>{feedback.isCorrect?"答對了":"再記一次"}</strong><div>{feedback.message}</div>{!feedback.isCorrect&&<div>正確答案：{feedback.correctIds.map(id=>optionMap.get(id)??id).join(" ")}</div>}</div>}

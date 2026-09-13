@@ -99,6 +99,20 @@
       "when": 1788444633302,
       "tag": "0013_cloudy_stardust",
       "breakpoints": true
+    },
+    {
+      "idx": 14,
+      "version": "7",
+      "when": 1789297091552,
+      "tag": "0014_perfect_madrox",
+      "breakpoints": true
+    },
+    {
+      "idx": 15,
+      "version": "7",
+      "when": 1789297496838,
+      "tag": "0015_lovely_hex",
+      "breakpoints": true
     }
   ]
 }

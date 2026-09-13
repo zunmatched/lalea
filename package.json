@@ -20,6 +20,7 @@
     "audio:import": "tsx scripts/audio/import.ts",
     "audio:review": "tsx scripts/audio/review.ts",
     "courses:import": "tsx scripts/courses/import.ts",
+    "images:import": "tsx scripts/images/import.ts",
     "verify": "pnpm lint && pnpm typecheck && pnpm test && pnpm test:integration && pnpm test:e2e && pnpm build"
   },
   "dependencies": {
