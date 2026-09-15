@@ -8,10 +8,10 @@ import { eq,inArray } from "drizzle-orm";
 
 export async function GET(){
  const userId=requireUserId();
- const[path]=await db.select({id:userLearningPaths.id,reviewWindowDays:userLearningPaths.reviewWindowDays}).from(userLearningPaths).where(eq(userLearningPaths.userId,userId)).limit(1);
+ const[path]=await db.select({id:userLearningPaths.id,reviewWindowDays:userLearningPaths.reviewWindowDays,decayEnabled:userLearningPaths.decayEnabled}).from(userLearningPaths).where(eq(userLearningPaths.userId,userId)).limit(1);
  if(!path)return Response.json({groups:[],proficiencyMax:0});
 
- const[allReviewed,fresh,{courseLabels}]=await Promise.all([loadDueCards(userId,path.reviewWindowDays,new Date(),{includeMastered:true}),loadFreshCandidates(userId),loadCourseSources(userId)]);
+ const[allReviewed,fresh,{courseLabels}]=await Promise.all([loadDueCards(userId,path.reviewWindowDays,new Date(),path.decayEnabled,{includeMastered:true}),loadFreshCandidates(userId),loadCourseSources(userId)]);
 
  // 顯示的複習頻率取這個關卡裡最弱的字（min），不取平均——要整關都到某個分數才算到那個分數
  const stats=new Map<string,{min:number;count:number;spellDoneToday:number;dictationDoneToday:number;everMastered:number;label:string}>();

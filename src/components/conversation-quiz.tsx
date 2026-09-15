@@ -1,8 +1,10 @@
 "use client";
-import { useEffect,useMemo,useState } from "react";
+import { useEffect,useMemo,useRef,useState } from "react";
 import Link from "next/link";
 import { AudioPlayer } from "./audio-player";
 import { randomUUID } from "@/lib/client-id";
+
+function formatDuration(totalSeconds:number){const m=Math.floor(totalSeconds/60);const s=totalSeconds%60;return`${m}:${String(s).padStart(2,"0")}`}
 
 type Option={id:string;text:string};
 type Asset={id:string;status:string;url:string|null;voice:string|null;durationMs:number|null};
@@ -21,6 +23,9 @@ export function ConversationQuiz({courseId}:{courseId:string}){
  const[correct,setCorrect]=useState(0);
  const exercise=run?.exercises[index];
  const optionMap=useMemo(()=>new Map(exercise?.content.options?.map(option=>[option.id,option.text])??[]),[exercise]);
+ const startTimeRef=useRef<number|null>(null);
+ const[elapsedSeconds,setElapsedSeconds]=useState(0);
+ const[finishedSeconds,setFinishedSeconds]=useState(0);
 
  async function startCourse(id:string){
   setScreen("loading");setBusy(true);setError("");
@@ -32,12 +37,20 @@ export function ConversationQuiz({courseId}:{courseId:string}){
    if(!response.ok)throw new Error("無法載入課程內容。");
    const data:Run=await response.json();
    setRun(data);setIndex(Math.min(Math.max(data.currentPosition,0),Math.max(data.exercises.length-1,0)));
-   setSelected([]);setFeedback(null);setCorrect(0);setScreen("lesson");
+   setSelected([]);setFeedback(null);setCorrect(0);
+   startTimeRef.current=Date.now();setElapsedSeconds(0);
+   setScreen("lesson");
   }catch(cause){setError(cause instanceof Error?cause.message:"發生未預期錯誤。")}
   finally{setBusy(false)}
  }
 
  useEffect(()=>{void Promise.resolve().then(()=>startCourse(courseId))},[courseId]);
+ // 從進到題目畫面開始碼表計時（不是用課程本身的開始時間，因為課程可能是很久以前建立、之後才回來續做）
+ useEffect(()=>{
+  if(screen!=="lesson")return;
+  const timer=setInterval(()=>{if(startTimeRef.current!=null)setElapsedSeconds(Math.floor((Date.now()-startTimeRef.current)/1000))},1000);
+  return()=>clearInterval(timer);
+ },[screen]);
 
  function choose(id:string){
   if(feedback)return;
@@ -60,7 +73,7 @@ export function ConversationQuiz({courseId}:{courseId:string}){
   setBusy(true);
   const response=await fetch(`/api/unit-runs/${run.id}/complete`,{method:"POST"});
   setBusy(false);
-  if(response.ok)setScreen("done");
+  if(response.ok){setFinishedSeconds(elapsedSeconds);setScreen("done")}
   else setError("課程完成狀態未能儲存，請再試一次。");
  }
 
@@ -69,13 +82,13 @@ export function ConversationQuiz({courseId}:{courseId:string}){
  if(screen==="done")return <main className="shell finish">
   <div className="mark">✓</div><p className="eyebrow">短課完成</p>
   <h1>做得好，這些內容已加入你的學習進度。</h1>
-  <div className="stats"><div className="stat"><strong>{correct}/{run?.exercises.length}</strong><span>答對</span></div></div>
+  <div className="stats"><div className="stat"><strong>{correct}/{run?.exercises.length}</strong><span>答對</span></div><div className="stat"><strong>{formatDuration(finishedSeconds)}</strong><span>用時</span></div></div>
   <Link href="/conversation" className="primary" style={{display:"block",textAlign:"center",textDecoration:"none"}}>選別的課程</Link>
  </main>;
 
  if(!exercise||!run)return null;
  return <main className="shell">
-  <div className="lesson-head"><div><p className="eyebrow">會話 · 測驗</p><strong>{index+1} / {run.exercises.length}</strong></div></div>
+  <div className="lesson-head"><div><p className="eyebrow">會話 · 測驗</p><strong>{index+1} / {run.exercises.length} · ⏱ {formatDuration(elapsedSeconds)}</strong></div></div>
   <div className="progress" aria-label="課程進度"><div style={{width:`${(index+1)/run.exercises.length*100}%`}}/></div>
   <section className="card">
    <h1 style={{fontSize:25}}>{exercise.prompt}</h1>

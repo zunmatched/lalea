@@ -2,7 +2,7 @@
 import { useEffect,useRef,useState } from "react";
 import Link from "next/link";
 import { repeatModeLabels,RepeatMode,shuffle } from "@/lib/repeat-mode";
-import { speakSequence } from "@/lib/speech";
+import { speakSequence,stopNoise } from "@/lib/speech";
 import { useWakeLock } from "@/lib/wake-lock";
 
 type Item={userVocabularyId:string;form:string;partOfSpeech:string|null;translation:string|null;note:string|null;example:string|null;exampleTranslation:string|null;starred:boolean};
@@ -36,7 +36,7 @@ export function VocabPlayPanel({source}:{source:Source}){
   }).catch(()=>{if(active)setItems([])});
   return()=>{active=false};
  },[source.key]);
- useEffect(()=>()=>{if("speechSynthesis"in window)window.speechSynthesis.cancel()},[]);
+ useEffect(()=>()=>{if("speechSynthesis"in window)window.speechSynthesis.cancel();stopNoise()},[]);
 
  function applyStarredOnly(next:boolean){
   setStarredOnly(next);
@@ -83,7 +83,7 @@ export function VocabPlayPanel({source}:{source:Source}){
  }
  function togglePlayPause(){
   if(!("speechSynthesis"in window))return;
-  if(speaking){window.speechSynthesis.pause();setSpeaking(false);setUserPaused(true);return}
+  if(speaking){window.speechSynthesis.pause();stopNoise();setSpeaking(false);setUserPaused(true);return}
   setUserPaused(false);
   play();
  }
@@ -122,7 +122,7 @@ export function VocabPlayPanel({source}:{source:Source}){
     <button aria-label={speaking?"暫停":"播放"} onClick={togglePlayPause} style={{flex:1,border:0,borderRadius:16,background:"var(--mint)",color:"var(--ink)",cursor:"pointer",padding:"12px 10px",fontWeight:800,whiteSpace:"nowrap"}}>{speaking?"Ⅱ 暫停":"▶ 播放"}</button>
     <button className="primary" onClick={()=>advance()} style={{flex:1}}>下一個</button>
    </div>
-   <Link href="/vocab" onClick={()=>{if("speechSynthesis"in window)window.speechSynthesis.cancel()}} style={{marginTop:14,background:"none",border:0,textDecoration:"underline",cursor:"pointer",padding:0,display:"inline-block"}}>結束播放，返回選單</Link>
+   <Link href="/vocab" onClick={()=>{if("speechSynthesis"in window)window.speechSynthesis.cancel();stopNoise()}} style={{marginTop:14,background:"none",border:0,textDecoration:"underline",cursor:"pointer",padding:0,display:"inline-block"}}>結束播放，返回選單</Link>
   </section>
  </main>;
 }

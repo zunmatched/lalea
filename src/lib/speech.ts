@@ -26,7 +26,7 @@ function createNoiseBuffer(context: AudioContext) {
   return buffer;
 }
 
-function stopNoise() {
+export function stopNoise() {
   if (noiseSafetyTimeout !== undefined) { clearTimeout(noiseSafetyTimeout); noiseSafetyTimeout = undefined }
   if (!activeNoise) return;
   try { activeNoise.source.stop() } catch { /* already stopped */ }

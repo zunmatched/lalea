@@ -1,0 +1,1 @@
+ALTER TABLE "user_learning_paths" ADD COLUMN "decay_enabled" boolean DEFAULT true NOT NULL;

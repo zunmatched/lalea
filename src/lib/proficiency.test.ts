@@ -74,6 +74,39 @@ describe("computeProficiency", () => {
   });
 });
 
+describe("computeProficiency with decay disabled", () => {
+  it("still gives no points when only one of the two typing types is correct that day", () => {
+    expect(computeProficiency([{ isCorrect: true, createdAt: day(0), challengeType: "spell" }], WINDOW, day(0), false)).toBe(0);
+  });
+
+  it("keeps a day that has fallen out of the recent window instead of dropping it", () => {
+    const events = [
+      { isCorrect: true, createdAt: day(-WINDOW), challengeType: "spell" as const },
+      { isCorrect: true, createdAt: day(-WINDOW), challengeType: "dictation" as const },
+    ];
+    expect(computeProficiency(events, WINDOW, day(0), false)).toBe(PROFICIENCY_DAY_POINTS);
+    // same history still decays back to 0 when decay is enabled (the default)
+    expect(computeProficiency(events, WINDOW, day(0))).toBe(0);
+  });
+
+  it("caps at the max even with more all-time good days than the window size", () => {
+    const events = [0, 10, 20, 30, 40].flatMap((offset) => [
+      { isCorrect: true, createdAt: day(-offset), challengeType: "spell" as const },
+      { isCorrect: true, createdAt: day(-offset), challengeType: "dictation" as const },
+    ]);
+    expect(computeProficiency(events, WINDOW, day(0), false)).toBe(MAX);
+  });
+
+  it("never goes back down just from the passage of time with no new activity", () => {
+    const events = [
+      { isCorrect: true, createdAt: day(-5), challengeType: "spell" as const },
+      { isCorrect: true, createdAt: day(-5), challengeType: "dictation" as const },
+    ];
+    expect(computeProficiency(events, WINDOW, day(0), false)).toBe(PROFICIENCY_DAY_POINTS);
+    expect(computeProficiency(events, WINDOW, day(100), false)).toBe(PROFICIENCY_DAY_POINTS);
+  });
+});
+
 describe("reviewedOnDay", () => {
   it("is false with no events", () => {
     expect(reviewedOnDay([], day(0))).toBe(false);

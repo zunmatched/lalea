@@ -28,10 +28,18 @@ function latestByDayAndType(events: ProficiencyEvent[], timeZone: string) {
   return byDay;
 }
 
-export function computeProficiency(events: ProficiencyEvent[], windowDays: number, now = new Date(), timeZone = TIME_ZONE) {
+// decayEnabled=false：不再看「最近 N 天的滑動視窗」，而是累計歷史上所有兩種題型都答對過的天數（上限一樣是 windowDays）。
+// 只要練到滿分過，之後不練也不會再往下掉——只有分數還沒滿、且很久沒練時才會反映在「還沒滿」，不會主動倒扣。
+export function computeProficiency(events: ProficiencyEvent[], windowDays: number, now = new Date(), decayEnabled = true, timeZone = TIME_ZONE) {
+  const byDay = latestByDayAndType(events, timeZone);
+  const max = proficiencyMax(windowDays);
+  if (!decayEnabled) {
+    let score = 0;
+    for (const [, entry] of byDay) if (entry.spell?.isCorrect && entry.dictation?.isCorrect) score += PROFICIENCY_DAY_POINTS;
+    return Math.min(score, max);
+  }
   const windowKeys = new Set<string>();
   for (let i = 0; i < windowDays; i++) windowKeys.add(dayKey(new Date(now.getTime() - i * 86_400_000), timeZone));
-  const byDay = latestByDayAndType(events, timeZone);
   let score = 0;
   for (const [key, entry] of byDay) {
     if (!windowKeys.has(key)) continue;

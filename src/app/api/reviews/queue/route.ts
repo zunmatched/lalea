@@ -13,11 +13,11 @@ export async function GET(request:Request){
  const now=new Date();
  const url=new URL(request.url);
  const sourceFilter=url.searchParams.get("source")||"";
- const[path]=await db.select({id:userLearningPaths.id,reviewWindowDays:userLearningPaths.reviewWindowDays}).from(userLearningPaths).where(eq(userLearningPaths.userId,userId)).limit(1);
+ const[path]=await db.select({id:userLearningPaths.id,reviewWindowDays:userLearningPaths.reviewWindowDays,decayEnabled:userLearningPaths.decayEnabled}).from(userLearningPaths).where(eq(userLearningPaths.userId,userId)).limit(1);
  if(!path)return Response.json({due:[],new:[],pool:[],policy:{dueFirst:true},proficiencyMax:0});
 
  // 滿分的字不會從題庫消失，還是會跟其他字一起洗牌出現
- let due=shuffle(await loadDueCards(userId,path.reviewWindowDays,now,{includeMastered:true}));
+ let due=shuffle(await loadDueCards(userId,path.reviewWindowDays,now,path.decayEnabled,{includeMastered:true}));
  if(sourceFilter)due=due.filter(item=>item.sourceKey===sourceFilter);
 
  let freshPool=await loadFreshCandidates(userId);

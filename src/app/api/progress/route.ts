@@ -6,7 +6,7 @@ import { and,count,eq,inArray } from "drizzle-orm";
 
 export async function GET() {
   const userId = requireUserId();
-  const [path] = await db.select({ id: userLearningPaths.id, reviewWindowDays: userLearningPaths.reviewWindowDays }).from(userLearningPaths).where(eq(userLearningPaths.userId, userId)).limit(1);
+  const [path] = await db.select({ id: userLearningPaths.id, reviewWindowDays: userLearningPaths.reviewWindowDays, decayEnabled: userLearningPaths.decayEnabled }).from(userLearningPaths).where(eq(userLearningPaths.userId, userId)).limit(1);
   if (!path) return Response.json({ completedUnits: 0, inProgressUnits: 0, vocabulary: { total: 0, learned: 0, dueToday: 0, averageProficiency: 0, completedToday: 0 } });
 
   const [[completed], [inProgress], states] = await Promise.all([
@@ -23,7 +23,7 @@ export async function GET() {
   for (const event of events) { if (event.challengeType !== "spell" && event.challengeType !== "dictation") continue; const list = eventsByState.get(event.masteryStateId) ?? []; list.push({ isCorrect: event.isCorrect, createdAt: event.createdAt, challengeType: event.challengeType }); eventsByState.set(event.masteryStateId, list) }
   const max = proficiencyMax(path.reviewWindowDays);
   const now = new Date();
-  const proficiencies = states.map((state) => computeProficiency(eventsByState.get(state.id) ?? [], path.reviewWindowDays, now));
+  const proficiencies = states.map((state) => computeProficiency(eventsByState.get(state.id) ?? [], path.reviewWindowDays, now, path.decayEnabled));
   const completedTodayCount = states.filter((state) => scoredOnDay(eventsByState.get(state.id) ?? [], now)).length;
 
   const [[totalVocab], [learnedVocab]] = await Promise.all([

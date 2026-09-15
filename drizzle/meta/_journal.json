@@ -113,6 +113,27 @@
       "when": 1789297496838,
       "tag": "0015_lovely_hex",
       "breakpoints": true
+    },
+    {
+      "idx": 16,
+      "version": "7",
+      "when": 1789443502180,
+      "tag": "0016_numerous_shocker",
+      "breakpoints": true
+    },
+    {
+      "idx": 17,
+      "version": "7",
+      "when": 1789450086113,
+      "tag": "0017_greedy_leader",
+      "breakpoints": true
+    },
+    {
+      "idx": 18,
+      "version": "7",
+      "when": 1789451389456,
+      "tag": "0018_tired_lizard",
+      "breakpoints": true
     }
   ]
 }

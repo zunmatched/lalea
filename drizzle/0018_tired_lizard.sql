@@ -1,0 +1,1 @@
+ALTER TABLE "vocab_quiz_sessions" ADD COLUMN "duration_seconds" integer;

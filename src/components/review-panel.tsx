@@ -17,6 +17,7 @@ type ChallengeType=typeof challengeTypes[number];
 type QuizCategory=ChallengeType;
 const categoryLabels:Record<QuizCategory,string>={recognize_zh:"中選英",recognize_en:"英選中",dictation:"聽力拼字",spell:"看中文寫英文"};
 function shuffle<T>(items:T[]):T[]{return [...items].sort(()=>Math.random()-0.5)}
+function formatDuration(totalSeconds:number){const m=Math.floor(totalSeconds/60);const s=totalSeconds%60;return`${m}:${String(s).padStart(2,"0")}`}
 function foldAccents(value:string){return value.normalize("NFD").replace(/[\u0300-\u036f]/g,"")}
 function spellHint(form:string){const words=form.trim().split(/\s+/);const letters=words.join("").length;return`共 ${letters} 個字母${words.length>1?`（${words.length} 個單字）`:""}，開頭字母：${words[0][0].toUpperCase()}`}
 const emptyQueue:Queue={due:[],new:[],pool:[],policy:{dueFirst:true},proficiencyMax:DEFAULT_REVIEW_WINDOW_DAYS};
@@ -36,15 +37,27 @@ export function ReviewPanel({source}:{source:Source}){
  const[checked,setChecked]=useState<{correct:boolean}|null>(null);
  const sessionIndexRef=useRef(sessionIndex);
  useEffect(()=>{sessionIndexRef.current=sessionIndex},[sessionIndex]);
+ const sessionRecordedRef=useRef(false);
+ const startTimeRef=useRef<number|null>(null);
+ const[elapsedSeconds,setElapsedSeconds]=useState(0);
+ const[finishedSeconds,setFinishedSeconds]=useState<number|null>(null);
 
  function applySession(data:Queue){
   const items:SessionItem[]=[
    ...data.due.map(item=>({...item,isNew:false as const})),
    ...data.new.map(item=>({...item,isNew:true as const,dimension:"reading_recognition" as const,proficiency:0 as const,reviewCount:0 as const})),
   ];
+  sessionRecordedRef.current=false;
+  startTimeRef.current=Date.now();setElapsedSeconds(0);setFinishedSeconds(null);
   setPool(data.pool);setProficiencyMax(data.proficiencyMax);setSession(items);setSessionIndex(0);setCorrectCount(0);setWrongItems([]);
   setSelectedOption(null);setSpelling("");setChecked(null);setMessage("");
  }
+ // 本輪計時：從第一次拿到題目開始跑碼表，本輪跑完就凍結
+ useEffect(()=>{
+  if(!category||!session)return;
+  const timer=setInterval(()=>{if(startTimeRef.current!=null)setElapsedSeconds(Math.floor((Date.now()-startTimeRef.current)/1000))},1000);
+  return()=>clearInterval(timer);
+ },[category,session]);
  useEffect(()=>{
   if(!category)return;
   let active=true;
@@ -62,6 +75,15 @@ export function ReviewPanel({source}:{source:Source}){
  }
  useEffect(()=>{loadTodayProgress()},[source.key]);
  function backToCategories(){setCategory(null);setSession(null);loadTodayProgress()}
+
+ // 本輪跑完（不管是答完還是本來就沒東西可練）就記一筆測驗紀實，供「測驗紀實」頁面回顧
+ useEffect(()=>{
+  if(!category||!session||session.length===0||sessionIndex<session.length||sessionRecordedRef.current)return;
+  sessionRecordedRef.current=true;
+  const durationSeconds=startTimeRef.current!=null?Math.floor((Date.now()-startTimeRef.current)/1000):elapsedSeconds;
+  setFinishedSeconds(durationSeconds);
+  fetch("/api/reviews/sessions",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({sourceKey:source.key||"manual",sourceLabel:source.label,category,correctCount,totalCount:session.length,durationSeconds,wrongForms:wrongItems.map(wrong=>({form:wrong.form,translation:wrong.translation}))})}).catch(()=>{});
+ },[category,session,sessionIndex,correctCount,wrongItems,source.key,source.label,elapsedSeconds]);
 
  const item=session?.[sessionIndex];
  const isFirstLearning=item?.isNew??false;
@@ -160,12 +182,12 @@ export function ReviewPanel({source}:{source:Source}){
 
  if(session===null)return <main className="shell"><p className="eyebrow">詞彙 · 測驗 · {source.label} · {categoryLabels[category]}</p><h1>本輪隨機出題。</h1><section className="card">載入中…</section></main>;
 
- if(!item)return <main className="shell finish"><div className="mark">✓</div><p className="eyebrow">本輪複習完成</p><h1>{session.length===0?"目前沒有需要複習的內容。":"這輪的內容都練過一次了。"}</h1>{session.length>0&&<div className="stats"><div className="stat"><strong>{correctCount}/{session.length}</strong><span>答對</span></div></div>}{wrongItems.length>0&&<section className="card" style={{textAlign:"left"}}><span className="label">答錯的字</span>{wrongItems.map(wrong=><div key={wrong.userVocabularyId} className="context" style={{margin:"8px 0",display:"flex",justifyContent:"space-between",alignItems:"center",gap:10}}><span>{wrong.form}{wrong.translation?`（${wrong.translation}）`:""}</span><button aria-label={wrong.starred?"取消星號":"加上星號"} onClick={()=>toggleStarFor(wrong)} style={{border:0,background:"none",cursor:"pointer",fontSize:20,lineHeight:1,padding:0,flexShrink:0}}>{wrong.starred?"★":"☆"}</button></div>)}</section>}<button className="primary resume" onClick={backToCategories}>返回選單</button></main>;
+ if(!item)return <main className="shell finish"><div className="mark">✓</div><p className="eyebrow">本輪複習完成</p><h1>{session.length===0?"目前沒有需要複習的內容。":"這輪的內容都練過一次了。"}</h1>{session.length>0&&<div className="stats"><div className="stat"><strong>{correctCount}/{session.length}</strong><span>答對</span></div><div className="stat"><strong>{formatDuration(finishedSeconds??elapsedSeconds)}</strong><span>用時</span></div></div>}{wrongItems.length>0&&<section className="card" style={{textAlign:"left"}}><span className="label">答錯的字</span>{wrongItems.map(wrong=><div key={wrong.userVocabularyId} className="context" style={{margin:"8px 0",display:"flex",justifyContent:"space-between",alignItems:"center",gap:10}}><span>{wrong.form}{wrong.translation?`（${wrong.translation}）`:""}</span><button aria-label={wrong.starred?"取消星號":"加上星號"} onClick={()=>toggleStarFor(wrong)} style={{border:0,background:"none",cursor:"pointer",fontSize:20,lineHeight:1,padding:0,flexShrink:0}}>{wrong.starred?"★":"☆"}</button></div>)}</section>}<button className="primary resume" onClick={backToCategories}>返回選單</button></main>;
 
  return <main className="shell"><p className="eyebrow">詞彙 · 測驗 · {source.label} · {categoryLabels[category]}</p><h1>本輪隨機出題。</h1><p className="lead">隨機排序，本輪固定內容跑完一遍；聽力拼字與看中文寫英文同一天都答對才計分，近 {proficiencyMax} 天內每天最高分累計，最高 {proficiencyMax} 分，不練會掉分。</p>
  <section className="card">
   <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",gap:10,marginBottom:10}}>
-   <span className="label" style={{margin:0}}>{isFirstLearning?"首次學習":labels[item.dimension]} · {isFirstLearning?"":`熟練度 ${item.proficiency}/${proficiencyMax} · `}本輪剩餘 {session.length-sessionIndex}</span>
+   <span className="label" style={{margin:0}}>{isFirstLearning?"首次學習":labels[item.dimension]} · {isFirstLearning?"":`熟練度 ${item.proficiency}/${proficiencyMax} · `}本輪剩餘 {session.length-sessionIndex} · ⏱ {formatDuration(elapsedSeconds)}</span>
    <button aria-label={item.starred?"取消星號":"加上星號"} onClick={toggleStar} style={{border:0,background:"none",cursor:"pointer",fontSize:22,lineHeight:1,padding:0,flexShrink:0}}>{item.starred?"★":"☆"}</button>
   </div>
   {challengeType==="recognize_en"&&<h1 style={{fontSize:30}}>{item.form}</h1>}
