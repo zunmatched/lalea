@@ -12,7 +12,8 @@
       "definition": "an unintended escape of liquid, gas, or information",
       "translation": "漏水／漏氣；洩漏",
       "example": "Maintenance is checking the pipe for a possible leak.",
-      "exampleTranslation": "維修人員正在檢查管線是否有漏水。"
+      "exampleTranslation": "維修人員正在檢查管線是否有漏水。",
+      "note": "同形詞：也可作動詞，指「洩漏」，例如 Information leaked to the press。"
     },
     {
       "form": "occupancy",
@@ -20,7 +21,8 @@
       "definition": "the state of using or living in a building or room",
       "translation": "使用率；入住率",
       "example": "The hotel reported high occupancy during the holiday season.",
-      "exampleTranslation": "這間飯店在假期期間的入住率很高。"
+      "exampleTranslation": "這間飯店在假期期間的入住率很高。",
+      "note": "動詞形：occupy (v.) 佔用；居住，例如 The room is occupied by a guest。"
     },
     {
       "form": "proficiency",
@@ -28,7 +30,8 @@
       "definition": "a high degree of skill or competence",
       "translation": "熟練度；精通程度",
       "example": "The job requires proficiency in at least two languages.",
-      "exampleTranslation": "這份工作要求至少精通兩種語言。"
+      "exampleTranslation": "這份工作要求至少精通兩種語言。",
+      "note": "形容詞形：proficient (adj.) 熟練的，例如 She is proficient in Excel。"
     },
     {
       "form": "renewal",
@@ -36,7 +39,8 @@
       "definition": "the act of extending the validity of something, such as a contract",
       "translation": "續約；更新",
       "example": "The lease renewal must be signed before the end of the month.",
-      "exampleTranslation": "租約續約必須在月底前簽署。"
+      "exampleTranslation": "租約續約必須在月底前簽署。",
+      "note": "動詞形：renew (v.) 更新；續約，例如 Please renew your membership before it expires。"
     },
     {
       "form": "urgent",
@@ -44,7 +48,8 @@
       "definition": "requiring immediate action or attention",
       "translation": "緊急的",
       "example": "This is an urgent request, so please respond by noon.",
-      "exampleTranslation": "這是緊急請求，請在中午前回覆。"
+      "exampleTranslation": "這是緊急請求，請在中午前回覆。",
+      "note": "副詞形：urgently (adv.) 緊急地，例如 We urgently need your reply。"
     },
     {
       "form": "annually",
@@ -52,7 +57,8 @@
       "definition": "once a year; every year",
       "translation": "每年一次地",
       "example": "The conference is held annually in a different city.",
-      "exampleTranslation": "這場研討會每年在不同城市舉行一次。"
+      "exampleTranslation": "這場研討會每年在不同城市舉行一次。",
+      "note": "同義詞 yearly，相關詞：annual (adj.) 每年的，例如 an annual report。"
     },
     {
       "form": "basketball",
@@ -60,7 +66,8 @@
       "definition": "a team sport played by throwing a ball through a hoop",
       "translation": "籃球",
       "example": "The company sponsors a basketball tournament for local schools.",
-      "exampleTranslation": "公司贊助了一場給當地學校的籃球賽。"
+      "exampleTranslation": "公司贊助了一場給當地學校的籃球賽。",
+      "note": "當運動名稱時不可數，當實體「籃球」時可數，例如 pass me the basketball。"
     },
     {
       "form": "delete",
@@ -68,7 +75,8 @@
       "definition": "to remove something, especially from a computer file",
       "translation": "刪除",
       "example": "Please delete any outdated files from the shared drive.",
-      "exampleTranslation": "請把共用硬碟裡過時的檔案刪除。"
+      "exampleTranslation": "請把共用硬碟裡過時的檔案刪除。",
+      "note": "名詞形：deletion (n.) 刪除，例如 The deletion was accidental。"
     },
     {
       "form": "illogical",
@@ -76,7 +84,8 @@
       "definition": "not sensible or reasonable",
       "translation": "不合邏輯的",
       "example": "It seems illogical to cancel the project this close to launch.",
-      "exampleTranslation": "在這麼接近上線的時候取消專案似乎不合邏輯。"
+      "exampleTranslation": "在這麼接近上線的時候取消專案似乎不合邏輯。",
+      "note": "否定字首 il-（用於 l 開頭的字）+ logical = illogical"
     },
     {
       "form": "pet",
@@ -84,7 +93,8 @@
       "definition": "an animal kept for companionship",
       "translation": "寵物",
       "example": "The office recently introduced a pet-friendly policy.",
-      "exampleTranslation": "辦公室最近推出了寵物友善政策。"
+      "exampleTranslation": "辦公室最近推出了寵物友善政策。",
+      "note": "也可作動詞，指「撫摸」，例如 pet the cat（過去式雙寫子音為 petted）"
     },
     {
       "form": "textbook",
@@ -92,7 +102,8 @@
       "definition": "a book used for studying a subject",
       "translation": "教科書",
       "example": "New employees receive a training textbook during orientation.",
-      "exampleTranslation": "新進員工在職前訓練時會收到一本訓練教材。"
+      "exampleTranslation": "新進員工在職前訓練時會收到一本訓練教材。",
+      "note": "常用片語 a textbook example（典型範例）"
     },
     {
       "form": "accurately",
@@ -100,7 +111,8 @@
       "definition": "in a way that is correct and precise",
       "translation": "準確地",
       "example": "Please fill out the form accurately to avoid delays.",
-      "exampleTranslation": "請準確填寫表格以避免延誤。"
+      "exampleTranslation": "請準確填寫表格以避免延誤。",
+      "note": "名詞形：accuracy (n.) 準確度，例如 Check the data for accuracy。"
     },
     {
       "form": "cabin",
@@ -108,7 +120,8 @@
       "definition": "a small wooden house, or the passenger area of an aircraft",
       "translation": "小屋；機艙",
       "example": "Flight attendants will ask passengers to fasten their seatbelts before the cabin doors close.",
-      "exampleTranslation": "機艙門關閉前，空服員會請乘客繫好安全帶。"
+      "exampleTranslation": "機艙門關閉前，空服員會請乘客繫好安全帶。",
+      "note": "常見於 cabin crew（機艙組員）這個複合詞"
     },
     {
       "form": "conductor",
@@ -116,7 +129,8 @@
       "definition": "a person who leads an orchestra, or an official on a train",
       "translation": "指揮；車掌",
       "example": "The train conductor announced a delay due to signal problems.",
-      "exampleTranslation": "列車車掌宣布因為號誌問題而誤點。"
+      "exampleTranslation": "列車車掌宣布因為號誌問題而誤點。",
+      "note": "動詞形：conduct (v.) 指揮；進行，例如 conduct a meeting（主持會議）。"
     },
     {
       "form": "inspector",
@@ -124,7 +138,8 @@
       "definition": "a person who officially examines something to check its quality or safety",
       "translation": "檢查員；督察",
       "example": "A safety inspector will visit the factory next week.",
-      "exampleTranslation": "一位安全檢查員下週會來工廠訪查。"
+      "exampleTranslation": "一位安全檢查員下週會來工廠訪查。",
+      "note": "動詞形：inspect (v.) 檢查，例如 inspect the equipment before use。"
     },
     {
       "form": "intern",
@@ -132,7 +147,8 @@
       "definition": "a student or trainee who works, sometimes without pay, to gain experience",
       "translation": "實習生",
       "example": "The marketing team hired two interns for the summer.",
-      "exampleTranslation": "行銷團隊雇用了兩名暑期實習生。"
+      "exampleTranslation": "行銷團隊雇用了兩名暑期實習生。",
+      "note": "名詞形：internship (n.) 實習，例如 apply for a summer internship。"
     },
     {
       "form": "semester",
@@ -140,7 +156,8 @@
       "definition": "half of an academic year",
       "translation": "學期",
       "example": "The training program runs for one semester.",
-      "exampleTranslation": "這個訓練課程為期一個學期。"
+      "exampleTranslation": "這個訓練課程為期一個學期。",
+      "note": "美式英語用 semester，英式英語通常用 term"
     },
     {
       "form": "confirmation",
@@ -148,7 +165,8 @@
       "definition": "a statement or document that proves something is true or agreed",
       "translation": "確認；確認函",
       "example": "You will receive a confirmation email once your order ships.",
-      "exampleTranslation": "訂單出貨後你會收到一封確認信。"
+      "exampleTranslation": "訂單出貨後你會收到一封確認信。",
+      "note": "動詞形：confirm (v.) 確認，例如 Please confirm your attendance。"
     },
     {
       "form": "congratulation",
@@ -156,7 +174,8 @@
       "definition": "an expression of praise for someone's achievement or success",
       "translation": "祝賀",
       "example": "Please accept our congratulations on your promotion.",
-      "exampleTranslation": "請接受我們對你升遷的祝賀。"
+      "exampleTranslation": "請接受我們對你升遷的祝賀。",
+      "note": "通常用複數形 congratulations，例如 Congratulations on your promotion!"
     },
     {
       "form": "expertise",
@@ -164,7 +183,8 @@
       "definition": "expert skill or knowledge in a particular field",
       "translation": "專業知識；專長",
       "example": "We need someone with expertise in international tax law.",
-      "exampleTranslation": "我們需要在國際稅法方面有專業知識的人。"
+      "exampleTranslation": "我們需要在國際稅法方面有專業知識的人。",
+      "note": "不可數名詞，沒有複數形 expertises"
     }
   ]
 }

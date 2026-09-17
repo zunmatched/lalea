@@ -12,7 +12,8 @@
       "definition": "producing a lot of good or useful results",
       "translation": "有生產力的；富有成效的",
       "example": "The team had a productive meeting and finalized the schedule.",
-      "exampleTranslation": "團隊開了一場有成效的會議，敲定了時程。"
+      "exampleTranslation": "團隊開了一場有成效的會議，敲定了時程。",
+      "note": "相關詞：productivity (n.) 生產力，例如 The new software increased our productivity significantly。"
     },
     {
       "form": "salad",
@@ -20,7 +21,8 @@
       "definition": "a cold dish of mixed vegetables or other ingredients",
       "translation": "沙拉",
       "example": "The cafeteria offers a fresh salad bar at lunch.",
-      "exampleTranslation": "員工餐廳午餐時段有新鮮的沙拉吧。"
+      "exampleTranslation": "員工餐廳午餐時段有新鮮的沙拉吧。",
+      "note": "常見搭配動詞 toss，例如 toss a salad（拌沙拉）"
     },
     {
       "form": "stack",
@@ -28,7 +30,8 @@
       "definition": "a neat pile of things placed one on top of another",
       "translation": "一疊；堆",
       "example": "There's a stack of invoices waiting for your signature.",
-      "exampleTranslation": "有一疊發票等著你簽名。"
+      "exampleTranslation": "有一疊發票等著你簽名。",
+      "note": "stack 也可當動詞用，例如 stack the chairs in the corner（把椅子疊放在角落）"
     },
     {
       "form": "salesperson",
@@ -36,7 +39,8 @@
       "definition": "a person whose job is to sell products or services",
       "translation": "銷售員",
       "example": "The salesperson explained the warranty options in detail.",
-      "exampleTranslation": "那位銷售員詳細說明了保固方案。"
+      "exampleTranslation": "那位銷售員詳細說明了保固方案。",
+      "note": "性別中立用詞，取代較舊的 salesman/saleswoman"
     },
     {
       "form": "calculator",
@@ -44,7 +48,8 @@
       "definition": "a device used to perform mathematical calculations",
       "translation": "計算機",
       "example": "Keep a calculator handy when reviewing the budget spreadsheet.",
-      "exampleTranslation": "檢查預算表時，手邊放一台計算機比較方便。"
+      "exampleTranslation": "檢查預算表時，手邊放一台計算機比較方便。",
+      "note": "動詞形：calculate (v.) 計算，例如 Let me calculate the total cost。"
     },
     {
       "form": "completion",
@@ -52,7 +57,8 @@
       "definition": "the act of finishing something",
       "translation": "完成",
       "example": "The project is expected to reach completion by the end of the quarter.",
-      "exampleTranslation": "這個專案預計在本季末完成。"
+      "exampleTranslation": "這個專案預計在本季末完成。",
+      "note": "動詞形：complete (v.) 完成，例如 We need to complete the report by Friday。"
     },
     {
       "form": "defect",
@@ -60,7 +66,8 @@
       "definition": "a fault or imperfection in something",
       "translation": "瑕疵；缺陷",
       "example": "The factory found a defect in the last batch of parts.",
-      "exampleTranslation": "工廠在最後一批零件裡發現了瑕疵。"
+      "exampleTranslation": "工廠在最後一批零件裡發現了瑕疵。",
+      "note": "也可作動詞（重音在後，defECT），意思是「叛逃」，例如 The scientist defected to another country。"
     },
     {
       "form": "garbage",
@@ -68,7 +75,8 @@
       "definition": "waste material that is thrown away",
       "translation": "垃圾",
       "example": "Please take out the garbage before you leave the office.",
-      "exampleTranslation": "離開辦公室前請把垃圾拿出去丟。"
+      "exampleTranslation": "離開辦公室前請把垃圾拿出去丟。",
+      "note": "常見於 garbage truck（垃圾車）這個複合詞"
     },
     {
       "form": "omit",
@@ -76,7 +84,8 @@
       "definition": "to leave something out or not include it",
       "translation": "省略；遺漏",
       "example": "Don't omit your contact information from the application.",
-      "exampleTranslation": "申請表上請不要漏掉你的聯絡資訊。"
+      "exampleTranslation": "申請表上請不要漏掉你的聯絡資訊。",
+      "note": "字尾雙寫 t：omitted, omitting（重音在字尾且母音+子音結尾要雙寫）"
     },
     {
       "form": "spite",
@@ -93,7 +102,8 @@
       "definition": "a room containing a toilet and sink",
       "translation": "浴室；洗手間",
       "example": "The bathroom on this floor is currently being cleaned.",
-      "exampleTranslation": "這層樓的洗手間目前正在清潔中。"
+      "exampleTranslation": "這層樓的洗手間目前正在清潔中。",
+      "note": "美式英語習慣稱洗手間為 bathroom，英式英語較常用 toilet"
     },
     {
       "form": "cab",
@@ -101,7 +111,8 @@
       "definition": "a taxi",
       "translation": "計程車",
       "example": "I'll take a cab to the airport to save time.",
-      "exampleTranslation": "我會搭計程車去機場以節省時間。"
+      "exampleTranslation": "我會搭計程車去機場以節省時間。",
+      "note": "同義詞 taxi，cab 是 taxicab 的簡稱"
     },
     {
       "form": "correspondence",
@@ -109,7 +120,8 @@
       "definition": "letters or emails exchanged between people",
       "translation": "通信；往來信件",
       "example": "Please keep a record of all correspondence with the vendor.",
-      "exampleTranslation": "請保留與供應商之間所有往來信件的紀錄。"
+      "exampleTranslation": "請保留與供應商之間所有往來信件的紀錄。",
+      "note": "動詞形：correspond (v.) 通信；相符，例如 Please correspond with the vendor directly。"
     },
     {
       "form": "ladder",
@@ -117,7 +129,8 @@
       "definition": "a structure used for climbing up or down, or a metaphor for career progress",
       "translation": "梯子；階梯（喻晉升途徑）",
       "example": "She worked her way up the corporate ladder over ten years.",
-      "exampleTranslation": "她花了十年時間一步步爬上公司的職涯階梯。"
+      "exampleTranslation": "她花了十年時間一步步爬上公司的職涯階梯。",
+      "note": "英式英語中 ladder 也指絲襪抽絲（美式英語稱為 run）"
     },
     {
       "form": "photography",
@@ -125,7 +138,8 @@
       "definition": "the art or practice of taking photographs",
       "translation": "攝影",
       "example": "The company hired a professional for the product photography.",
-      "exampleTranslation": "公司請了專業人士來拍攝產品攝影照。"
+      "exampleTranslation": "公司請了專業人士來拍攝產品攝影照。",
+      "note": "相關詞：photographer (n.) 攝影師，例如 We hired a photographer for the event。"
     },
     {
       "form": "sculpture",
@@ -133,7 +147,8 @@
       "definition": "a work of art made by carving or shaping material",
       "translation": "雕塑",
       "example": "A large sculpture stands in front of the corporate headquarters.",
-      "exampleTranslation": "公司總部前面立著一座大型雕塑。"
+      "exampleTranslation": "公司總部前面立著一座大型雕塑。",
+      "note": "相關詞：sculptor (n.) 雕塑家，例如 The sculptor unveiled her latest work。"
     },
     {
       "form": "anniversary",
@@ -141,7 +156,8 @@
       "definition": "the date on which an event took place in a previous year",
       "translation": "週年紀念日",
       "example": "The store is celebrating its tenth anniversary with a sale.",
-      "exampleTranslation": "這間店正在以特賣慶祝十週年紀念。"
+      "exampleTranslation": "這間店正在以特賣慶祝十週年紀念。",
+      "note": "常見於 wedding anniversary（結婚週年紀念日）這個複合詞"
     },
     {
       "form": "buffet",
@@ -149,7 +165,8 @@
       "definition": "a meal where guests serve themselves from dishes laid out on a table",
       "translation": "自助餐",
       "example": "Lunch will be a buffet in the hotel's main hall.",
-      "exampleTranslation": "午餐將在飯店大廳以自助餐形式供應。"
+      "exampleTranslation": "午餐將在飯店大廳以自助餐形式供應。",
+      "note": "餐飲用法的 buffet 字尾 t 不發音（法語借詞），勿與動詞 buffet「連續撞擊」搞混"
     },
     {
       "form": "defective",
@@ -157,7 +174,8 @@
       "definition": "having a fault; not working correctly",
       "translation": "有瑕疵的；故障的",
       "example": "Customers can return any defective merchandise for a full refund.",
-      "exampleTranslation": "顧客可以退還任何有瑕疵的商品並獲得全額退款。"
+      "exampleTranslation": "顧客可以退還任何有瑕疵的商品並獲得全額退款。",
+      "note": "相關詞：defect (n.) 瑕疵，例如 The inspector found a defect in the product。"
     },
     {
       "form": "ice cream",
@@ -165,7 +183,8 @@
       "definition": "a frozen sweet food made from cream",
       "translation": "冰淇淋",
       "example": "The cafeteria added a new ice cream flavor this month.",
-      "exampleTranslation": "員工餐廳這個月新增了一種冰淇淋口味。"
+      "exampleTranslation": "員工餐廳這個月新增了一種冰淇淋口味。",
+      "note": "通常為不可數名詞，但點餐時可數，例如 I'll have an ice cream。"
     }
   ]
 }

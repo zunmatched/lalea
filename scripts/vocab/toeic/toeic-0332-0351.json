@@ -12,7 +12,8 @@
       "definition": "a structure that shoots water into the air for decoration",
       "translation": "噴泉",
       "example": "The lobby's fountain is a popular photo spot for visitors.",
-      "exampleTranslation": "大廳的噴泉是訪客熱門的拍照景點。"
+      "exampleTranslation": "大廳的噴泉是訪客熱門的拍照景點。",
+      "note": "常見於 drinking fountain（飲水機）這個複合詞"
     },
     {
       "form": "juice",
@@ -20,7 +21,8 @@
       "definition": "the liquid extracted from fruit or vegetables",
       "translation": "果汁",
       "example": "Fresh juice is served at the welcome reception.",
-      "exampleTranslation": "歡迎茶會上供應新鮮果汁。"
+      "exampleTranslation": "歡迎茶會上供應新鮮果汁。",
+      "note": "不可數名詞，通常說 a glass of juice，而非 a juice"
     },
     {
       "form": "lane",
@@ -28,7 +30,8 @@
       "definition": "a narrow road, or one of the marked sections of a road",
       "translation": "車道；巷道",
       "example": "The left lane is closed for road maintenance.",
-      "exampleTranslation": "左側車道因道路維修而封閉。"
+      "exampleTranslation": "左側車道因道路維修而封閉。",
+      "note": "常見於 bike lane（自行車道）、fast lane（快車道）這類複合詞"
     },
     {
       "form": "popularity",
@@ -36,7 +39,8 @@
       "definition": "the state of being liked or supported by many people",
       "translation": "受歡迎的程度；人氣",
       "example": "The product's popularity grew quickly after the ad campaign.",
-      "exampleTranslation": "這項產品在廣告活動後人氣迅速上升。"
+      "exampleTranslation": "這項產品在廣告活動後人氣迅速上升。",
+      "note": "形容詞形：popular (adj.) 受歡迎的，例如 a popular choice among customers。"
     },
     {
       "form": "poster",
@@ -44,7 +48,8 @@
       "definition": "a large printed picture or notice displayed in public",
       "translation": "海報",
       "example": "A poster announcing the sale was put up in the window.",
-      "exampleTranslation": "櫥窗貼上了一張宣傳特賣的海報。"
+      "exampleTranslation": "櫥窗貼上了一張宣傳特賣的海報。",
+      "note": "相關詞：post (v.) 張貼，例如 post a notice on the board，poster 即張貼出來的海報"
     },
     {
       "form": "promptly",
@@ -52,7 +57,8 @@
       "definition": "immediately or without delay",
       "translation": "準時地；立刻地",
       "example": "Please arrive promptly at nine for the meeting.",
-      "exampleTranslation": "請在九點準時抵達開會。"
+      "exampleTranslation": "請在九點準時抵達開會。",
+      "note": "形容詞形：prompt (adj.) 迅速的；準時的，例如 a prompt reply。"
     },
     {
       "form": "retailer",
@@ -60,7 +66,8 @@
       "definition": "a business that sells goods directly to consumers",
       "translation": "零售商",
       "example": "The retailer is expanding into three new markets.",
-      "exampleTranslation": "這家零售商正在擴展到三個新市場。"
+      "exampleTranslation": "這家零售商正在擴展到三個新市場。",
+      "note": "相關詞：retail (n./adj.) 零售，例如 retail price（零售價）"
     },
     {
       "form": "vacancy",
@@ -68,7 +75,8 @@
       "definition": "an unoccupied position or room available",
       "translation": "空缺；空房",
       "example": "There is a vacancy for a senior accountant in our finance team.",
-      "exampleTranslation": "我們財務團隊有一個資深會計師的職缺。"
+      "exampleTranslation": "我們財務團隊有一個資深會計師的職缺。",
+      "note": "形容詞形：vacant (adj.) 空著的，例如 a vacant room。"
     },
     {
       "form": "bench",
@@ -76,7 +84,8 @@
       "definition": "a long seat for several people",
       "translation": "長椅",
       "example": "Visitors can rest on a bench in the courtyard.",
-      "exampleTranslation": "訪客可以在中庭的長椅上休息。"
+      "exampleTranslation": "訪客可以在中庭的長椅上休息。",
+      "note": "在法律情境中 the bench 可指「法官席」或司法體系"
     },
     {
       "form": "cumulative",
@@ -84,7 +93,8 @@
       "definition": "increasing by successive additions over time",
       "translation": "累積的",
       "example": "The cumulative effect of small savings adds up over a year.",
-      "exampleTranslation": "小額節省的累積效果，一年下來會相當可觀。"
+      "exampleTranslation": "小額節省的累積效果，一年下來會相當可觀。",
+      "note": "動詞形：accumulate (v.) 累積，例如 accumulate frequent-flyer miles。"
     },
     {
       "form": "directory",
@@ -92,7 +102,8 @@
       "definition": "a list of names, addresses, or files organized for easy reference",
       "translation": "名錄；目錄",
       "example": "You can find her extension in the staff directory.",
-      "exampleTranslation": "你可以在員工名錄裡找到她的分機號碼。"
+      "exampleTranslation": "你可以在員工名錄裡找到她的分機號碼。",
+      "note": "常見於 phone directory（電話簿）這個複合詞"
     },
     {
       "form": "disposal",
@@ -100,7 +111,8 @@
       "definition": "the act of getting rid of something",
       "translation": "處置；棄置",
       "example": "The company follows strict rules for waste disposal.",
-      "exampleTranslation": "公司在廢棄物處置上遵守嚴格規定。"
+      "exampleTranslation": "公司在廢棄物處置上遵守嚴格規定。",
+      "note": "常用片語 at your disposal（供你使用），與「棄置」的意思不同"
     },
     {
       "form": "housekeeper",
@@ -108,7 +120,8 @@
       "definition": "a person employed to clean and maintain a house or hotel room",
       "translation": "管家；房務人員",
       "example": "The housekeeper will service the room after checkout.",
-      "exampleTranslation": "退房後房務人員會來整理房間。"
+      "exampleTranslation": "退房後房務人員會來整理房間。",
+      "note": "相關詞：housekeeping (n.) 家務管理；飯店的房務部，例如 Housekeeping will clean the room at 2 p.m."
     },
     {
       "form": "internship",
@@ -116,7 +129,8 @@
       "definition": "a temporary position for gaining work experience",
       "translation": "實習職位",
       "example": "She completed a six-month internship before being hired full time.",
-      "exampleTranslation": "她完成了六個月的實習後才被正式錄用。"
+      "exampleTranslation": "她完成了六個月的實習後才被正式錄用。",
+      "note": "相關詞：intern (n./v.) 實習生；實習，例如 She interned at a law firm last summer。"
     },
     {
       "form": "knowledgeable",
@@ -124,7 +138,8 @@
       "definition": "having a lot of knowledge or information about a subject",
       "translation": "見多識廣的；博學的",
       "example": "The staff are knowledgeable about all the products in the store.",
-      "exampleTranslation": "店裡的員工對所有產品都很了解。"
+      "exampleTranslation": "店裡的員工對所有產品都很了解。",
+      "note": "相關詞：knowledge (n.) 知識，例如 The training improved his knowledge of safety procedures。"
     },
     {
       "form": "organizer",
@@ -132,7 +147,8 @@
       "definition": "a person or thing that arranges or plans an event",
       "translation": "主辦人；整理工具",
       "example": "The event organizer confirmed the venue for next month.",
-      "exampleTranslation": "活動主辦人確認了下個月的場地。"
+      "exampleTranslation": "活動主辦人確認了下個月的場地。",
+      "note": "英式英文拼作 organiser（用 s 而非 z）"
     },
     {
       "form": "overdue",
@@ -140,7 +156,8 @@
       "definition": "not paid, done, or arrived by the expected time",
       "translation": "逾期的",
       "example": "Please settle any overdue invoices by the end of the week.",
-      "exampleTranslation": "請在週末前結清任何逾期的發票款項。"
+      "exampleTranslation": "請在週末前結清任何逾期的發票款項。",
+      "note": "相關詞：due (adj.) 到期的，例如 The payment is due on the 10th，overdue 則表示「已超過到期日」"
     },
     {
       "form": "prediction",
@@ -148,7 +165,8 @@
       "definition": "a statement about what will happen in the future",
       "translation": "預測",
       "example": "Analysts made a prediction about next quarter's sales growth.",
-      "exampleTranslation": "分析師對下季的銷售成長做出了預測。"
+      "exampleTranslation": "分析師對下季的銷售成長做出了預測。",
+      "note": "動詞形：predict (v.) 預測，例如 Experts predict steady growth next year。"
     },
     {
       "form": "subscriber",
@@ -156,7 +174,8 @@
       "definition": "a person who pays to regularly receive a service or publication",
       "translation": "訂閱者",
       "example": "The newsletter now has over ten thousand subscribers.",
-      "exampleTranslation": "這份電子報現在有超過一萬名訂閱者。"
+      "exampleTranslation": "這份電子報現在有超過一萬名訂閱者。",
+      "note": "動詞形：subscribe (v.) 訂閱，常搭配介系詞 to，例如 subscribe to a magazine。"
     },
     {
       "form": "booklet",
@@ -164,7 +183,8 @@
       "definition": "a small thin book, often with information or instructions",
       "translation": "小冊子",
       "example": "A booklet explaining the benefits plan was mailed to all staff.",
-      "exampleTranslation": "一本說明福利方案的小冊子已寄給全體員工。"
+      "exampleTranslation": "一本說明福利方案的小冊子已寄給全體員工。",
+      "note": "字尾 -let 表示「小型的」，book + let 構成 booklet（小冊子），同樣用法如 piglet（小豬）"
     }
   ]
 }

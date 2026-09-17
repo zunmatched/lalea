@@ -12,7 +12,8 @@
       "definition": "a visual diagram showing the relationship between numbers or quantities",
       "translation": "圖表",
       "example": "The graph shows a steady increase in quarterly revenue.",
-      "exampleTranslation": "這張圖表顯示季度營收穩定成長。"
+      "exampleTranslation": "這張圖表顯示季度營收穩定成長。",
+      "note": "相關詞：graph (v.) 也可作動詞，把資料繪成圖表，例如 graph the quarterly sales。"
     },
     {
       "form": "taker",
@@ -29,7 +30,8 @@
       "definition": "a public service such as electricity, gas, or water",
       "translation": "公用事業；水電瓦斯",
       "example": "Utility costs are included in the monthly office rent.",
-      "exampleTranslation": "水電瓦斯費用已包含在每月的辦公室租金中。"
+      "exampleTranslation": "水電瓦斯費用已包含在每月的辦公室租金中。",
+      "note": "相關詞：utilize (v.) 利用，例如 We utilize solar power to cut costs。"
     },
     {
       "form": "voucher",
@@ -37,7 +39,8 @@
       "definition": "a document that can be exchanged for goods or services",
       "translation": "抵用券；憑證",
       "example": "Employees received a meal voucher for the training day.",
-      "exampleTranslation": "員工在訓練當天收到了一張餐飲抵用券。"
+      "exampleTranslation": "員工在訓練當天收到了一張餐飲抵用券。",
+      "note": "常見於 gift voucher（禮券）這個常見用法"
     },
     {
       "form": "banker",
@@ -45,7 +48,8 @@
       "definition": "a person who works in a bank, especially in a senior role",
       "translation": "銀行家；銀行從業人員",
       "example": "The investment banker advised the company on the merger.",
-      "exampleTranslation": "那位投資銀行家為公司的合併案提供建議。"
+      "exampleTranslation": "那位投資銀行家為公司的合併案提供建議。",
+      "note": "常見於 investment banker（投資銀行家）這個搭配詞"
     },
     {
       "form": "behalf",
@@ -62,7 +66,8 @@
       "definition": "to reduce something to the smallest possible amount",
       "translation": "使降到最低；最小化",
       "example": "We rescheduled the shipment to minimize delivery delays.",
-      "exampleTranslation": "我們重新安排出貨時間，以將配送延誤降到最低。"
+      "exampleTranslation": "我們重新安排出貨時間，以將配送延誤降到最低。",
+      "note": "反義詞：maximize（使最大化）"
     },
     {
       "form": "optional",
@@ -70,7 +75,8 @@
       "definition": "available to choose but not required",
       "translation": "選擇性的；非必要的",
       "example": "Attendance at the workshop is optional this year.",
-      "exampleTranslation": "今年參加這場工作坊是自由選擇的。"
+      "exampleTranslation": "今年參加這場工作坊是自由選擇的。",
+      "note": "反義詞：mandatory（強制性的）"
     },
     {
       "form": "paycheck",
@@ -78,7 +84,8 @@
       "definition": "a payment of wages, especially in the form of a check",
       "translation": "薪水支票；薪資",
       "example": "Direct deposit means your paycheck arrives automatically each month.",
-      "exampleTranslation": "直接存款代表你的薪水每個月會自動入帳。"
+      "exampleTranslation": "直接存款代表你的薪水每個月會自動入帳。",
+      "note": "相關詞：payroll (n.) 薪資作業／薪資名冊，例如 The payroll department issues paychecks monthly。"
     },
     {
       "form": "polite",
@@ -86,7 +93,8 @@
       "definition": "showing good manners and respect toward others",
       "translation": "有禮貌的",
       "example": "Always be polite to customers, even when they are frustrated.",
-      "exampleTranslation": "即使顧客不耐煩，也要一直保持禮貌。"
+      "exampleTranslation": "即使顧客不耐煩，也要一直保持禮貌。",
+      "note": "反義詞：polite（有禮貌的）前面加上否定字首 im- 就變成 impolite（不禮貌的）"
     },
     {
       "form": "protective",
@@ -94,7 +102,8 @@
       "definition": "providing protection or intended to prevent damage or injury",
       "translation": "保護性的；防護的",
       "example": "Workers must wear protective gear in the warehouse.",
-      "exampleTranslation": "工人在倉庫裡必須穿戴防護裝備。"
+      "exampleTranslation": "工人在倉庫裡必須穿戴防護裝備。",
+      "note": "動詞形：protect (v.) 保護，例如 The policy protects consumer rights。"
     },
     {
       "form": "seller",
@@ -102,7 +111,8 @@
       "definition": "a person or company that sells something",
       "translation": "賣家",
       "example": "The seller agreed to lower the price after negotiation.",
-      "exampleTranslation": "賣家在協商後同意降價。"
+      "exampleTranslation": "賣家在協商後同意降價。",
+      "note": "反義詞：buyer（買家）"
     },
     {
       "form": "sidewalk",
@@ -110,7 +120,8 @@
       "definition": "a paved path for pedestrians beside a road",
       "translation": "人行道",
       "example": "Construction has closed part of the sidewalk outside the building.",
-      "exampleTranslation": "施工工程封閉了大樓外部分人行道。"
+      "exampleTranslation": "施工工程封閉了大樓外部分人行道。",
+      "note": "美式英文用 sidewalk，英式英文則說 pavement（人行道）"
     },
     {
       "form": "sightsee",
@@ -118,7 +129,8 @@
       "definition": "to visit famous or interesting places as a tourist",
       "translation": "觀光；遊覽",
       "example": "After the conference, several attendees stayed to sightsee.",
-      "exampleTranslation": "會議結束後，幾位與會者留下來觀光。"
+      "exampleTranslation": "會議結束後，幾位與會者留下來觀光。",
+      "note": "動詞 sightsee 較少單獨使用，通常用 go sightseeing（去觀光）這個片語"
     },
     {
       "form": "soup",
@@ -126,7 +138,8 @@
       "definition": "a liquid food made by boiling ingredients together",
       "translation": "湯",
       "example": "The menu includes soup as a starter for the business lunch.",
-      "exampleTranslation": "菜單上把湯品列為商務午餐的前菜。"
+      "exampleTranslation": "菜單上把湯品列為商務午餐的前菜。",
+      "note": "不可數名詞，通常說 a bowl of soup，而非 a soup"
     },
     {
       "form": "transit",
@@ -134,7 +147,8 @@
       "definition": "the transportation of people or goods from one place to another",
       "translation": "運輸；轉運",
       "example": "The package is currently in transit and should arrive tomorrow.",
-      "exampleTranslation": "這個包裹目前正在運送中，預計明天送達。"
+      "exampleTranslation": "這個包裹目前正在運送中，預計明天送達。",
+      "note": "常見於 mass transit（大眾運輸）這個搭配詞"
     },
     {
       "form": "wallet",
@@ -142,7 +156,8 @@
       "definition": "a small flat case for carrying money and cards",
       "translation": "皮夾；錢包",
       "example": "He left his wallet at the reception desk.",
-      "exampleTranslation": "他把皮夾忘在櫃檯了。"
+      "exampleTranslation": "他把皮夾忘在櫃檯了。",
+      "note": "常見於 digital wallet（電子錢包）這個現代用法"
     },
     {
       "form": "cashier",
@@ -150,7 +165,8 @@
       "definition": "a person who handles payments in a store or bank",
       "translation": "收銀員；出納",
       "example": "The cashier processed the refund without any issue.",
-      "exampleTranslation": "收銀員順利處理了退款，沒有任何問題。"
+      "exampleTranslation": "收銀員順利處理了退款，沒有任何問題。",
+      "note": "相關詞：cash (v.) 兌現，例如 cash a check（兌現支票）"
     },
     {
       "form": "casual",
@@ -158,7 +174,8 @@
       "definition": "relaxed and informal in style or manner",
       "translation": "休閒的；非正式的",
       "example": "Employees can wear casual clothing on Fridays.",
-      "exampleTranslation": "員工在星期五可以穿休閒服裝。"
+      "exampleTranslation": "員工在星期五可以穿休閒服裝。",
+      "note": "反義詞：formal（正式的）"
     },
     {
       "form": "drill",
@@ -166,7 +183,8 @@
       "definition": "a repeated exercise or practice, or a tool for making holes",
       "translation": "演習；鑽孔機",
       "example": "The office held a fire drill this morning.",
-      "exampleTranslation": "辦公室今天早上舉行了消防演習。"
+      "exampleTranslation": "辦公室今天早上舉行了消防演習。",
+      "note": "動詞形：drill (v.) 鑽孔；反覆訓練，例如 The team drills for emergencies every month。"
     }
   ]
 }
