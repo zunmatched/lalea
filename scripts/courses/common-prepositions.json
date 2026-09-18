@@ -1,0 +1,440 @@
+{
+  "id": "2f02e3af-1da6-4eb5-987c-15998abfd50f",
+  "versionId": "545a71fe-5178-49d0-9dab-62b68a712457",
+  "slug": "common-prepositions",
+  "title": "常用對話介係詞",
+  "units": [
+    {
+      "id": "74e9f1b1-1a73-4a49-bb20-04022887c367",
+      "title": "常用對話介係詞",
+      "estimatedSeconds": 720,
+      "exercises": [
+        {
+          "type": "reading_choice",
+          "context": "Could we move the meeting ______ Friday morning?",
+          "id": "f1233a9b-aab8-4e67-b319-20b520f39513",
+          "prompt": "選出最適合的介係詞。",
+          "options": [
+            {
+              "id": "to",
+              "text": "to"
+            },
+            {
+              "id": "at",
+              "text": "at"
+            },
+            {
+              "id": "on",
+              "text": "on"
+            }
+          ],
+          "correctIds": [
+            "to"
+          ],
+          "feedbackCorrect": "move A to B 表示把時間或地點「改到」某處，用 to。",
+          "feedbackIncorrect": "改期要用 move ... to ...；at/on 是用來標示原本的時間點，不是「改成」的方向。"
+        },
+        {
+          "type": "reading_choice",
+          "context": "I'll get back ______ you by the end of the day.",
+          "id": "5fcf8377-f7a1-47e8-9ba4-38339e85b4a2",
+          "prompt": "選出最適合的介係詞。",
+          "options": [
+            {
+              "id": "to",
+              "text": "to"
+            },
+            {
+              "id": "with",
+              "text": "with"
+            },
+            {
+              "id": "for",
+              "text": "for"
+            }
+          ],
+          "correctIds": [
+            "to"
+          ],
+          "feedbackCorrect": "get back to someone 表示「之後再回覆」某人，是固定用法。",
+          "feedbackIncorrect": "正確用法是 get back to you，to 表示回覆的對象。"
+        },
+        {
+          "type": "reading_choice",
+          "context": "We're still waiting ______ the client's approval.",
+          "id": "20f418d4-952c-4489-98cc-106ddb8835b8",
+          "prompt": "選出最適合的介係詞。",
+          "options": [
+            {
+              "id": "for",
+              "text": "for"
+            },
+            {
+              "id": "of",
+              "text": "of"
+            },
+            {
+              "id": "on",
+              "text": "on"
+            }
+          ],
+          "correctIds": [
+            "for"
+          ],
+          "feedbackCorrect": "wait for + 名詞，表示「等待」某件事發生。",
+          "feedbackIncorrect": "正確用法是 wait for，表示在等待某件尚未發生的事。"
+        },
+        {
+          "type": "reading_choice",
+          "context": "I'm really looking forward ______ the trip next month.",
+          "id": "f563ef58-346a-498b-bf6c-1873a7499956",
+          "prompt": "選出最適合的介係詞。",
+          "options": [
+            {
+              "id": "to",
+              "text": "to"
+            },
+            {
+              "id": "for",
+              "text": "for"
+            },
+            {
+              "id": "at",
+              "text": "at"
+            }
+          ],
+          "correctIds": [
+            "to"
+          ],
+          "feedbackCorrect": "look forward to 的 to 是介係詞，後面接名詞或動名詞，例如 look forward to seeing you。",
+          "feedbackIncorrect": "正確用法是 look forward to，這裡的 to 不是不定詞，後面要接名詞或動名詞。"
+        },
+        {
+          "type": "reading_choice",
+          "context": "She's responsible ______ the entire project.",
+          "id": "b0345f4b-6aa9-41e6-8b1d-a06aa9ea2e47",
+          "prompt": "選出最適合的介係詞。",
+          "options": [
+            {
+              "id": "for",
+              "text": "for"
+            },
+            {
+              "id": "to",
+              "text": "to"
+            },
+            {
+              "id": "of",
+              "text": "of"
+            }
+          ],
+          "correctIds": [
+            "for"
+          ],
+          "feedbackCorrect": "responsible for + 事情，表示「對...負責」。",
+          "feedbackIncorrect": "正確用法是 responsible for，for 後面接負責的對象或事務。"
+        },
+        {
+          "type": "reading_choice",
+          "context": "Let's focus ______ quality instead of speed for now.",
+          "id": "797bd97c-dbfc-44af-8dee-b899fcfd84ee",
+          "prompt": "選出最適合的介係詞。",
+          "options": [
+            {
+              "id": "on",
+              "text": "on"
+            },
+            {
+              "id": "to",
+              "text": "to"
+            },
+            {
+              "id": "for",
+              "text": "for"
+            }
+          ],
+          "correctIds": [
+            "on"
+          ],
+          "feedbackCorrect": "focus on 表示「把注意力放在」某件事上。",
+          "feedbackIncorrect": "正確用法是 focus on，表示集中心力在某個重點上。"
+        },
+        {
+          "type": "reading_choice",
+          "context": "He's in charge ______ the marketing team this quarter.",
+          "id": "014c2d5c-bb84-4961-b5eb-9ea57265edaa",
+          "prompt": "選出最適合的介係詞。",
+          "options": [
+            {
+              "id": "of",
+              "text": "of"
+            },
+            {
+              "id": "for",
+              "text": "for"
+            },
+            {
+              "id": "with",
+              "text": "with"
+            }
+          ],
+          "correctIds": [
+            "of"
+          ],
+          "feedbackCorrect": "in charge of 表示「負責、掌管」某個部門或事務，是固定片語。",
+          "feedbackIncorrect": "正確用法是 in charge of，of 後面接被掌管的對象。"
+        },
+        {
+          "type": "reading_choice",
+          "context": "I'm counting ______ you to finish this by Monday.",
+          "id": "30086e6f-9eeb-4ed6-a1cf-1f256385cb7d",
+          "prompt": "選出最適合的介係詞。",
+          "options": [
+            {
+              "id": "on",
+              "text": "on"
+            },
+            {
+              "id": "to",
+              "text": "to"
+            },
+            {
+              "id": "for",
+              "text": "for"
+            }
+          ],
+          "correctIds": [
+            "on"
+          ],
+          "feedbackCorrect": "count on someone 表示「指望、依賴」某人完成某事。",
+          "feedbackIncorrect": "正確用法是 count on，表示信賴、指望某人。"
+        },
+        {
+          "type": "reading_choice",
+          "context": "We're ______ track to finish the project by June.",
+          "id": "9cd8d074-b3d9-497a-aa72-cb1d8a753d13",
+          "prompt": "選出最適合的介係詞。",
+          "options": [
+            {
+              "id": "on",
+              "text": "on"
+            },
+            {
+              "id": "in",
+              "text": "in"
+            },
+            {
+              "id": "at",
+              "text": "at"
+            }
+          ],
+          "correctIds": [
+            "on"
+          ],
+          "feedbackCorrect": "on track 表示「進度符合計畫」，是常見的職場用語。",
+          "feedbackIncorrect": "正確用法是 on track，表示按計畫進行中。"
+        },
+        {
+          "type": "reading_choice",
+          "context": "The report needs to be ready ______ Friday at the latest.",
+          "id": "e9ab4b94-11c6-4e35-a1af-58abc03df729",
+          "prompt": "選出最適合的介係詞。",
+          "options": [
+            {
+              "id": "by",
+              "text": "by"
+            },
+            {
+              "id": "until",
+              "text": "until"
+            },
+            {
+              "id": "to",
+              "text": "to"
+            }
+          ],
+          "correctIds": [
+            "by"
+          ],
+          "feedbackCorrect": "by 表示「最晚不超過」某個時間點，適合用在截止期限。",
+          "feedbackIncorrect": "by 才是「最晚在...之前」；until 是「持續到」某時間點才停止，意思不同。"
+        },
+        {
+          "type": "reading_choice",
+          "context": "We should deal ______ this issue right away.",
+          "id": "ca47e10f-5a13-4ad5-a8ca-4a356c8204c0",
+          "prompt": "選出最適合的介係詞。",
+          "options": [
+            {
+              "id": "with",
+              "text": "with"
+            },
+            {
+              "id": "on",
+              "text": "on"
+            },
+            {
+              "id": "to",
+              "text": "to"
+            }
+          ],
+          "correctIds": [
+            "with"
+          ],
+          "feedbackCorrect": "deal with 表示「處理」某個問題或狀況。",
+          "feedbackIncorrect": "正確用法是 deal with，表示著手處理某件事。"
+        },
+        {
+          "type": "reading_choice",
+          "context": "I ran ______ an old colleague at the airport yesterday.",
+          "id": "8f47340c-b03f-46d4-8ffa-dedd9d20b8a0",
+          "prompt": "選出最適合的介係詞。",
+          "options": [
+            {
+              "id": "into",
+              "text": "into"
+            },
+            {
+              "id": "on",
+              "text": "on"
+            },
+            {
+              "id": "at",
+              "text": "at"
+            }
+          ],
+          "correctIds": [
+            "into"
+          ],
+          "feedbackCorrect": "run into 表示「（意外）巧遇」某人，是固定片語。",
+          "feedbackIncorrect": "正確用法是 run into，表示沒有事先約好就遇到某人。"
+        },
+        {
+          "type": "reading_choice",
+          "context": "Please let me know ______ advance if you can't make it.",
+          "id": "5ec86527-f55c-4a3b-8829-028f739dc8f4",
+          "prompt": "選出最適合的介係詞。",
+          "options": [
+            {
+              "id": "in",
+              "text": "in"
+            },
+            {
+              "id": "on",
+              "text": "on"
+            },
+            {
+              "id": "with",
+              "text": "with"
+            }
+          ],
+          "correctIds": [
+            "in"
+          ],
+          "feedbackCorrect": "in advance 表示「事先」，是固定用法。",
+          "feedbackIncorrect": "正確用法是 in advance，表示在事情發生之前先做某事。"
+        },
+        {
+          "type": "reading_choice",
+          "context": "I couldn't agree more ______ that decision.",
+          "id": "c01b587e-b3be-4b7c-9dfa-7c1f7e3a167b",
+          "prompt": "選出最適合的介係詞。",
+          "options": [
+            {
+              "id": "with",
+              "text": "with"
+            },
+            {
+              "id": "to",
+              "text": "to"
+            },
+            {
+              "id": "on",
+              "text": "on"
+            }
+          ],
+          "correctIds": [
+            "with"
+          ],
+          "feedbackCorrect": "agree with + 人或意見，表示同意某人或某個看法。",
+          "feedbackIncorrect": "agree with 才是同意某個看法；agree on 則是雙方針對某個議題達成共識，用法不同。"
+        },
+        {
+          "type": "reading_choice",
+          "context": "Thanks ______ your help, we finished ahead of schedule.",
+          "id": "3c8bd6aa-8ec3-4467-8e45-cf3ab9987905",
+          "prompt": "選出最適合的介係詞。",
+          "options": [
+            {
+              "id": "to",
+              "text": "to"
+            },
+            {
+              "id": "for",
+              "text": "for"
+            },
+            {
+              "id": "with",
+              "text": "with"
+            }
+          ],
+          "correctIds": [
+            "to"
+          ],
+          "feedbackCorrect": "thanks to + 原因，表示「多虧了...」，用來說明某件好事的原因。",
+          "feedbackIncorrect": "正確用法是 thanks to（表示原因），跟感謝別人時說的 thank you for 用法不同。"
+        },
+        {
+          "type": "reading_choice",
+          "context": "Let's touch base ______ each other next week.",
+          "id": "290302e5-37c2-48ac-9a9b-97756bd804ee",
+          "prompt": "選出最適合的介係詞。",
+          "options": [
+            {
+              "id": "with",
+              "text": "with"
+            },
+            {
+              "id": "to",
+              "text": "to"
+            },
+            {
+              "id": "on",
+              "text": "on"
+            }
+          ],
+          "correctIds": [
+            "with"
+          ],
+          "feedbackCorrect": "touch base with someone 表示「之後再聯繫、對一下進度」，是常見的職場口語。",
+          "feedbackIncorrect": "正確用法是 touch base with，表示跟某人保持聯繫、同步近況。"
+        },
+        {
+          "type": "reading_choice",
+          "context": "I'm not familiar ______ this software yet.",
+          "id": "a6834eb4-f2ef-4ec0-9f57-9c00eff158b4",
+          "prompt": "選出最適合的介係詞。",
+          "options": [
+            {
+              "id": "with",
+              "text": "with"
+            },
+            {
+              "id": "to",
+              "text": "to"
+            },
+            {
+              "id": "of",
+              "text": "of"
+            }
+          ],
+          "correctIds": [
+            "with"
+          ],
+          "feedbackCorrect": "familiar with 表示「對...熟悉」。",
+          "feedbackIncorrect": "正確用法是 familiar with，with 後面接熟悉的對象。"
+        }
+      ]
+    }
+  ]
+}

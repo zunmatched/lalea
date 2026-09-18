@@ -1,0 +1,179 @@
+{
+  "slug": "almighty-expressions-03",
+  "title": "英語萬能表達 041-060",
+  "group": { "slug": "almighty-expressions", "title": "英語萬能表達" },
+  "words": [
+    {
+      "form": "I am here to",
+      "partOfSpeech": "phrase",
+      "definition": "used to state the purpose or reason for being somewhere or for speaking",
+      "translation": "我來這裡是為了……（表明目的）",
+      "example": "I am here to discuss the budget proposal with your team.",
+      "exampleTranslation": "我來這裡是為了跟你們團隊討論預算提案。",
+      "note": "後面接原形動詞，常用於自我介紹或會議開場，直接點出來意"
+    },
+    {
+      "form": "side hustle",
+      "partOfSpeech": "phrase",
+      "definition": "a job or business someone does in addition to their main job, usually to earn extra income",
+      "translation": "副業；兼職",
+      "example": "She started a side hustle selling handmade jewelry online.",
+      "exampleTranslation": "她開始經營一個在網路上賣手工飾品的副業。"
+    },
+    {
+      "form": "I should've",
+      "partOfSpeech": "phrase",
+      "definition": "used to express regret about something that was not done in the past",
+      "translation": "我早該……（表達後悔）",
+      "example": "I should've called you back sooner, I'm really sorry.",
+      "exampleTranslation": "我早該更快回你電話的，真的很抱歉。",
+      "note": "should've 是 should have 的口語縮讀，後面接過去分詞，語氣是懊悔而非單純過去式"
+    },
+    {
+      "form": "high level",
+      "partOfSpeech": "phrase",
+      "definition": "describing something in a general, broad way without going into detailed specifics",
+      "translation": "宏觀的；概略的",
+      "example": "Let me give you a high-level overview before we dive into the specifics.",
+      "exampleTranslation": "在深入細節之前，先讓我給你一個概略的整體說明。",
+      "note": "當形容詞修飾名詞時常加連字號，例如 a high-level summary；與 low level 相對"
+    },
+    {
+      "form": "first off",
+      "partOfSpeech": "phrase",
+      "definition": "used to introduce the first point when explaining or listing several things",
+      "translation": "首先；第一點",
+      "example": "First off, I want to thank everyone for coming today.",
+      "exampleTranslation": "首先，我想謝謝大家今天的到來。",
+      "note": "口語說法，意思接近 first of all，通常後面會接著講更多點"
+    },
+    {
+      "form": "I've been",
+      "partOfSpeech": "phrase",
+      "definition": "used to talk about something that started in the past and has continued up to now",
+      "translation": "我一直在……（近況、持續狀態）",
+      "example": "I've been working on this report all week.",
+      "exampleTranslation": "我這整個星期都在忙這份報告。",
+      "note": "現在完成式常見開頭，後面可接 V-ing（持續動作）或過去分詞（狀態）"
+    },
+    {
+      "form": "low level",
+      "partOfSpeech": "phrase",
+      "definition": "describing something in detailed, specific, or granular terms rather than as a broad overview",
+      "translation": "細節層面的；基層的",
+      "example": "Once everyone's aligned on the plan, we'll get into the low-level details.",
+      "exampleTranslation": "等大家對計畫都有共識之後，我們再進入細節層面的討論。",
+      "note": "與 high level 相對，強調具體、瑣碎的細節而非整體方向"
+    },
+    {
+      "form": "settle in",
+      "partOfSpeech": "phrase",
+      "definition": "to become comfortable in a new place, situation, or role",
+      "translation": "安頓下來；適應新環境",
+      "example": "It took me a few weeks to settle in at my new job.",
+      "exampleTranslation": "我花了幾個星期才在新工作中安頓下來。"
+    },
+    {
+      "form": "let's get right into it",
+      "partOfSpeech": "phrase",
+      "definition": "used to say that a task, discussion, or presentation will begin immediately without delay",
+      "translation": "我們直接開始吧",
+      "example": "Let's get right into it — first item on the agenda is the budget.",
+      "exampleTranslation": "我們直接開始吧——議程的第一項是預算問題。",
+      "note": "常用於會議或影片開場，跳過寒暄直接進入主題"
+    },
+    {
+      "form": "high agency",
+      "partOfSpeech": "phrase",
+      "definition": "a personality trait describing someone who takes initiative and actively finds ways to solve problems instead of waiting or giving up",
+      "translation": "高主動性；高主觀能動性",
+      "example": "She has high agency — when she hits a roadblock, she just finds another way around it.",
+      "exampleTranslation": "她非常有主動性——遇到阻礙時，總是會自己找到解決辦法。",
+      "note": "近期在職場、自我成長話題中流行的說法，強調主動出擊而非被動等待"
+    },
+    {
+      "form": "I am a huge fan of",
+      "partOfSpeech": "phrase",
+      "definition": "used to express strong enthusiasm or admiration for something or someone",
+      "translation": "我是……的忠實粉絲；我非常喜歡……",
+      "example": "I am a huge fan of your work — I've read everything you've published.",
+      "exampleTranslation": "我是你作品的忠實粉絲——你發表過的東西我都讀過。"
+    },
+    {
+      "form": "feel the same way",
+      "partOfSpeech": "phrase",
+      "definition": "to share the same opinion or emotion as someone else",
+      "translation": "有同感；也是這麼想",
+      "example": "I love this city, and I know my husband feels the same way.",
+      "exampleTranslation": "我很喜歡這座城市，我知道我先生也有同感。"
+    },
+    {
+      "form": "come across",
+      "partOfSpeech": "phrase",
+      "definition": "to give a particular impression to other people",
+      "translation": "給人……的印象；顯得",
+      "example": "He came across as very confident during the interview.",
+      "exampleTranslation": "他在面試時給人一種非常自信的印象。",
+      "note": "後面常接 as + 形容詞/名詞；come across 也可以指「偶然發現／遇到」，例如 I came across an old photo"
+    },
+    {
+      "form": "push myself too hard",
+      "partOfSpeech": "phrase",
+      "definition": "to demand too much of oneself, often to the point of stress or exhaustion",
+      "translation": "把自己逼得太緊；對自己太苛刻",
+      "example": "I've been pushing myself too hard lately, and I think I need a break.",
+      "exampleTranslation": "我最近一直把自己逼得太緊，我覺得我需要休息一下。"
+    },
+    {
+      "form": "first up",
+      "partOfSpeech": "phrase",
+      "definition": "used to introduce the first item, task, or person in a sequence, especially at the start of an agenda or event",
+      "translation": "首先（介紹第一項）",
+      "example": "First up on today's agenda is the quarterly sales report.",
+      "exampleTranslation": "今天議程的第一項是季度銷售報告。",
+      "note": "和 first off 意思相近，但 first up 更常用來點名「排序中的第一項」，first off 則較常引出一個概括性的說明"
+    },
+    {
+      "form": "scroll through",
+      "partOfSpeech": "phrase",
+      "definition": "to move quickly through content on a screen, such as a social media feed or a list",
+      "translation": "滑動瀏覽",
+      "example": "I was scrolling through my phone and completely lost track of time.",
+      "exampleTranslation": "我滑手機滑到完全忘了時間。"
+    },
+    {
+      "form": "a big part of it is",
+      "partOfSpeech": "phrase",
+      "definition": "used to point out a major reason or component that contributes to something",
+      "translation": "很大一部分原因是……",
+      "example": "A big part of it is just staying consistent every day.",
+      "exampleTranslation": "很大一部分原因就是每天保持一致的習慣。"
+    },
+    {
+      "form": "fall back into old patterns",
+      "partOfSpeech": "phrase",
+      "definition": "to return to previous habits or behaviors, especially unhealthy or unproductive ones, after trying to change",
+      "translation": "回到老樣子；故態復萌",
+      "example": "After the holidays, it's easy to fall back into old patterns and skip the gym.",
+      "exampleTranslation": "放假結束後，很容易又回到老樣子，開始不去健身房。"
+    },
+    {
+      "form": "but that being said",
+      "partOfSpeech": "phrase",
+      "definition": "used to introduce a contrasting point right after acknowledging what was just said",
+      "translation": "話雖如此；不過話說回來",
+      "example": "The report has some strong points. But that being said, a few numbers need double-checking.",
+      "exampleTranslation": "這份報告有不少優點。不過話說回來，有幾個數字還需要再核對一下。",
+      "note": "與 that said / having said that 意思相近，用於先肯定後轉折"
+    },
+    {
+      "form": "walk you through",
+      "partOfSpeech": "phrase",
+      "definition": "to explain or demonstrate something to someone step by step",
+      "translation": "詳細帶你了解；一步步說明",
+      "example": "Let me walk you through how to set up your new account.",
+      "exampleTranslation": "讓我一步步帶你了解怎麼設定你的新帳號。",
+      "note": "walk 後面的受詞可依對象換成 me / him / you all 等，用法固定為 walk + 人 + through + 事"
+    }
+  ]
+}
